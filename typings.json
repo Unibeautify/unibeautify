@@ -1,0 +1,9 @@
+{
+  "globalDependencies": {
+    "json-stable-stringify": "registry:dt/json-stable-stringify#1.0.0+20160317120654",
+    "node": "registry:dt/node#6.0.0+20160826120425"
+  },
+  "dependencies": {
+    "bluebird": "registry:npm/bluebird#3.4.1+20160811213708"
+  }
+}

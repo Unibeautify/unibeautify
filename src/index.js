@@ -1,3 +1,6 @@
-import options from './options.json';
-
-export class Beautifier
+"use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(require("./beautifier"));
+//# sourceMappingURL=index.js.map
