@@ -47,5 +47,8 @@
   "dependencies": {
     "bluebird": "^3.4.3",
     "lodash": "^4.15.0"
+  },
+  "engines": {
+      "node": ">= 4.0.0"
   }
 }
