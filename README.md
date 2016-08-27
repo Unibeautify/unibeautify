@@ -1,5 +1,7 @@
 # Unibeautify
 
+[![Build Status](https://travis-ci.org/Unibeautify/unibeautify.svg?branch=master)](https://travis-ci.org/Unibeautify/unibeautify)
+
 > One Beautifier to rule them all, One Beautifier to clean them, One Beautifier to bring them all and in the darkness sheen them
 
 ## Why
