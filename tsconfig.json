@@ -5,7 +5,7 @@
         "removeComments": false,
         "preserveConstEnums": true,
         "sourceMap": true,
-        "target": "es3",
+        "target": "ES6",
         "declaration": true,
         "moduleResolution": "node"
     },
