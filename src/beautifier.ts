@@ -1,4 +1,3 @@
-declare var require: any;
 const options: any = require("./options.json");
 import * as Promise from "bluebird";
 

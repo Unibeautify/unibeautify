@@ -1,6 +1,3 @@
-declare var require: any;
-declare var __dirname: any;
-
 import * as fs from "fs";
 import * as path from "path";
 import * as stringify from "json-stable-stringify";
