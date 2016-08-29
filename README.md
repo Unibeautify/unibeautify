@@ -115,3 +115,10 @@ beautifier.beautify(text, language.name, options, context)
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
 ```
+
+## Collaborate
+
+```bash
+npm run typings
+```
+

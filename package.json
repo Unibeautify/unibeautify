@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "description": "One Beautifier to rule them all",
   "main": "src/index.js",
+  "typings": "src/index.d.ts",
   "scripts": {
-    "ava": "ava",
+    "ava": "ava --verbose",
     "test": "npm-run-all compile ava",
     "compile": "tsc",
     "sort-options": "node script/sort-options.js",
@@ -14,7 +15,7 @@
     "lint:script": "tslint script/**/*.ts",
     "lint:test": "tslint test/**/*.ts",
     "lint": "npm-run-all compile lint:*",
-    "postinstall": "typings install"
+    "typings": "typings install"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,11 @@
     "prettify",
     "pretty"
   ],
-  "author": "Glavin Wiechert",
+  "author": {
+    "name": "Glavin Wiechert",
+    "email": "glavin.wiechert@gmail.com",
+    "url": "https://github.com/glavin001"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Unibeautify/unibeautify/issues"
@@ -41,7 +46,7 @@
     "rimraf": "^2.5.4",
     "tslint": "^3.15.1",
     "typedoc": "^0.4.5",
-    "typescript": "^1.8.10",
+    "typescript": "^2.1.0-dev.20160828",
     "typings": "^1.3.3"
   },
   "dependencies": {
@@ -49,6 +54,6 @@
     "lodash": "^4.15.0"
   },
   "engines": {
-      "node": ">= 4.0.0"
+    "node": ">=4"
   }
 }

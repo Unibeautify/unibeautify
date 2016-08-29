@@ -12,6 +12,7 @@
     "filesGlob": [
         "./typings/**/*.d.ts",
         "./src/**/*.ts",
+        "./src/**/*.d.ts",
         "./script/**/*.ts",
         "./test/**/*.ts"
     ],

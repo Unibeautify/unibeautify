@@ -10,15 +10,15 @@
   - [ ] Standard Options & Languages
   - [ ] Add Option
     - Option has fields:
-      - `key`
+      - `key` (unique)
       - `description`
       - `default`
       - `type`
       - ...
   - [ ] Add Language
     - Language has fields:
-      - `namespace`
-      - `name`
+      - `name` (unique)
+      - `namespace` (unique)
       - `extensions`
       - `options`
   - [ ] Add Beautifier
@@ -40,3 +40,45 @@
 
 - [ ] Sublime
   - Use CLI
+
+
+
+
+
+Models:
+- Options
+- Languages
+  - name
+  - namespace
+  - extensions
+  - atomGrammars (for Atom)
+  - sublimeSyntax (for Sublime)
+- Beautifiers
+  - hasMany Options
+  - hasMany Languages
+
+
+- [ ] Can update Beautifier independently
+- [ ] Can update Language
+
+Separate Options registry (centralized)
+
+Separate Languages registry (centralized)
+
+Separate Beautifiers (no registry, decentralized)
+- Peer/Atom dependencies:
+  -
+
+
+Goal: NPM Global
+```bash
+npm install --global unibeautify
+npm install --global beautifier-js-beautify
+unibeautify --language JavaScript
+```
+
+Goal: Atom
+```bash
+apm install unibeautify
+apm install beautifier-js-beautify
+```
