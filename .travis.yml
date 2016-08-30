@@ -8,3 +8,5 @@ node_js:
   # - "0.6"
   # - "iojs"
   # - "node"
+before_script:
+  - npm run typings
