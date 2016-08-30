@@ -11,7 +11,7 @@
     "clean:src": "rimraf src/**/*.d.ts src/**/*.js src/**/*.js.map",
     "clean:test": "rimraf test/**/*.d.ts test/**/*.js test/**/*.js.map",
     "clean": "npm-run-all --parallel clean:*",
-    "prepublish": "npm-run-all compile lint",
+    "prepublish": "npm-run-all typings compile",
     "docs": "typedoc --out docs --includeDeclarations typings/*.ts --module commonjs src",
     "lint:src": "tslint src/**/*.ts",
     "lint:script": "tslint script/**/*.ts",
