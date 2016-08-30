@@ -21,7 +21,7 @@ export interface Language {
   /**
   Sublime Text editor syntaxes.
   */
-  sublimeSyntax: string[];
+  sublimeSyntaxes: string[];
 }
 
 export const Languages: Language[] = [
@@ -37,6 +37,6 @@ export const Languages: Language[] = [
     namespace: "js",
     extensions: ["js"],
     atomGrammars: [],
-    sublimeSyntax: []
+    sublimeSyntaxes: []
   },
 ];

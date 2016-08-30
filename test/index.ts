@@ -67,7 +67,7 @@ test("should find JavaScript Language and Beautifier", (t) => {
 });
 
 
-test.failing("should find JavaScript Language and not Beautifier", (t) => {
+test("should find JavaScript Language and not Beautifier", (t) => {
 
   const unibeautify2 = _.cloneDeep(unibeautify);
 

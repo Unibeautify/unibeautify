@@ -1,7 +1,7 @@
 /// <reference path="../typings/modules/bluebird/index.d.ts" />
 const options: any = require("./options.json");
 import * as Promise from "bluebird";
-import {Language} from "./language";
+import {Language} from "./languages";
 import * as _ from "lodash";
 import {OptionsRegistry} from "./options";
 
@@ -255,14 +255,14 @@ export class Unibeautify {
     const langs: Language[][] = [];
     // Name
     langs.push(_.filter(this.languages, (c: Language): boolean => _.isEqual(c.name, query.name)));
-    // TODO: Namespace
-
-    // TODO: Extension
-
-    // TODO: Atom Grammar
-
-    // TODO: Sublime Grammar
-
+    // Namespace
+    langs.push(_.filter(this.languages, (c: Language): boolean => _.isEqual(c.namespace, query.namespace)));
+    // Extension
+    langs.push(_.filter(this.languages, (c: Language): boolean => _.includes(c.extensions, query.extension)));
+    // Atom Grammar
+    langs.push(_.filter(this.languages, (c: Language): boolean => _.includes(c.atomGrammars, query.atomGrammar)));
+    // Sublime Syntax
+    langs.push(_.filter(this.languages, (c: Language): boolean => _.includes(c.sublimeSyntaxes, query.sublimeSyntax)));
     // Return unique array of Languages
     return _.uniq(_.flatten(langs));
   }
@@ -272,7 +272,7 @@ export class Unibeautify {
   */
   private getBeautifiersForLanguage(language: Language): Beautifier[] {
     // TODO
-    return this.beautifiers;
+    return _.filter(this.beautifiers, (b: Beautifier): boolean => _.includes(Object.keys(b.options), language.name));
   }
 
   /**

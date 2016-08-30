@@ -9,7 +9,7 @@ test("should successfully beautify text", (t) => {
       namespace: "test",
       extensions: ["test"],
       atomGrammars: [],
-      sublimeSyntax: []
+      sublimeSyntaxes: []
     };
     b.loadLanguage(lang);
 
@@ -46,7 +46,7 @@ test("should fail to find beautifier", (t) => {
       namespace: "test",
       extensions: ["test"],
       atomGrammars: [],
-      sublimeSyntax: []
+      sublimeSyntaxes: []
     };
     b.loadLanguage(lang);
 
