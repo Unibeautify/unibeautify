@@ -53,6 +53,7 @@
             "check-operator",
             "check-separator",
             "check-type"
-        ]
+        ],
+        "object-literal-sort-keys": true
     }
 }

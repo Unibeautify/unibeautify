@@ -5,10 +5,10 @@ test("should successfully beautify text", (t) => {
 
     const b = new Unibeautify();
     const lang: Language = {
+      atomGrammars: [],
+      extensions: ["test"],
       name: "TestLang",
       namespace: "test",
-      extensions: ["test"],
-      atomGrammars: [],
       sublimeSyntaxes: []
     };
     b.loadLanguage(lang);
@@ -28,9 +28,9 @@ test("should successfully beautify text", (t) => {
     b.loadBeautifier(beautifier);
 
     return b.beautify({
-      text: "test",
       languageName: "TestLang",
-      options: {}
+      options: {},
+      text: "test",
     })
     .then((results) => {
       t.is(results, beautifierResult);
@@ -42,18 +42,18 @@ test("should fail to find beautifier", (t) => {
 
     const b = new Unibeautify();
     const lang: Language = {
+      atomGrammars: [],
+      extensions: ["test"],
       name: "TestLang",
       namespace: "test",
-      extensions: ["test"],
-      atomGrammars: [],
       sublimeSyntaxes: []
     };
     b.loadLanguage(lang);
 
     return b.beautify({
-      text: "test",
       languageName: "TestLang",
-      options: {}
+      options: {},
+      text: "test",
     })
     .then((results) => {
       t.fail(results);
@@ -69,9 +69,9 @@ test("should fail to find language", (t) => {
     const b = new Unibeautify();
 
     return b.beautify({
-      text: "test",
       languageName: "TestLang",
-      options: {}
+      options: {},
+      text: "test",
     })
     .then((results) => {
       t.fail(results);

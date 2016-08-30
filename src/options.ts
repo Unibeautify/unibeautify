@@ -10,7 +10,7 @@ export interface Option {
 }
 
 export interface OptionsRegistry {
-  [key: string]: Option
+  [key: string]: Option;
 }
 
 export const Options: OptionsRegistry = {

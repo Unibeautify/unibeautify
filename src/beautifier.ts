@@ -1,5 +1,4 @@
 /// <reference path="../typings/modules/bluebird/index.d.ts" />
-const options: any = require("./options.json");
 import * as Promise from "bluebird";
 import {Language} from "./languages";
 import * as _ from "lodash";
@@ -303,14 +302,14 @@ export class Unibeautify {
 
     // Get Language
     const langs: Language[] = this.getLanguages({
-      name: data.languageName,
-      extension: data.fileExtension,
       atomGrammar: data.atomGrammar,
+      extension: data.fileExtension,
+      name: data.languageName,
       sublimeSyntax: data.sublimeSyntax,
     });
     const lang: Language | null = langs.length > 0 ? langs[0] : null;
     if (lang == null) {
-      return Promise.reject(new Error('Cannot find language.'));
+      return Promise.reject(new Error("Cannot find language."));
     }
 
     // Get Options for Language
@@ -322,14 +321,12 @@ export class Unibeautify {
     // Run beautifier
     if (beautifier != null ) {
       return (beautifier as Beautifier).beautify({
-        // Required
-        text: data.text,
+        filePath: data.fileExtension,
         language: lang,
         options,
         Promise,
-        // Optional
-        filePath: data.fileExtension,
         projectPath: data.projectPath,
+        text: data.text,
       });
     } else {
       return Promise.reject(new Error(`Beautifier not found for Language: ${lang.name}`));

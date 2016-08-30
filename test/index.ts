@@ -5,9 +5,9 @@ import * as _ from "lodash";
 test("should fail to find language", (t) => {
 
     return unibeautify.beautify({
-      text: "test",
       languageName: "TestLang",
-      options: {}
+      options: {},
+      text: "test",
     })
     .then((results) => {
       t.fail(results);
@@ -21,9 +21,9 @@ test("should fail to find language", (t) => {
 test("should find JavaScript language and no Beautifier for Language", (t) => {
 
     return unibeautify.beautify({
-      text: "test",
       languageName: "JavaScript",
-      options: {}
+      options: {},
+      text: "test",
     })
     .then((results) => {
       t.fail(results);
@@ -53,9 +53,9 @@ test("should find JavaScript Language and Beautifier", (t) => {
   unibeautify2.loadBeautifier(beautifier);
 
   return unibeautify2.beautify({
-    text: "test",
     languageName: "JavaScript",
-    options: {}
+    options: {},
+    text: "test",
   })
   .then((results) => {
     t.is(results, beautifierResult);
@@ -86,9 +86,9 @@ test("should find JavaScript Language and not Beautifier", (t) => {
   unibeautify2.loadBeautifier(beautifier);
 
   return unibeautify2.beautify({
-    text: "test",
     languageName: "JavaScript",
-    options: {}
+    options: {},
+    text: "test",
   })
   .then((results) => {
     t.fail("Should not have found beautifier");

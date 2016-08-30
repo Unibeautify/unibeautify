@@ -33,10 +33,10 @@ export const Languages: Language[] = [
   //   sublimeSyntax: []
   // },
   {
+    atomGrammars: [],
+    extensions: ["js"],
     name: "JavaScript",
     namespace: "js",
-    extensions: ["js"],
-    atomGrammars: [],
     sublimeSyntaxes: []
   },
 ];
