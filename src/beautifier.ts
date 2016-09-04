@@ -81,17 +81,11 @@ export interface BeautifierBeautifyData {
 }
 
 export interface LanguageOptionValues {
-  /**
-  Languages
-  */
-  [key: string]: OptionValues;
+  [languageName: string]: OptionValues;
 }
 
 export interface OptionValues {
-  /**
-  Options
-  */
-  [key: string]: any;
+  [optionName: string]: any;
 }
 
 /**
@@ -291,8 +285,8 @@ export class Unibeautify {
   Extract the Language-specific option values.
   */
   private getOptionsForLanguage(language: Language, options: LanguageOptionValues): OptionValues {
-    const { namespace } = language;
-    return options[namespace] = {};
+    const { name } = language;
+    return options[name] || {};
   }
 
   /**
