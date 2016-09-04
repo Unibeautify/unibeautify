@@ -295,7 +295,16 @@ export class Unibeautify {
   Extract the option values that the Beautifier supports, including applying transformations.
   */
   public static getOptionsForBeautifier(beautifier: Beautifier, language: Language, options: OptionValues): OptionValues {
-    const beautifierOptions = beautifier.options[language.name];
+    const globalOptions = beautifier.options['_'];
+    let beautifierOptions = beautifier.options[language.name];
+    // Global options
+    if (typeof globalOptions === "object") {
+      if (beautifierOptions === true) {
+        beautifierOptions = globalOptions;
+      } else if (typeof beautifierOptions === "object") {
+        beautifierOptions = Object.assign({}, globalOptions, beautifierOptions);
+      }
+    }
     // Transform options
     if (typeof beautifierOptions === "boolean") {
       if (beautifierOptions === true) {
