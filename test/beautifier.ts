@@ -81,3 +81,56 @@ test("should fail to find language", (t) => {
     });
 
 });
+
+
+test("should successfully transform option values for beautifier", (t) => {
+
+    const b = new Unibeautify();
+    const lang: Language = {
+      atomGrammars: [],
+      extensions: ["test"],
+      name: "TestLang",
+      namespace: "test",
+      sublimeSyntaxes: []
+    };
+    b.loadLanguage(lang);
+
+    const beautifierResult = "Testing Result";
+    const beautifier: Beautifier = {
+      name: "TestBeautify",
+      options: {
+        "TestLang": {
+          "value1": true,
+          "renamed1": "value1",
+          "basicTransform": (n) => n + 1,
+          "complexTransform": [["value1","basicTransform"], (options) => options['value1'] + options['basicTransform']],
+        }
+      },
+      beautify({
+        Promise
+      }) {
+        return Promise.resolve(beautifierResult);
+      }
+    };
+    b.loadBeautifier(beautifier);
+
+    const options = {
+      "value1": 123,
+      "basicTransform": 2
+    };
+    const result = Unibeautify.getOptionsForBeautifier(beautifier, lang, options);
+
+    t.is(result['value1'], options.value1, "Allow option");
+    t.is(result['renamed1'], options.value1, "Renaming option");
+    t.is(result['basicTransform'], options.basicTransform + 1, "Basic transformation");
+    t.is(result['complexTransform'], options.value1 + options.basicTransform, "Complex transformation");
+
+    t.deepEqual(result, {
+      "value1": options.value1,
+      "renamed1": options.value1,
+      "basicTransform": options.basicTransform + 1,
+      "complexTransform": options.value1 + options.basicTransform,
+    });
+
+});
+

@@ -12,27 +12,29 @@ export type BeautifierOptionRename = string;
 Function to process the given options and return a final option value.
 */
 export type BeautifierOptionTransformFunction = (options: {
-  [key: string]: any
+  [optionName: string]: any
 }) => any;
 /**
 Option that transforms one or more required options into a single value.
 */
-export type BeautifyOptionTransform = {
-  /**
-  Required options that will be transformed.
-  */
-  options: string[],
-  fn: BeautifierOptionTransformFunction
-};
+export type BeautifyOptionTransform = [string[], BeautifierOptionTransformFunction];
+/**
+Option that transforms a single option value with the same name.
+*/
+export type BeautifyOptionTransformSingleFunction = (optionValue: any) => any;
 /**
 Option for Beautifier given the Language.
 */
-export type BeautifierLanguageOption = boolean | BeautifierOptionRename | BeautifyOptionTransform;
+export type BeautifierLanguageOption =
+  boolean |
+  BeautifierOptionRename |
+  BeautifyOptionTransformSingleFunction |
+  BeautifyOptionTransform;
 /**
 
 */
-export type BeautifierLanguageOptionComplex = {
-  [key: string]: BeautifierLanguageOption;
+export interface BeautifierLanguageOptionComplex {
+  [optionName: string]: BeautifierLanguageOption;
 };
 /**
 
@@ -46,8 +48,8 @@ Options for Beautifier.
 
 Keys are the names of Languages.
 */
-export type BeautifierOptions = {
-  [key: string]: BeautifierLanguageOptions;
+export interface BeautifierOptions {
+  [languageName: string]: BeautifierLanguageOptions;
 };
 
 /**
@@ -65,7 +67,7 @@ export interface BeautifierBeautifyData {
   /**
   Option values for given Language.
   */
-  options: { [key: string]: any };
+  options: { [optionName: string]: any };
   /**
   File path.
   */
@@ -284,9 +286,48 @@ export class Unibeautify {
   /**
   Extract the Language-specific option values.
   */
-  private getOptionsForLanguage(language: Language, options: LanguageOptionValues): OptionValues {
+  public static getOptionsForLanguage(language: Language, options: LanguageOptionValues): OptionValues {
     const { name } = language;
     return options[name] || {};
+  }
+
+  /**
+  Extract the option values that the Beautifier supports, including applying transformations.
+  */
+  public static getOptionsForBeautifier(beautifier: Beautifier, language: Language, options: OptionValues): OptionValues {
+    const beautifierOptions = beautifier.options[language.name];
+    // Transform options
+    if (typeof beautifierOptions === "boolean") {
+      if (beautifierOptions === true) {
+        return options;
+      } else {
+        return {};
+      }
+    } else if (typeof beautifierOptions === "object") {
+      const transformedOptions: OptionValues = {};
+      for (let field in beautifierOptions) {
+        const op = beautifierOptions[field];
+        if (typeof op === "string") {
+          transformedOptions[field] = options[op as string];
+        } else if (typeof op === "function") {
+          transformedOptions[field] = (op as BeautifyOptionTransformSingleFunction)(options[field]);
+        } else if (typeof op === "boolean") {
+          if (op === true) {
+            transformedOptions[field] = options[field];
+          }
+        } else if (_.isArray(op)) {
+          const [fields, fn] = (op as BeautifyOptionTransform);
+          const vals = _.map(fields, function(f) {
+            return options[f];
+          });
+          const obj = _.zipObject(fields, vals);
+          transformedOptions[field] = fn(obj);
+        }
+      }
+      return transformedOptions;
+    } else {
+      return options;
+    }
   }
 
   /**
@@ -307,13 +348,15 @@ export class Unibeautify {
     }
 
     // Get Options for Language
-    const options: OptionValues = this.getOptionsForLanguage(lang as Language, data.options);
+    const langOptions: OptionValues = Unibeautify.getOptionsForLanguage(lang as Language, data.options);
 
     // Get Beautifier
-    const beautifier: Beautifier | null = this.getBeautifierForLanguage(lang as Language, options);
+    const beautifier: Beautifier | null = this.getBeautifierForLanguage(lang as Language, langOptions);
 
     // Run beautifier
     if (beautifier != null ) {
+      // Get Options for Beautifier
+      const options: OptionValues = Unibeautify.getOptionsForBeautifier(beautifier, lang, langOptions);
       return (beautifier as Beautifier).beautify({
         filePath: data.fileExtension,
         language: lang,
