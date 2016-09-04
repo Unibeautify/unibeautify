@@ -107,7 +107,7 @@ test("should successfully transform option values for beautifier", (t) => {
           "value1": true,
           "renamed1": "value1",
           "basicTransform": (n) => n + 1,
-          "complexTransform": [["value1","basicTransform"], (options) => options['value1'] + options['basicTransform']],
+          "complexTransform": [["value1", "basicTransform"], (options) => options["value1"] + options["basicTransform"]],
           "willBeReplaced": "value1"
         }
       },
@@ -126,12 +126,12 @@ test("should successfully transform option values for beautifier", (t) => {
     };
     const result = Unibeautify.getOptionsForBeautifier(beautifier, lang, options);
 
-    t.is(result['value1'], options.value1, "Allow option");
-    t.is(result['renamed1'], options.value1, "Rename option");
-    t.is(result['basicTransform'], options.basicTransform + 1, "Perform basic transformation");
-    t.is(result['complexTransform'], options.value1 + options.basicTransform, "Perform complex transformation");
-    t.is(result['globalOption'], options.globalOption, "Include global option");
-    t.is(result['willBeReplaced'], options.value1, "Replace global option with language-specific option");
+    t.is(result["value1"], options.value1, "Allow option");
+    t.is(result["renamed1"], options.value1, "Rename option");
+    t.is(result["basicTransform"], options.basicTransform + 1, "Perform basic transformation");
+    t.is(result["complexTransform"], options.value1 + options.basicTransform, "Perform complex transformation");
+    t.is(result["globalOption"], options.globalOption, "Include global option");
+    t.is(result["willBeReplaced"], options.value1, "Replace global option with language-specific option");
 
     t.deepEqual(result, {
       "value1": options.value1,

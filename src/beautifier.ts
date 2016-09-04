@@ -295,7 +295,7 @@ export class Unibeautify {
   Extract the option values that the Beautifier supports, including applying transformations.
   */
   public static getOptionsForBeautifier(beautifier: Beautifier, language: Language, options: OptionValues): OptionValues {
-    const globalOptions = beautifier.options['_'];
+    const globalOptions = beautifier.options["_"];
     let beautifierOptions = beautifier.options[language.name];
     // Global options
     if (typeof globalOptions === "object") {

@@ -18,7 +18,7 @@
     "lint:src": "tslint src/**/*.ts",
     "lint:script": "tslint script/**/*.ts",
     "lint:test": "tslint test/**/*.ts",
-    "lint": "npm-run-all compile lint:*",
+    "lint": "npm-run-all lint:*",
     "typings": "typings install"
   },
   "repository": {
