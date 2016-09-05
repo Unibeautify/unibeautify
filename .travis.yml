@@ -8,6 +8,9 @@ node_js:
 os:
   - linux
   - osx
+cache:
+  directories:
+  - node_modules # NPM packages
 script:
   - npm run lint
   - npm test
