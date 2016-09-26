@@ -160,6 +160,13 @@ export class Unibeautify {
 
   */
   private languages: Language[] = [];
+
+  /**
+  Get a copy of the languages currently loaded.
+  */
+  public getLoadedLanguages(): Language[] {
+    return this.languages.slice();
+  }
   /**
 
   */
@@ -208,8 +215,8 @@ export class Unibeautify {
   /**
   Find and return the appropriate Language for the given file extension.
   */
-  private getLanguagesForExtension(extension: string): Language[] {
-    return this.getLanguages({
+  private findLanguagesForExtension(extension: string): Language[] {
+    return this.findLanguages({
       extension
     });
   }
@@ -225,7 +232,7 @@ export class Unibeautify {
   - atomGrammar
   - sublimeSyntax
   */
-  private getLanguages(query: {
+  private findLanguages(query: {
     /**
     Language name
     */
@@ -345,7 +352,7 @@ export class Unibeautify {
   public beautify(data: BeautifyData): Promise<string> {
 
     // Get Language
-    const langs: Language[] = this.getLanguages({
+    const langs: Language[] = this.findLanguages({
       atomGrammar: data.atomGrammar,
       extension: data.fileExtension,
       name: data.languageName,
