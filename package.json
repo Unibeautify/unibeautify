@@ -2,24 +2,21 @@
   "name": "unibeautify",
   "version": "0.1.6",
   "description": "One Beautifier to rule them all",
-  "main": "src/index.js",
-  "typings": "src/index.d.ts",
+  "main": "dist/src/index.js",
+  "typings": "dist/src/index.d.ts",
   "scripts": {
-    "ava": "ava --verbose",
-    "test": "npm-run-all compile ava",
+    "ava": "ava --verbose dist/test",
+    "test": "npm-run-all compile:ts ava",
+    "dev": "tsc --watch",
     "compile:ts": "tsc",
-    "compile:babel": "babel src --source-maps inline -d src",
-    "compile": "npm-run-all compile:ts compile:babel",
-    "clean:src": "rimraf src/**/*.d.ts src/**/*.js src/**/*.js.map",
-    "clean:test": "rimraf test/**/*.d.ts test/**/*.js test/**/*.js.map",
-    "clean": "npm-run-all --parallel clean:*",
+    "compile": "npm run compile:ts",
+    "clean": "rimraf dist/",
     "prepublish": "npm-run-all typings compile",
-    "docs": "typedoc --out docs --includeDeclarations typings/*.ts --module commonjs src",
+    "docs": "typedoc --out docs --includeDeclarations typings/*.ts --module commonjs dist/src",
     "lint:src": "tslint src/**/*.ts",
     "lint:script": "tslint script/**/*.ts",
     "lint:test": "tslint test/**/*.ts",
-    "lint": "npm-run-all lint:*",
-    "typings": "typings install"
+    "lint": "npm-run-all lint:*"
   },
   "repository": {
     "type": "git",
@@ -44,6 +41,10 @@
   },
   "homepage": "https://github.com/Unibeautify/unibeautify#readme",
   "devDependencies": {
+    "@types/bluebird": "^3.5.8",
+    "@types/json-stable-stringify": "^1.0.31",
+    "@types/lodash": "^4.14.71",
+    "@types/node": "^8.0.19",
     "ava": "^0.16.0",
     "babel-cli": "^6.14.0",
     "babel-preset-es2015": "^6.14.0",
@@ -52,8 +53,7 @@
     "rimraf": "^2.5.4",
     "tslint": "3.15.0-dev.0",
     "typedoc": "^0.4.5",
-    "typescript": "2.1.0-dev.20160828",
-    "typings": "^1.3.3"
+    "typescript": "^2.4.2"
   },
   "dependencies": {
     "bluebird": "^3.4.3",

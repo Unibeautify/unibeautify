@@ -1,4 +1,3 @@
-/// <reference path="../typings/modules/bluebird/index.d.ts" />
 import * as Promise from "bluebird";
 import {Language} from "./languages";
 import * as _ from "lodash";
