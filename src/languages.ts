@@ -478,7 +478,11 @@ export const Languages: Language[] = [
       "Perl 6"
     ],
     "extensions": [
-      "pl"
+      "pl",
+      "PL",
+      "pm",
+      "pod",
+      "t"
     ],
     "name": "Perl",
     "namespace": "perl",
