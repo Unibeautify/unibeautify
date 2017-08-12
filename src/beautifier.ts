@@ -1,7 +1,10 @@
-import * as Promise from "bluebird";
-import {Language} from "./languages";
+import {
+  Language,
+} from "./languages";
 import * as _ from "lodash";
-import {OptionsRegistry} from "./options";
+import {
+  OptionsRegistry
+} from "./options";
 
 /**
 New name to rename the option (key) to.
@@ -113,6 +116,10 @@ export interface BeautifyData {
   Sublime Text editor syntax.
   */
   sublimeSyntax?: string;
+  /**
+   * VSCode Document Selector
+   */
+  vscodeLanguage?: string;
   /**
   File path.
   */
@@ -230,6 +237,7 @@ export class Unibeautify {
   - extension
   - atomGrammar
   - sublimeSyntax
+  - vscodeLanguage
   */
   private findLanguages(query: {
     /**
@@ -252,6 +260,10 @@ export class Unibeautify {
     Language Sublime Syntax
     */
     sublimeSyntax?: string;
+    /**
+     * VSCode Language ID
+     */
+    vscodeLanguage?: string;
   }): Language[] {
     const langs: Language[][] = [];
     // Name
@@ -264,14 +276,21 @@ export class Unibeautify {
     langs.push(_.filter(this.languages, (c: Language): boolean => _.includes(c.atomGrammars, query.atomGrammar)));
     // Sublime Syntax
     langs.push(_.filter(this.languages, (c: Language): boolean => _.includes(c.sublimeSyntaxes, query.sublimeSyntax)));
+    // VSCode Language ID
+    langs.push(_.filter(this.languages, (c: Language): boolean => _.includes(c.vscodeLanguages, query.vscodeLanguage)));
     // Return unique array of Languages
     return _.uniq(_.flatten(langs));
+  }
+
+  public get supportedLanguages() {
+    return this.getLoadedLanguages()
+      .filter(language => Boolean(this.getBeautifierForLanguage(language)));
   }
 
   /**
   Find and return the appropriate Beautifiers for the given Language.
   */
-  private getBeautifiersForLanguage(language: Language): Beautifier[] {
+  public getBeautifiersForLanguage(language: Language): Beautifier[] {
     // TODO
     return _.filter(this.beautifiers, (b: Beautifier): boolean => _.includes(Object.keys(b.options), language.name));
   }
@@ -279,14 +298,9 @@ export class Unibeautify {
   /**
   Get default beautifier for given language and options.
   */
-  private getBeautifierForLanguage(language: Language, options: OptionValues): Beautifier | null {
+  private getBeautifierForLanguage(language: Language, options: OptionValues = {}): Beautifier | null {
     // TODO
-    const beautifiers = this.getBeautifiersForLanguage(language);
-    if (beautifiers.length > 0) {
-      return beautifiers[0];
-    } else {
-      return null;
-    }
+    return _.find(this.beautifiers, (b: Beautifier): boolean => _.includes(Object.keys(b.options), language.name));
   }
 
   /**

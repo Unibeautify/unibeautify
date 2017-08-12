@@ -22,6 +22,10 @@ export interface Language {
   Sublime Text editor syntaxes.
   */
   sublimeSyntaxes: string[];
+  /**
+   * VSCode Language ID
+   */
+  vscodeLanguages: string[];
 }
 
 export const Languages: Language[] = [
@@ -229,7 +233,7 @@ export const Languages: Language[] = [
     "extensions": [
       "feature"
     ],
-    "name": "gherkin",
+    "name": "Gherkin",
     "namespace": "gherkin",
     "sublimeSyntaxes": [
     ]
@@ -333,6 +337,9 @@ export const Languages: Language[] = [
     "name": "JavaScript",
     "namespace": "js",
     "sublimeSyntaxes": [
+    ],
+    "vscodeLanguages": [
+      "javascript"
     ]
   },
   {
@@ -359,6 +366,9 @@ export const Languages: Language[] = [
     "name": "JSX",
     "namespace": "jsx",
     "sublimeSyntaxes": [
+    ],
+    "vscodeLanguages": [
+      "javascriptreact"
     ]
   },
   {
@@ -748,4 +758,6 @@ export const Languages: Language[] = [
     "sublimeSyntaxes": [
     ]
   }
-];
+].map(lang => Object.assign({}, {
+  vscodeLanguages: []
+}, lang));
