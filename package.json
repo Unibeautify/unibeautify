@@ -9,7 +9,7 @@
     "test": "npm-run-all compile:ts ava",
     "dev": "tsc --watch",
     "compile:ts": "tsc",
-    "compile": "npm-run-all compile:ts update-build-options",
+    "compile": "npm-run-all compile:ts update-type-defs",
     "clean": "rimraf dist/",
     "prepublish": "npm-run-all compile",
     "docs": "typedoc --out docs --includeDeclarations typings/*.ts --module commonjs dist/src",
@@ -17,7 +17,7 @@
     "lint:script": "tslint script/**/*.ts",
     "lint:test": "tslint test/**/*.ts",
     "lint": "npm-run-all lint:*",
-    "update-build-options": "node dist/scripts/updateBeautifierOptions.js BeautifierOptions dist/src/beautifier.d.ts"
+    "update-type-defs": "node dist/scripts/update-type-defs.js dist/src/beautifier.d.ts"
   },
   "repository": {
     "type": "git",

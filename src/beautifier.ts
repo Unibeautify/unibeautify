@@ -8,18 +8,17 @@ import {
 
 /**
 New name to rename the option (key) to.
+Name of an option to configure for a beautifier.
 */
-export type BeautifierOptionRename = string;
+export type BeautifierOptionName = string;
 /**
 Function to process the given options and return a final option value.
 */
-export type BeautifierOptionTransformFunction = (options: {
-  [optionName: string]: any
-}) => any;
+export type BeautifierOptionTransformFunction = (options: OptionValues) => any;
 /**
 Option that transforms one or more required options into a single value.
 */
-export type BeautifyOptionTransform = [string[], BeautifierOptionTransformFunction];
+export type BeautifyOptionTransform = [BeautifierOptionName[], BeautifierOptionTransformFunction];
 /**
 Option that transforms a single option value with the same name.
 */
@@ -29,14 +28,14 @@ Option for Beautifier given the Language.
 */
 export type BeautifierLanguageOption =
   boolean |
-  BeautifierOptionRename |
+  BeautifierOptionName |
   BeautifyOptionTransformSingleFunction |
   BeautifyOptionTransform;
 /**
 
 */
 export interface BeautifierLanguageOptionComplex {
-  [optionName: string]: BeautifierLanguageOption;
+  [outOptionName: string]: BeautifierLanguageOption;
 };
 /**
 
@@ -69,7 +68,7 @@ export interface BeautifierBeautifyData {
   /**
   Option values for given Language.
   */
-  options: { [optionName: string]: any };
+  options: { [outOptionName: string]: any };
   /**
   File path.
   */
