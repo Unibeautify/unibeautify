@@ -36,7 +36,7 @@ export type BeautifierLanguageOption =
 */
 export interface BeautifierLanguageOptionComplex {
   [outOptionName: string]: BeautifierLanguageOption;
-};
+}
 /**
 
 true = supports language, enable all options
@@ -51,7 +51,7 @@ Keys are the names of Languages.
 */
 export interface BeautifierOptions {
   [languageName: string]: BeautifierLanguageOptions;
-};
+}
 
 /**
 Data given to Beautifier's Beautify function.
@@ -314,7 +314,7 @@ export class Unibeautify {
   Extract the option values that the Beautifier supports, including applying transformations.
   */
   public static getOptionsForBeautifier(beautifier: Beautifier, language: Language, options: OptionValues): OptionValues {
-    const globalOptions = beautifier.options["_"];
+    const globalOptions = beautifier.options._;
     let beautifierOptions = beautifier.options[language.name];
     // Global options
     if (typeof globalOptions === "object") {
@@ -333,7 +333,7 @@ export class Unibeautify {
       }
     } else if (typeof beautifierOptions === "object") {
       const transformedOptions: OptionValues = {};
-      for (let field in beautifierOptions) {
+      for (const field in beautifierOptions) {
         const op = beautifierOptions[field];
         if (typeof op === "string") {
           transformedOptions[field] = options[op as string];
