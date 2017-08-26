@@ -12,4 +12,4 @@ export function newUnibeautify(): Unibeautify {
   unibeautify.loadLanguages(Languages);
   return unibeautify;
 }
-export default newUnibeautify();
+export default newUnibeautify(); // tslint:disable-line no-default-export export-name

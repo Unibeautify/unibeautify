@@ -1,35 +1,35 @@
 import test from "ava";
-import unibeautify, {Beautifier} from "../src/";
+import unibeautify, { Beautifier } from "../src/";
 import * as _ from "lodash";
 
 test("should fail to find language", (t) => {
 
-    return unibeautify.beautify({
-      languageName: "TestLang",
-      options: {},
-      text: "test",
-    })
+  return unibeautify.beautify({
+    languageName: "TestLang",
+    options: {},
+    text: "test",
+  })
     .then((results) => {
       t.fail(results);
     })
     .catch((error) => {
-      t.is(error.message, `Cannot find language.`);
+      t.is(error.message, "Cannot find language.");
     });
 
 });
 
 test("should find JavaScript language and no Beautifier for Language", (t) => {
 
-    return unibeautify.beautify({
-      languageName: "JavaScript",
-      options: {},
-      text: "test",
-    })
+  return unibeautify.beautify({
+    languageName: "JavaScript",
+    options: {},
+    text: "test",
+  })
     .then((results) => {
       t.fail(results);
     })
     .catch((error) => {
-      t.is(error.message, `Beautifier not found for Language: JavaScript`);
+      t.is(error.message, "Beautifier not found for Language: JavaScript");
     });
 
 });
@@ -40,15 +40,15 @@ test("should find JavaScript Language and Beautifier", (t) => {
 
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
+    beautify: ({
+      Promise
+    }) => {
+      return Promise.resolve(beautifierResult);
+    },
     name: "JavaScript Beautifier",
     options: {
       JavaScript: false
     },
-    beautify({
-      Promise
-    }) {
-      return Promise.resolve(beautifierResult);
-    }
   };
   unibeautify2.loadBeautifier(beautifier);
 
@@ -57,12 +57,12 @@ test("should find JavaScript Language and Beautifier", (t) => {
     options: {},
     text: "test",
   })
-  .then((results) => {
-    t.is(results, beautifierResult);
-  })
-  .catch((error) => {
-    t.fail(error);
-  });
+    .then((results) => {
+      t.is(results, beautifierResult);
+    })
+    .catch((error) => {
+      t.fail(error);
+    });
 
 });
 
@@ -72,15 +72,15 @@ test("should find JavaScript Language and not Beautifier", (t) => {
 
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
+    beautify: ({
+      Promise
+    }) => {
+      return Promise.resolve(beautifierResult);
+    },
     name: "Not JavaScript Beautifier",
     options: {
       "Not JavaScript": false
     },
-    beautify({
-      Promise
-    }) {
-      return Promise.resolve(beautifierResult);
-    }
   };
   unibeautify2.loadBeautifier(beautifier);
 
@@ -89,11 +89,11 @@ test("should find JavaScript Language and not Beautifier", (t) => {
     options: {},
     text: "test",
   })
-  .then((results) => {
-    t.fail("Should not have found beautifier");
-  })
-  .catch((error) => {
-    t.is(error.message, `Beautifier not found for Language: JavaScript`);
-  });
+    .then((results) => {
+      t.fail("Should not have found beautifier");
+    })
+    .catch((error) => {
+      t.is(error.message, "Beautifier not found for Language: JavaScript");
+    });
 
 });

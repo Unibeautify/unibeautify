@@ -1,0 +1,17 @@
+{
+    "extends": [
+        "../tslint.json"
+    ],
+    "rules": {
+        "id-length": [
+            true,
+            {
+                "exceptions": [
+                    "_",
+                    "T" ,
+                    "t"
+                ]
+            }
+        ]
+    }
+}

@@ -54,7 +54,7 @@
             "check-separator",
             "check-type"
         ],
-        "object-literal-sort-keys": true,
+        "object-literal-sort-keys": [true, "ignore-case"],
         "array-type": [
             true,
             "array"
@@ -82,7 +82,12 @@
             false
         ],
         "forin": true,
-        "function-name": true,
+        "function-name": [
+            true,
+            {
+                "static-method-regex": "^[a-z][\\w\\d]+$"
+            }
+        ],
         "id-length": [
             true,
             [
@@ -91,12 +96,8 @@
             ]
         ],
         "import-blacklist": false,
-        "import-name": true,
+        "import-name": false,
         "import-spacing": true,
-        "indent": [
-            true,
-            "spaces"
-        ],
         "insecure-random": true,
         "interface-name": false,
         "interface-over-type-literal": false,

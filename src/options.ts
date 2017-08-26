@@ -1,4 +1,4 @@
-
+// tslint:disable:disable no-reserved-keywords
 export interface Option {
   title?: string;
   type: "string" | "boolean" | "integer" | "array";
@@ -11,6 +11,7 @@ export interface Option {
     type: string
   };
 }
+// tslint:disable:enable no-reserved-keywords
 
 export interface OptionsRegistry {
   [key: string]: Option;
@@ -23,13 +24,13 @@ export const Options: OptionsRegistry = {
     type: "boolean"
   },
   align_columns_in_environments: {
-    description: "Aligns columns by the alignment tabs for environments specified",
     default: [
       "tabular",
       "matrix",
       "bmatrix",
       "pmatrix"
     ],
+    description: "Aligns columns by the alignment tabs for environments specified",
     type: "array"
   },
   always_look_for_split_braces: {
@@ -130,7 +131,8 @@ export const Options: OptionsRegistry = {
   },
   force_indentation: {
     default: false,
-    description: "if indentation should be forcefully applied to markup even if it disruptively adds unintended whitespace to the documents rendered output",
+    description: "if indentation should be forcefully applied to markup "
+    + "even if it disruptively adds unintended whitespace to the documents rendered output",
     type: "boolean"
   },
   gfm: {

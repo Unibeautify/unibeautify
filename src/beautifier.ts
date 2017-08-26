@@ -167,63 +167,57 @@ export class Unibeautify {
   private languages: Language[] = [];
 
   /**
-  Get a copy of the languages currently loaded.
-  */
-  public getLoadedLanguages(): Language[] {
-    return this.languages.slice();
-  }
-  /**
-
-  */
-  private beautifiers: Beautifier[] = [];
-
-  /**
-  Load Options
-  */
-  public loadOptions(options: OptionsRegistry): Unibeautify {
-    _.merge(this.options, options);
-    return this;
-  }
-
-  /**
-  Load a Language
-  */
-  public loadLanguage(language: Language): Unibeautify {
-    this.languages.push(language);
-    return this;
-  }
-
-  /**
-  Load multiple Languages
-  */
-  public loadLanguages(languages: Language[]): Unibeautify {
-    this.languages.push(...languages);
-    return this;
-  }
-
-  /**
-  Load a Beautifier
-  */
-  public loadBeautifier(beautifier: Beautifier): Unibeautify {
-    this.beautifiers.push(beautifier);
-    return this;
-  }
-
-  /**
-  Load multiple beautifiers.
-  */
-  public loadBeautifiers(beautifiers: Beautifier[]): Unibeautify {
-    this.beautifiers.push(...beautifiers);
-    return this;
-  }
-
-  /**
   Find and return the appropriate Language for the given file extension.
   */
   private findLanguagesForExtension(extension: string): Language[] {
     return this.findLanguages({
       extension
     });
+  }
+
+  public get supportedLanguages() {
+    return this.getLoadedLanguages()
+      .filter(language => Boolean(this.getBeautifierForLanguage(language)));
+  }
+
+  /**
+  Beautify code
+  */
+  public beautify(data: BeautifyData): Promise<string> {
+
+    // Get Language
+    const langs: Language[] = this.findLanguages({
+      atomGrammar: data.atomGrammar,
+      extension: data.fileExtension,
+      name: data.languageName,
+      sublimeSyntax: data.sublimeSyntax,
+    });
+    const lang: Language | null = langs.length > 0 ? langs[0] : null;
+    if (lang == null) {
+      return Promise.reject(new Error("Cannot find language."));
+    }
+
+    // Get Options for Language
+    const langOptions: OptionValues = Unibeautify.getOptionsForLanguage(lang as Language, data.options);
+
+    // Get Beautifier
+    const beautifier: Beautifier | null = this.getBeautifierForLanguage(lang as Language, langOptions);
+
+    // Run beautifier
+    if (beautifier != null) {
+      // Get Options for Beautifier
+      const options: OptionValues = Unibeautify.getOptionsForBeautifier(beautifier, lang, langOptions);
+      return (beautifier as Beautifier).beautify({
+        filePath: data.fileExtension,
+        language: lang,
+        options,
+        projectPath: data.projectPath,
+        Promise,
+        text: data.text,
+      });
+    } else {
+      return Promise.reject(new Error(`Beautifier not found for Language: ${lang.name}`));
+    }
   }
 
   /**
@@ -266,24 +260,38 @@ export class Unibeautify {
   }): Language[] {
     const langs: Language[][] = [];
     // Name
-    langs.push(_.filter(this.languages, (c: Language): boolean => _.isEqual(c.name, query.name)));
+    langs.push(_.filter(this.languages, (language: Language): boolean => _.isEqual(language.name, query.name)));
     // Namespace
-    langs.push(_.filter(this.languages, (c: Language): boolean => _.isEqual(c.namespace, query.namespace)));
+    langs.push(_.filter(this.languages, (language: Language): boolean => _.isEqual(language.namespace, query.namespace)));
     // Extension
-    langs.push(_.filter(this.languages, (c: Language): boolean => _.includes(c.extensions, query.extension)));
+    langs.push(_.filter(this.languages, (language: Language): boolean => _.includes(language.extensions, query.extension)));
     // Atom Grammar
-    langs.push(_.filter(this.languages, (c: Language): boolean => _.includes(c.atomGrammars, query.atomGrammar)));
+    langs.push(_.filter(this.languages, (language: Language): boolean => _.includes(language.atomGrammars, query.atomGrammar)));
     // Sublime Syntax
-    langs.push(_.filter(this.languages, (c: Language): boolean => _.includes(c.sublimeSyntaxes, query.sublimeSyntax)));
+    langs.push(_.filter(this.languages, (language: Language): boolean => _.includes(language.sublimeSyntaxes, query.sublimeSyntax)));
     // VSCode Language ID
-    langs.push(_.filter(this.languages, (c: Language): boolean => _.includes(c.vscodeLanguages, query.vscodeLanguage)));
+    langs.push(_.filter(this.languages, (language: Language): boolean => _.includes(language.vscodeLanguages, query.vscodeLanguage)));
     // Return unique array of Languages
     return _.uniq(_.flatten(langs));
   }
 
-  public get supportedLanguages() {
-    return this.getLoadedLanguages()
-      .filter(language => Boolean(this.getBeautifierForLanguage(language)));
+  /**
+  Get a copy of the languages currently loaded.
+  */
+  public getLoadedLanguages(): Language[] {
+    return this.languages.slice();
+  }
+  /**
+
+  */
+  private beautifiers: Beautifier[] = [];
+
+  /**
+  Get default beautifier for given language and options.
+  */
+  private getBeautifierForLanguage(language: Language, options: OptionValues = {}): Beautifier | null {
+    // TODO
+    return _.find(this.beautifiers, (beautifier: Beautifier): boolean => _.includes(Object.keys(beautifier.options), language.name));
   }
 
   /**
@@ -291,15 +299,7 @@ export class Unibeautify {
   */
   public getBeautifiersForLanguage(language: Language): Beautifier[] {
     // TODO
-    return _.filter(this.beautifiers, (b: Beautifier): boolean => _.includes(Object.keys(b.options), language.name));
-  }
-
-  /**
-  Get default beautifier for given language and options.
-  */
-  private getBeautifierForLanguage(language: Language, options: OptionValues = {}): Beautifier | null {
-    // TODO
-    return _.find(this.beautifiers, (b: Beautifier): boolean => _.includes(Object.keys(b.options), language.name));
+    return _.filter(this.beautifiers, (beautifier: Beautifier): boolean => _.includes(Object.keys(beautifier.options), language.name));
   }
 
   /**
@@ -333,25 +333,23 @@ export class Unibeautify {
       }
     } else if (typeof beautifierOptions === "object") {
       const transformedOptions: OptionValues = {};
-      for (const field in beautifierOptions) {
-        const op = beautifierOptions[field];
+      Object.keys(beautifierOptions).forEach(fieldKey => {
+        const op = (<BeautifierLanguageOptionComplex> beautifierOptions)[fieldKey];
         if (typeof op === "string") {
-          transformedOptions[field] = options[op as string];
+          transformedOptions[fieldKey] = options[op as string];
         } else if (typeof op === "function") {
-          transformedOptions[field] = (op as BeautifyOptionTransformSingleFunction)(options[field]);
+          transformedOptions[fieldKey] = (op as BeautifyOptionTransformSingleFunction)(options[fieldKey]);
         } else if (typeof op === "boolean") {
           if (op === true) {
-            transformedOptions[field] = options[field];
+            transformedOptions[fieldKey] = options[fieldKey];
           }
         } else if (_.isArray(op)) {
           const [fields, fn] = (op as BeautifyOptionTransform);
-          const vals = _.map(fields, function(f) {
-            return options[f];
-          });
+          const vals = _.map(fields, (field) => options[field]);
           const obj = _.zipObject(fields, vals);
-          transformedOptions[field] = fn(obj);
+          transformedOptions[fieldKey] = fn(obj);
         }
-      }
+      });
       return transformedOptions;
     } else {
       return options;
@@ -359,43 +357,43 @@ export class Unibeautify {
   }
 
   /**
-  Beautify code
+  Load a Beautifier
   */
-  public beautify(data: BeautifyData): Promise<string> {
+  public loadBeautifier(beautifier: Beautifier): Unibeautify {
+    this.beautifiers.push(beautifier);
+    return this;
+  }
 
-    // Get Language
-    const langs: Language[] = this.findLanguages({
-      atomGrammar: data.atomGrammar,
-      extension: data.fileExtension,
-      name: data.languageName,
-      sublimeSyntax: data.sublimeSyntax,
-    });
-    const lang: Language | null = langs.length > 0 ? langs[0] : null;
-    if (lang == null) {
-      return Promise.reject(new Error("Cannot find language."));
-    }
+  /**
+  Load multiple beautifiers.
+  */
+  public loadBeautifiers(beautifiers: Beautifier[]): Unibeautify {
+    this.beautifiers.push(...beautifiers);
+    return this;
+  }
 
-    // Get Options for Language
-    const langOptions: OptionValues = Unibeautify.getOptionsForLanguage(lang as Language, data.options);
+  /**
+  Load a Language
+  */
+  public loadLanguage(language: Language): Unibeautify {
+    this.languages.push(language);
+    return this;
+  }
 
-    // Get Beautifier
-    const beautifier: Beautifier | null = this.getBeautifierForLanguage(lang as Language, langOptions);
+  /**
+  Load multiple Languages
+  */
+  public loadLanguages(languages: Language[]): Unibeautify {
+    this.languages.push(...languages);
+    return this;
+  }
 
-    // Run beautifier
-    if (beautifier != null ) {
-      // Get Options for Beautifier
-      const options: OptionValues = Unibeautify.getOptionsForBeautifier(beautifier, lang, langOptions);
-      return (beautifier as Beautifier).beautify({
-        filePath: data.fileExtension,
-        language: lang,
-        options,
-        Promise,
-        projectPath: data.projectPath,
-        text: data.text,
-      });
-    } else {
-      return Promise.reject(new Error(`Beautifier not found for Language: ${lang.name}`));
-    }
+  /**
+  Load Options
+  */
+  public loadOptions(options: OptionsRegistry): Unibeautify {
+    _.merge(this.options, options);
+    return this;
   }
 
 }
