@@ -12,7 +12,7 @@
     "compile": "npm-run-all compile:ts update-type-defs",
     "clean": "rimraf dist/",
     "prepublish": "npm-run-all compile",
-    "docs": "typedoc --out docs --module commonjs dist/src",
+    "docs": "typedoc --out docs --module commonjs --readme README.md --name Unibeautify src",
     "lint": "tslint {src,test,script}/**/*.ts",
     "lint-fix": "tslint --fix {src,test,script}/**/*.ts",
     "update-type-defs": "node dist/scripts/update-type-defs.js dist/src/beautifier.d.ts"
