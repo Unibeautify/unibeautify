@@ -11,6 +11,7 @@ engines:
   tslint:
     enabled: true
     channel: beta
+    config: tslint.json
 ratings:
   paths:
   - "**.ts"
