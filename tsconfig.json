@@ -5,18 +5,13 @@
         "removeComments": false,
         "preserveConstEnums": true,
         "sourceMap": true,
-        "target": "ES6",
+        "target": "es6",
         "declaration": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "outDir": "./dist/"
     },
-    "filesGlob": [
-        "./typings/**/*.d.ts",
-        "./src/**/*.ts",
-        "./src/**/*.d.ts",
-        "./script/**/*.ts",
-        "./test/**/*.ts"
-    ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "./dist/"
     ]
 }

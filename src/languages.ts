@@ -22,93 +22,97 @@ export interface Language {
   Sublime Text editor syntaxes.
   */
   sublimeSyntaxes: string[];
+  /**
+   * VSCode Language ID
+   */
+  vscodeLanguages: string[];
 }
 
 export const Languages: Language[] = [
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Apex"
     ],
-    "extensions": [
+    extensions: [
       "cls",
       "trigger"
     ],
-    "name": "Apex",
-    "namespace": "apex",
-    "sublimeSyntaxes": [
+    name: "Apex",
+    namespace: "apex",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Arduino"
     ],
-    "extensions": [
+    extensions: [
       "ino",
       "pde"
     ],
-    "name": "Arduino",
-    "namespace": "arduino",
-    "sublimeSyntaxes": [
+    name: "Arduino",
+    namespace: "arduino",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "C#"
     ],
-    "extensions": [
+    extensions: [
       "cs"
     ],
-    "name": "C#",
-    "namespace": "cs",
-    "sublimeSyntaxes": [
+    name: "C#",
+    namespace: "cs",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "C",
       "opencl"
     ],
-    "extensions": [
+    extensions: [
       "h",
       "c",
       "cl"
     ],
-    "name": "C",
-    "namespace": "c",
-    "sublimeSyntaxes": [
+    name: "C",
+    namespace: "c",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "CoffeeScript"
     ],
-    "extensions": [
+    extensions: [
       "coffee"
     ],
-    "name": "CoffeeScript",
-    "namespace": "coffeescript",
-    "sublimeSyntaxes": [
+    name: "CoffeeScript",
+    namespace: "coffeescript",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "html"
     ],
-    "extensions": [
+    extensions: [
       "cfm",
       "cfml",
       "cfc"
     ],
-    "name": "Coldfusion",
-    "namespace": "cfml",
-    "sublimeSyntaxes": [
+    name: "Coldfusion",
+    namespace: "cfml",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "C++"
     ],
-    "extensions": [
+    extensions: [
       "h",
       "hh",
       "cc",
@@ -120,600 +124,606 @@ export const Languages: Language[] = [
       "hxx",
       "h++"
     ],
-    "name": "C++",
-    "namespace": "cpp",
-    "sublimeSyntaxes": [
+    name: "C++",
+    namespace: "cpp",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Crystal"
     ],
-    "extensions": [
+    extensions: [
       "cr"
     ],
-    "name": "Crystal",
-    "namespace": "crystal",
-    "sublimeSyntaxes": [
+    name: "Crystal",
+    namespace: "crystal",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "CSS"
     ],
-    "extensions": [
+    extensions: [
       "css"
     ],
-    "name": "CSS",
-    "namespace": "css",
-    "sublimeSyntaxes": [
+    name: "CSS",
+    namespace: "css",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "CSV"
     ],
-    "extensions": [
+    extensions: [
       "csv"
     ],
-    "name": "CSV",
-    "namespace": "csv",
-    "sublimeSyntaxes": [
+    name: "CSV",
+    namespace: "csv",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "D"
     ],
-    "extensions": [
+    extensions: [
       "d"
     ],
-    "name": "D",
-    "namespace": "d",
-    "sublimeSyntaxes": [
+    name: "D",
+    namespace: "d",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "JavaScript Template",
       "HTML (Angular)"
     ],
-    "extensions": [
+    extensions: [
     ],
-    "name": "EJS",
-    "namespace": "ejs",
-    "sublimeSyntaxes": [
+    name: "EJS",
+    namespace: "ejs",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Elm"
     ],
-    "extensions": [
+    extensions: [
       "elm"
     ],
-    "name": "Elm",
-    "namespace": "elm",
-    "sublimeSyntaxes": [
+    name: "Elm",
+    namespace: "elm",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "HTML (Ruby - ERB)",
       "HTML (Rails)"
     ],
-    "extensions": [
+    extensions: [
       "erb"
     ],
-    "name": "ERB",
-    "namespace": "erb",
-    "sublimeSyntaxes": [
+    name: "ERB",
+    namespace: "erb",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Erlang"
     ],
-    "extensions": [
+    extensions: [
       "erl"
     ],
-    "name": "Erlang",
-    "namespace": "erlang",
-    "sublimeSyntaxes": [
+    name: "Erlang",
+    namespace: "erlang",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Gherkin"
     ],
-    "extensions": [
+    extensions: [
       "feature"
     ],
-    "name": "gherkin",
-    "namespace": "gherkin",
-    "sublimeSyntaxes": [
+    name: "Gherkin",
+    namespace: "gherkin",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Go"
     ],
-    "extensions": [
+    extensions: [
       "go"
     ],
-    "name": "Go",
-    "namespace": "go",
-    "sublimeSyntaxes": [
+    name: "Go",
+    namespace: "go",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Fortran - Modern"
     ],
-    "extensions": [
+    extensions: [
       "f90",
       "F90"
     ],
-    "name": "Fortran",
-    "namespace": "fortran",
-    "sublimeSyntaxes": [
+    name: "Fortran",
+    namespace: "fortran",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Handlebars",
       "HTML (Handlebars)"
     ],
-    "extensions": [
+    extensions: [
       "hbs",
       "handlebars"
     ],
-    "name": "Handlebars",
-    "namespace": "handlebars",
-    "sublimeSyntaxes": [
+    name: "Handlebars",
+    namespace: "handlebars",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Haskell"
     ],
-    "extensions": [
+    extensions: [
       "hs"
     ],
-    "name": "Haskell",
-    "namespace": "haskell",
-    "sublimeSyntaxes": [
+    name: "Haskell",
+    namespace: "haskell",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "HTML"
     ],
-    "extensions": [
+    extensions: [
       "html"
     ],
-    "name": "HTML",
-    "namespace": "html",
-    "sublimeSyntaxes": [
+    name: "HTML",
+    namespace: "html",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Jade",
       "Pug"
     ],
-    "extensions": [
+    extensions: [
       "jade",
       "pug"
     ],
-    "name": "Jade",
-    "namespace": "jade",
-    "sublimeSyntaxes": [
+    name: "Jade",
+    namespace: "jade",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Java"
     ],
-    "extensions": [
+    extensions: [
       "java"
     ],
-    "name": "Java",
-    "namespace": "java",
-    "sublimeSyntaxes": [
+    name: "Java",
+    namespace: "java",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "JavaScript"
     ],
-    "extensions": [
+    extensions: [
       "js"
     ],
-    "name": "JavaScript",
-    "namespace": "js",
-    "sublimeSyntaxes": [
+    name: "JavaScript",
+    namespace: "js",
+    sublimeSyntaxes: [
+    ],
+    vscodeLanguages: [
+      "javascript"
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "JSON"
     ],
-    "extensions": [
+    extensions: [
       "json"
     ],
-    "name": "JSON",
-    "namespace": "json",
-    "sublimeSyntaxes": [
+    name: "JSON",
+    namespace: "json",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "JSX",
       "JavaScript (JSX)"
     ],
-    "extensions": [
+    extensions: [
       "jsx",
       "js"
     ],
-    "name": "JSX",
-    "namespace": "jsx",
-    "sublimeSyntaxes": [
+    name: "JSX",
+    namespace: "jsx",
+    sublimeSyntaxes: [
+    ],
+    vscodeLanguages: [
+      "javascriptreact"
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "LaTeX"
     ],
-    "extensions": [
+    extensions: [
       "tex"
     ],
-    "name": "LaTeX",
-    "namespace": "latex",
-    "sublimeSyntaxes": [
+    name: "LaTeX",
+    namespace: "latex",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "LESS"
     ],
-    "extensions": [
+    extensions: [
       "less"
     ],
-    "name": "LESS",
-    "namespace": "less",
-    "sublimeSyntaxes": [
+    name: "LESS",
+    namespace: "less",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Lua"
     ],
-    "extensions": [
+    extensions: [
       "lua"
     ],
-    "name": "Lua",
-    "namespace": "lua",
-    "sublimeSyntaxes": [
+    name: "Lua",
+    namespace: "lua",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "GitHub Markdown"
     ],
-    "extensions": [
+    extensions: [
       "markdown",
       "md"
     ],
-    "name": "Markdown",
-    "namespace": "markdown",
-    "sublimeSyntaxes": [
+    name: "Markdown",
+    namespace: "markdown",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Marko"
     ],
-    "extensions": [
+    extensions: [
       "marko"
     ],
-    "name": "Marko",
-    "namespace": "marko",
-    "sublimeSyntaxes": [
+    name: "Marko",
+    namespace: "marko",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "HTML (Mustache)"
     ],
-    "extensions": [
+    extensions: [
       "mustache"
     ],
-    "name": "Mustache",
-    "namespace": "mustache",
-    "sublimeSyntaxes": [
+    name: "Mustache",
+    namespace: "mustache",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Objective-C",
       "Objective-C++"
     ],
-    "extensions": [
+    extensions: [
       "m",
       "mm",
       "h"
     ],
-    "name": "Objective-C",
-    "namespace": "objectivec",
-    "sublimeSyntaxes": [
+    name: "Objective-C",
+    namespace: "objectivec",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "OCaml"
     ],
-    "extensions": [
+    extensions: [
       "ml"
     ],
-    "name": "OCaml",
-    "namespace": "ocaml",
-    "sublimeSyntaxes": [
+    name: "OCaml",
+    namespace: "ocaml",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Pawn"
     ],
-    "extensions": [
+    extensions: [
     ],
-    "name": "Pawn",
-    "namespace": "pawn",
-    "sublimeSyntaxes": [
+    name: "Pawn",
+    namespace: "pawn",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Perl",
       "Perl 6"
     ],
-    "extensions": [
+    extensions: [
       "pl",
       "PL",
       "pm",
       "pod",
       "t"
     ],
-    "name": "Perl",
-    "namespace": "perl",
-    "sublimeSyntaxes": [
+    name: "Perl",
+    namespace: "perl",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "PHP"
     ],
-    "extensions": [
+    extensions: [
       "php",
       "module",
       "inc"
     ],
-    "name": "PHP",
-    "namespace": "php",
-    "sublimeSyntaxes": [
+    name: "PHP",
+    namespace: "php",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Puppet"
     ],
-    "extensions": [
+    extensions: [
       "pp"
     ],
-    "name": "Puppet",
-    "namespace": "puppet",
-    "sublimeSyntaxes": [
+    name: "Puppet",
+    namespace: "puppet",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Python"
     ],
-    "extensions": [
+    extensions: [
       "py"
     ],
-    "name": "Python",
-    "namespace": "python",
-    "sublimeSyntaxes": [
+    name: "Python",
+    namespace: "python",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Riot.js",
       "HTML (Riot Tag)"
     ],
-    "extensions": [
+    extensions: [
       "tag"
     ],
-    "name": "Riot.js",
-    "namespace": "riot",
-    "sublimeSyntaxes": [
+    name: "Riot.js",
+    namespace: "riot",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Ruby",
       "Ruby on Rails"
     ],
-    "extensions": [
+    extensions: [
       "rb"
     ],
-    "name": "Ruby",
-    "namespace": "ruby",
-    "sublimeSyntaxes": [
+    name: "Ruby",
+    namespace: "ruby",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Rust"
     ],
-    "extensions": [
+    extensions: [
       "rs",
       "rlib"
     ],
-    "name": "Rust",
-    "namespace": "rust",
-    "sublimeSyntaxes": [
+    name: "Rust",
+    namespace: "rust",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Sass"
     ],
-    "extensions": [
+    extensions: [
       "sass"
     ],
-    "name": "Sass",
-    "namespace": "sass",
-    "sublimeSyntaxes": [
+    name: "Sass",
+    namespace: "sass",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "SCSS"
     ],
-    "extensions": [
+    extensions: [
       "scss"
     ],
-    "name": "SCSS",
-    "namespace": "scss",
-    "sublimeSyntaxes": [
+    name: "SCSS",
+    namespace: "scss",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Spacebars"
     ],
-    "extensions": [
+    extensions: [
     ],
-    "name": "Spacebars",
-    "namespace": "spacebars",
-    "sublimeSyntaxes": [
+    name: "Spacebars",
+    namespace: "spacebars",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "SQL (Rails)",
       "SQL"
     ],
-    "extensions": [
+    extensions: [
       "sql"
     ],
-    "name": "SQL",
-    "namespace": "sql",
-    "sublimeSyntaxes": [
+    name: "SQL",
+    namespace: "sql",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "SVG"
     ],
-    "extensions": [
+    extensions: [
       "svg"
     ],
-    "name": "SVG",
-    "namespace": "svg",
-    "sublimeSyntaxes": [
+    name: "SVG",
+    namespace: "svg",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "HTML (Swig)",
       "SWIG"
     ],
-    "extensions": [
+    extensions: [
       "swig"
     ],
-    "name": "Swig",
-    "namespace": "swig",
-    "sublimeSyntaxes": [
+    name: "Swig",
+    namespace: "swig",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "TSS"
     ],
-    "extensions": [
+    extensions: [
       "tss"
     ],
-    "name": "TSS",
-    "namespace": "tss",
-    "sublimeSyntaxes": [
+    name: "TSS",
+    namespace: "tss",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "HTML (Twig)"
     ],
-    "extensions": [
+    extensions: [
       "twig"
     ],
-    "name": "Twig",
-    "namespace": "twig",
-    "sublimeSyntaxes": [
+    name: "Twig",
+    namespace: "twig",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "TypeScript"
     ],
-    "extensions": [
+    extensions: [
       "ts"
     ],
-    "name": "TypeScript",
-    "namespace": "typescript",
-    "sublimeSyntaxes": [
+    name: "TypeScript",
+    namespace: "typescript",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Vala"
     ],
-    "extensions": [
+    extensions: [
       "vala",
       "vapi"
     ],
-    "name": "Vala",
-    "namespace": "vala",
-    "sublimeSyntaxes": [
+    name: "Vala",
+    namespace: "vala",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Vue Component"
     ],
-    "extensions": [
+    extensions: [
       "vue"
     ],
-    "name": "Vue",
-    "namespace": "vue",
-    "sublimeSyntaxes": [
+    name: "Vue",
+    namespace: "vue",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "Visualforce"
     ],
-    "extensions": [
+    extensions: [
       "page"
     ],
-    "name": "Visualforce",
-    "namespace": "visualforce",
-    "sublimeSyntaxes": [
+    name: "Visualforce",
+    namespace: "visualforce",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "SLD",
       "XML",
       "XHTML",
@@ -722,7 +732,7 @@ export const Languages: Language[] = [
       "JSP",
       "GSP"
     ],
-    "extensions": [
+    extensions: [
       "sld",
       "xml",
       "xhtml",
@@ -731,21 +741,23 @@ export const Languages: Language[] = [
       "jsp",
       "gsp"
     ],
-    "name": "XML",
-    "namespace": "xml",
-    "sublimeSyntaxes": [
+    name: "XML",
+    namespace: "xml",
+    sublimeSyntaxes: [
     ]
   },
   {
-    "atomGrammars": [
+    atomGrammars: [
       "XTemplate"
     ],
-    "extensions": [
+    extensions: [
       "xtemplate"
     ],
-    "name": "XTemplate",
-    "namespace": "xtemplate",
-    "sublimeSyntaxes": [
+    name: "XTemplate",
+    namespace: "xtemplate",
+    sublimeSyntaxes: [
     ]
   }
-];
+].map(lang => Object.assign({}, {
+  vscodeLanguages: []
+}, lang));

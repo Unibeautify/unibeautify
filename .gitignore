@@ -4,6 +4,7 @@
 **/*.d.ts
 typings
 docs
+dist/
 
 ### https://raw.github.com/github/gitignore/77e29837cf03b59fc4d885ea011bbd683caaaf85/node.gitignore
 
