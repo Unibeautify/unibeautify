@@ -1,4 +1,5 @@
 export * from "./beautifier";
+export * from "./language";
 export * from "./languages";
 export * from "./options";
 

@@ -1,0 +1,8103 @@
+[
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".bsl",
+      ".os"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 0,
+    "name": "1C Enterprise",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.bsl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "abap",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".abap"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 1,
+    "name": "ABAP",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".abnf"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 429,
+    "name": "ABNF",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.abnf",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".asc",
+      ".ash"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 2,
+    "name": "AGS Script",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.c++",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ampl",
+      ".mod"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 3,
+    "name": "AMPL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ampl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".g4"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 4,
+    "name": "ANTLR",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "markdown",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".apib"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 5,
+    "name": "API Blueprint",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.markdown.source.gfm.apib",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".apl",
+      ".dyalog"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 6,
+    "name": "APL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.apl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".asn",
+      ".asn1"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 7,
+    "name": "ASN.1",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.asn",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".asp",
+      ".asax",
+      ".ascx",
+      ".ashx",
+      ".asmx",
+      ".aspx",
+      ".axd"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 8,
+    "name": "ASP",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.asp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "ocaml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".dats",
+      ".hats",
+      ".sats"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 9,
+    "name": "ATS",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ats",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "actionscript",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".as"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 10,
+    "name": "ActionScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.actionscript.3",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "ada",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".adb",
+      ".ada",
+      ".ads"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 11,
+    "name": "Ada",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".afm"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 147198098,
+    "name": "Adobe Font Metrics",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.afm",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".agda"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 12,
+    "name": "Agda",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".als"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 13,
+    "name": "Alloy",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "sh",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [],
+    "fileNames": [
+      "APKBUILD"
+    ],
+    "liguistLanguageId": 14,
+    "name": "Alpine Abuild",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.shell",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".as",
+      ".angelscript"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 389477596,
+    "name": "AngelScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.angelscript",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "xml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [],
+    "fileNames": [
+      "ant.xml",
+      "build.xml"
+    ],
+    "liguistLanguageId": 15,
+    "name": "Ant Build System",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.xml.ant",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "apache_conf",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".apacheconf",
+      ".vhost"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 16,
+    "name": "ApacheConf",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.apache-config",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "java",
+    "aliases": [],
+    "atomGrammars": [
+      "Apex"
+    ],
+    "extensions": [
+      ".cls",
+      ".trigger"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 17,
+    "name": "Apex",
+    "namespace": "apex",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.java",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "assembly_x86",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".agc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 18,
+    "name": "Apollo Guidance Computer",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.agc",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "applescript",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".applescript",
+      ".scpt"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 19,
+    "name": "AppleScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".arc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 20,
+    "name": "Arc",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [
+      "Arduino"
+    ],
+    "extensions": [
+      ".ino",
+      ".pde"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 21,
+    "name": "Arduino",
+    "namespace": "arduino",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.c++",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "asciidoc",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".asciidoc",
+      ".adoc",
+      ".asc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 22,
+    "name": "AsciiDoc",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.asciidoc",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".aj"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 23,
+    "name": "AspectJ",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.aspectj",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "assembly_x86",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".asm",
+      ".a51",
+      ".inc",
+      ".nasm"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 24,
+    "name": "Assembly",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.assembly",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".aug"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 25,
+    "name": "Augeas",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "autohotkey",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ahk",
+      ".ahkl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 26,
+    "name": "AutoHotkey",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ahk",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "autohotkey",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".au3"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 27,
+    "name": "AutoIt",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.autoit",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".awk",
+      ".auk",
+      ".gawk",
+      ".mawk",
+      ".nawk"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 28,
+    "name": "Awk",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".bal"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 720859680,
+    "name": "Ballerina",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ballerina",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "batchfile",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".bat",
+      ".cmd"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 29,
+    "name": "Batchfile",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.batchfile",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".befunge"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 30,
+    "name": "Befunge",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".bison"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 31,
+    "name": "Bison",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.bison",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".bb"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 32,
+    "name": "BitBake",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".blade",
+      ".blade.php"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 33,
+    "name": "Blade",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.php.blade",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".bb",
+      ".decls"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 34,
+    "name": "BlitzBasic",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.blitzmax",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".bmx"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 35,
+    "name": "BlitzMax",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "verilog",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".bsv"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 36,
+    "name": "Bluespec",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.bsv",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".boo"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 37,
+    "name": "Boo",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.boo",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".b",
+      ".bf"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 38,
+    "name": "Brainfuck",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.bf",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".brs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 39,
+    "name": "Brightscript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.brightscript",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".bro"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 40,
+    "name": "Bro",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [
+      "C",
+      "opencl"
+    ],
+    "extensions": [
+      ".h",
+      ".c",
+      ".cl",
+      ".cats",
+      ".idc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 41,
+    "name": "C",
+    "namespace": "c",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "csharp",
+    "aliases": [],
+    "atomGrammars": [
+      "C#"
+    ],
+    "extensions": [
+      ".cs",
+      ".cake",
+      ".cshtml",
+      ".csx"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 42,
+    "name": "C#",
+    "namespace": "cs",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.cs",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [
+      "C++"
+    ],
+    "extensions": [
+      ".h",
+      ".hh",
+      ".cc",
+      ".cpp",
+      ".cxx",
+      ".C",
+      ".c++",
+      ".hpp",
+      ".hxx",
+      ".h++",
+      ".cp",
+      ".inc",
+      ".inl",
+      ".ipp",
+      ".re",
+      ".tcc",
+      ".tpp"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 43,
+    "name": "C++",
+    "namespace": "cpp",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "assembly_x86",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".c-objdump"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 44,
+    "name": "C-ObjDump",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "objdump.x86asm",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "haskell",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".chs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 45,
+    "name": "C2hs Haskell",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.haskell",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".clp"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 46,
+    "name": "CLIPS",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.clips",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".cmake",
+      ".cmake.in"
+    ],
+    "fileNames": [
+      "CMakeLists.txt"
+    ],
+    "liguistLanguageId": 47,
+    "name": "CMake",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "cobol",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".cob",
+      ".cbl",
+      ".ccp",
+      ".cobol",
+      ".cpy"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 48,
+    "name": "COBOL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "xml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".dae"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 49,
+    "name": "COLLADA",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.xml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "coffee",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".cson"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 424,
+    "name": "CSON",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.coffee",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "css",
+    "aliases": [],
+    "atomGrammars": [
+      "CSS"
+    ],
+    "extensions": [
+      ".css"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 50,
+    "name": "CSS",
+    "namespace": "css",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.css",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [
+      "CSV"
+    ],
+    "extensions": [
+      ".csv"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 51,
+    "name": "CSV",
+    "namespace": "csv",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".w"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 657332628,
+    "name": "CWeb",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".capnp"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 52,
+    "name": "Cap'n Proto",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.capnp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mss"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 53,
+    "name": "CartoCSS",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.css.mss",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ceylon"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 54,
+    "name": "Ceylon",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ceylon",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".chpl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 55,
+    "name": "Chapel",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ch"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 56,
+    "name": "Charity",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "java",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ck"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 57,
+    "name": "ChucK",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.java",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "cirru",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".cirru"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 58,
+    "name": "Cirru",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".clw"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 59,
+    "name": "Clarion",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.clarion",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".icl",
+      ".dcl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 60,
+    "name": "Clean",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.clean",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".click"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 61,
+    "name": "Click",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.click",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "clojure",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".clj",
+      ".boot",
+      ".cl2",
+      ".cljc",
+      ".cljs",
+      ".cljs.hl",
+      ".cljscm",
+      ".cljx",
+      ".hic"
+    ],
+    "fileNames": [
+      "riemann.config"
+    ],
+    "liguistLanguageId": 62,
+    "name": "Clojure",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "soy_template",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".soy"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 357046146,
+    "name": "Closure Templates",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.soy",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "coffee",
+    "aliases": [],
+    "atomGrammars": [
+      "CoffeeScript"
+    ],
+    "extensions": [
+      ".coffee",
+      "._coffee",
+      ".cake",
+      ".cjsx",
+      ".iced"
+    ],
+    "fileNames": [
+      "Cakefile"
+    ],
+    "liguistLanguageId": 63,
+    "name": "CoffeeScript",
+    "namespace": "coffeescript",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.coffee",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "coldfusion",
+    "aliases": [],
+    "atomGrammars": [
+      "html"
+    ],
+    "extensions": [
+      ".cfm",
+      ".cfml",
+      ".cfc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 64,
+    "name": "ColdFusion",
+    "namespace": "cfml",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.cfm",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "coldfusion",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".cfc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 65,
+    "name": "ColdFusion CFC",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.cfscript",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lisp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".lisp",
+      ".asd",
+      ".cl",
+      ".l",
+      ".lsp",
+      ".ny",
+      ".podsl",
+      ".sexp"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 66,
+    "name": "Common Lisp",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.lisp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "yaml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".cwl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 988547172,
+    "name": "Common Workflow Language",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.cwl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "pascal",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".cp",
+      ".cps"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 67,
+    "name": "Component Pascal",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.pascal",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".cl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 68,
+    "name": "Cool",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.cool",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".coq",
+      ".v"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 69,
+    "name": "Coq",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "assembly_x86",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".cppobjdump",
+      ".c++-objdump",
+      ".c++objdump",
+      ".cpp-objdump",
+      ".cxx-objdump"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 70,
+    "name": "Cpp-ObjDump",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "objdump.x86asm",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".creole"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 71,
+    "name": "Creole",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.creole",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "ruby",
+    "aliases": [],
+    "atomGrammars": [
+      "Crystal"
+    ],
+    "extensions": [
+      ".cr"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 72,
+    "name": "Crystal",
+    "namespace": "crystal",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.crystal",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "csound_orchestra",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".orc",
+      ".udo"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 73,
+    "name": "Csound",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.csound",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "csound_document",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".csd"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 74,
+    "name": "Csound Document",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.csound-document",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "csound_score",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sco"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 75,
+    "name": "Csound Score",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.csound-score",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".cu",
+      ".cuh"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 77,
+    "name": "Cuda",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.cuda-c++",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "javascript",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".cy"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 78,
+    "name": "Cycript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.js",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pyx",
+      ".pxd",
+      ".pxi"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 79,
+    "name": "Cython",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "d",
+    "aliases": [],
+    "atomGrammars": [
+      "D"
+    ],
+    "extensions": [
+      ".d",
+      ".di"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 80,
+    "name": "D",
+    "namespace": "d",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "assembly_x86",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".d-objdump"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 81,
+    "name": "D-ObjDump",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "objdump.x86asm",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".com"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 82,
+    "name": "DIGITAL Command Language",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".dm"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 83,
+    "name": "DM",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.dm",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".zone",
+      ".arpa"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 84,
+    "name": "DNS Zone",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.zone_file",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".d"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 85,
+    "name": "DTrace",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.c",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".darcspatch",
+      ".dpatch"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 86,
+    "name": "Darcs Patch",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "dart",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".dart"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 87,
+    "name": "Dart",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".dwl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 974514097,
+    "name": "DataWeave",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.data-weave",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "diff",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".diff",
+      ".patch"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 88,
+    "name": "Diff",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.diff",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "dockerfile",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".dockerfile"
+    ],
+    "fileNames": [
+      "Dockerfile"
+    ],
+    "liguistLanguageId": 89,
+    "name": "Dockerfile",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.dockerfile",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".djs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 90,
+    "name": "Dogescript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".dylan",
+      ".dyl",
+      ".intr",
+      ".lid"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 91,
+    "name": "Dylan",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".E"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 92,
+    "name": "E",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ebnf"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 430,
+    "name": "EBNF",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ebnf",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ecl",
+      ".eclxml"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 93,
+    "name": "ECL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "prolog",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ecl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 94,
+    "name": "ECLiPSe",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.prolog.eclipse",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "ejs",
+    "aliases": [],
+    "atomGrammars": [
+      "JavaScript Template",
+      "HTML (Angular)"
+    ],
+    "extensions": [
+      ".ejs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 95,
+    "name": "EJS",
+    "namespace": "ejs",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.js",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "csharp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".eq"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 96,
+    "name": "EQ",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.cs",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "xml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sch",
+      ".brd"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 97,
+    "name": "Eagle",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.xml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "python",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".eb"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 342840477,
+    "name": "Easybuild",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.python",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "json",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".epj"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 98,
+    "name": "Ecere Projects",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.json",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "json",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".edc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 342840478,
+    "name": "Edje Data Collection",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.json",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "eiffel",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".e"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 99,
+    "name": "Eiffel",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "elixir",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ex",
+      ".exs"
+    ],
+    "fileNames": [
+      "mix.lock"
+    ],
+    "liguistLanguageId": 100,
+    "name": "Elixir",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "elm",
+    "aliases": [],
+    "atomGrammars": [
+      "Elm"
+    ],
+    "extensions": [
+      ".elm"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 101,
+    "name": "Elm",
+    "namespace": "elm",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.elm",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lisp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".el",
+      ".emacs",
+      ".emacs.desktop"
+    ],
+    "fileNames": [
+      ".abbrev_defs",
+      ".emacs",
+      ".emacs.desktop",
+      ".gnus",
+      ".spacemacs",
+      ".viper",
+      "Cask",
+      "Project.ede",
+      "_emacs",
+      "abbrev_defs"
+    ],
+    "liguistLanguageId": 102,
+    "name": "Emacs Lisp",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.emacs.lisp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "coffee",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".em",
+      ".emberscript"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 103,
+    "name": "EmberScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.coffee",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "erlang",
+    "aliases": [],
+    "atomGrammars": [
+      "Erlang"
+    ],
+    "extensions": [
+      ".erl",
+      ".app.src",
+      ".es",
+      ".escript",
+      ".hrl",
+      ".xrl",
+      ".yrl"
+    ],
+    "fileNames": [
+      "Emakefile",
+      "rebar.config",
+      "rebar.config.lock",
+      "rebar.lock"
+    ],
+    "liguistLanguageId": 104,
+    "name": "Erlang",
+    "namespace": "erlang",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".fs",
+      ".fsi",
+      ".fsx"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 105,
+    "name": "F#",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.fsharp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".fx",
+      ".flux"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 106,
+    "name": "FLUX",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".factor"
+    ],
+    "fileNames": [
+      ".factor-boot-rc",
+      ".factor-rc"
+    ],
+    "liguistLanguageId": 108,
+    "name": "Factor",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".fy",
+      ".fancypack"
+    ],
+    "fileNames": [
+      "Fakefile"
+    ],
+    "liguistLanguageId": 109,
+    "name": "Fancy",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".fan"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 110,
+    "name": "Fantom",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.fan",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".f"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 111,
+    "name": "Filebench WML",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".fs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 112,
+    "name": "Filterscript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".for",
+      ".eam.fs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 113,
+    "name": "Formatted",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "forth",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".fth",
+      ".4th",
+      ".f",
+      ".for",
+      ".forth",
+      ".fr",
+      ".frt",
+      ".fs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 114,
+    "name": "Forth",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [
+      "Fortran - Modern"
+    ],
+    "extensions": [
+      ".f90",
+      ".F90",
+      ".f",
+      ".f03",
+      ".f08",
+      ".f77",
+      ".f95",
+      ".for",
+      ".fpp"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 107,
+    "name": "Fortran",
+    "namespace": "fortran",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.fortran.modern",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "ftl",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ftl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 115,
+    "name": "FreeMarker",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.ftl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "haskell",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".fr"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 116,
+    "name": "Frege",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.haskell",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "gcode",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".g",
+      ".gco",
+      ".gcode"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 117,
+    "name": "G-code",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.gcode",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".gms"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 118,
+    "name": "GAMS",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".g",
+      ".gap",
+      ".gd",
+      ".gi",
+      ".tst"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 119,
+    "name": "GAP",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.gap",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lisp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".md"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 121,
+    "name": "GCC Machine Description",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.lisp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".gdb",
+      ".gdbinit"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 122,
+    "name": "GDB",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.gdb",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".gd"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 123,
+    "name": "GDScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.gdscript",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "glsl",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".glsl",
+      ".fp",
+      ".frag",
+      ".frg",
+      ".fs",
+      ".fsh",
+      ".fshader",
+      ".geo",
+      ".geom",
+      ".glslv",
+      ".gshader",
+      ".shader",
+      ".tesc",
+      ".tese",
+      ".vert",
+      ".vrx",
+      ".vsh",
+      ".vshader"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 124,
+    "name": "GLSL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "python",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".gn",
+      ".gni"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 302957008,
+    "name": "GN",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.gn",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".gml"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 125,
+    "name": "Game Maker Language",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.c++",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".gs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 792408528,
+    "name": "Genie",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "xml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".kid"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 126,
+    "name": "Genshi",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.xml.genshi",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "sh",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ebuild"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 127,
+    "name": "Gentoo Ebuild",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.shell",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "sh",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".eclass"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 128,
+    "name": "Gentoo Eclass",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.shell",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".gbr",
+      ".gbl",
+      ".gbo",
+      ".gbp",
+      ".gbs",
+      ".gko",
+      ".gpb",
+      ".gpt",
+      ".gtl",
+      ".gto",
+      ".gtp",
+      ".gts"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 404627610,
+    "name": "Gerber Image",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.gerber",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".po",
+      ".pot"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 129,
+    "name": "Gettext Catalog",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.po",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [
+      "Gherkin"
+    ],
+    "extensions": [
+      ".feature"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 76,
+    "name": "Gherkin",
+    "namespace": "gherkin",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.gherkin.feature",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "tcl",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".glf"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 130,
+    "name": "Glyph",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.tcl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".gp",
+      ".gnu",
+      ".gnuplot",
+      ".plot",
+      ".plt"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 131,
+    "name": "Gnuplot",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "golang",
+    "aliases": [],
+    "atomGrammars": [
+      "Go"
+    ],
+    "extensions": [
+      ".go"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 132,
+    "name": "Go",
+    "namespace": "go",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".golo"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 133,
+    "name": "Golo",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.golo",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".gs",
+      ".gst",
+      ".gsx",
+      ".vark"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 134,
+    "name": "Gosu",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.gosu.2",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".grace"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 135,
+    "name": "Grace",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.grace",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".gradle"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 136,
+    "name": "Gradle",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.groovy.gradle",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "haskell",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".gf"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 137,
+    "name": "Grammatical Framework",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.haskell",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".gml"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 138,
+    "name": "Graph Modeling Language",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".graphql",
+      ".gql"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 139,
+    "name": "GraphQL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.graphql",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".dot",
+      ".gv"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 140,
+    "name": "Graphviz (DOT)",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.dot",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "groovy",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".groovy",
+      ".grt",
+      ".gtpl",
+      ".gvy"
+    ],
+    "fileNames": [
+      "Jenkinsfile"
+    ],
+    "liguistLanguageId": 142,
+    "name": "Groovy",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "jsp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".gsp"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 143,
+    "name": "Groovy Server Pages",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.jsp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "ruby",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".hcl",
+      ".tf"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 144,
+    "name": "HCL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.terraform",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".hlsl",
+      ".cginc",
+      ".fx",
+      ".fxh",
+      ".hlsli"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 145,
+    "name": "HLSL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.hlsl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "html",
+    "aliases": [],
+    "atomGrammars": [
+      "HTML"
+    ],
+    "extensions": [
+      ".html",
+      ".htm",
+      ".html.hl",
+      ".inc",
+      ".st",
+      ".xht",
+      ".xhtml"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 146,
+    "name": "HTML",
+    "namespace": "html",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.basic",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "django",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".jinja",
+      ".mustache",
+      ".njk"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 147,
+    "name": "HTML+Django",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.django",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ecr"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 148,
+    "name": "HTML+ECR",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.ecr",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".eex"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 149,
+    "name": "HTML+EEX",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.elixir",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [
+      "HTML (Ruby - ERB)",
+      "HTML (Rails)"
+    ],
+    "extensions": [
+      ".erb",
+      ".erb.deface"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 150,
+    "name": "HTML+ERB",
+    "namespace": "erb",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.erb",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "php",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".phtml"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 151,
+    "name": "HTML+PHP",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.php",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".http"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 152,
+    "name": "HTTP",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.httpspec",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "php",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".hh",
+      ".php"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 153,
+    "name": "Hack",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.php",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "haml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".haml",
+      ".haml.deface"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 154,
+    "name": "Haml",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "handlebars",
+    "aliases": [],
+    "atomGrammars": [
+      "Handlebars",
+      "HTML (Handlebars)"
+    ],
+    "extensions": [
+      ".hbs",
+      ".handlebars"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 155,
+    "name": "Handlebars",
+    "namespace": "handlebars",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.handlebars",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".hb"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 156,
+    "name": "Harbour",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.harbour",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "haskell",
+    "aliases": [],
+    "atomGrammars": [
+      "Haskell"
+    ],
+    "extensions": [
+      ".hs",
+      ".hsc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 157,
+    "name": "Haskell",
+    "namespace": "haskell",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "haxe",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".hx",
+      ".hxsl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 158,
+    "name": "Haxe",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.haxe.2",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".hy"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 159,
+    "name": "Hy",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".bf"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 160,
+    "name": "HyPhy",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pro",
+      ".dlm"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 161,
+    "name": "IDL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ipf"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 162,
+    "name": "IGOR Pro",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "ini",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ini",
+      ".cfg",
+      ".prefs",
+      ".pro",
+      ".properties"
+    ],
+    "fileNames": [
+      "buildozer.spec"
+    ],
+    "liguistLanguageId": 163,
+    "name": "INI",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ini",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".irclog",
+      ".weechatlog"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 164,
+    "name": "IRC log",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".idr",
+      ".lidr"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 165,
+    "name": "Idris",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.idris",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ni",
+      ".i7x"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 166,
+    "name": "Inform 7",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.inform7",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".iss"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 167,
+    "name": "Inno Setup",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "io",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".io"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 168,
+    "name": "Io",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ik"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 169,
+    "name": "Ioke",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".thy"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 170,
+    "name": "Isabelle",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.isabelle.theory",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [],
+    "fileNames": [
+      "ROOT"
+    ],
+    "liguistLanguageId": 171,
+    "name": "Isabelle ROOT",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.isabelle.root",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ijs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 172,
+    "name": "J",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.j",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".flex",
+      ".jflex"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 173,
+    "name": "JFlex",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.jflex",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "json",
+    "aliases": [],
+    "atomGrammars": [
+      "JSON"
+    ],
+    "extensions": [
+      ".json",
+      ".geojson",
+      ".JSON-tmLanguage",
+      ".topojson"
+    ],
+    "fileNames": [
+      ".arcconfig",
+      ".jshintrc",
+      "composer.lock",
+      "mcmod.info"
+    ],
+    "liguistLanguageId": 174,
+    "name": "JSON",
+    "namespace": "json",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.json",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "javascript",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".json5"
+    ],
+    "fileNames": [
+      ".babelrc"
+    ],
+    "liguistLanguageId": 175,
+    "name": "JSON5",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.js",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "javascript",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".jsonld"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 176,
+    "name": "JSONLD",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.js",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "jsoniq",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".jq"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 177,
+    "name": "JSONiq",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.jq",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "javascript",
+    "aliases": [],
+    "atomGrammars": [
+      "JSX",
+      "JavaScript (JSX)"
+    ],
+    "extensions": [
+      ".jsx",
+      ".js"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 178,
+    "name": "JSX",
+    "namespace": "jsx",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.js.jsx",
+    "vscodeLanguages": [
+      "javascriptreact"
+    ]
+  },
+  {
+    "aceMode": "java",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".j"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 180,
+    "name": "Jasmin",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.jasmin",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "java",
+    "aliases": [],
+    "atomGrammars": [
+      "Java"
+    ],
+    "extensions": [
+      ".java"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 181,
+    "name": "Java",
+    "namespace": "java",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "jsp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".jsp"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 182,
+    "name": "Java Server Pages",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.jsp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "javascript",
+    "aliases": [],
+    "atomGrammars": [
+      "JavaScript"
+    ],
+    "extensions": [
+      ".js",
+      "._js",
+      ".bones",
+      ".es",
+      ".es6",
+      ".frag",
+      ".gs",
+      ".jake",
+      ".jsb",
+      ".jscad",
+      ".jsfl",
+      ".jsm",
+      ".jss",
+      ".mjs",
+      ".njs",
+      ".pac",
+      ".sjs",
+      ".ssjs",
+      ".xsjs",
+      ".xsjslib"
+    ],
+    "fileNames": [
+      "Jakefile"
+    ],
+    "liguistLanguageId": 183,
+    "name": "JavaScript",
+    "namespace": "js",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.js",
+    "vscodeLanguages": [
+      "javascript"
+    ]
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".jison"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 284531423,
+    "name": "Jison",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.jison",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".jisonlex"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 406395330,
+    "name": "Jison Lex",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.jisonlex",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ol",
+      ".iol"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 998078858,
+    "name": "Jolie",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.jolie",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "julia",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".jl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 184,
+    "name": "Julia",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "json",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ipynb"
+    ],
+    "fileNames": [
+      "Notebook"
+    ],
+    "liguistLanguageId": 185,
+    "name": "Jupyter Notebook",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.json",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".krl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 186,
+    "name": "KRL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lisp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".kicad_pcb",
+      ".kicad_mod",
+      ".kicad_wks"
+    ],
+    "fileNames": [
+      "fp-lib-table"
+    ],
+    "liguistLanguageId": 187,
+    "name": "KiCad Layout",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.pcb.sexp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".brd"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 140848857,
+    "name": "KiCad Legacy Layout",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.pcb.board",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sch"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 622447435,
+    "name": "KiCad Schematic",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.pcb.schematic",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "html",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".kit"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 188,
+    "name": "Kit",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.basic",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".kt",
+      ".ktm",
+      ".kts"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 189,
+    "name": "Kotlin",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.Kotlin",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lisp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".lfe"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 190,
+    "name": "LFE",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.lisp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ll"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 191,
+    "name": "LLVM",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".lol"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 192,
+    "name": "LOLCODE",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lsl",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".lsl",
+      ".lslp"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 193,
+    "name": "LSL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "xml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".lvproj"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 194,
+    "name": "LabVIEW",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.xml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".lasso",
+      ".las",
+      ".lasso8",
+      ".lasso9",
+      ".ldml"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 195,
+    "name": "Lasso",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "file.lasso",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "smarty",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".latte"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 196,
+    "name": "Latte",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.smarty",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".lean",
+      ".hlean"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 197,
+    "name": "Lean",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "less",
+    "aliases": [],
+    "atomGrammars": [
+      "LESS"
+    ],
+    "extensions": [
+      ".less"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 198,
+    "name": "Less",
+    "namespace": "less",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.css.less",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".l",
+      ".lex"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 199,
+    "name": "Lex",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ly",
+      ".ily"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 200,
+    "name": "LilyPond",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".b",
+      ".m"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 201,
+    "name": "Limbo",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ld",
+      ".lds"
+    ],
+    "fileNames": [
+      "ld.script"
+    ],
+    "liguistLanguageId": 202,
+    "name": "Linker Script",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mod"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 203,
+    "name": "Linux Kernel Module",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "liquid",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".liquid"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 204,
+    "name": "Liquid",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.liquid",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".lagda"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 205,
+    "name": "Literate Agda",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".litcoffee"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 206,
+    "name": "Literate CoffeeScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.litcoffee",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".lhs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 207,
+    "name": "Literate Haskell",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.tex.latex.haskell",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "livescript",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ls",
+      "._ls"
+    ],
+    "fileNames": [
+      "Slakefile"
+    ],
+    "liguistLanguageId": 208,
+    "name": "LiveScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".xm",
+      ".x",
+      ".xi"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 209,
+    "name": "Logos",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.logos",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".lgt",
+      ".logtalk"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 210,
+    "name": "Logtalk",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "yaml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".lookml",
+      ".model.lkml",
+      ".view.lkml"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 211,
+    "name": "LookML",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.yaml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ls"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 212,
+    "name": "LoomScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.loomscript",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lua",
+    "aliases": [],
+    "atomGrammars": [
+      "Lua"
+    ],
+    "extensions": [
+      ".lua",
+      ".fcgi",
+      ".nse",
+      ".pd_lua",
+      ".rbxs",
+      ".wlua"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 213,
+    "name": "Lua",
+    "namespace": "lua",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mumps",
+      ".m"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 214,
+    "name": "M",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".m4"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 215,
+    "name": "M4",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".m4"
+    ],
+    "fileNames": [
+      "configure.ac"
+    ],
+    "liguistLanguageId": 216,
+    "name": "M4Sugar",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ms",
+      ".mcr"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 217,
+    "name": "MAXScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.maxscript",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mq4",
+      ".mqh"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 426,
+    "name": "MQL4",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.mql5",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mq5",
+      ".mqh"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 427,
+    "name": "MQL5",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.mql5",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "html",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mtml"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 218,
+    "name": "MTML",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.basic",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "forth",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".muf",
+      ".m"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 219,
+    "name": "MUF",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "makefile",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mak",
+      ".d",
+      ".make",
+      ".mk",
+      ".mkfile"
+    ],
+    "fileNames": [
+      "BSDmakefile",
+      "GNUmakefile",
+      "Kbuild",
+      "Makefile",
+      "Makefile.am",
+      "Makefile.boot",
+      "Makefile.frag",
+      "Makefile.in",
+      "Makefile.inc",
+      "Makefile.wat",
+      "makefile",
+      "makefile.sco",
+      "mkfile"
+    ],
+    "liguistLanguageId": 220,
+    "name": "Makefile",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mako",
+      ".mao"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 221,
+    "name": "Mako",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.mako",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "markdown",
+    "aliases": [],
+    "atomGrammars": [
+      "GitHub Markdown"
+    ],
+    "extensions": [
+      ".markdown",
+      ".md",
+      ".mdown",
+      ".mdwn",
+      ".mkd",
+      ".mkdn",
+      ".mkdown",
+      ".ron",
+      ".workbook"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 222,
+    "name": "Markdown",
+    "namespace": "markdown",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.gfm",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [
+      "Marko"
+    ],
+    "extensions": [
+      ".marko"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 932782397,
+    "name": "Marko",
+    "namespace": "marko",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.marko",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "mask",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mask"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 223,
+    "name": "Mask",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.mask",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mathematica",
+      ".cdf",
+      ".m",
+      ".ma",
+      ".mt",
+      ".nb",
+      ".nbp",
+      ".wl",
+      ".wlt"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 224,
+    "name": "Mathematica",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "matlab",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".matlab",
+      ".m"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 225,
+    "name": "Matlab",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "xml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [],
+    "fileNames": [
+      "pom.xml"
+    ],
+    "liguistLanguageId": 226,
+    "name": "Maven POM",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.xml.pom",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "json",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".maxpat",
+      ".maxhelp",
+      ".maxproj",
+      ".mxt",
+      ".pat"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 227,
+    "name": "Max",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.json",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mediawiki",
+      ".wiki"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 228,
+    "name": "MediaWiki",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.mediawiki",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "prolog",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".m",
+      ".moo"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 229,
+    "name": "Mercury",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.mercury",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [],
+    "fileNames": [
+      "meson.build",
+      "meson_options.txt"
+    ],
+    "liguistLanguageId": 799141244,
+    "name": "Meson",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.meson",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".metal"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 230,
+    "name": "Metal",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.c++",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".minid"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 231,
+    "name": "MiniD",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "ruby",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".druby",
+      ".duby",
+      ".mir",
+      ".mirah"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 232,
+    "name": "Mirah",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ruby",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mo"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 233,
+    "name": "Modelica",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.modelica",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mod"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 234,
+    "name": "Modula-2",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.modula2",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mms",
+      ".mmk"
+    ],
+    "fileNames": [
+      "descrip.mmk",
+      "descrip.mms"
+    ],
+    "liguistLanguageId": 235,
+    "name": "Module Management System",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".monkey",
+      ".monkey2"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 236,
+    "name": "Monkey",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.monkey",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".moo"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 237,
+    "name": "Moocode",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".moon"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 238,
+    "name": "MoonScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "atomGrammars": [
+      "HTML (Mustache)"
+    ],
+    "extensions": [
+      ".mustache"
+    ],
+    "name": "Mustache",
+    "namespace": "mustache",
+    "sublimeSyntaxes": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".myt"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 239,
+    "name": "Myghty",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ncl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 240,
+    "name": "NCL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ncl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".nl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 241,
+    "name": "NL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".nsi",
+      ".nsh"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 242,
+    "name": "NSIS",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ne",
+      ".nearley"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 521429430,
+    "name": "Nearley",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ne",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".n"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 243,
+    "name": "Nemerle",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".axs",
+      ".axi"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 244,
+    "name": "NetLinx",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.netlinx",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".axs.erb",
+      ".axi.erb"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 245,
+    "name": "NetLinx+ERB",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.netlinx.erb",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lisp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".nlogo"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 246,
+    "name": "NetLogo",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.lisp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lisp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".nl",
+      ".lisp",
+      ".lsp"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 247,
+    "name": "NewLisp",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.lisp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".nginxconf",
+      ".vhost"
+    ],
+    "fileNames": [
+      "nginx.conf"
+    ],
+    "liguistLanguageId": 248,
+    "name": "Nginx",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.nginx",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".nim",
+      ".nimrod"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 249,
+    "name": "Nim",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.nim",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ninja"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 250,
+    "name": "Ninja",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ninja",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".nit"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 251,
+    "name": "Nit",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.nit",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "nix",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".nix"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 252,
+    "name": "Nix",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.nix",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "scheme",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".nu"
+    ],
+    "fileNames": [
+      "Nukefile"
+    ],
+    "liguistLanguageId": 253,
+    "name": "Nu",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.nu",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".numpy",
+      ".numpyw",
+      ".numsc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 254,
+    "name": "NumPy",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "ocaml",
+    "aliases": [],
+    "atomGrammars": [
+      "OCaml"
+    ],
+    "extensions": [
+      ".ml",
+      ".eliom",
+      ".eliomi",
+      ".ml4",
+      ".mli",
+      ".mll",
+      ".mly"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 255,
+    "name": "OCaml",
+    "namespace": "ocaml",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ocaml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "assembly_x86",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".objdump"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 256,
+    "name": "ObjDump",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "objdump.x86asm",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "objectivec",
+    "aliases": [],
+    "atomGrammars": [
+      "Objective-C",
+      "Objective-C++"
+    ],
+    "extensions": [
+      ".m",
+      ".mm",
+      ".h"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 257,
+    "name": "Objective-C",
+    "namespace": "objectivec",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.objc",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "objectivec",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mm"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 258,
+    "name": "Objective-C++",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.objc++",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".j",
+      ".sj"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 259,
+    "name": "Objective-J",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.js.objj",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".omgrofl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 260,
+    "name": "Omgrofl",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".opa"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 261,
+    "name": "Opa",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".opal"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 262,
+    "name": "Opal",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.opal",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".cl",
+      ".opencl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 263,
+    "name": "OpenCL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.c",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".p",
+      ".cls",
+      ".w"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 264,
+    "name": "OpenEdge ABL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.abl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "sh",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [],
+    "fileNames": [],
+    "liguistLanguageId": 265,
+    "name": "OpenRC runscript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.shell",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "scad",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".scad"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 266,
+    "name": "OpenSCAD",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.scad",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".fea"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 374317347,
+    "name": "OpenType Feature File",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.opentype",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".org"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 267,
+    "name": "Org",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ox",
+      ".oxh",
+      ".oxo"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 268,
+    "name": "Ox",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ox",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".oxygene"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 269,
+    "name": "Oxygene",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".oz"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 270,
+    "name": "Oz",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.oz",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".p4"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 348895984,
+    "name": "P4",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.p4",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [
+      "Pawn"
+    ],
+    "extensions": [
+      ".pwn",
+      ".inc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 271,
+    "name": "PAWN",
+    "namespace": "pawn",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.pawn",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "php",
+    "aliases": [],
+    "atomGrammars": [
+      "PHP"
+    ],
+    "extensions": [
+      ".php",
+      ".module",
+      ".inc",
+      ".aw",
+      ".ctp",
+      ".fcgi",
+      ".php3",
+      ".php4",
+      ".php5",
+      ".phps",
+      ".phpt"
+    ],
+    "fileNames": [
+      ".php_cs",
+      ".php_cs.dist",
+      "Phakefile"
+    ],
+    "liguistLanguageId": 272,
+    "name": "PHP",
+    "namespace": "php",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.php",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "sql",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pls",
+      ".bdy",
+      ".ddl",
+      ".fnc",
+      ".pck",
+      ".pkb",
+      ".pks",
+      ".plb",
+      ".plsql",
+      ".prc",
+      ".spc",
+      ".sql",
+      ".tpb",
+      ".tps",
+      ".trg",
+      ".vw"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 273,
+    "name": "PLSQL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "pgsql",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sql"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 274,
+    "name": "PLpgSQL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.sql",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pov",
+      ".inc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 275,
+    "name": "POV-Ray SDL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pan"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 276,
+    "name": "Pan",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.pan",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".psc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 277,
+    "name": "Papyrus",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.papyrus.skyrim",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".parrot"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 278,
+    "name": "Parrot",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pasm"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 279,
+    "name": "Parrot Assembly",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pir"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 280,
+    "name": "Parrot Internal Representation",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.parrot.pir",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "pascal",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pas",
+      ".dfm",
+      ".dpr",
+      ".inc",
+      ".lpr",
+      ".pascal",
+      ".pp"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 281,
+    "name": "Pascal",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pep"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 840372442,
+    "name": "Pep8",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.pep8",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "perl",
+    "aliases": [],
+    "atomGrammars": [
+      "Perl",
+      "Perl 6"
+    ],
+    "extensions": [
+      ".pl",
+      ".PL",
+      ".pm",
+      ".pod",
+      ".t",
+      ".al",
+      ".cgi",
+      ".fcgi",
+      ".perl",
+      ".ph",
+      ".plx",
+      ".psgi"
+    ],
+    "fileNames": [
+      "cpanfile"
+    ],
+    "liguistLanguageId": 282,
+    "name": "Perl",
+    "namespace": "perl",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.perl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "perl",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".6pl",
+      ".6pm",
+      ".nqp",
+      ".p6",
+      ".p6l",
+      ".p6m",
+      ".pl",
+      ".pl6",
+      ".pm",
+      ".pm6",
+      ".t"
+    ],
+    "fileNames": [
+      "Rexfile"
+    ],
+    "liguistLanguageId": 283,
+    "name": "Perl 6",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.perl6fe",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pic",
+      ".chem"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 425,
+    "name": "Pic",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.pic",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pkl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 284,
+    "name": "Pickle",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lisp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".l"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 285,
+    "name": "PicoLisp",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.lisp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pig"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 286,
+    "name": "PigLatin",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.pig_latin",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pike",
+      ".pmod"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 287,
+    "name": "Pike",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "perl",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pod"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 288,
+    "name": "Pod",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pogo"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 289,
+    "name": "PogoScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.pogoscript",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pony"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 290,
+    "name": "Pony",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.pony",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pcss"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 262764437,
+    "name": "PostCSS",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.postcss",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ps",
+      ".eps",
+      ".pfa"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 291,
+    "name": "PostScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.postscript",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pbt",
+      ".sra",
+      ".sru",
+      ".srw"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 292,
+    "name": "PowerBuilder",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "powershell",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ps1",
+      ".psd1",
+      ".psm1"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 293,
+    "name": "PowerShell",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pde"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 294,
+    "name": "Processing",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "prolog",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pl",
+      ".pro",
+      ".prolog",
+      ".yap"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 295,
+    "name": "Prolog",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.prolog",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".spin"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 296,
+    "name": "Propeller Spin",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.spin",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "protobuf",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".proto"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 297,
+    "name": "Protocol Buffer",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.protobuf",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".asc",
+      ".pub"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 298,
+    "name": "Public Key",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "jade",
+    "aliases": [],
+    "atomGrammars": [
+      "Jade",
+      "Pug"
+    ],
+    "extensions": [
+      ".jade",
+      ".pug"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 179,
+    "name": "Pug",
+    "namespace": "pug",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.jade",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [
+      "Puppet"
+    ],
+    "extensions": [
+      ".pp"
+    ],
+    "fileNames": [
+      "Modulefile"
+    ],
+    "liguistLanguageId": 299,
+    "name": "Puppet",
+    "namespace": "puppet",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.puppet",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pd"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 300,
+    "name": "Pure Data",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pb",
+      ".pbi"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 301,
+    "name": "PureBasic",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "haskell",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".purs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 302,
+    "name": "PureScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.purescript",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "python",
+    "aliases": [],
+    "atomGrammars": [
+      "Python"
+    ],
+    "extensions": [
+      ".py",
+      ".bzl",
+      ".cgi",
+      ".fcgi",
+      ".gyp",
+      ".gypi",
+      ".lmi",
+      ".py3",
+      ".pyde",
+      ".pyi",
+      ".pyp",
+      ".pyt",
+      ".pyw",
+      ".rpy",
+      ".spec",
+      ".tac",
+      ".wsgi",
+      ".xpy"
+    ],
+    "fileNames": [
+      ".gclient",
+      "BUCK",
+      "BUILD",
+      "BUILD.bazel",
+      "SConscript",
+      "SConstruct",
+      "Snakefile",
+      "WORKSPACE",
+      "wscript"
+    ],
+    "liguistLanguageId": 303,
+    "name": "Python",
+    "namespace": "python",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [],
+    "fileNames": [],
+    "liguistLanguageId": 428,
+    "name": "Python console",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.python.console",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pytb"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 304,
+    "name": "Python traceback",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.python.traceback",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".qml",
+      ".qbs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 305,
+    "name": "QML",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.qml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".pro",
+      ".pri"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 306,
+    "name": "QMake",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "r",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".r",
+      ".rd",
+      ".rsx"
+    ],
+    "fileNames": [
+      ".Rprofile"
+    ],
+    "liguistLanguageId": 307,
+    "name": "R",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "yaml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".raml"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 308,
+    "name": "RAML",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.yaml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "rdoc",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".rdoc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 309,
+    "name": "RDoc",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.rdoc",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".rbbas",
+      ".rbfrm",
+      ".rbmnu",
+      ".rbres",
+      ".rbtbar",
+      ".rbuistate"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 310,
+    "name": "REALbasic",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.vbnet",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".rexx",
+      ".pprx",
+      ".rex"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 311,
+    "name": "REXX",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.rexx",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "rhtml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".rhtml"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 312,
+    "name": "RHTML",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.erb",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "markdown",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".rmd"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 313,
+    "name": "RMarkdown",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.gfm",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".spec"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 314,
+    "name": "RPM Spec",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.rpm-spec",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".rnh",
+      ".rno"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 315,
+    "name": "RUNOFF",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.runoff",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lisp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".rkt",
+      ".rktd",
+      ".rktl",
+      ".scrbl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 316,
+    "name": "Racket",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.racket",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".rl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 317,
+    "name": "Ragel",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".rsc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 173616037,
+    "name": "Rascal",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.rascal",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".raw"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 318,
+    "name": "Raw token data",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "rust",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".re",
+      ".rei"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 869538413,
+    "name": "Reason",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.reason",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".reb",
+      ".r",
+      ".r2",
+      ".r3",
+      ".rebol"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 319,
+    "name": "Rebol",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.rebol",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".red",
+      ".reds"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 320,
+    "name": "Red",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.red",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".cw"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 321,
+    "name": "Redcode",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".regexp",
+      ".regex"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 363378884,
+    "name": "Regular Expression",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.regexp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "python",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".rpy"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 322,
+    "name": "Ren'Py",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.renpy",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".rs",
+      ".rsh"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 323,
+    "name": "RenderScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ring"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 431,
+    "name": "Ring",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ring",
+    "vscodeLanguages": []
+  },
+  {
+    "atomGrammars": [
+      "Riot.js",
+      "HTML (Riot Tag)"
+    ],
+    "extensions": [
+      ".tag"
+    ],
+    "name": "Riot",
+    "namespace": "riot",
+    "sublimeSyntaxes": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".robot"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 324,
+    "name": "RobotFramework",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.robot",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".man",
+      ".1",
+      ".1in",
+      ".1m",
+      ".1x",
+      ".2",
+      ".3",
+      ".3in",
+      ".3m",
+      ".3qt",
+      ".3x",
+      ".4",
+      ".5",
+      ".6",
+      ".7",
+      ".8",
+      ".9",
+      ".l",
+      ".me",
+      ".ms",
+      ".n",
+      ".nr",
+      ".rno",
+      ".roff",
+      ".tmac"
+    ],
+    "fileNames": [
+      "mmn",
+      "mmt"
+    ],
+    "liguistLanguageId": 141,
+    "name": "Roff",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.roff",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "clojure",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".rg"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 325,
+    "name": "Rouge",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.clojure",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "ruby",
+    "aliases": [],
+    "atomGrammars": [
+      "Ruby",
+      "Ruby on Rails"
+    ],
+    "extensions": [
+      ".rb",
+      ".builder",
+      ".eye",
+      ".fcgi",
+      ".gemspec",
+      ".god",
+      ".jbuilder",
+      ".mspec",
+      ".pluginspec",
+      ".podspec",
+      ".rabl",
+      ".rake",
+      ".rbuild",
+      ".rbw",
+      ".rbx",
+      ".ru",
+      ".ruby",
+      ".spec",
+      ".thor",
+      ".watchr"
+    ],
+    "fileNames": [
+      ".irbrc",
+      ".pryrc",
+      "Appraisals",
+      "Berksfile",
+      "Brewfile",
+      "Buildfile",
+      "Dangerfile",
+      "Deliverfile",
+      "Fastfile",
+      "Gemfile",
+      "Gemfile.lock",
+      "Guardfile",
+      "Jarfile",
+      "Mavenfile",
+      "Podfile",
+      "Puppetfile",
+      "Rakefile",
+      "Snapfile",
+      "Thorfile",
+      "Vagrantfile",
+      "buildfile"
+    ],
+    "liguistLanguageId": 326,
+    "name": "Ruby",
+    "namespace": "ruby",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "rust",
+    "aliases": [],
+    "atomGrammars": [
+      "Rust"
+    ],
+    "extensions": [
+      ".rs",
+      ".rlib",
+      ".rs.in"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 327,
+    "name": "Rust",
+    "namespace": "rust",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sas"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 328,
+    "name": "SAS",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.sas",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "scss",
+    "aliases": [],
+    "atomGrammars": [
+      "SCSS"
+    ],
+    "extensions": [
+      ".scss"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 329,
+    "name": "SCSS",
+    "namespace": "scss",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.scss",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".smt2",
+      ".smt"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 330,
+    "name": "SMT",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.smt",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sparql",
+      ".rq"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 331,
+    "name": "SPARQL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.sparql",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sqf",
+      ".hqf"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 332,
+    "name": "SQF",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.sqf",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "sql",
+    "aliases": [],
+    "atomGrammars": [
+      "SQL (Rails)",
+      "SQL"
+    ],
+    "extensions": [
+      ".sql",
+      ".cql",
+      ".ddl",
+      ".inc",
+      ".mysql",
+      ".prc",
+      ".tab",
+      ".udf",
+      ".viw"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 333,
+    "name": "SQL",
+    "namespace": "sql",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.sql",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "sql",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sql",
+      ".db2"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 334,
+    "name": "SQLPL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.sql",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lisp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".srt"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 335,
+    "name": "SRecode Template",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.lisp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ston"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 336,
+    "name": "STON",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.smalltalk",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "xml",
+    "aliases": [],
+    "atomGrammars": [
+      "SVG"
+    ],
+    "extensions": [
+      ".svg"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 337,
+    "name": "SVG",
+    "namespace": "svg",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.xml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "python",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sage",
+      ".sagews"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 338,
+    "name": "Sage",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.python",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "yaml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sls"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 339,
+    "name": "SaltStack",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.yaml.salt",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "sass",
+    "aliases": [],
+    "atomGrammars": [
+      "Sass"
+    ],
+    "extensions": [
+      ".sass"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 340,
+    "name": "Sass",
+    "namespace": "sass",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.sass",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "scala",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".scala",
+      ".sbt",
+      ".sc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 341,
+    "name": "Scala",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".scaml"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 342,
+    "name": "Scaml",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.scaml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "scheme",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".scm",
+      ".sch",
+      ".sld",
+      ".sls",
+      ".sps",
+      ".ss"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 343,
+    "name": "Scheme",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sci",
+      ".sce",
+      ".tst"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 344,
+    "name": "Scilab",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".self"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 345,
+    "name": "Self",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".shader"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 664257356,
+    "name": "ShaderLab",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.shaderlab",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "sh",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sh",
+      ".bash",
+      ".bats",
+      ".cgi",
+      ".command",
+      ".fcgi",
+      ".ksh",
+      ".sh.in",
+      ".tmux",
+      ".tool",
+      ".zsh"
+    ],
+    "fileNames": [
+      ".bash_history",
+      ".bash_logout",
+      ".bash_profile",
+      ".bashrc",
+      "PKGBUILD",
+      "gradlew"
+    ],
+    "liguistLanguageId": 346,
+    "name": "Shell",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "sh",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sh-session"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 347,
+    "name": "ShellSession",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.shell-session",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".shen"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 348,
+    "name": "Shen",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.shen",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 349,
+    "name": "Slash",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.slash",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".slim"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 350,
+    "name": "Slim",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.slim",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".smali"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 351,
+    "name": "Smali",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.smali",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".st",
+      ".cs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 352,
+    "name": "Smalltalk",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "smarty",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".tpl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 353,
+    "name": "Smarty",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.smarty",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sp",
+      ".inc",
+      ".sma"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 354,
+    "name": "SourcePawn",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.sp",
+    "vscodeLanguages": []
+  },
+  {
+    "atomGrammars": [
+      "Spacebars"
+    ],
+    "extensions": [],
+    "name": "Spacebars",
+    "namespace": "spacebars",
+    "sublimeSyntaxes": []
+  },
+  {
+    "aceMode": "yaml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sfd"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 767169629,
+    "name": "Spline Font Database",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.sfd",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".nut"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 355,
+    "name": "Squirrel",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.c++",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".stan"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 356,
+    "name": "Stan",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.stan",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ML",
+      ".fun",
+      ".sig",
+      ".sml"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 357,
+    "name": "Standard ML",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".do",
+      ".ado",
+      ".doh",
+      ".ihlp",
+      ".mata",
+      ".matah",
+      ".sthlp"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 358,
+    "name": "Stata",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "stylus",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".styl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 359,
+    "name": "Stylus",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.stylus",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".srt"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 360,
+    "name": "SubRip Text",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.srt",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "javascript",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sublime-build",
+      ".sublime-commands",
+      ".sublime-completions",
+      ".sublime-keymap",
+      ".sublime-macro",
+      ".sublime-menu",
+      ".sublime-mousemap",
+      ".sublime-project",
+      ".sublime-settings",
+      ".sublime-theme",
+      ".sublime-workspace",
+      ".sublime_metrics",
+      ".sublime_session"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 423,
+    "name": "Sublime Text Config",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.js",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sss"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 826404698,
+    "name": "SugarSS",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.css.postcss.sugarss",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sc",
+      ".scd"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 361,
+    "name": "SuperCollider",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.supercollider",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".swift"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 362,
+    "name": "Swift",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "atomGrammars": [
+      "HTML (Swig)",
+      "SWIG"
+    ],
+    "extensions": [
+      ".swig"
+    ],
+    "name": "Swig",
+    "namespace": "swig",
+    "sublimeSyntaxes": []
+  },
+  {
+    "aceMode": "verilog",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".sv",
+      ".svh",
+      ".vh"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 363,
+    "name": "SystemVerilog",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".8xp",
+      ".8xk",
+      ".8xk.txt",
+      ".8xp.txt"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 422,
+    "name": "TI Program",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".tla"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 364,
+    "name": "TLA",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.tla",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "toml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".toml"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 365,
+    "name": "TOML",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.toml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".txl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 366,
+    "name": "TXL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.txl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "tcl",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".tcl",
+      ".adp",
+      ".tm"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 367,
+    "name": "Tcl",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "sh",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".tcsh",
+      ".csh"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 368,
+    "name": "Tcsh",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.shell",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "tex",
+    "aliases": [],
+    "atomGrammars": [
+      "LaTeX"
+    ],
+    "extensions": [
+      ".tex",
+      ".aux",
+      ".bbx",
+      ".bib",
+      ".cbx",
+      ".cls",
+      ".dtx",
+      ".ins",
+      ".lbx",
+      ".ltx",
+      ".mkii",
+      ".mkiv",
+      ".mkvi",
+      ".sty",
+      ".toc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 369,
+    "name": "TeX",
+    "namespace": "latex",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".tea"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 370,
+    "name": "Tea",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.tea",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lua",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".t"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 371,
+    "name": "Terra",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".txt",
+      ".fr",
+      ".nb",
+      ".ncl",
+      ".no"
+    ],
+    "fileNames": [
+      "COPYING",
+      "COPYRIGHT.regex",
+      "FONTLOG",
+      "INSTALL",
+      "INSTALL.mysql",
+      "LICENSE",
+      "LICENSE.mysql",
+      "NEWS",
+      "README.1ST",
+      "README.me",
+      "README.mysql",
+      "click.me",
+      "delete.me",
+      "keep.me",
+      "read.me",
+      "test.me"
+    ],
+    "liguistLanguageId": 372,
+    "name": "Text",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "textile",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".textile"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 373,
+    "name": "Textile",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".thrift"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 374,
+    "name": "Thrift",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.thrift",
+    "vscodeLanguages": []
+  },
+  {
+    "atomGrammars": [
+      "TSS"
+    ],
+    "extensions": [
+      ".tss"
+    ],
+    "name": "Titanium Style Sheets",
+    "namespace": "tss",
+    "sublimeSyntaxes": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".t",
+      ".tu"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 375,
+    "name": "Turing",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.turing",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ttl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 376,
+    "name": "Turtle",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.turtle",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "twig",
+    "aliases": [],
+    "atomGrammars": [
+      "HTML (Twig)"
+    ],
+    "extensions": [
+      ".twig"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 377,
+    "name": "Twig",
+    "namespace": "twig",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.twig",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".tl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 632765617,
+    "name": "Type Language",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.tl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "typescript",
+    "aliases": [],
+    "atomGrammars": [
+      "TypeScript"
+    ],
+    "extensions": [
+      ".ts",
+      ".tsx"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 378,
+    "name": "TypeScript",
+    "namespace": "typescript",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ts",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".upc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 379,
+    "name": "Unified Parallel C",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.c",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "yaml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".anim",
+      ".asset",
+      ".mat",
+      ".meta",
+      ".prefab",
+      ".unity"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 380,
+    "name": "Unity3D Asset",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.yaml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "assembly_x86",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".s",
+      ".ms"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 120,
+    "name": "Unix Assembly",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.assembly",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "csharp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".uno"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 381,
+    "name": "Uno",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.cs",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "java",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".uc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 382,
+    "name": "UnrealScript",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.java",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ur",
+      ".urs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 383,
+    "name": "UrWeb",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.ur",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".vcl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 384,
+    "name": "VCL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.varnish.vcl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "vhdl",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".vhdl",
+      ".vhd",
+      ".vhf",
+      ".vhi",
+      ".vho",
+      ".vhs",
+      ".vht",
+      ".vhw"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 385,
+    "name": "VHDL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "vala",
+    "aliases": [],
+    "atomGrammars": [
+      "Vala"
+    ],
+    "extensions": [
+      ".vala",
+      ".vapi"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 386,
+    "name": "Vala",
+    "namespace": "vala",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "verilog",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".v",
+      ".veo"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 387,
+    "name": "Verilog",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".vim"
+    ],
+    "fileNames": [
+      ".nvimrc",
+      ".vimrc",
+      "_vimrc",
+      "gvimrc",
+      "nvimrc",
+      "vimrc"
+    ],
+    "liguistLanguageId": 388,
+    "name": "Vim script",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.viml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".vb",
+      ".bas",
+      ".cls",
+      ".frm",
+      ".frx",
+      ".vba",
+      ".vbhtml",
+      ".vbs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 389,
+    "name": "Visual Basic",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.vbnet",
+    "vscodeLanguages": []
+  },
+  {
+    "atomGrammars": [
+      "Visualforce"
+    ],
+    "extensions": [
+      ".page"
+    ],
+    "name": "Visualforce",
+    "namespace": "visualforce",
+    "sublimeSyntaxes": []
+  },
+  {
+    "aceMode": "d",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".volt"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 390,
+    "name": "Volt",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.d",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "html",
+    "aliases": [],
+    "atomGrammars": [
+      "Vue Component"
+    ],
+    "extensions": [
+      ".vue"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 391,
+    "name": "Vue",
+    "namespace": "vue",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.html.vue",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mtl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 392,
+    "name": "Wavefront Material",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.wavefront.mtl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".obj"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 393,
+    "name": "Wavefront Object",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.wavefront.obj",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "xml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".owl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 394,
+    "name": "Web Ontology Language",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.xml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "lisp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".wast",
+      ".wat"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 956556503,
+    "name": "WebAssembly",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.webassembly",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".webidl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 395,
+    "name": "WebIDL",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.webidl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".toc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 396,
+    "name": "World of Warcraft Addon Data",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.toc",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".x10"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 397,
+    "name": "X10",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.x10",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".xc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 398,
+    "name": "XC",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.xc",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [],
+    "fileNames": [
+      ".XCompose",
+      "XCompose",
+      "xcompose"
+    ],
+    "liguistLanguageId": 225167241,
+    "name": "XCompose",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "config.xcompose",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "xml",
+    "aliases": [],
+    "atomGrammars": [
+      "SLD",
+      "XML",
+      "XHTML",
+      "XSD",
+      "XSL",
+      "JSP",
+      "GSP"
+    ],
+    "extensions": [
+      ".sld",
+      ".xml",
+      ".xhtml",
+      ".xsd",
+      ".xsl",
+      ".jsp",
+      ".gsp",
+      ".adml",
+      ".admx",
+      ".ant",
+      ".axml",
+      ".builds",
+      ".ccproj",
+      ".ccxml",
+      ".clixml",
+      ".cproject",
+      ".cscfg",
+      ".csdef",
+      ".csl",
+      ".csproj",
+      ".ct",
+      ".depproj",
+      ".dita",
+      ".ditamap",
+      ".ditaval",
+      ".dll.config",
+      ".dotsettings",
+      ".filters",
+      ".fsproj",
+      ".fxml",
+      ".glade",
+      ".gml",
+      ".grxml",
+      ".iml",
+      ".ivy",
+      ".jelly",
+      ".jsproj",
+      ".kml",
+      ".launch",
+      ".mdpolicy",
+      ".mjml",
+      ".mm",
+      ".mod",
+      ".mxml",
+      ".natvis",
+      ".ndproj",
+      ".nproj",
+      ".nuspec",
+      ".odd",
+      ".osm",
+      ".pkgproj",
+      ".plist",
+      ".pluginspec",
+      ".proj",
+      ".props",
+      ".ps1xml",
+      ".psc1",
+      ".pt",
+      ".rdf",
+      ".resx",
+      ".rss",
+      ".sch",
+      ".scxml",
+      ".sfproj",
+      ".shproj",
+      ".srdf",
+      ".storyboard",
+      ".stTheme",
+      ".sublime-snippet",
+      ".targets",
+      ".tmCommand",
+      ".tml",
+      ".tmLanguage",
+      ".tmPreferences",
+      ".tmSnippet",
+      ".tmTheme",
+      ".ts",
+      ".tsx",
+      ".ui",
+      ".urdf",
+      ".ux",
+      ".vbproj",
+      ".vcxproj",
+      ".vsixmanifest",
+      ".vssettings",
+      ".vstemplate",
+      ".vxml",
+      ".wixproj",
+      ".wsdl",
+      ".wsf",
+      ".wxi",
+      ".wxl",
+      ".wxs",
+      ".x3d",
+      ".xacro",
+      ".xaml",
+      ".xib",
+      ".xlf",
+      ".xliff",
+      ".xmi",
+      ".xml.dist",
+      ".xproj",
+      ".xspec",
+      ".xul",
+      ".zcml"
+    ],
+    "fileNames": [
+      ".classpath",
+      ".project",
+      "App.config",
+      "NuGet.config",
+      "Settings.StyleCop",
+      "Web.Debug.config",
+      "Web.Release.config",
+      "Web.config",
+      "packages.config"
+    ],
+    "liguistLanguageId": 399,
+    "name": "XML",
+    "namespace": "xml",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".xpm",
+      ".pm"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 781846279,
+    "name": "XPM",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.c",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "xml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".xsp-config",
+      ".xsp.metadata"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 400,
+    "name": "XPages",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.xml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "xml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".xpl",
+      ".xproc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 401,
+    "name": "XProc",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.xml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "xquery",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".xquery",
+      ".xq",
+      ".xql",
+      ".xqm",
+      ".xqy"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 402,
+    "name": "XQuery",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.xq",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".xs"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 403,
+    "name": "XS",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.c",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "xml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".xslt",
+      ".xsl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 404,
+    "name": "XSLT",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.xml.xsl",
+    "vscodeLanguages": []
+  },
+  {
+    "atomGrammars": [
+      "XTemplate"
+    ],
+    "extensions": [
+      ".xtemplate"
+    ],
+    "name": "XTemplate",
+    "namespace": "xtemplate",
+    "sublimeSyntaxes": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".xojo_code",
+      ".xojo_menu",
+      ".xojo_report",
+      ".xojo_script",
+      ".xojo_toolbar",
+      ".xojo_window"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 405,
+    "name": "Xojo",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.vbnet",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".xtend"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 406,
+    "name": "Xtend",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "yaml",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".yml",
+      ".reek",
+      ".rviz",
+      ".sublime-syntax",
+      ".syntax",
+      ".yaml",
+      ".yaml-tmlanguage",
+      ".yml.mysql"
+    ],
+    "fileNames": [
+      ".clang-format",
+      ".clang-tidy"
+    ],
+    "liguistLanguageId": 407,
+    "name": "YAML",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.yaml",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".yang"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 408,
+    "name": "YANG",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.yang",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".yar",
+      ".yara"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 805122868,
+    "name": "YARA",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.yara",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".y",
+      ".yacc",
+      ".yy"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 409,
+    "name": "Yacc",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.bison",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "php",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".zep"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 410,
+    "name": "Zephir",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.php.zephir",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".zimpl",
+      ".zmpl",
+      ".zpl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 411,
+    "name": "Zimpl",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "none",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".desktop",
+      ".desktop.in"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 412,
+    "name": "desktop",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.desktop",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ec",
+      ".eh"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 413,
+    "name": "eC",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.c.ec",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "clojure",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".edn"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 414,
+    "name": "edn",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.clojure",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".fish"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 415,
+    "name": "fish",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.fish",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".mu"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 416,
+    "name": "mupad",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".nc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 417,
+    "name": "nesC",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.nesc",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".ooc"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 418,
+    "name": "ooc",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".rst",
+      ".rest",
+      ".rest.txt",
+      ".rst.txt"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 419,
+    "name": "reStructuredText",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".wdl"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 374521672,
+    "name": "wdl",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.wdl",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "clojure",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".wisp"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 420,
+    "name": "wisp",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.clojure",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".prg",
+      ".ch",
+      ".prw"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 421,
+    "name": "xBase",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.harbour",
+    "vscodeLanguages": []
+  }
+]

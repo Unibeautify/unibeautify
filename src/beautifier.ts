@@ -1,6 +1,6 @@
 import {
   Language,
-} from "./languages";
+} from "./language";
 import * as _ from "lodash";
 import {
   OptionsRegistry
@@ -201,7 +201,7 @@ export class Unibeautify {
     const langOptions: OptionValues = Unibeautify.getOptionsForLanguage(lang as Language, data.options);
 
     // Get Beautifier
-    const beautifier: Beautifier | null = this.getBeautifierForLanguage(lang as Language, langOptions);
+    const beautifier: Beautifier | undefined = this.getBeautifierForLanguage(lang as Language, langOptions);
 
     // Run beautifier
     if (beautifier != null) {
@@ -289,7 +289,7 @@ export class Unibeautify {
   /**
   Get default beautifier for given language and options.
   */
-  private getBeautifierForLanguage(language: Language, options: OptionValues = {}): Beautifier | null {
+  private getBeautifierForLanguage(language: Language, options: OptionValues = {}): Beautifier | undefined {
     // TODO
     return _.find(this.beautifiers, (beautifier: Beautifier): boolean => _.includes(Object.keys(beautifier.options), language.name));
   }
