@@ -1,5 +1,4 @@
-// tslint:disable:newspaper-order
-// tslint:disable:no-console
+// tslint:disable:newspaper-order no-console
 import * as request from "request";
 import * as yaml from "js-yaml";
 import * as fs from "fs";
@@ -15,7 +14,6 @@ const originalLanguages = require(outFilePath);
 
 const languagesUrl =
   "https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml";
-// const file = fs.createWriteStream(outFilePath);
 
 request(languagesUrl, (error, response, body) => {
   if (error) {
@@ -25,14 +23,10 @@ request(languagesUrl, (error, response, body) => {
 
   try {
     const githubLanguages: GitHubLanguages = yaml.safeLoad(body);
-    // console.log(githubLanguages);
     const languages = convertGitHubLanguageToUnibeautify(githubLanguages);
-    // console.log(languages);
 
     const finalLanguages = mergeLanguages(originalLanguages, languages);
     console.log(`Writing to ${outFilePath}`);
-    // console.log(JSON.stringify(finalLanguages, null, 2));
-    // console.log();
     fs.writeFileSync(outFilePath, JSON.stringify(finalLanguages, null, 2));
 
     const nonGitHubLanguages = finalLanguages.filter(
@@ -44,7 +38,6 @@ request(languagesUrl, (error, response, body) => {
       "# of languages GitHub is missing: ",
       nonGitHubLanguages.length
     );
-    // console.log(JSON.stringify(nonGitHubLanguages, null, 2));
     console.log(
       nonGitHubLanguages
         .map((lang, index) => `${index + 1}. ${lang.name}`)
