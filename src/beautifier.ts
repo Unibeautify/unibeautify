@@ -35,7 +35,7 @@ export type BeautifierLanguageOption =
 
 */
 export interface BeautifierLanguageOptionComplex {
-  [outOptionName: string]: BeautifierLanguageOption;
+  [outOptionName: string]: BeautifierLanguageOption | undefined;
 }
 /**
 
