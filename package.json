@@ -6,16 +6,19 @@
   "typings": "dist/src/index.d.ts",
   "scripts": {
     "ava": "ava --verbose dist/test",
-    "test": "npm-run-all compile:ts ava",
+    "test": "npm-run-all compile:ts copy-languages-json ava",
     "dev": "tsc --watch",
+    "build": "npm run compile",
+    "copy-languages-json": "cp src/languages.json dist/src/languages.json",
     "compile:ts": "tsc",
-    "compile": "npm-run-all compile:ts update-type-defs",
+    "compile": "npm-run-all compile:ts copy-languages-json update-type-defs",
     "clean": "rimraf dist/",
     "prepublish": "npm-run-all compile",
     "docs": "typedoc --out docs --module commonjs --readme README.md --name Unibeautify src",
     "lint": "tslint {src,test,script}/**/*.ts",
     "lint-fix": "tslint --fix {src,test,script}/**/*.ts",
-    "update-type-defs": "node dist/scripts/update-type-defs.js dist/src/beautifier.d.ts"
+    "update-type-defs": "node dist/scripts/update-type-defs.js dist/src/beautifier.d.ts",
+    "update-languages": "node dist/scripts/update-languages.js ./src/languages.json"
   },
   "repository": {
     "type": "git",
@@ -41,15 +44,19 @@
   "homepage": "https://github.com/Unibeautify/unibeautify#readme",
   "devDependencies": {
     "@types/bluebird": "^3.5.8",
+    "@types/js-yaml": "^3.10.1",
     "@types/json-stable-stringify": "^1.0.31",
     "@types/lodash": "^4.14.71",
     "@types/node": "^8.0.19",
+    "@types/request": "^2.0.9",
     "ava": "^0.16.0",
+    "js-yaml": "^3.10.0",
     "json-stable-stringify": "^1.0.1",
     "npm-run-all": "^3.0.0",
+    "request": "^2.83.0",
     "rimraf": "^2.5.4",
     "tslint": "^5.7.0",
-    "tslint-clean-code": "^0.1.3",
+    "tslint-clean-code": "^0.2.3",
     "tslint-microsoft-contrib": "^5.0.1",
     "typedoc": "^0.9.0",
     "typescript": "^2.5.3"
