@@ -112,8 +112,7 @@ function mergeLanguage(
 }
 
 function getArray(key: keyof Language, obj1: any, obj2: any): string[] {
-  return _.union<string>(obj1[key] || [], obj2[key] || [])
-    .sort();
+  return _.union<string>(obj1[key] || [], obj2[key] || []).sort();
 }
 
 function getString(key: keyof Language, obj1: any, obj2: any): string {
