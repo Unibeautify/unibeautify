@@ -1,7 +1,4 @@
 # Project
-**/*.js
-**/*.js.map
-**/*.d.ts
 typings
 docs
 dist/

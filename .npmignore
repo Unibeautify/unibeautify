@@ -1,6 +1,2 @@
 *
-!src/**/*.js
-!src/**/*.js.map
-!src/**/*.d.ts
-!src/**/*.json
-!typings/**/*
+!dist/src/**/*
