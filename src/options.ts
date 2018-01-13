@@ -351,6 +351,11 @@ export const Options: OptionsRegistry = {
     ],
     type: "string"
   },
+  ternaryline: {
+    default: false,
+    description: "Keeps ? and : operators of ternary statements on the same line of code",
+    type: "boolean"
+  },
   unescape_strings: {
     default: false,
     description: "Decode printable characters encoded in xNN notation",
