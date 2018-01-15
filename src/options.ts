@@ -256,7 +256,12 @@ export const Options: OptionsRegistry = {
   multiline_ternary: {
     default: false,
     description: "Keeps ? and : operators of ternary statements on the same line of code",
-    type: "boolean"
+     enum: [
+      "always",
+      "always-multiline",
+      "never"
+    ],
+    type: "string"
   },
   newline_between_rules: {
     default: true,
