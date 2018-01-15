@@ -253,6 +253,11 @@ export const Options: OptionsRegistry = {
     description: "Number of line-breaks to be preserved in one chunk",
     type: "integer"
   },
+  multiline_ternary: {
+    default: false,
+    description: "Keeps ? and : operators of ternary statements on the same line of code",
+    type: "boolean"
+  },
   newline_between_rules: {
     default: true,
     description: "Add a newline between CSS rules",
@@ -350,11 +355,6 @@ export const Options: OptionsRegistry = {
       "concise"
     ],
     type: "string"
-  },
-  ternaryline: {
-    default: false,
-    description: "Keeps ? and : operators of ternary statements on the same line of code",
-    type: "boolean"
   },
   unescape_strings: {
     default: false,
