@@ -254,7 +254,7 @@ export const Options: OptionsRegistry = {
     type: "integer"
   },
   multiline_ternary: {
-    default: false,
+    default: "always",
     description: "Keeps ? and : operators of ternary statements on the same line of code",
      enum: [
       "always",
