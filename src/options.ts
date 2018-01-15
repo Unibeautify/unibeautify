@@ -253,6 +253,16 @@ export const Options: OptionsRegistry = {
     description: "Number of line-breaks to be preserved in one chunk",
     type: "integer"
   },
+  multiline_ternary: {
+    default: "always",
+    description: "Enforces new lines between the operands of a ternary expression",
+    enum: [
+      "always",
+      "always-multiline",
+      "never"
+    ],
+    type: "string"
+  },
   newline_between_rules: {
     default: true,
     description: "Add a newline between CSS rules",
