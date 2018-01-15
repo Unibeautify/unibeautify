@@ -255,7 +255,7 @@ export const Options: OptionsRegistry = {
   },
   multiline_ternary: {
     default: "always",
-    description: "Keeps ? and : operators of ternary statements on the same line of code",
+    description: "Enforces new lines between the operands of a ternary expression",
      enum: [
       "always",
       "always-multiline",
