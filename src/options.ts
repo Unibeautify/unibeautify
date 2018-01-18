@@ -43,6 +43,15 @@ export const Options: OptionsRegistry = {
     description: "If `latexindent` should look for commands that split brackets across lines",
     type: "boolean"
   },
+  arrow_parens: {
+    default: "always",
+    description: "Require parenthesis in arrow function arguments",
+    enum: [
+      "always",
+      "as-needed"
+    ],
+    type: "string"
+  },
   brace_style: {
     default: "collapse",
     description: "[collapse|collapse-preserve-inline|expand|end-expand|none]",
@@ -105,6 +114,11 @@ export const Options: OptionsRegistry = {
   end_with_newline: {
     default: false,
     description: "End output with newline",
+    type: "boolean"
+  },
+  end_with_semicolon: {
+    default: false,
+    description: "Insert a semicolon at the end of statements",
     type: "boolean"
   },
   eval_code: {
@@ -217,6 +231,11 @@ export const Options: OptionsRegistry = {
     description: "Enable jslint-stricter mode",
     type: "boolean"
   },
+  jsx_brackets: {
+    default: false,
+    description: "Put the > of a multi-line JSX element at the end of the last line",
+    type: "boolean"
+  },
   keep_array_indentation: {
     default: false,
     description: "Preserve array indentation",
@@ -273,6 +292,11 @@ export const Options: OptionsRegistry = {
     description: "If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented.",
     type: "boolean"
   },
+  object_curly_spacing: {
+    default: true,
+    description: "Inserts a space before/after brackets for object literals, destructuring assignments, and import/export specifiers",
+    type: "boolean"
+  },
   omit_div: {
     default: false,
     description: "Whether to omit/remove the 'div' tags.",
@@ -288,6 +312,16 @@ export const Options: OptionsRegistry = {
     description: "Path to the `phpcbf` CLI executable",
     title: "PHPCBF Path",
     type: "string"
+  },
+  pragma_insert: {
+    default: false,
+    description: "Insert a marker at the top of a file specifying the file has been beautified",
+    type: "boolean"
+  },
+  pragma_require: {
+    default: false,
+    description: "Restrict beautifying files to only those with a pragma at the top",
+    type: "boolean"
   },
   predefinedConfig: {
     default: "csscomb",
@@ -462,6 +496,16 @@ export const Options: OptionsRegistry = {
     default: 0,
     description: "Wrap lines at next opportunity after N characters",
     type: "integer"
+  },
+  wrap_prose: {
+    default: "preserve",
+    description: "Wrap markdown text to new lines",
+    enum: [
+      "always",
+      "never",
+      "preserve"
+    ],
+    type: "string"
   },
   yaml: {
     default: true,
