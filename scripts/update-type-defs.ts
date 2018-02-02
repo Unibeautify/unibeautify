@@ -1,3 +1,4 @@
+// tslint:disable:newspaper-order no-shadowed-variable
 import { Languages } from "../src/languages";
 import { Options } from "../src/options";
 import { readFileSync, writeFileSync } from "fs";
@@ -55,7 +56,7 @@ function updateBeautifierLanguageOptionComplex(originalContents: string): string
     const fields: string[] = optionNames.map(optionName => {
         const option = Options[optionName];
         const valueType: string = typescriptTypeForOptionType(option.type);
-        const fieldType: string = `true | ((${optionName}: ${valueType}) => any)`;
+        const fieldType: string = `true | ((${optionName}: ${valueType}) => any) | BeautifierLanguageOption`;
         return `    "${optionName}"?: ${fieldType};`;
     });
     const newInterfaceBody: string = fields.join("\n");
