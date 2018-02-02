@@ -1,5 +1,5 @@
 import test from "ava";
-import { Unibeautify, Language, Beautifier } from "../src/";
+import { Unibeautify, Language, Beautifier } from "../../src/";
 
 test("should successfully beautify text", (t) => {
 
@@ -61,7 +61,7 @@ test("should fail to find beautifier", (t) => {
       t.fail(results);
     })
     .catch((error) => {
-      t.is(error.message, `Beautifier not found for Language: ${lang.name}`);
+      t.is(error.message, `Beautifiers not found for Language: ${lang.name}`);
     });
 
 });
