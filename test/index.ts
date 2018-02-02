@@ -29,7 +29,7 @@ test("should find JavaScript language and no Beautifier for Language", (t) => {
       t.fail(results);
     })
     .catch((error) => {
-      t.is(error.message, "Beautifier not found for Language: JavaScript");
+      t.is(error.message, "Beautifiers not found for Language: JavaScript");
     });
 
 });
@@ -93,7 +93,7 @@ test("should find JavaScript Language and not Beautifier", (t) => {
       t.fail("Should not have found beautifier");
     })
     .catch((error) => {
-      t.is(error.message, "Beautifier not found for Language: JavaScript");
+      t.is(error.message, "Beautifiers not found for Language: JavaScript");
     });
 
 });
