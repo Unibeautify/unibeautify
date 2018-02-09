@@ -12,6 +12,9 @@
                     "t"
                 ]
             }
+        ],
+        "max-func-body-length": [
+            false
         ]
     }
 }

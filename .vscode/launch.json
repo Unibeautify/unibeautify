@@ -8,13 +8,15 @@
             "type": "node",
             "request": "launch",
             "name": "Run AVA Tests",
-            "cwd": "${workspaceRoot}",
-            "program": "${workspaceRoot}/node_modules/ava/cli.js",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/node_modules/ava/cli.js",
             "args": [
                 "--verbose",
-                "${workspaceRoot}/dist/test"
+                "${workspaceFolder}/dist/test"
             ],
-            "internalConsoleOptions": "openOnSessionStart"
+            "internalConsoleOptions": "openOnSessionStart",
+            "sourceMaps": true,
+            "protocol": "inspector"
         }
     ]
 }

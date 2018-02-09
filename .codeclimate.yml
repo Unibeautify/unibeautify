@@ -8,10 +8,9 @@ engines:
       - javascript
   fixme:
     enabled: true
-  tslint:
-    enabled: true
-    channel: beta
-    config: tslint.json
+  # tslint:
+  #   enabled: true
+  #   config: tslint.json
 ratings:
   paths:
   - "**.ts"
