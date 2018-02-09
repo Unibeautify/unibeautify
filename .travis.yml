@@ -16,4 +16,4 @@ notifications:
     on_success: never
     on_failure: change
 after_success:
-	- './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
+  - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
