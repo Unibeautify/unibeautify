@@ -189,6 +189,22 @@ export class Unibeautify {
   }
 
   /**
+   * Get options supported for language and all loaded beautifiers
+   */
+  public getOptionsSupportedForLanguage(language: Language): OptionsRegistry {
+    return this.beautifiers.reduce(
+      (options, beautifier) => ({
+        ...options,
+        ...this.getOptionsSupportedByBeautifierForLanguage({
+          beautifier,
+          language
+        })
+      }),
+      {}
+    );
+  }
+
+  /**
    * Get options supported by beautifier for a language.
    */
   public getOptionsSupportedByBeautifierForLanguage({

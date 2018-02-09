@@ -219,6 +219,67 @@ test("should correctly determine whether beautifier supports option for a langua
   );
 });
 
+test("should get options supported for a language", t => {
+  const unibeautify = new Unibeautify();
+  const optionName = "op1";
+  const options1: OptionsRegistry = {
+    [optionName]: {
+      default: false,
+      description: "Test option",
+      type: "boolean"
+    }
+  };
+  unibeautify.loadOptions(options1);
+  const lang1: Language = {
+    atomGrammars: [],
+    extensions: ["test"],
+    name: "TestLang1",
+    namespace: "test",
+    sublimeSyntaxes: [],
+    vscodeLanguages: []
+  };
+  const lang2: Language = {
+    atomGrammars: [],
+    extensions: ["test"],
+    name: "TestLang2",
+    namespace: "test",
+    sublimeSyntaxes: [],
+    vscodeLanguages: []
+  };
+  unibeautify.loadLanguages([lang1, lang2]);
+  const beautifierResult = "Testing Result";
+  const beautifier1: Beautifier = {
+    beautify: ({ Promise }) => {
+      return Promise.resolve(beautifierResult);
+    },
+    name: "TestBeautify1",
+    options: {
+      [lang1.name]: {
+        [optionName]: false
+      }
+    }
+  };
+  const beautifier2: Beautifier = {
+    beautify: ({ Promise }) => {
+      return Promise.resolve(beautifierResult);
+    },
+    name: "TestBeautify2",
+    options: {
+      [lang1.name]: {
+        [optionName]: true
+      }
+    }
+  };
+  unibeautify.loadBeautifiers([beautifier1, beautifier2]);
+  t.deepEqual(Object.keys(unibeautify.getOptionsSupportedForLanguage(lang1)), [
+    optionName
+  ]);
+  t.deepEqual(
+    Object.keys(unibeautify.getOptionsSupportedForLanguage(lang2)),
+    []
+  );
+});
+
 test("should get options supported by a beautifier for a language", t => {
   const unibeautify = new Unibeautify();
   const optionName = "op1";
