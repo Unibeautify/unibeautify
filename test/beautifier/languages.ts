@@ -91,7 +91,6 @@ test("should loaded languages which support a given beautifier", (t) => {
   t.deepEqual(unibeautify.getLanguagesForBeautifier(beautifier).map(({ name }) => name), [lang1.name]);
 });
 
-
 test("should loaded languages which support a given beautifier", (t) => {
   const unibeautify = new Unibeautify();
   const lang1: Language = {

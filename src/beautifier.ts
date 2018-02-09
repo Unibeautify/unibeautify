@@ -171,6 +171,19 @@ export class Unibeautify {
   private beautifiers: Beautifier[] = [];
 
   /**
+   * Get languages which have loaded beautifiers supporting option
+   */
+  public getLanguagesSupportingOption(optionName: BeautifierOptionName): Language[] {
+    return this.supportedLanguages.filter(
+      language =>
+        this.beautifiers.findIndex(
+          beautifier =>
+            optionKeys(beautifier, language).indexOf(optionName) !== -1,
+        ) !== -1,
+    );
+  }
+
+  /**
    * Get all loaded languages which have at least one supporting beautifier.
    */
   public get supportedLanguages(): Language[] {
@@ -489,4 +502,52 @@ export class Unibeautify {
     _.merge(this.options, options);
     return this;
   }
+}
+
+export function optionKeys(
+  beautifier: Beautifier,
+  language: Language
+): BeautifierOptionName[] {
+  const globalOptions = beautifier.options._;
+  let beautifierOptions = beautifier.options[language.name];
+  // Global options
+  if (typeof globalOptions === "object") {
+    if (beautifierOptions === true) {
+      beautifierOptions = globalOptions;
+    } else if (typeof beautifierOptions === "object") {
+      beautifierOptions = Object.assign({}, globalOptions, beautifierOptions);
+    }
+  }
+  // Transform options
+  if (typeof beautifierOptions === "boolean") {
+    return [];
+  } else if (typeof beautifierOptions === "object") {
+    const options: BeautifierOptionName[] = [];
+    // const transformedOptions: OptionValues = {};
+    Object.keys(beautifierOptions).forEach(fieldKey => {
+      const op = (<BeautifierLanguageOptionComplex>beautifierOptions)[fieldKey];
+      if (typeof op === "string") {
+        options.push(op);
+      } else if (isOptionTransformSingleFunction(op)) {
+        options.push(fieldKey as BeautifierOptionName);
+      } else if (typeof op === "boolean") {
+        if (op === true) {
+          options.push(fieldKey as BeautifierOptionName);
+        }
+      } else if (isOptionTransform(op)) {
+        options.push(...op[0]);
+      }
+    });
+    return options;
+  } else {
+    return [];
+  }
+}
+function isOptionTransformSingleFunction(
+  option: any
+): option is BeautifyOptionTransformSingleFunction {
+  return typeof option === "function";
+}
+function isOptionTransform(option: any): option is BeautifyOptionTransform {
+  return Array.isArray(option);
 }
