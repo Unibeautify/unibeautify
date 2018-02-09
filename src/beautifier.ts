@@ -165,6 +165,10 @@ export class Unibeautify {
 
   */
   private languages: Language[] = [];
+  /**
+
+  */
+  private beautifiers: Beautifier[] = [];
 
   /**
   Find and return the appropriate Language for the given file extension.
@@ -175,7 +179,10 @@ export class Unibeautify {
     });
   }
 
-  public get supportedLanguages() {
+  /**
+   * Get all loaded languages which have at least one supporting beautifier.
+   */
+  public get supportedLanguages(): Language[] {
     return this.getLoadedLanguages().filter(language =>
       Boolean(this.getBeautifierForLanguage(language))
     );
@@ -341,19 +348,15 @@ export class Unibeautify {
   }
 
   /**
-  Get a copy of the languages currently loaded.
+  Get a shallow copy of the languages currently loaded.
   */
   public getLoadedLanguages(): Language[] {
     return this.languages.slice();
   }
-  /**
-
-  */
-  private beautifiers: Beautifier[] = [];
 
   /**
-  Get first loaded beautifier for given language.
-  */
+   Get first loaded beautifier for given language.
+   */
   private getBeautifierForLanguage(language: Language): Beautifier | undefined {
     return _.find(this.beautifiers, (beautifier: Beautifier): boolean =>
       _.includes(Object.keys(beautifier.options), language.name)
@@ -361,12 +364,19 @@ export class Unibeautify {
   }
 
   /**
-  Find and return the appropriate Beautifiers for the given Language.
-  */
+ Find and return the appropriate Beautifiers for the given Language.
+ */
   public getBeautifiersForLanguage(language: Language): Beautifier[] {
     return _.filter(this.beautifiers, (beautifier: Beautifier): boolean =>
       _.includes(Object.keys(beautifier.options), language.name)
     );
+  }
+
+  /**
+   * Get a shallow copy of the options currently loaded.
+   */
+  public getLoadedOptions(): OptionsRegistry {
+    return { ...this.options };
   }
 
   /**
