@@ -171,15 +171,6 @@ export class Unibeautify {
   private beautifiers: Beautifier[] = [];
 
   /**
-  Find and return the appropriate Language for the given file extension.
-  */
-  private findLanguagesForExtension(extension: string): Language[] {
-    return this.findLanguages({
-      extension
-    });
-  }
-
-  /**
    * Get all loaded languages which have at least one supporting beautifier.
    */
   public get supportedLanguages(): Language[] {
@@ -359,7 +350,7 @@ export class Unibeautify {
    */
   private getBeautifierForLanguage(language: Language): Beautifier | undefined {
     return _.find(this.beautifiers, (beautifier: Beautifier): boolean =>
-      _.includes(Object.keys(beautifier.options), language.name)
+      beautifier.options.hasOwnProperty(language.name)
     );
   }
 
@@ -368,8 +359,16 @@ export class Unibeautify {
  */
   public getBeautifiersForLanguage(language: Language): Beautifier[] {
     return _.filter(this.beautifiers, (beautifier: Beautifier): boolean =>
-      _.includes(Object.keys(beautifier.options), language.name)
+      beautifier.options.hasOwnProperty(language.name)
     );
+  }
+
+  /**
+   * Find loaded languages the given beautifier supports.
+   */
+  public getLanguagesForBeautifier(beautifier: Beautifier): Language[] {
+    const { options = {} } = beautifier;
+    return this.languages.filter(lang => options.hasOwnProperty(lang.name));
   }
 
   /**
