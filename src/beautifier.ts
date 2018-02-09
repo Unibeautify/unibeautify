@@ -458,7 +458,7 @@ export class Unibeautify {
    * Find loaded languages the given beautifier supports.
    */
   public getLanguagesForBeautifier(beautifier: Beautifier): Language[] {
-    const { options = {} } = beautifier;
+    const { options } = beautifier;
     return this.languages.filter(lang => options.hasOwnProperty(lang.name));
   }
 

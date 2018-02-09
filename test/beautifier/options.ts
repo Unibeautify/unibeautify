@@ -221,9 +221,21 @@ test("should correctly determine whether beautifier supports option for a langua
 
 test("should get options supported for a language", t => {
   const unibeautify = new Unibeautify();
-  const optionName = "op1";
+  const optionName1 = "op1";
+  const optionName2 = "op2";
+  const optionName3 = "op3";
   const options1: OptionsRegistry = {
-    [optionName]: {
+    [optionName1]: {
+      default: false,
+      description: "Test option",
+      type: "boolean"
+    },
+    [optionName2]: {
+      default: false,
+      description: "Test option",
+      type: "boolean"
+    },
+    [optionName3]: {
       default: false,
       description: "Test option",
       type: "boolean"
@@ -254,9 +266,13 @@ test("should get options supported for a language", t => {
     },
     name: "TestBeautify1",
     options: {
+      _: {
+        [optionName1]: optionName2
+      },
       [lang1.name]: {
-        [optionName]: false
-      }
+        [optionName1]: false
+      },
+      [lang2.name]: true
     }
   };
   const beautifier2: Beautifier = {
@@ -266,18 +282,23 @@ test("should get options supported for a language", t => {
     name: "TestBeautify2",
     options: {
       [lang1.name]: {
-        [optionName]: true
-      }
+        [optionName1]: true,
+        [optionName2]: [[optionName2, optionName3], (options: any) => true],
+      },
+      [lang2.name]: {
+        [optionName2]: (value: any) => value,
+      },
     }
   };
   unibeautify.loadBeautifiers([beautifier1, beautifier2]);
   t.deepEqual(Object.keys(unibeautify.getOptionsSupportedForLanguage(lang1)), [
-    optionName
+    optionName1,
+    optionName2,
+    optionName3,
   ]);
-  t.deepEqual(
-    Object.keys(unibeautify.getOptionsSupportedForLanguage(lang2)),
-    []
-  );
+  t.deepEqual(Object.keys(unibeautify.getOptionsSupportedForLanguage(lang2)), [
+    optionName2
+  ]);
 });
 
 test("should get options supported by a beautifier for a language", t => {
@@ -327,7 +348,8 @@ test("should get options supported by a beautifier for a language", t => {
     name: "TestBeautify2",
     options: {
       [lang1.name]: {
-        [optionName]: true
+        [optionName]: true,
+        unknownOption: true
       }
     }
   };
