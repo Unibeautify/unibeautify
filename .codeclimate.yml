@@ -10,7 +10,6 @@ engines:
     enabled: true
   tslint:
     enabled: true
-    channel: beta
     config: tslint.json
 ratings:
   paths:
