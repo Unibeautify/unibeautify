@@ -171,15 +171,20 @@ export class Unibeautify {
   private beautifiers: Beautifier[] = [];
 
   /**
-   * Get languages which have loaded beautifiers supporting option
+   * Get loaded languages which have a loaded beautifier supporting the given option
    */
-  public getLanguagesSupportingOption(optionName: BeautifierOptionName): Language[] {
+  public getLanguagesSupportingOption(
+    optionName: BeautifierOptionName
+  ): Language[] {
     return this.supportedLanguages.filter(
       language =>
-        this.beautifiers.findIndex(
-          beautifier =>
-            optionKeys(beautifier, language).indexOf(optionName) !== -1,
-        ) !== -1,
+        this.beautifiers.findIndex(beautifier =>
+          this.doesBeautifierSupportOptionForLanguage({
+            beautifier,
+            language,
+            optionName
+          })
+        ) !== -1
     );
   }
 
@@ -374,6 +379,36 @@ export class Unibeautify {
     return _.filter(this.beautifiers, (beautifier: Beautifier): boolean =>
       beautifier.options.hasOwnProperty(language.name)
     );
+  }
+
+  /**
+   * Get loaded beautifiers which have a loaded languages supporting the given option
+   */
+  public getBeautifiersSupportingOption(
+    optionName: BeautifierOptionName
+  ): Beautifier[] {
+    return this.beautifiers.filter(
+      beautifier =>
+        this.languages.findIndex(language =>
+          this.doesBeautifierSupportOptionForLanguage({
+            beautifier,
+            language,
+            optionName
+          })
+        ) !== -1
+    );
+  }
+
+  public doesBeautifierSupportOptionForLanguage({
+    beautifier,
+    language,
+    optionName
+  }: {
+    beautifier: Beautifier;
+    language: Language;
+    optionName: BeautifierOptionName;
+  }): boolean {
+    return optionKeys(beautifier, language).indexOf(optionName) !== -1;
   }
 
   /**
