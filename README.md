@@ -2,6 +2,8 @@
 
 > One Beautifier to rule them all, One Beautifier to clean them, One Beautifier to bring them all and in the darkness sheen them
 
+[![Coverage Status](https://coveralls.io/repos/github/Unibeautify/unibeautify/badge.svg?branch=master)](https://coveralls.io/github/Unibeautify/unibeautify?branch=master)
+
 | Travis CI (Linux / macOS) | AppVeyor (Windows) |
 | --- | --- |
 | [![Build Status](https://travis-ci.org/Unibeautify/unibeautify.svg?branch=master)](https://travis-ci.org/Unibeautify/unibeautify) | [![Build status](https://ci.appveyor.com/api/projects/status/fsa9xirkn73hfibt/branch/master?svg=true)](https://ci.appveyor.com/project/Glavin001/unibeautify/branch/master) |

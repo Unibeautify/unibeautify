@@ -51,6 +51,7 @@
     "@types/node": "^8.0.19",
     "@types/request": "^2.0.9",
     "ava": "^0.16.0",
+    "coveralls": "^3.0.0",
     "js-yaml": "^3.10.0",
     "json-stable-stringify": "^1.0.1",
     "npm-run-all": "^3.0.0",
