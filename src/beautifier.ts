@@ -189,6 +189,30 @@ export class Unibeautify {
   }
 
   /**
+   * Get options supported by beautifier for a language.
+   */
+  public getOptionsSupportedByBeautifierForLanguage({
+    beautifier,
+    language
+  }: {
+    beautifier: Beautifier;
+    language: Language;
+  }): OptionsRegistry {
+    const keys: BeautifierOptionName[] = optionKeys(beautifier, language);
+    const allOptions = this.options;
+    return keys.reduce((options, key) => {
+      const option = allOptions[key];
+      if (!option) {
+        return options;
+      }
+      return {
+        ...options,
+        [key]: option
+      };
+    }, {});
+  }
+
+  /**
    * Get all loaded languages which have at least one supporting beautifier.
    */
   public get supportedLanguages(): Language[] {
@@ -364,7 +388,7 @@ export class Unibeautify {
   }
 
   /**
-   Get first loaded beautifier for given language.
+   * Get first loaded beautifier for given language.
    */
   private getBeautifierForLanguage(language: Language): Beautifier | undefined {
     return _.find(this.beautifiers, (beautifier: Beautifier): boolean =>
@@ -373,8 +397,8 @@ export class Unibeautify {
   }
 
   /**
- Find and return the appropriate Beautifiers for the given Language.
- */
+   * Find and return the appropriate Beautifiers for the given Language.
+   */
   public getBeautifiersForLanguage(language: Language): Beautifier[] {
     return _.filter(this.beautifiers, (beautifier: Beautifier): boolean =>
       beautifier.options.hasOwnProperty(language.name)
@@ -399,6 +423,9 @@ export class Unibeautify {
     );
   }
 
+  /**
+   * Determine whether beautifier supports option for a language
+   */
   public doesBeautifierSupportOptionForLanguage({
     beautifier,
     language,
