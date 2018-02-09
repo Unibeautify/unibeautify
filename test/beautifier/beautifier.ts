@@ -1,6 +1,53 @@
 import test from "ava";
 import { Unibeautify, Language, Beautifier } from "../../src/";
 
+test("should load beautifier", (t) => {
+  const unibeautify = new Unibeautify();
+  const beautifierResult = "Testing Result";
+  const beautifier: Beautifier = {
+    beautify: ({
+        Promise
+      }) => {
+      return Promise.resolve(beautifierResult);
+    },
+    name: "TestBeautify",
+    options: {
+      TestLang: false
+    },
+  };
+  unibeautify.loadBeautifier(beautifier);
+  t.deepEqual(unibeautify.loadedBeautifiers.map(curr => curr.name), [beautifier.name]);
+});
+
+test("should load beautifiers", (t) => {
+  const unibeautify = new Unibeautify();
+  const beautifierResult = "Testing Result";
+  const beautifier1: Beautifier = {
+    beautify: ({
+        Promise
+      }) => {
+      return Promise.resolve(beautifierResult);
+    },
+    name: "TestBeautify1",
+    options: {
+      TestLang: false
+    },
+  };
+  const beautifier2: Beautifier = {
+    beautify: ({
+        Promise
+      }) => {
+      return Promise.resolve(beautifierResult);
+    },
+    name: "TestBeautify2",
+    options: {
+      TestLang: false
+    },
+  };
+  unibeautify.loadBeautifiers([beautifier1, beautifier2]);
+  t.deepEqual(unibeautify.loadedBeautifiers.map(curr => curr.name), [beautifier1.name, beautifier2.name]);
+});
+
 test("should successfully beautify text", (t) => {
 
   const unibeautify = new Unibeautify();

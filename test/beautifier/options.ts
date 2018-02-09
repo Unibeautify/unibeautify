@@ -23,7 +23,7 @@ test("should get all loaded options", (t) => {
   };
   unibeautify.loadOptions(options2);
 
-  t.deepEqual(Object.keys(unibeautify.getLoadedOptions()), [
+  t.deepEqual(Object.keys(unibeautify.loadedOptions), [
     ...Object.keys(options1),
     ...Object.keys(options2),
   ]);

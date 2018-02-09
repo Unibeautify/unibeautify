@@ -280,7 +280,7 @@ export class Unibeautify {
   - sublimeSyntax
   - vscodeLanguage
   */
-  private findLanguages(query: {
+  public findLanguages(query: {
     /**
     Language name
     */
@@ -375,8 +375,15 @@ export class Unibeautify {
   /**
    * Get a shallow copy of the options currently loaded.
    */
-  public getLoadedOptions(): OptionsRegistry {
+  public get loadedOptions(): OptionsRegistry {
     return { ...this.options };
+  }
+
+  /**
+   * Get a shallow copy of the beautifiers currently loaded.
+   */
+  public get loadedBeautifiers(): Beautifier[] {
+    return this.beautifiers.slice();
   }
 
   /**

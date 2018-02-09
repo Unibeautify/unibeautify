@@ -5,8 +5,9 @@
   "main": "dist/src/index.js",
   "typings": "dist/src/index.d.ts",
   "scripts": {
-    "ava": "ava --verbose dist/test",
-    "test": "npm-run-all clean compile:ts copy-languages-json ava",
+    "ava": "nyc ava --verbose dist/test",
+    "report": "nyc report --reporter=html",
+    "test": "npm-run-all clean compile:ts copy-languages-json ava report",
     "dev": "tsc --watch",
     "build": "npm run compile",
     "copy-languages-json": "cp src/languages.json dist/src/languages.json",
@@ -53,6 +54,7 @@
     "js-yaml": "^3.10.0",
     "json-stable-stringify": "^1.0.1",
     "npm-run-all": "^3.0.0",
+    "nyc": "^11.4.1",
     "request": "^2.83.0",
     "rimraf": "^2.5.4",
     "tslint": "^5.7.0",
@@ -67,5 +69,10 @@
   },
   "engines": {
     "node": ">=6.0.0"
+  },
+  "nyc": {
+    "exclude": [
+      "**/test"
+    ]
   }
 }
