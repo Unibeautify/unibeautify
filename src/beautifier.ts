@@ -148,6 +148,11 @@ export interface Beautifier {
   */
   options: BeautifierOptions;
   /**
+   * Parsed Package.json file as JSON.
+   */
+  // tslint:disable-next-line:no-reserved-keywords
+  package?: object;
+  /**
   Beautify the given code with the beautifier.
   */
   beautify(data: BeautifierBeautifyData): Promise<string>;
