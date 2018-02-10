@@ -1,6 +1,6 @@
 {
   "name": "unibeautify",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "One Beautifier to rule them all",
   "main": "dist/src/index.js",
   "typings": "dist/src/index.d.ts",
