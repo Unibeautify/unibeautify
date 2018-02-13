@@ -1,7 +1,6 @@
-import test from "ava";
 import { Unibeautify, Language, Beautifier, OptionsRegistry } from "../../src/";
 
-test("should get all loaded options", t => {
+test("should get all loaded options", () => {
   const unibeautify = new Unibeautify();
   const options1: OptionsRegistry = {
     op1: {
@@ -19,13 +18,13 @@ test("should get all loaded options", t => {
     }
   };
   unibeautify.loadOptions(options2);
-  t.deepEqual(Object.keys(unibeautify.loadedOptions), [
+  expect(Object.keys(unibeautify.loadedOptions)).toEqual([
     ...Object.keys(options1),
     ...Object.keys(options2)
   ]);
 });
 
-test("should get languages with a loaded beautifier supporting the given option", t => {
+test("should get languages with a loaded beautifier supporting the given option", () => {
   const unibeautify = new Unibeautify();
   const optionName = "op1";
   const options1: OptionsRegistry = {
@@ -66,15 +65,12 @@ test("should get languages with a loaded beautifier supporting the given option"
     }
   };
   unibeautify.loadBeautifier(beautifier);
-  t.deepEqual(
-    unibeautify
-      .getLanguagesSupportingOption(optionName)
-      .map(({ name }) => name),
-    [lang1.name]
-  );
+  expect(
+    unibeautify.getLanguagesSupportingOption(optionName).map(({ name }) => name)
+  ).toEqual([lang1.name]);
 });
 
-test("should get beautifiers with a loaded language supporting the given option", t => {
+test("should get beautifiers with a loaded language supporting the given option", () => {
   const unibeautify = new Unibeautify();
   const optionName = "op1";
   const options1: OptionsRegistry = {
@@ -126,15 +122,14 @@ test("should get beautifiers with a loaded language supporting the given option"
     }
   };
   unibeautify.loadBeautifiers([beautifier1, beautifier2]);
-  t.deepEqual(
+  expect(
     unibeautify
       .getBeautifiersSupportingOption(optionName)
-      .map(({ name }) => name),
-    [beautifier2.name]
-  );
+      .map(({ name }) => name)
+  ).toEqual([beautifier2.name]);
 });
 
-test("should correctly determine whether beautifier supports option for a language", t => {
+test("should correctly determine whether beautifier supports option for a language", () => {
   const unibeautify = new Unibeautify();
   const optionName = "op1";
   const options1: OptionsRegistry = {
@@ -185,41 +180,37 @@ test("should correctly determine whether beautifier supports option for a langua
       }
     }
   };
-  t.is(
+  expect(
     unibeautify.doesBeautifierSupportOptionForLanguage({
       beautifier: beautifier1,
       language: lang1,
       optionName
-    }),
-    false
-  );
-  t.is(
+    })
+  ).toEqual(false);
+  expect(
     unibeautify.doesBeautifierSupportOptionForLanguage({
       beautifier: beautifier2,
       language: lang1,
       optionName
-    }),
-    true
-  );
-  t.is(
+    })
+  ).toEqual(true);
+  expect(
     unibeautify.doesBeautifierSupportOptionForLanguage({
       beautifier: beautifier1,
       language: lang2,
       optionName
-    }),
-    false
-  );
-  t.is(
+    })
+  ).toEqual(false);
+  expect(
     unibeautify.doesBeautifierSupportOptionForLanguage({
       beautifier: beautifier2,
       language: lang2,
       optionName
-    }),
-    false
-  );
+    })
+  ).toEqual(false);
 });
 
-test("should get options supported for a language", t => {
+test("should get options supported for a language", () => {
   const unibeautify = new Unibeautify();
   const optionName1 = "op1";
   const optionName2 = "op2";
@@ -283,25 +274,23 @@ test("should get options supported for a language", t => {
     options: {
       [lang1.name]: {
         [optionName1]: true,
-        [optionName2]: [[optionName2, optionName3], (options: any) => true],
+        [optionName2]: [[optionName2, optionName3], (options: any) => true]
       },
       [lang2.name]: {
-        [optionName2]: (value: any) => value,
-      },
+        [optionName2]: (value: any) => value
+      }
     }
   };
   unibeautify.loadBeautifiers([beautifier1, beautifier2]);
-  t.deepEqual(Object.keys(unibeautify.getOptionsSupportedForLanguage(lang1)), [
-    optionName1,
-    optionName2,
-    optionName3,
-  ]);
-  t.deepEqual(Object.keys(unibeautify.getOptionsSupportedForLanguage(lang2)), [
-    optionName2
-  ]);
+  expect(
+    Object.keys(unibeautify.getOptionsSupportedForLanguage(lang1))
+  ).toEqual([optionName1, optionName2, optionName3]);
+  expect(
+    Object.keys(unibeautify.getOptionsSupportedForLanguage(lang2))
+  ).toEqual([optionName2]);
 });
 
-test("should get options supported by a beautifier for a language", t => {
+test("should get options supported by a beautifier for a language", () => {
   const unibeautify = new Unibeautify();
   const optionName = "op1";
   const options1: OptionsRegistry = {
@@ -353,40 +342,36 @@ test("should get options supported by a beautifier for a language", t => {
       }
     }
   };
-  t.deepEqual(
+  expect(
     Object.keys(
       unibeautify.getOptionsSupportedByBeautifierForLanguage({
         beautifier: beautifier1,
         language: lang1
       })
-    ),
-    []
-  );
-  t.deepEqual(
+    )
+  ).toEqual([]);
+  expect(
     Object.keys(
       unibeautify.getOptionsSupportedByBeautifierForLanguage({
         beautifier: beautifier2,
         language: lang1
       })
-    ),
-    [optionName]
-  );
-  t.deepEqual(
+    )
+  ).toEqual([optionName]);
+  expect(
     Object.keys(
       unibeautify.getOptionsSupportedByBeautifierForLanguage({
         beautifier: beautifier1,
         language: lang2
       })
-    ),
-    []
-  );
-  t.deepEqual(
+    )
+  ).toEqual([]);
+  expect(
     Object.keys(
       unibeautify.getOptionsSupportedByBeautifierForLanguage({
         beautifier: beautifier2,
         language: lang2
       })
-    ),
-    []
-  );
+    )
+  ).toEqual([]);
 });

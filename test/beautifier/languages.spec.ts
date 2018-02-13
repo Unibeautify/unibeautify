@@ -1,7 +1,6 @@
-import test from "ava";
 import { Unibeautify, Language, Beautifier, OptionsRegistry } from "../../src/";
 
-test("should get all loaded languages", (t) => {
+test("should get all loaded languages", () => {
   const unibeautify = new Unibeautify();
   const lang: Language = {
     atomGrammars: [],
@@ -12,10 +11,12 @@ test("should get all loaded languages", (t) => {
     vscodeLanguages: []
   };
   unibeautify.loadLanguage(lang);
-  t.deepEqual(unibeautify.getLoadedLanguages().map(({ name }) => name), [lang.name]);
+  expect(unibeautify.getLoadedLanguages().map(({ name }) => name)).toEqual([
+    lang.name
+  ]);
 });
 
-test("should return empty array when no languages are supported with a beautifier", (t) => {
+test("should return empty array when no languages are supported with a beautifier", () => {
   const unibeautify = new Unibeautify();
   const lang: Language = {
     atomGrammars: [],
@@ -26,10 +27,10 @@ test("should return empty array when no languages are supported with a beautifie
     vscodeLanguages: []
   };
   unibeautify.loadLanguage(lang);
-  t.deepEqual(unibeautify.supportedLanguages.map(({ name }) => name), []);
+  expect(unibeautify.supportedLanguages.map(({ name }) => name)).toEqual([]);
 });
 
-test("should supported languages", (t) => {
+test("should supported languages", () => {
   const unibeautify = new Unibeautify();
   const lang: Language = {
     atomGrammars: [],
@@ -42,21 +43,21 @@ test("should supported languages", (t) => {
   unibeautify.loadLanguage(lang);
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({
-        Promise
-      }) => {
+    beautify: ({ Promise }) => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify",
     options: {
       TestLang: false
-    },
+    }
   };
   unibeautify.loadBeautifier(beautifier);
-  t.deepEqual(unibeautify.supportedLanguages.map(({ name }) => name), [lang.name]);
+  expect(unibeautify.supportedLanguages.map(({ name }) => name)).toEqual([
+    lang.name
+  ]);
 });
 
-test("should loaded languages which support a given beautifier", (t) => {
+test("should loaded languages which support a given beautifier", () => {
   const unibeautify = new Unibeautify();
   const lang1: Language = {
     atomGrammars: [],
@@ -77,21 +78,21 @@ test("should loaded languages which support a given beautifier", (t) => {
   unibeautify.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({
-        Promise
-      }) => {
+    beautify: ({ Promise }) => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify",
     options: {
       [lang1.name]: false
-    },
+    }
   };
   unibeautify.loadBeautifier(beautifier);
-  t.deepEqual(unibeautify.getLanguagesForBeautifier(beautifier).map(({ name }) => name), [lang1.name]);
+  expect(
+    unibeautify.getLanguagesForBeautifier(beautifier).map(({ name }) => name)
+  ).toEqual([lang1.name]);
 });
 
-test("should loaded languages which support a given beautifier", (t) => {
+test("should loaded languages which support a given beautifier", () => {
   const unibeautify = new Unibeautify();
   const lang1: Language = {
     atomGrammars: [],
@@ -112,17 +113,19 @@ test("should loaded languages which support a given beautifier", (t) => {
   unibeautify.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({
-        Promise
-      }) => {
+    beautify: ({ Promise }) => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify",
     options: {
       [lang1.name]: false
-    },
+    }
   };
   unibeautify.loadBeautifier(beautifier);
-  t.deepEqual(unibeautify.getBeautifiersForLanguage(lang1).map(({ name }) => name), [beautifier.name]);
-  t.deepEqual(unibeautify.getBeautifiersForLanguage(lang2).map(({ name }) => name), []);
+  expect(
+    unibeautify.getBeautifiersForLanguage(lang1).map(({ name }) => name)
+  ).toEqual([beautifier.name]);
+  expect(
+    unibeautify.getBeautifiersForLanguage(lang2).map(({ name }) => name)
+  ).toEqual([]);
 });
