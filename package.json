@@ -5,9 +5,8 @@
   "main": "dist/src/index.js",
   "typings": "dist/src/index.d.ts",
   "scripts": {
-    "ava": "nyc ava --verbose dist/test",
-    "report": "nyc report --reporter=html",
-    "test": "npm-run-all clean compile:ts copy-languages-json ava report",
+    "jest": "jest",
+    "test": "npm-run-all clean compile:ts copy-languages-json jest",
     "dev": "tsc --watch",
     "build": "npm run compile",
     "copy-languages-json": "cp src/languages.json dist/src/languages.json",
@@ -44,20 +43,20 @@
   },
   "homepage": "https://github.com/Unibeautify/unibeautify#readme",
   "devDependencies": {
-    "@types/bluebird": "^3.5.8",
+    "@types/jest": "^22.1.2",
     "@types/js-yaml": "^3.10.1",
     "@types/json-stable-stringify": "^1.0.31",
     "@types/lodash": "^4.14.71",
     "@types/node": "^8.0.19",
     "@types/request": "^2.0.9",
-    "ava": "^0.16.0",
     "coveralls": "^3.0.0",
+    "jest": "^22.2.2",
     "js-yaml": "^3.10.0",
     "json-stable-stringify": "^1.0.1",
     "npm-run-all": "^3.0.0",
-    "nyc": "^11.4.1",
     "request": "^2.83.0",
     "rimraf": "^2.5.4",
+    "ts-jest": "^22.0.4",
     "tslint": "^5.7.0",
     "tslint-clean-code": "^0.2.3",
     "tslint-microsoft-contrib": "^5.0.1",
@@ -65,7 +64,6 @@
     "typescript": "^2.5.3"
   },
   "dependencies": {
-    "bluebird": "^3.4.3",
     "lodash": "^4.15.0"
   },
   "engines": {
@@ -74,6 +72,24 @@
   "nyc": {
     "exclude": [
       "**/test"
+    ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "dist/test/.*\\.(test|spec)\\.js$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json", "lcov", "text", "html"
     ]
   }
 }

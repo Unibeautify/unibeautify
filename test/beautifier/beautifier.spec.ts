@@ -1,7 +1,6 @@
-import test from "ava";
 import { Unibeautify, Language, Beautifier } from "../../src/";
 
-test("should load beautifier", t => {
+test("should load beautifier", () => {
   const unibeautify = new Unibeautify();
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
@@ -14,12 +13,12 @@ test("should load beautifier", t => {
     }
   };
   unibeautify.loadBeautifier(beautifier);
-  t.deepEqual(unibeautify.loadedBeautifiers.map(curr => curr.name), [
+  expect(unibeautify.loadedBeautifiers.map(curr => curr.name)).toEqual([
     beautifier.name
   ]);
 });
 
-test("should load beautifiers", t => {
+test("should load beautifiers", () => {
   const unibeautify = new Unibeautify();
   const beautifierResult = "Testing Result";
   const beautifier1: Beautifier = {
@@ -41,13 +40,13 @@ test("should load beautifiers", t => {
     }
   };
   unibeautify.loadBeautifiers([beautifier1, beautifier2]);
-  t.deepEqual(unibeautify.loadedBeautifiers.map(curr => curr.name), [
+  expect(unibeautify.loadedBeautifiers.map(curr => curr.name)).toEqual([
     beautifier1.name,
     beautifier2.name
   ]);
 });
 
-test("should successfully beautify text", t => {
+test("should successfully beautify text", () => {
   const unibeautify = new Unibeautify();
   const lang: Language = {
     atomGrammars: [],
@@ -71,18 +70,16 @@ test("should successfully beautify text", t => {
   };
   unibeautify.loadBeautifier(beautifier);
 
-  return unibeautify
-    .beautify({
+  return expect(
+    unibeautify.beautify({
       languageName: "TestLang",
       options: {},
       text: "test"
     })
-    .then(results => {
-      t.is(results, beautifierResult);
-    });
+  ).resolves.toBe(beautifierResult);
 });
 
-test("should fail to find beautifier", t => {
+test("should fail to find beautifier", () => {
   const unibeautify = new Unibeautify();
   const lang: Language = {
     atomGrammars: [],
@@ -94,38 +91,28 @@ test("should fail to find beautifier", t => {
   };
   unibeautify.loadLanguage(lang);
 
-  return unibeautify
-    .beautify({
+  return expect(
+    unibeautify.beautify({
       languageName: "TestLang",
       options: {},
       text: "test"
     })
-    .then(results => {
-      t.fail(results);
-    })
-    .catch(error => {
-      t.is(error.message, `Beautifiers not found for Language: ${lang.name}`);
-    });
+  ).rejects.toThrowError(`Beautifiers not found for Language: ${lang.name}`);
 });
 
-test("should fail to find language", t => {
+test("should fail to find language", () => {
   const unibeautify = new Unibeautify();
 
-  return unibeautify
-    .beautify({
+  return expect(
+    unibeautify.beautify({
       languageName: "TestLang",
       options: {},
       text: "test"
     })
-    .then(results => {
-      t.fail(results);
-    })
-    .catch(error => {
-      t.is(error.message, "Cannot find language.");
-    });
+  ).rejects.toThrowError("Cannot find language.");
 });
 
-test("should successfully transform option values for beautifier", t => {
+test("should successfully transform option values for beautifier", () => {
   const unibeautify = new Unibeautify();
   const lang1: Language = {
     atomGrammars: [],
@@ -181,25 +168,15 @@ test("should successfully transform option values for beautifier", t => {
     lang1,
     options
   );
-  t.is(result1.value1, options.value1, "Allow option");
-  t.is(result1.renamed1, options.value1, "Rename option");
-  t.is(
-    result1.basicTransform,
-    options.basicTransform + 1,
-    "Perform basic transformation"
-  );
-  t.is(
-    result1.complexTransform,
-    options.value1 + options.basicTransform,
-    "Perform complex transformation"
-  );
-  t.is(result1.globalOption, options.globalOption, "Include global option");
-  t.is(
-    result1.willBeReplaced,
-    options.value1,
-    "Replace global option with language-specific option"
-  );
-  t.deepEqual(result1, {
+  expect(result1.value1).toEqual(options.value1); // "Allow option"
+  expect(result1.renamed1).toEqual(options.value1); // "Rename option"
+  expect(result1.basicTransform).toEqual(options.basicTransform + 1); // "Perform basic transformation"
+  expect(result1.complexTransform).toEqual(
+    options.value1 + options.basicTransform
+  ); // "Perform complex transformation"
+  expect(result1.globalOption).toEqual(options.globalOption); // "Include global option"
+  expect(result1.willBeReplaced).toEqual(options.value1); // "Replace global option with language-specific option"
+  expect(result1).toEqual({
     basicTransform: options.basicTransform + 1,
     complexTransform: options.value1 + options.basicTransform,
     globalOption: options.globalOption,
@@ -213,15 +190,10 @@ test("should successfully transform option values for beautifier", t => {
     lang2,
     options
   );
-  t.is(result2.globalOption, options.globalOption, "Include global option");
-  t.is(
-    result2.willBeReplaced,
-    options.globalOption,
-    "Replace global option with language-specific option"
-  );
-  t.deepEqual(result2, {
+  expect(result2.globalOption).toEqual(options.globalOption); // "Include global option"
+  expect(result2.willBeReplaced).toEqual(options.globalOption); // "Replace global option with language-specific option"
+  expect(result2).toEqual({
     globalOption: options.globalOption,
     willBeReplaced: options.globalOption
   });
-
 });
