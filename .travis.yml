@@ -16,5 +16,6 @@ notifications:
     on_success: never
     on_failure: change
 after_success:
-  - npm install nyc
+  - npm install nyc codecov
   - ./node_modules/.bin/nyc report --temp-directory=coverage --reporter=text-lcov | ./node_modules/.bin/coveralls
+  - codecov -f coverage/*.json
