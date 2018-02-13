@@ -6,6 +6,7 @@
   "typings": "dist/src/index.d.ts",
   "scripts": {
     "jest": "jest",
+    "jest-watch": "jest --watch",
     "test": "npm-run-all clean compile:ts copy-languages-json jest",
     "dev": "tsc --watch",
     "build": "npm run compile",
@@ -72,24 +73,6 @@
   "nyc": {
     "exclude": [
       "**/test"
-    ]
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "dist/test/.*\\.(test|spec)\\.js$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
-    "collectCoverage": true,
-    "coverageReporters": [
-      "json", "lcov", "text", "html"
     ]
   }
 }
