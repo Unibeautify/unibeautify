@@ -2,11 +2,9 @@
 
 > One Beautifier to rule them all, One Beautifier to clean them, One Beautifier to bring them all and in the darkness sheen them
 
-[![Coverage Status](https://coveralls.io/repos/github/Unibeautify/unibeautify/badge.svg?branch=master)](https://coveralls.io/github/Unibeautify/unibeautify?branch=master)
-
-| Travis CI (Linux / macOS) | AppVeyor (Windows) |
+| Travis CI (Linux / macOS) | AppVeyor (Windows) | Test Coverage |
 | --- | --- |
-| [![Build Status](https://travis-ci.org/Unibeautify/unibeautify.svg?branch=master)](https://travis-ci.org/Unibeautify/unibeautify) | [![Build status](https://ci.appveyor.com/api/projects/status/fsa9xirkn73hfibt/branch/master?svg=true)](https://ci.appveyor.com/project/Glavin001/unibeautify/branch/master) |
+| [![Build Status](https://travis-ci.org/Unibeautify/unibeautify.svg?branch=master)](https://travis-ci.org/Unibeautify/unibeautify) | [![Build status](https://ci.appveyor.com/api/projects/status/fsa9xirkn73hfibt/branch/master?svg=true)](https://ci.appveyor.com/project/Glavin001/unibeautify/branch/master) | [![Test Coverage](https://api.codeclimate.com/v1/badges/b472e3d8388e14a6d9ea/test_coverage)](https://codeclimate.com/github/Unibeautify/unibeautify/test_coverage) |
 
 
 ## Why
