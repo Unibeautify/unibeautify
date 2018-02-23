@@ -6,6 +6,7 @@ test("should get all loaded options", () => {
     op1: {
       default: false,
       description: "Test option",
+      since: "0.0.0",
       type: "boolean"
     }
   };
@@ -14,6 +15,7 @@ test("should get all loaded options", () => {
     op2: {
       default: false,
       description: "Test option",
+      since: "0.0.0",
       type: "boolean"
     }
   };
@@ -31,6 +33,7 @@ test("should get languages with a loaded beautifier supporting the given option"
     [optionName]: {
       default: false,
       description: "Test option",
+      since: "0.0.0",
       type: "boolean"
     }
   };
@@ -77,6 +80,7 @@ test("should get beautifiers with a loaded language supporting the given option"
     [optionName]: {
       default: false,
       description: "Test option",
+      since: "0.0.0",
       type: "boolean"
     }
   };
@@ -136,6 +140,7 @@ test("should correctly determine whether beautifier supports option for a langua
     [optionName]: {
       default: false,
       description: "Test option",
+      since: "0.0.0",
       type: "boolean"
     }
   };
@@ -219,16 +224,19 @@ test("should get options supported for a language", () => {
     [optionName1]: {
       default: false,
       description: "Test option",
+      since: "0.0.0",
       type: "boolean"
     },
     [optionName2]: {
       default: false,
       description: "Test option",
+      since: "0.0.0",
       type: "boolean"
     },
     [optionName3]: {
       default: false,
       description: "Test option",
+      since: "0.0.0",
       type: "boolean"
     }
   };
@@ -297,6 +305,7 @@ test("should get options supported by a beautifier for a language", () => {
     [optionName]: {
       default: false,
       description: "Test option",
+      since: "0.0.0",
       type: "boolean"
     }
   };
