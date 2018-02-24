@@ -58,8 +58,11 @@ function convertGitHubLanguageToUnibeautify(
       const [languageName, language] = value;
       return <Partial<Language>>{
         aceMode: language.ace_mode,
+        codeMirrorMimeType: language.codemirror_mime_type,
+        codeMirrorMode: language.codemirror_mode,
         extensions: language.extensions,
         fileNames: language.filenames,
+        group: language.group,
         liguistLanguageId: language.language_id,
         name: languageName,
         textMateScope: language.tm_scope
@@ -96,8 +99,11 @@ function mergeLanguage(
     aceMode: getString("aceMode", baseLanguage, newLanguage),
     aliases: getArray("aliases", baseLanguage, newLanguage),
     atomGrammars: getArray("atomGrammars", baseLanguage, newLanguage),
+    codeMirrorMimeType: getString("codeMirrorMimeType", baseLanguage, newLanguage) || undefined,
+    codeMirrorMode: getString("codeMirrorMode", baseLanguage, newLanguage) || undefined,
     extensions: getArray("extensions", baseLanguage, newLanguage),
     fileNames: getArray("fileNames", baseLanguage, newLanguage),
+    group: getString("group", baseLanguage, newLanguage) || undefined,
     liguistLanguageId: getNumber(
       "liguistLanguageId",
       baseLanguage,
@@ -106,7 +112,7 @@ function mergeLanguage(
     name: getString("name", baseLanguage, newLanguage),
     namespace: getString("namespace", baseLanguage, newLanguage),
     sublimeSyntaxes: getArray("sublimeSyntaxes", baseLanguage, newLanguage),
-    textMateScope: getString("textMateScope", baseLanguage, newLanguage),
+    textMateScope: getString("textMateScope", baseLanguage, newLanguage) || undefined,
     vscodeLanguages: getArray("vscodeLanguages", baseLanguage, newLanguage)
   };
 }

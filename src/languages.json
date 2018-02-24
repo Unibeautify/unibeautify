@@ -27,7 +27,6 @@
     "name": "ABAP",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -49,6 +48,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".asc",
       ".ash"
@@ -89,7 +90,6 @@
     "name": "ANTLR",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -111,6 +111,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/apl",
+    "codeMirrorMode": "apl",
     "extensions": [
       ".apl",
       ".dyalog"
@@ -127,6 +129,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-ttcn-asn",
+    "codeMirrorMode": "asn.1",
     "extensions": [
       ".asn",
       ".asn1"
@@ -143,12 +147,14 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-aspx",
+    "codeMirrorMode": "htmlembedded",
     "extensions": [
-      ".asp",
       ".asax",
       ".ascx",
       ".ashx",
       ".asmx",
+      ".asp",
       ".aspx",
       ".axd"
     ],
@@ -197,8 +203,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".adb",
       ".ada",
+      ".adb",
       ".ads"
     ],
     "fileNames": [],
@@ -206,7 +212,6 @@
     "name": "Ada",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -236,7 +241,6 @@
     "name": "Agda",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -251,17 +255,19 @@
     "name": "Alloy",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [],
     "fileNames": [
       "APKBUILD"
     ],
+    "group": "Shell",
     "liguistLanguageId": 14,
     "name": "Alpine Abuild",
     "namespace": "",
@@ -273,9 +279,11 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
-      ".as",
-      ".angelscript"
+      ".angelscript",
+      ".as"
     ],
     "fileNames": [],
     "liguistLanguageId": 389477596,
@@ -289,6 +297,8 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/xml",
+    "codeMirrorMode": "xml",
     "extensions": [],
     "fileNames": [
       "ant.xml",
@@ -323,6 +333,8 @@
     "atomGrammars": [
       "Apex"
     ],
+    "codeMirrorMimeType": "text/x-java",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".cls",
       ".trigger"
@@ -343,6 +355,7 @@
       ".agc"
     ],
     "fileNames": [],
+    "group": "Assembly",
     "liguistLanguageId": 18,
     "name": "Apollo Guidance Computer",
     "namespace": "",
@@ -363,7 +376,6 @@
     "name": "AppleScript",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -404,9 +416,9 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".asciidoc",
       ".adoc",
-      ".asc"
+      ".asc",
+      ".asciidoc"
     ],
     "fileNames": [],
     "liguistLanguageId": 22,
@@ -436,8 +448,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".asm",
       ".a51",
+      ".asm",
       ".inc",
       ".nasm"
     ],
@@ -500,8 +512,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".awk",
       ".auk",
+      ".awk",
       ".gawk",
       ".mawk",
       ".nawk"
@@ -511,7 +523,6 @@
     "name": "Awk",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -557,7 +568,6 @@
     "name": "Befunge",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -568,6 +578,7 @@
       ".bison"
     ],
     "fileNames": [],
+    "group": "Yacc",
     "liguistLanguageId": 31,
     "name": "Bison",
     "namespace": "",
@@ -599,6 +610,7 @@
       ".blade.php"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 33,
     "name": "Blade",
     "namespace": "",
@@ -634,7 +646,6 @@
     "name": "BlitzMax",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -671,6 +682,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-brainfuck",
+    "codeMirrorMode": "brainfuck",
     "extensions": [
       ".b",
       ".bf"
@@ -710,7 +723,6 @@
     "name": "Bro",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -720,11 +732,13 @@
       "C",
       "opencl"
     ],
+    "codeMirrorMimeType": "text/x-csrc",
+    "codeMirrorMode": "clike",
     "extensions": [
-      ".h",
       ".c",
-      ".cl",
       ".cats",
+      ".cl",
+      ".h",
       ".idc"
     ],
     "fileNames": [],
@@ -732,7 +746,6 @@
     "name": "C",
     "namespace": "c",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -741,9 +754,11 @@
     "atomGrammars": [
       "C#"
     ],
+    "codeMirrorMimeType": "text/x-csharp",
+    "codeMirrorMode": "clike",
     "extensions": [
-      ".cs",
       ".cake",
+      ".cs",
       ".cshtml",
       ".csx"
     ],
@@ -761,20 +776,23 @@
     "atomGrammars": [
       "C++"
     ],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
-      ".h",
-      ".hh",
-      ".cc",
-      ".cpp",
-      ".cxx",
       ".C",
       ".c++",
+      ".cc",
+      ".cp",
+      ".cpp",
+      ".cxx",
+      ".h",
+      ".h++",
+      ".hh",
       ".hpp",
       ".hxx",
-      ".h++",
-      ".cp",
       ".inc",
       ".inl",
+      ".ino",
       ".ipp",
       ".re",
       ".tcc",
@@ -785,7 +803,6 @@
     "name": "C++",
     "namespace": "cpp",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -807,10 +824,13 @@
     "aceMode": "haskell",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-haskell",
+    "codeMirrorMode": "haskell",
     "extensions": [
       ".chs"
     ],
     "fileNames": [],
+    "group": "Haskell",
     "liguistLanguageId": 45,
     "name": "C2hs Haskell",
     "namespace": "",
@@ -837,6 +857,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-cmake",
+    "codeMirrorMode": "cmake",
     "extensions": [
       ".cmake",
       ".cmake.in"
@@ -848,17 +870,18 @@
     "name": "CMake",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "cobol",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-cobol",
+    "codeMirrorMode": "cobol",
     "extensions": [
-      ".cob",
       ".cbl",
       ".ccp",
+      ".cob",
       ".cobol",
       ".cpy"
     ],
@@ -867,13 +890,14 @@
     "name": "COBOL",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
       ".dae"
     ],
@@ -889,10 +913,13 @@
     "aceMode": "coffee",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-coffeescript",
+    "codeMirrorMode": "coffeescript",
     "extensions": [
       ".cson"
     ],
     "fileNames": [],
+    "group": "CoffeeScript",
     "liguistLanguageId": 424,
     "name": "CSON",
     "namespace": "",
@@ -906,6 +933,8 @@
     "atomGrammars": [
       "CSS"
     ],
+    "codeMirrorMimeType": "text/css",
+    "codeMirrorMode": "css",
     "extensions": [
       ".css"
     ],
@@ -1006,7 +1035,6 @@
     "name": "Chapel",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1028,6 +1056,8 @@
     "aceMode": "java",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-java",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".ck"
     ],
@@ -1051,7 +1081,6 @@
     "name": "Cirru",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1074,8 +1103,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".icl",
-      ".dcl"
+      ".dcl",
+      ".icl"
     ],
     "fileNames": [],
     "liguistLanguageId": 60,
@@ -1104,10 +1133,12 @@
     "aceMode": "clojure",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-clojure",
+    "codeMirrorMode": "clojure",
     "extensions": [
-      ".clj",
       ".boot",
       ".cl2",
+      ".clj",
       ".cljc",
       ".cljs",
       ".cljs.hl",
@@ -1122,17 +1153,19 @@
     "name": "Clojure",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "soy_template",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-soy",
+    "codeMirrorMode": "soy",
     "extensions": [
       ".soy"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 357046146,
     "name": "Closure Templates",
     "namespace": "",
@@ -1141,16 +1174,34 @@
     "vscodeLanguages": []
   },
   {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".conll",
+      ".conllu"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 421026389,
+    "name": "CoNLL-U",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.conllu",
+    "vscodeLanguages": []
+  },
+  {
     "aceMode": "coffee",
     "aliases": [],
     "atomGrammars": [
       "CoffeeScript"
     ],
+    "codeMirrorMimeType": "text/x-coffeescript",
+    "codeMirrorMode": "coffeescript",
     "extensions": [
-      ".coffee",
       "._coffee",
       ".cake",
       ".cjsx",
+      ".coffee",
       ".iced"
     ],
     "fileNames": [
@@ -1170,9 +1221,9 @@
       "html"
     ],
     "extensions": [
+      ".cfc",
       ".cfm",
-      ".cfml",
-      ".cfc"
+      ".cfml"
     ],
     "fileNames": [],
     "liguistLanguageId": 64,
@@ -1190,6 +1241,7 @@
       ".cfc"
     ],
     "fileNames": [],
+    "group": "ColdFusion",
     "liguistLanguageId": 65,
     "name": "ColdFusion CFC",
     "namespace": "",
@@ -1201,11 +1253,13 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
-      ".lisp",
       ".asd",
       ".cl",
       ".l",
+      ".lisp",
       ".lsp",
       ".ny",
       ".podsl",
@@ -1223,6 +1277,8 @@
     "aceMode": "yaml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-yaml",
+    "codeMirrorMode": "yaml",
     "extensions": [
       ".cwl"
     ],
@@ -1238,6 +1294,8 @@
     "aceMode": "pascal",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-pascal",
+    "codeMirrorMode": "pascal",
     "extensions": [
       ".cp",
       ".cps"
@@ -1278,7 +1336,6 @@
     "name": "Coq",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1286,10 +1343,10 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".cppobjdump",
       ".c++-objdump",
       ".c++objdump",
       ".cpp-objdump",
+      ".cppobjdump",
       ".cxx-objdump"
     ],
     "fileNames": [],
@@ -1321,6 +1378,8 @@
     "atomGrammars": [
       "Crystal"
     ],
+    "codeMirrorMimeType": "text/x-crystal",
+    "codeMirrorMode": "crystal",
     "extensions": [
       ".cr"
     ],
@@ -1382,6 +1441,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".cu",
       ".cuh"
@@ -1398,6 +1459,8 @@
     "aceMode": "javascript",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/javascript",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".cy"
     ],
@@ -1413,17 +1476,19 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-cython",
+    "codeMirrorMode": "python",
     "extensions": [
-      ".pyx",
       ".pxd",
-      ".pxi"
+      ".pxi",
+      ".pyx"
     ],
     "fileNames": [],
+    "group": "Python",
     "liguistLanguageId": 79,
     "name": "Cython",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1432,6 +1497,8 @@
     "atomGrammars": [
       "D"
     ],
+    "codeMirrorMimeType": "text/x-d",
+    "codeMirrorMode": "d",
     "extensions": [
       ".d",
       ".di"
@@ -1441,7 +1508,6 @@
     "name": "D",
     "namespace": "d",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1494,8 +1560,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".zone",
-      ".arpa"
+      ".arpa",
+      ".zone"
     ],
     "fileNames": [],
     "liguistLanguageId": 84,
@@ -1509,6 +1575,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csrc",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".d"
     ],
@@ -1540,6 +1608,8 @@
     "aceMode": "dart",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/dart",
+    "codeMirrorMode": "dart",
     "extensions": [
       ".dart"
     ],
@@ -1548,7 +1618,6 @@
     "name": "Dart",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1570,6 +1639,8 @@
     "aceMode": "diff",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-diff",
+    "codeMirrorMode": "diff",
     "extensions": [
       ".diff",
       ".patch"
@@ -1586,6 +1657,8 @@
     "aceMode": "dockerfile",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-dockerfile",
+    "codeMirrorMode": "dockerfile",
     "extensions": [
       ".dockerfile"
     ],
@@ -1618,9 +1691,11 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-dylan",
+    "codeMirrorMode": "dylan",
     "extensions": [
-      ".dylan",
       ".dyl",
+      ".dylan",
       ".intr",
       ".lid"
     ],
@@ -1629,7 +1704,6 @@
     "name": "Dylan",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1651,6 +1725,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-ebnf",
+    "codeMirrorMode": "ebnf",
     "extensions": [
       ".ebnf"
     ],
@@ -1666,6 +1742,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-ecl",
+    "codeMirrorMode": "ecl",
     "extensions": [
       ".ecl",
       ".eclxml"
@@ -1686,6 +1764,7 @@
       ".ecl"
     ],
     "fileNames": [],
+    "group": "prolog",
     "liguistLanguageId": 94,
     "name": "ECLiPSe",
     "namespace": "",
@@ -1697,13 +1776,14 @@
     "aceMode": "ejs",
     "aliases": [],
     "atomGrammars": [
-      "JavaScript Template",
-      "HTML (Angular)"
+      "HTML (Angular)",
+      "JavaScript Template"
     ],
     "extensions": [
       ".ejs"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 95,
     "name": "EJS",
     "namespace": "ejs",
@@ -1715,6 +1795,8 @@
     "aceMode": "csharp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csharp",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".eq"
     ],
@@ -1730,9 +1812,11 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
-      ".sch",
-      ".brd"
+      ".brd",
+      ".sch"
     ],
     "fileNames": [],
     "liguistLanguageId": 97,
@@ -1746,10 +1830,13 @@
     "aceMode": "python",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-python",
+    "codeMirrorMode": "python",
     "extensions": [
       ".eb"
     ],
     "fileNames": [],
+    "group": "Python",
     "liguistLanguageId": 342840477,
     "name": "Easybuild",
     "namespace": "",
@@ -1761,10 +1848,13 @@
     "aceMode": "json",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".epj"
     ],
     "fileNames": [],
+    "group": "JavaScript",
     "liguistLanguageId": 98,
     "name": "Ecere Projects",
     "namespace": "",
@@ -1776,6 +1866,8 @@
     "aceMode": "json",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".edc"
     ],
@@ -1791,6 +1883,8 @@
     "aceMode": "eiffel",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-eiffel",
+    "codeMirrorMode": "eiffel",
     "extensions": [
       ".e"
     ],
@@ -1799,7 +1893,6 @@
     "name": "Eiffel",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1817,7 +1910,6 @@
     "name": "Elixir",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1826,6 +1918,8 @@
     "atomGrammars": [
       "Elm"
     ],
+    "codeMirrorMimeType": "text/x-elm",
+    "codeMirrorMode": "elm",
     "extensions": [
       ".elm"
     ],
@@ -1841,6 +1935,8 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
       ".el",
       ".emacs",
@@ -1869,6 +1965,8 @@
     "aceMode": "coffee",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-coffeescript",
+    "codeMirrorMode": "coffeescript",
     "extensions": [
       ".em",
       ".emberscript"
@@ -1887,9 +1985,11 @@
     "atomGrammars": [
       "Erlang"
     ],
+    "codeMirrorMimeType": "text/x-erlang",
+    "codeMirrorMode": "erlang",
     "extensions": [
-      ".erl",
       ".app.src",
+      ".erl",
       ".es",
       ".escript",
       ".hrl",
@@ -1906,13 +2006,14 @@
     "name": "Erlang",
     "namespace": "erlang",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-fsharp",
+    "codeMirrorMode": "mllike",
     "extensions": [
       ".fs",
       ".fsi",
@@ -1931,8 +2032,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".fx",
-      ".flux"
+      ".flux",
+      ".fx"
     ],
     "fileNames": [],
     "liguistLanguageId": 106,
@@ -1946,6 +2047,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-factor",
+    "codeMirrorMode": "factor",
     "extensions": [
       ".factor"
     ],
@@ -1957,7 +2060,6 @@
     "name": "Factor",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1965,8 +2067,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".fy",
-      ".fancypack"
+      ".fancypack",
+      ".fy"
     ],
     "fileNames": [
       "Fakefile"
@@ -1975,7 +2077,6 @@
     "name": "Fancy",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -2016,6 +2117,7 @@
       ".fs"
     ],
     "fileNames": [],
+    "group": "RenderScript",
     "liguistLanguageId": 112,
     "name": "Filterscript",
     "namespace": "",
@@ -2028,8 +2130,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".for",
-      ".eam.fs"
+      ".eam.fs",
+      ".for"
     ],
     "fileNames": [],
     "liguistLanguageId": 113,
@@ -2043,22 +2145,23 @@
     "aceMode": "forth",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-forth",
+    "codeMirrorMode": "forth",
     "extensions": [
-      ".fth",
       ".4th",
       ".f",
       ".for",
       ".forth",
       ".fr",
       ".frt",
-      ".fs"
+      ".fs",
+      ".fth"
     ],
     "fileNames": [],
     "liguistLanguageId": 114,
     "name": "Forth",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -2067,13 +2170,15 @@
     "atomGrammars": [
       "Fortran - Modern"
     ],
+    "codeMirrorMimeType": "text/x-fortran",
+    "codeMirrorMode": "fortran",
     "extensions": [
-      ".f90",
       ".F90",
       ".f",
       ".f03",
       ".f08",
       ".f77",
+      ".f90",
       ".f95",
       ".for",
       ".fpp"
@@ -2171,6 +2276,8 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
       ".md"
     ],
@@ -2218,7 +2325,6 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".glsl",
       ".fp",
       ".frag",
       ".frg",
@@ -2227,6 +2333,7 @@
       ".fshader",
       ".geo",
       ".geom",
+      ".glsl",
       ".glslv",
       ".gshader",
       ".shader",
@@ -2242,13 +2349,14 @@
     "name": "GLSL",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "python",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-python",
+    "codeMirrorMode": "python",
     "extensions": [
       ".gn",
       ".gni"
@@ -2265,6 +2373,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".gml"
     ],
@@ -2295,6 +2405,8 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
       ".kid"
     ],
@@ -2310,10 +2422,13 @@
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [
       ".ebuild"
     ],
     "fileNames": [],
+    "group": "Shell",
     "liguistLanguageId": 127,
     "name": "Gentoo Ebuild",
     "namespace": "",
@@ -2325,10 +2440,13 @@
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [
       ".eclass"
     ],
     "fileNames": [],
+    "group": "Shell",
     "liguistLanguageId": 128,
     "name": "Gentoo Eclass",
     "namespace": "",
@@ -2341,10 +2459,10 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".gbr",
       ".gbl",
       ".gbo",
       ".gbp",
+      ".gbr",
       ".gbs",
       ".gko",
       ".gpb",
@@ -2399,6 +2517,8 @@
     "aceMode": "tcl",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-tcl",
+    "codeMirrorMode": "tcl",
     "extensions": [
       ".glf"
     ],
@@ -2415,9 +2535,9 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".gp",
       ".gnu",
       ".gnuplot",
+      ".gp",
       ".plot",
       ".plt"
     ],
@@ -2426,7 +2546,6 @@
     "name": "Gnuplot",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -2435,6 +2554,8 @@
     "atomGrammars": [
       "Go"
     ],
+    "codeMirrorMimeType": "text/x-go",
+    "codeMirrorMode": "go",
     "extensions": [
       ".go"
     ],
@@ -2443,7 +2564,6 @@
     "name": "Go",
     "namespace": "go",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -2513,6 +2633,8 @@
     "aceMode": "haskell",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-haskell",
+    "codeMirrorMode": "haskell",
     "extensions": [
       ".gf"
     ],
@@ -2544,8 +2666,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".graphql",
-      ".gql"
+      ".gql",
+      ".graphql"
     ],
     "fileNames": [],
     "liguistLanguageId": 139,
@@ -2575,6 +2697,8 @@
     "aceMode": "groovy",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-groovy",
+    "codeMirrorMode": "groovy",
     "extensions": [
       ".groovy",
       ".grt",
@@ -2588,17 +2712,19 @@
     "name": "Groovy",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "jsp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-jsp",
+    "codeMirrorMode": "htmlembedded",
     "extensions": [
       ".gsp"
     ],
     "fileNames": [],
+    "group": "Groovy",
     "liguistLanguageId": 143,
     "name": "Groovy Server Pages",
     "namespace": "",
@@ -2610,9 +2736,12 @@
     "aceMode": "ruby",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-ruby",
+    "codeMirrorMode": "ruby",
     "extensions": [
       ".hcl",
-      ".tf"
+      ".tf",
+      ".tfvars"
     ],
     "fileNames": [],
     "liguistLanguageId": 144,
@@ -2627,10 +2756,10 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".hlsl",
       ".cginc",
       ".fx",
       ".fxh",
+      ".hlsl",
       ".hlsli"
     ],
     "fileNames": [],
@@ -2647,9 +2776,11 @@
     "atomGrammars": [
       "HTML"
     ],
+    "codeMirrorMimeType": "text/html",
+    "codeMirrorMode": "htmlmixed",
     "extensions": [
-      ".html",
       ".htm",
+      ".html",
       ".html.hl",
       ".inc",
       ".st",
@@ -2668,12 +2799,15 @@
     "aceMode": "django",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-django",
+    "codeMirrorMode": "django",
     "extensions": [
       ".jinja",
       ".mustache",
       ".njk"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 147,
     "name": "HTML+Django",
     "namespace": "",
@@ -2685,10 +2819,13 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/html",
+    "codeMirrorMode": "htmlmixed",
     "extensions": [
       ".ecr"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 148,
     "name": "HTML+ECR",
     "namespace": "",
@@ -2700,10 +2837,13 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/html",
+    "codeMirrorMode": "htmlmixed",
     "extensions": [
       ".eex"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 149,
     "name": "HTML+EEX",
     "namespace": "",
@@ -2715,14 +2855,17 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [
-      "HTML (Ruby - ERB)",
-      "HTML (Rails)"
+      "HTML (Rails)",
+      "HTML (Ruby - ERB)"
     ],
+    "codeMirrorMimeType": "application/x-erb",
+    "codeMirrorMode": "htmlembedded",
     "extensions": [
       ".erb",
       ".erb.deface"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 150,
     "name": "HTML+ERB",
     "namespace": "erb",
@@ -2734,10 +2877,13 @@
     "aceMode": "php",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-httpd-php",
+    "codeMirrorMode": "php",
     "extensions": [
       ".phtml"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 151,
     "name": "HTML+PHP",
     "namespace": "",
@@ -2749,6 +2895,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "message/http",
+    "codeMirrorMode": "http",
     "extensions": [
       ".http"
     ],
@@ -2764,6 +2912,8 @@
     "aceMode": "php",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-httpd-php",
+    "codeMirrorMode": "php",
     "extensions": [
       ".hh",
       ".php"
@@ -2780,30 +2930,33 @@
     "aceMode": "haml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-haml",
+    "codeMirrorMode": "haml",
     "extensions": [
       ".haml",
       ".haml.deface"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 154,
     "name": "Haml",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "handlebars",
     "aliases": [],
     "atomGrammars": [
-      "Handlebars",
-      "HTML (Handlebars)"
+      "HTML (Handlebars)",
+      "Handlebars"
     ],
     "extensions": [
-      ".hbs",
-      ".handlebars"
+      ".handlebars",
+      ".hbs"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 155,
     "name": "Handlebars",
     "namespace": "handlebars",
@@ -2832,6 +2985,8 @@
     "atomGrammars": [
       "Haskell"
     ],
+    "codeMirrorMimeType": "text/x-haskell",
+    "codeMirrorMode": "haskell",
     "extensions": [
       ".hs",
       ".hsc"
@@ -2841,13 +2996,14 @@
     "name": "Haskell",
     "namespace": "haskell",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "haxe",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-haxe",
+    "codeMirrorMode": "haxe",
     "extensions": [
       ".hx",
       ".hxsl"
@@ -2894,16 +3050,17 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-idl",
+    "codeMirrorMode": "idl",
     "extensions": [
-      ".pro",
-      ".dlm"
+      ".dlm",
+      ".pro"
     ],
     "fileNames": [],
     "liguistLanguageId": 161,
     "name": "IDL",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -2925,9 +3082,11 @@
     "aceMode": "ini",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-properties",
+    "codeMirrorMode": "properties",
     "extensions": [
-      ".ini",
       ".cfg",
+      ".ini",
       ".prefs",
       ".pro",
       ".properties"
@@ -2946,6 +3105,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/mirc",
+    "codeMirrorMode": "mirc",
     "extensions": [
       ".irclog",
       ".weechatlog"
@@ -2979,8 +3140,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".ni",
-      ".i7x"
+      ".i7x",
+      ".ni"
     ],
     "fileNames": [],
     "liguistLanguageId": 166,
@@ -3017,7 +3178,6 @@
     "name": "Io",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -3032,7 +3192,6 @@
     "name": "Ioke",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -3058,6 +3217,7 @@
     "fileNames": [
       "ROOT"
     ],
+    "group": "Isabelle",
     "liguistLanguageId": 171,
     "name": "Isabelle ROOT",
     "namespace": "",
@@ -3089,6 +3249,7 @@
       ".jflex"
     ],
     "fileNames": [],
+    "group": "Lex",
     "liguistLanguageId": 173,
     "name": "JFlex",
     "namespace": "",
@@ -3102,10 +3263,12 @@
     "atomGrammars": [
       "JSON"
     ],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
-      ".json",
-      ".geojson",
       ".JSON-tmLanguage",
+      ".geojson",
+      ".json",
       ".topojson"
     ],
     "fileNames": [
@@ -3114,6 +3277,7 @@
       "composer.lock",
       "mcmod.info"
     ],
+    "group": "JavaScript",
     "liguistLanguageId": 174,
     "name": "JSON",
     "namespace": "json",
@@ -3125,6 +3289,8 @@
     "aceMode": "javascript",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".json5"
     ],
@@ -3146,6 +3312,7 @@
       ".jsonld"
     ],
     "fileNames": [],
+    "group": "JavaScript",
     "liguistLanguageId": 176,
     "name": "JSONLD",
     "namespace": "",
@@ -3157,6 +3324,8 @@
     "aceMode": "jsoniq",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".jq"
     ],
@@ -3175,11 +3344,14 @@
       "JSX",
       "JavaScript (JSX)"
     ],
+    "codeMirrorMimeType": "text/jsx",
+    "codeMirrorMode": "jsx",
     "extensions": [
-      ".jsx",
-      ".js"
+      ".js",
+      ".jsx"
     ],
     "fileNames": [],
+    "group": "JavaScript",
     "liguistLanguageId": 178,
     "name": "JSX",
     "namespace": "jsx",
@@ -3210,6 +3382,8 @@
     "atomGrammars": [
       "Java"
     ],
+    "codeMirrorMimeType": "text/x-java",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".java"
     ],
@@ -3218,17 +3392,19 @@
     "name": "Java",
     "namespace": "java",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "jsp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-jsp",
+    "codeMirrorMode": "htmlembedded",
     "extensions": [
       ".jsp"
     ],
     "fileNames": [],
+    "group": "Java",
     "liguistLanguageId": 182,
     "name": "Java Server Pages",
     "namespace": "",
@@ -3242,8 +3418,9 @@
     "atomGrammars": [
       "JavaScript"
     ],
+    "codeMirrorMimeType": "text/javascript",
+    "codeMirrorMode": "javascript",
     "extensions": [
-      ".js",
       "._js",
       ".bones",
       ".es",
@@ -3251,6 +3428,7 @@
       ".frag",
       ".gs",
       ".jake",
+      ".js",
       ".jsb",
       ".jscad",
       ".jsfl",
@@ -3284,6 +3462,7 @@
       ".jison"
     ],
     "fileNames": [],
+    "group": "Yacc",
     "liguistLanguageId": 284531423,
     "name": "Jison",
     "namespace": "",
@@ -3299,6 +3478,7 @@
       ".jisonlex"
     ],
     "fileNames": [],
+    "group": "Lex",
     "liguistLanguageId": 406395330,
     "name": "Jison Lex",
     "namespace": "",
@@ -3311,8 +3491,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".ol",
-      ".iol"
+      ".iol",
+      ".ol"
     ],
     "fileNames": [],
     "liguistLanguageId": 998078858,
@@ -3326,6 +3506,8 @@
     "aceMode": "julia",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-julia",
+    "codeMirrorMode": "julia",
     "extensions": [
       ".jl"
     ],
@@ -3334,13 +3516,14 @@
     "name": "Julia",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "json",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".ipynb"
     ],
@@ -3373,9 +3556,11 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
-      ".kicad_pcb",
       ".kicad_mod",
+      ".kicad_pcb",
       ".kicad_wks"
     ],
     "fileNames": [
@@ -3422,6 +3607,8 @@
     "aceMode": "html",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/html",
+    "codeMirrorMode": "htmlmixed",
     "extensions": [
       ".kit"
     ],
@@ -3437,6 +3624,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-kotlin",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".kt",
       ".ktm",
@@ -3454,6 +3643,8 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
       ".lfe"
     ],
@@ -3477,7 +3668,6 @@
     "name": "LLVM",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -3508,13 +3698,14 @@
     "name": "LSL",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
       ".lvproj"
     ],
@@ -3531,8 +3722,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".lasso",
       ".las",
+      ".lasso",
       ".lasso8",
       ".lasso9",
       ".ldml"
@@ -3549,10 +3740,13 @@
     "aceMode": "smarty",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-smarty",
+    "codeMirrorMode": "smarty",
     "extensions": [
       ".latte"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 196,
     "name": "Latte",
     "namespace": "",
@@ -3565,15 +3759,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".lean",
-      ".hlean"
+      ".hlean",
+      ".lean"
     ],
     "fileNames": [],
     "liguistLanguageId": 197,
     "name": "Lean",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -3582,10 +3775,13 @@
     "atomGrammars": [
       "LESS"
     ],
+    "codeMirrorMimeType": "text/css",
+    "codeMirrorMode": "css",
     "extensions": [
       ".less"
     ],
     "fileNames": [],
+    "group": "CSS",
     "liguistLanguageId": 198,
     "name": "Less",
     "namespace": "less",
@@ -3614,15 +3810,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".ly",
-      ".ily"
+      ".ily",
+      ".ly"
     ],
     "fileNames": [],
     "liguistLanguageId": 200,
     "name": "LilyPond",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -3647,7 +3842,8 @@
     "atomGrammars": [],
     "extensions": [
       ".ld",
-      ".lds"
+      ".lds",
+      ".x"
     ],
     "fileNames": [
       "ld.script"
@@ -3697,6 +3893,7 @@
       ".lagda"
     ],
     "fileNames": [],
+    "group": "Agda",
     "liguistLanguageId": 205,
     "name": "Literate Agda",
     "namespace": "",
@@ -3712,6 +3909,7 @@
       ".litcoffee"
     ],
     "fileNames": [],
+    "group": "CoffeeScript",
     "liguistLanguageId": 206,
     "name": "Literate CoffeeScript",
     "namespace": "",
@@ -3723,10 +3921,13 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-literate-haskell",
+    "codeMirrorMode": "haskell-literate",
     "extensions": [
       ".lhs"
     ],
     "fileNames": [],
+    "group": "Haskell",
     "liguistLanguageId": 207,
     "name": "Literate Haskell",
     "namespace": "",
@@ -3738,9 +3939,11 @@
     "aceMode": "livescript",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-livescript",
+    "codeMirrorMode": "livescript",
     "extensions": [
-      ".ls",
-      "._ls"
+      "._ls",
+      ".ls"
     ],
     "fileNames": [
       "Slakefile"
@@ -3749,7 +3952,6 @@
     "name": "LiveScript",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -3757,9 +3959,9 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".xm",
       ".x",
-      ".xi"
+      ".xi",
+      ".xm"
     ],
     "fileNames": [],
     "liguistLanguageId": 209,
@@ -3782,13 +3984,14 @@
     "name": "Logtalk",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "yaml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-yaml",
+    "codeMirrorMode": "yaml",
     "extensions": [
       ".lookml",
       ".model.lkml",
@@ -3823,9 +4026,11 @@
     "atomGrammars": [
       "Lua"
     ],
+    "codeMirrorMimeType": "text/x-lua",
+    "codeMirrorMode": "lua",
     "extensions": [
-      ".lua",
       ".fcgi",
+      ".lua",
       ".nse",
       ".pd_lua",
       ".rbxs",
@@ -3836,16 +4041,17 @@
     "name": "Lua",
     "namespace": "lua",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-mumps",
+    "codeMirrorMode": "mumps",
     "extensions": [
-      ".mumps",
-      ".m"
+      ".m",
+      ".mumps"
     ],
     "fileNames": [],
     "liguistLanguageId": 214,
@@ -3880,6 +4086,7 @@
     "fileNames": [
       "configure.ac"
     ],
+    "group": "M4",
     "liguistLanguageId": 216,
     "name": "M4Sugar",
     "namespace": "",
@@ -3892,8 +4099,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".ms",
-      ".mcr"
+      ".mcr",
+      ".ms"
     ],
     "fileNames": [],
     "liguistLanguageId": 217,
@@ -3939,6 +4146,8 @@
     "aceMode": "html",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/html",
+    "codeMirrorMode": "htmlmixed",
     "extensions": [
       ".mtml"
     ],
@@ -3954,11 +4163,14 @@
     "aceMode": "forth",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-forth",
+    "codeMirrorMode": "forth",
     "extensions": [
-      ".muf",
-      ".m"
+      ".m",
+      ".muf"
     ],
     "fileNames": [],
+    "group": "Forth",
     "liguistLanguageId": 219,
     "name": "MUF",
     "namespace": "",
@@ -3970,9 +4182,11 @@
     "aceMode": "makefile",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-cmake",
+    "codeMirrorMode": "cmake",
     "extensions": [
-      ".mak",
       ".d",
+      ".mak",
       ".make",
       ".mk",
       ".mkfile"
@@ -3996,7 +4210,6 @@
     "name": "Makefile",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -4021,6 +4234,8 @@
     "atomGrammars": [
       "GitHub Markdown"
     ],
+    "codeMirrorMimeType": "text/x-gfm",
+    "codeMirrorMode": "gfm",
     "extensions": [
       ".markdown",
       ".md",
@@ -4046,10 +4261,13 @@
     "atomGrammars": [
       "Marko"
     ],
+    "codeMirrorMimeType": "text/html",
+    "codeMirrorMode": "htmlmixed",
     "extensions": [
       ".marko"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 932782397,
     "name": "Marko",
     "namespace": "marko",
@@ -4076,11 +4294,13 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-mathematica",
+    "codeMirrorMode": "mathematica",
     "extensions": [
-      ".mathematica",
       ".cdf",
       ".m",
       ".ma",
+      ".mathematica",
       ".mt",
       ".nb",
       ".nbp",
@@ -4092,29 +4312,31 @@
     "name": "Mathematica",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "matlab",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-octave",
+    "codeMirrorMode": "octave",
     "extensions": [
-      ".matlab",
-      ".m"
+      ".m",
+      ".matlab"
     ],
     "fileNames": [],
     "liguistLanguageId": 225,
     "name": "Matlab",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [],
     "fileNames": [
       "pom.xml"
@@ -4130,9 +4352,11 @@
     "aceMode": "json",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
-      ".maxpat",
       ".maxhelp",
+      ".maxpat",
       ".maxproj",
       ".mxt",
       ".pat"
@@ -4197,6 +4421,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".metal"
     ],
@@ -4227,6 +4453,8 @@
     "aceMode": "ruby",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-ruby",
+    "codeMirrorMode": "ruby",
     "extensions": [
       ".druby",
       ".duby",
@@ -4245,6 +4473,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-modelica",
+    "codeMirrorMode": "modelica",
     "extensions": [
       ".mo"
     ],
@@ -4276,8 +4506,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".mms",
-      ".mmk"
+      ".mmk",
+      ".mms"
     ],
     "fileNames": [
       "descrip.mmk",
@@ -4333,7 +4563,6 @@
     "name": "MoonScript",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -4396,16 +4625,17 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-nsis",
+    "codeMirrorMode": "nsis",
     "extensions": [
-      ".nsi",
-      ".nsh"
+      ".nsh",
+      ".nsi"
     ],
     "fileNames": [],
     "liguistLanguageId": 242,
     "name": "NSIS",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -4436,7 +4666,6 @@
     "name": "Nemerle",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -4444,8 +4673,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".axs",
-      ".axi"
+      ".axi",
+      ".axs"
     ],
     "fileNames": [],
     "liguistLanguageId": 244,
@@ -4460,8 +4689,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".axs.erb",
-      ".axi.erb"
+      ".axi.erb",
+      ".axs.erb"
     ],
     "fileNames": [],
     "liguistLanguageId": 245,
@@ -4475,6 +4704,8 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
       ".nlogo"
     ],
@@ -4490,10 +4721,12 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
-      ".nl",
       ".lisp",
-      ".lsp"
+      ".lsp",
+      ".nl"
     ],
     "fileNames": [],
     "liguistLanguageId": 247,
@@ -4504,9 +4737,28 @@
     "vscodeLanguages": []
   },
   {
+    "aceMode": "groovy",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".nf"
+    ],
+    "fileNames": [
+      "nextflow.config"
+    ],
+    "liguistLanguageId": 506780613,
+    "name": "Nextflow",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.nextflow",
+    "vscodeLanguages": []
+  },
+  {
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-nginx-conf",
+    "codeMirrorMode": "nginx",
     "extensions": [
       ".nginxconf",
       ".vhost"
@@ -4586,6 +4838,8 @@
     "aceMode": "scheme",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-scheme",
+    "codeMirrorMode": "scheme",
     "extensions": [
       ".nu"
     ],
@@ -4603,12 +4857,15 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-python",
+    "codeMirrorMode": "python",
     "extensions": [
       ".numpy",
       ".numpyw",
       ".numsc"
     ],
     "fileNames": [],
+    "group": "Python",
     "liguistLanguageId": 254,
     "name": "NumPy",
     "namespace": "",
@@ -4622,10 +4879,12 @@
     "atomGrammars": [
       "OCaml"
     ],
+    "codeMirrorMimeType": "text/x-ocaml",
+    "codeMirrorMode": "mllike",
     "extensions": [
-      ".ml",
       ".eliom",
       ".eliomi",
+      ".ml",
       ".ml4",
       ".mli",
       ".mll",
@@ -4661,10 +4920,12 @@
       "Objective-C",
       "Objective-C++"
     ],
+    "codeMirrorMimeType": "text/x-objectivec",
+    "codeMirrorMode": "clike",
     "extensions": [
+      ".h",
       ".m",
-      ".mm",
-      ".h"
+      ".mm"
     ],
     "fileNames": [],
     "liguistLanguageId": 257,
@@ -4678,6 +4939,8 @@
     "aceMode": "objectivec",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-objectivec",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".mm"
     ],
@@ -4732,7 +4995,6 @@
     "name": "Opa",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -4754,11 +5016,14 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csrc",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".cl",
       ".opencl"
     ],
     "fileNames": [],
+    "group": "C",
     "liguistLanguageId": 263,
     "name": "OpenCL",
     "namespace": "",
@@ -4771,8 +5036,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".p",
       ".cls",
+      ".p",
       ".w"
     ],
     "fileNames": [],
@@ -4787,8 +5052,11 @@
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [],
     "fileNames": [],
+    "group": "Shell",
     "liguistLanguageId": 265,
     "name": "OpenRC runscript",
     "namespace": "",
@@ -4877,6 +5145,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-oz",
+    "codeMirrorMode": "oz",
     "extensions": [
       ".oz"
     ],
@@ -4910,8 +5180,8 @@
       "Pawn"
     ],
     "extensions": [
-      ".pwn",
-      ".inc"
+      ".inc",
+      ".pwn"
     ],
     "fileNames": [],
     "liguistLanguageId": 271,
@@ -4927,13 +5197,15 @@
     "atomGrammars": [
       "PHP"
     ],
+    "codeMirrorMimeType": "application/x-httpd-php",
+    "codeMirrorMode": "php",
     "extensions": [
-      ".php",
-      ".module",
-      ".inc",
       ".aw",
       ".ctp",
       ".fcgi",
+      ".inc",
+      ".module",
+      ".php",
       ".php3",
       ".php4",
       ".php5",
@@ -4956,8 +5228,9 @@
     "aceMode": "sql",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-plsql",
+    "codeMirrorMode": "sql",
     "extensions": [
-      ".pls",
       ".bdy",
       ".ddl",
       ".fnc",
@@ -4965,6 +5238,7 @@
       ".pkb",
       ".pks",
       ".plb",
+      ".pls",
       ".plsql",
       ".prc",
       ".spc",
@@ -4986,6 +5260,8 @@
     "aceMode": "pgsql",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sql",
+    "codeMirrorMode": "sql",
     "extensions": [
       ".sql"
     ],
@@ -5002,15 +5278,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".pov",
-      ".inc"
+      ".inc",
+      ".pov"
     ],
     "fileNames": [],
     "liguistLanguageId": 275,
     "name": "POV-Ray SDL",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -5066,6 +5341,7 @@
       ".pasm"
     ],
     "fileNames": [],
+    "group": "Parrot",
     "liguistLanguageId": 279,
     "name": "Parrot Assembly",
     "namespace": "",
@@ -5081,6 +5357,7 @@
       ".pir"
     ],
     "fileNames": [],
+    "group": "Parrot",
     "liguistLanguageId": 280,
     "name": "Parrot Internal Representation",
     "namespace": "",
@@ -5092,12 +5369,14 @@
     "aceMode": "pascal",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-pascal",
+    "codeMirrorMode": "pascal",
     "extensions": [
-      ".pas",
       ".dfm",
       ".dpr",
       ".inc",
       ".lpr",
+      ".pas",
       ".pascal",
       ".pp"
     ],
@@ -5106,7 +5385,6 @@
     "name": "Pascal",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -5131,19 +5409,21 @@
       "Perl",
       "Perl 6"
     ],
+    "codeMirrorMimeType": "text/x-perl",
+    "codeMirrorMode": "perl",
     "extensions": [
-      ".pl",
       ".PL",
-      ".pm",
-      ".pod",
-      ".t",
       ".al",
       ".cgi",
       ".fcgi",
       ".perl",
       ".ph",
+      ".pl",
       ".plx",
-      ".psgi"
+      ".pm",
+      ".pod",
+      ".psgi",
+      ".t"
     ],
     "fileNames": [
       "cpanfile"
@@ -5159,6 +5439,8 @@
     "aceMode": "perl",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-perl",
+    "codeMirrorMode": "perl",
     "extensions": [
       ".6pl",
       ".6pm",
@@ -5186,11 +5468,14 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/troff",
+    "codeMirrorMode": "troff",
     "extensions": [
-      ".pic",
-      ".chem"
+      ".chem",
+      ".pic"
     ],
     "fileNames": [],
+    "group": "Roff",
     "liguistLanguageId": 425,
     "name": "Pic",
     "namespace": "",
@@ -5256,13 +5541,14 @@
     "name": "Pike",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "perl",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-perl",
+    "codeMirrorMode": "perl",
     "extensions": [
       ".pod"
     ],
@@ -5312,6 +5598,7 @@
       ".pcss"
     ],
     "fileNames": [],
+    "group": "CSS",
     "liguistLanguageId": 262764437,
     "name": "PostCSS",
     "namespace": "",
@@ -5324,9 +5611,9 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".ps",
       ".eps",
-      ".pfa"
+      ".pfa",
+      ".ps"
     ],
     "fileNames": [],
     "liguistLanguageId": 291,
@@ -5358,6 +5645,8 @@
     "aceMode": "powershell",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-powershell",
+    "codeMirrorMode": "powershell",
     "extensions": [
       ".ps1",
       ".psd1",
@@ -5368,7 +5657,6 @@
     "name": "PowerShell",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -5383,7 +5671,6 @@
     "name": "Processing",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -5423,6 +5710,8 @@
     "aceMode": "protobuf",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-protobuf",
+    "codeMirrorMode": "protobuf",
     "extensions": [
       ".proto"
     ],
@@ -5438,6 +5727,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/pgp",
+    "codeMirrorMode": "asciiarmor",
     "extensions": [
       ".asc",
       ".pub"
@@ -5457,11 +5748,14 @@
       "Jade",
       "Pug"
     ],
+    "codeMirrorMimeType": "text/x-pug",
+    "codeMirrorMode": "pug",
     "extensions": [
       ".jade",
       ".pug"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 179,
     "name": "Pug",
     "namespace": "pug",
@@ -5475,6 +5769,8 @@
     "atomGrammars": [
       "Puppet"
     ],
+    "codeMirrorMimeType": "text/x-puppet",
+    "codeMirrorMode": "puppet",
     "extensions": [
       ".pp"
     ],
@@ -5523,6 +5819,8 @@
     "aceMode": "haskell",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-haskell",
+    "codeMirrorMode": "haskell",
     "extensions": [
       ".purs"
     ],
@@ -5540,14 +5838,16 @@
     "atomGrammars": [
       "Python"
     ],
+    "codeMirrorMimeType": "text/x-python",
+    "codeMirrorMode": "python",
     "extensions": [
-      ".py",
       ".bzl",
       ".cgi",
       ".fcgi",
       ".gyp",
       ".gypi",
       ".lmi",
+      ".py",
       ".py3",
       ".pyde",
       ".pyi",
@@ -5575,7 +5875,6 @@
     "name": "Python",
     "namespace": "python",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -5584,6 +5883,7 @@
     "atomGrammars": [],
     "extensions": [],
     "fileNames": [],
+    "group": "Python",
     "liguistLanguageId": 428,
     "name": "Python console",
     "namespace": "",
@@ -5599,6 +5899,7 @@
       ".pytb"
     ],
     "fileNames": [],
+    "group": "Python",
     "liguistLanguageId": 304,
     "name": "Python traceback",
     "namespace": "",
@@ -5611,8 +5912,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".qml",
-      ".qbs"
+      ".qbs",
+      ".qml"
     ],
     "fileNames": [],
     "liguistLanguageId": 305,
@@ -5627,21 +5928,22 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".pro",
-      ".pri"
+      ".pri",
+      ".pro"
     ],
     "fileNames": [],
     "liguistLanguageId": 306,
     "name": "QMake",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "r",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-rsrc",
+    "codeMirrorMode": "r",
     "extensions": [
       ".r",
       ".rd",
@@ -5654,13 +5956,14 @@
     "name": "R",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "yaml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-yaml",
+    "codeMirrorMode": "yaml",
     "extensions": [
       ".raml"
     ],
@@ -5712,9 +6015,9 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".rexx",
       ".pprx",
-      ".rex"
+      ".rex",
+      ".rexx"
     ],
     "fileNames": [],
     "liguistLanguageId": 311,
@@ -5728,10 +6031,13 @@
     "aceMode": "rhtml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-erb",
+    "codeMirrorMode": "htmlembedded",
     "extensions": [
       ".rhtml"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 312,
     "name": "RHTML",
     "namespace": "",
@@ -5743,6 +6049,8 @@
     "aceMode": "markdown",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-gfm",
+    "codeMirrorMode": "gfm",
     "extensions": [
       ".rmd"
     ],
@@ -5755,9 +6063,26 @@
     "vscodeLanguages": []
   },
   {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".x"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 1031374237,
+    "name": "RPC",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.c",
+    "vscodeLanguages": []
+  },
+  {
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-rpm-spec",
+    "codeMirrorMode": "rpm",
     "extensions": [
       ".spec"
     ],
@@ -5852,11 +6177,14 @@
     "aceMode": "rust",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-rustsrc",
+    "codeMirrorMode": "rust",
     "extensions": [
       ".re",
       ".rei"
     ],
     "fileNames": [],
+    "group": "OCaml",
     "liguistLanguageId": 869538413,
     "name": "Reason",
     "namespace": "",
@@ -5869,10 +6197,10 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".reb",
       ".r",
       ".r2",
       ".r3",
+      ".reb",
       ".rebol"
     ],
     "fileNames": [],
@@ -5919,8 +6247,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".regexp",
-      ".regex"
+      ".regex",
+      ".regexp"
     ],
     "fileNames": [],
     "liguistLanguageId": 363378884,
@@ -6007,8 +6335,9 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/troff",
+    "codeMirrorMode": "troff",
     "extensions": [
-      ".man",
       ".1",
       ".1in",
       ".1m",
@@ -6026,6 +6355,7 @@
       ".8",
       ".9",
       ".l",
+      ".man",
       ".me",
       ".ms",
       ".n",
@@ -6049,6 +6379,8 @@
     "aceMode": "clojure",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-clojure",
+    "codeMirrorMode": "clojure",
     "extensions": [
       ".rg"
     ],
@@ -6067,8 +6399,9 @@
       "Ruby",
       "Ruby on Rails"
     ],
+    "codeMirrorMimeType": "text/x-ruby",
+    "codeMirrorMode": "ruby",
     "extensions": [
-      ".rb",
       ".builder",
       ".eye",
       ".fcgi",
@@ -6080,6 +6413,7 @@
       ".podspec",
       ".rabl",
       ".rake",
+      ".rb",
       ".rbuild",
       ".rbw",
       ".rbx",
@@ -6116,7 +6450,6 @@
     "name": "Ruby",
     "namespace": "ruby",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6125,9 +6458,11 @@
     "atomGrammars": [
       "Rust"
     ],
+    "codeMirrorMimeType": "text/x-rustsrc",
+    "codeMirrorMode": "rust",
     "extensions": [
-      ".rs",
       ".rlib",
+      ".rs",
       ".rs.in"
     ],
     "fileNames": [],
@@ -6135,13 +6470,14 @@
     "name": "Rust",
     "namespace": "rust",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sas",
+    "codeMirrorMode": "sas",
     "extensions": [
       ".sas"
     ],
@@ -6159,10 +6495,13 @@
     "atomGrammars": [
       "SCSS"
     ],
+    "codeMirrorMimeType": "text/x-scss",
+    "codeMirrorMode": "css",
     "extensions": [
       ".scss"
     ],
     "fileNames": [],
+    "group": "CSS",
     "liguistLanguageId": 329,
     "name": "SCSS",
     "namespace": "scss",
@@ -6175,8 +6514,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".smt2",
-      ".smt"
+      ".smt",
+      ".smt2"
     ],
     "fileNames": [],
     "liguistLanguageId": 330,
@@ -6190,9 +6529,11 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/sparql-query",
+    "codeMirrorMode": "sparql",
     "extensions": [
-      ".sparql",
-      ".rq"
+      ".rq",
+      ".sparql"
     ],
     "fileNames": [],
     "liguistLanguageId": 331,
@@ -6207,8 +6548,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".sqf",
-      ".hqf"
+      ".hqf",
+      ".sqf"
     ],
     "fileNames": [],
     "liguistLanguageId": 332,
@@ -6222,16 +6563,18 @@
     "aceMode": "sql",
     "aliases": [],
     "atomGrammars": [
-      "SQL (Rails)",
-      "SQL"
+      "SQL",
+      "SQL (Rails)"
     ],
+    "codeMirrorMimeType": "text/x-sql",
+    "codeMirrorMode": "sql",
     "extensions": [
-      ".sql",
       ".cql",
       ".ddl",
       ".inc",
       ".mysql",
       ".prc",
+      ".sql",
       ".tab",
       ".udf",
       ".viw"
@@ -6248,9 +6591,11 @@
     "aceMode": "sql",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sql",
+    "codeMirrorMode": "sql",
     "extensions": [
-      ".sql",
-      ".db2"
+      ".db2",
+      ".sql"
     ],
     "fileNames": [],
     "liguistLanguageId": 334,
@@ -6264,6 +6609,8 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
       ".srt"
     ],
@@ -6283,6 +6630,7 @@
       ".ston"
     ],
     "fileNames": [],
+    "group": "Smalltalk",
     "liguistLanguageId": 336,
     "name": "STON",
     "namespace": "",
@@ -6296,6 +6644,8 @@
     "atomGrammars": [
       "SVG"
     ],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
       ".svg"
     ],
@@ -6311,11 +6661,14 @@
     "aceMode": "python",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-python",
+    "codeMirrorMode": "python",
     "extensions": [
       ".sage",
       ".sagews"
     ],
     "fileNames": [],
+    "group": "Python",
     "liguistLanguageId": 338,
     "name": "Sage",
     "namespace": "",
@@ -6327,6 +6680,8 @@
     "aceMode": "yaml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-yaml",
+    "codeMirrorMode": "yaml",
     "extensions": [
       ".sls"
     ],
@@ -6344,10 +6699,13 @@
     "atomGrammars": [
       "Sass"
     ],
+    "codeMirrorMimeType": "text/x-sass",
+    "codeMirrorMode": "sass",
     "extensions": [
       ".sass"
     ],
     "fileNames": [],
+    "group": "CSS",
     "liguistLanguageId": 340,
     "name": "Sass",
     "namespace": "sass",
@@ -6359,17 +6717,19 @@
     "aceMode": "scala",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-scala",
+    "codeMirrorMode": "clike",
     "extensions": [
-      ".scala",
+      ".kojo",
       ".sbt",
-      ".sc"
+      ".sc",
+      ".scala"
     ],
     "fileNames": [],
     "liguistLanguageId": 341,
     "name": "Scala",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6380,6 +6740,7 @@
       ".scaml"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 342,
     "name": "Scaml",
     "namespace": "",
@@ -6391,9 +6752,11 @@
     "aceMode": "scheme",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-scheme",
+    "codeMirrorMode": "scheme",
     "extensions": [
-      ".scm",
       ".sch",
+      ".scm",
       ".sld",
       ".sls",
       ".sps",
@@ -6404,7 +6767,6 @@
     "name": "Scheme",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6412,8 +6774,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".sci",
       ".sce",
+      ".sci",
       ".tst"
     ],
     "fileNames": [],
@@ -6421,7 +6783,6 @@
     "name": "Scilab",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6458,14 +6819,16 @@
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [
-      ".sh",
       ".bash",
       ".bats",
       ".cgi",
       ".command",
       ".fcgi",
       ".ksh",
+      ".sh",
       ".sh.in",
       ".tmux",
       ".tool",
@@ -6483,13 +6846,14 @@
     "name": "Shell",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [
       ".sh-session"
     ],
@@ -6535,10 +6899,13 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-slim",
+    "codeMirrorMode": "slim",
     "extensions": [
       ".slim"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 350,
     "name": "Slim",
     "namespace": "",
@@ -6565,22 +6932,25 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-stsrc",
+    "codeMirrorMode": "smalltalk",
     "extensions": [
-      ".st",
-      ".cs"
+      ".cs",
+      ".st"
     ],
     "fileNames": [],
     "liguistLanguageId": 352,
     "name": "Smalltalk",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "smarty",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-smarty",
+    "codeMirrorMode": "smarty",
     "extensions": [
       ".tpl"
     ],
@@ -6596,10 +6966,23 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "extensions": [],
+    "fileNames": [],
+    "liguistLanguageId": 237469032,
+    "name": "Solidity",
+    "namespace": "",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.solidity",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
     "extensions": [
-      ".sp",
       ".inc",
-      ".sma"
+      ".sma",
+      ".sp"
     ],
     "fileNames": [],
     "liguistLanguageId": 354,
@@ -6637,6 +7020,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".nut"
     ],
@@ -6667,6 +7052,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-ocaml",
+    "codeMirrorMode": "mllike",
     "extensions": [
       ".ML",
       ".fun",
@@ -6686,8 +7073,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".do",
       ".ado",
+      ".do",
       ".doh",
       ".ihlp",
       ".mata",
@@ -6699,7 +7086,6 @@
     "name": "Stata",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6710,6 +7096,7 @@
       ".styl"
     ],
     "fileNames": [],
+    "group": "CSS",
     "liguistLanguageId": 359,
     "name": "Stylus",
     "namespace": "",
@@ -6736,6 +7123,8 @@
     "aceMode": "javascript",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/javascript",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".sublime-build",
       ".sublime-commands",
@@ -6752,6 +7141,7 @@
       ".sublime_session"
     ],
     "fileNames": [],
+    "group": "JSON",
     "liguistLanguageId": 423,
     "name": "Sublime Text Config",
     "namespace": "",
@@ -6767,6 +7157,7 @@
       ".sss"
     ],
     "fileNames": [],
+    "group": "CSS",
     "liguistLanguageId": 826404698,
     "name": "SugarSS",
     "namespace": "",
@@ -6794,6 +7185,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-swift",
+    "codeMirrorMode": "swift",
     "extensions": [
       ".swift"
     ],
@@ -6802,7 +7195,6 @@
     "name": "Swift",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6821,6 +7213,8 @@
     "aceMode": "verilog",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-systemverilog",
+    "codeMirrorMode": "verilog",
     "extensions": [
       ".sv",
       ".svh",
@@ -6831,7 +7225,6 @@
     "name": "SystemVerilog",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6839,9 +7232,9 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".8xp",
       ".8xk",
       ".8xk.txt",
+      ".8xp",
       ".8xp.txt"
     ],
     "fileNames": [],
@@ -6871,6 +7264,8 @@
     "aceMode": "toml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-toml",
+    "codeMirrorMode": "toml",
     "extensions": [
       ".toml"
     ],
@@ -6901,9 +7296,11 @@
     "aceMode": "tcl",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-tcl",
+    "codeMirrorMode": "tcl",
     "extensions": [
-      ".tcl",
       ".adp",
+      ".tcl",
       ".tm"
     ],
     "fileNames": [],
@@ -6911,18 +7308,20 @@
     "name": "Tcl",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [
-      ".tcsh",
-      ".csh"
+      ".csh",
+      ".tcsh"
     ],
     "fileNames": [],
+    "group": "Shell",
     "liguistLanguageId": 368,
     "name": "Tcsh",
     "namespace": "",
@@ -6936,8 +7335,9 @@
     "atomGrammars": [
       "LaTeX"
     ],
+    "codeMirrorMimeType": "text/x-stex",
+    "codeMirrorMode": "stex",
     "extensions": [
-      ".tex",
       ".aux",
       ".bbx",
       ".bib",
@@ -6951,6 +7351,7 @@
       ".mkiv",
       ".mkvi",
       ".sty",
+      ".tex",
       ".toc"
     ],
     "fileNames": [],
@@ -6958,7 +7359,6 @@
     "name": "TeX",
     "namespace": "latex",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6980,6 +7380,8 @@
     "aceMode": "lua",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-lua",
+    "codeMirrorMode": "lua",
     "extensions": [
       ".t"
     ],
@@ -6988,7 +7390,6 @@
     "name": "Terra",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6996,11 +7397,11 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".txt",
       ".fr",
       ".nb",
       ".ncl",
-      ".no"
+      ".no",
+      ".txt"
     ],
     "fileNames": [
       "COPYING",
@@ -7031,6 +7432,8 @@
     "aceMode": "textile",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-textile",
+    "codeMirrorMode": "textile",
     "extensions": [
       ".textile"
     ],
@@ -7088,6 +7491,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/turtle",
+    "codeMirrorMode": "turtle",
     "extensions": [
       ".ttl"
     ],
@@ -7105,10 +7510,13 @@
     "atomGrammars": [
       "HTML (Twig)"
     ],
+    "codeMirrorMimeType": "text/x-twig",
+    "codeMirrorMode": "twig",
     "extensions": [
       ".twig"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 377,
     "name": "Twig",
     "namespace": "twig",
@@ -7137,6 +7545,8 @@
     "atomGrammars": [
       "TypeScript"
     ],
+    "codeMirrorMimeType": "application/typescript",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".ts",
       ".tsx"
@@ -7153,10 +7563,13 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csrc",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".upc"
     ],
     "fileNames": [],
+    "group": "C",
     "liguistLanguageId": 379,
     "name": "Unified Parallel C",
     "namespace": "",
@@ -7168,6 +7581,8 @@
     "aceMode": "yaml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-yaml",
+    "codeMirrorMode": "yaml",
     "extensions": [
       ".anim",
       ".asset",
@@ -7189,10 +7604,11 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".s",
-      ".ms"
+      ".ms",
+      ".s"
     ],
     "fileNames": [],
+    "group": "Assembly",
     "liguistLanguageId": 120,
     "name": "Unix Assembly",
     "namespace": "",
@@ -7204,6 +7620,8 @@
     "aceMode": "csharp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csharp",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".uno"
     ],
@@ -7219,6 +7637,8 @@
     "aceMode": "java",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-java",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".uc"
     ],
@@ -7265,9 +7685,11 @@
     "aceMode": "vhdl",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-vhdl",
+    "codeMirrorMode": "vhdl",
     "extensions": [
-      ".vhdl",
       ".vhd",
+      ".vhdl",
       ".vhf",
       ".vhi",
       ".vho",
@@ -7280,7 +7702,6 @@
     "name": "VHDL",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -7298,13 +7719,14 @@
     "name": "Vala",
     "namespace": "vala",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "verilog",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-verilog",
+    "codeMirrorMode": "verilog",
     "extensions": [
       ".v",
       ".veo"
@@ -7314,7 +7736,6 @@
     "name": "Verilog",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -7343,12 +7764,14 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-vb",
+    "codeMirrorMode": "vb",
     "extensions": [
-      ".vb",
       ".bas",
       ".cls",
       ".frm",
       ".frx",
+      ".vb",
       ".vba",
       ".vbhtml",
       ".vbs"
@@ -7376,6 +7799,8 @@
     "aceMode": "d",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-d",
+    "codeMirrorMode": "d",
     "extensions": [
       ".volt"
     ],
@@ -7453,6 +7878,8 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
       ".wast",
       ".wat"
@@ -7469,6 +7896,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-webidl",
+    "codeMirrorMode": "webidl",
     "extensions": [
       ".webidl"
     ],
@@ -7514,6 +7943,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csrc",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".xc"
     ],
@@ -7546,22 +7977,17 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [
-      "SLD",
-      "XML",
-      "XHTML",
-      "XSD",
-      "XSL",
+      "GSP",
       "JSP",
-      "GSP"
+      "SLD",
+      "XHTML",
+      "XML",
+      "XSD",
+      "XSL"
     ],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
-      ".sld",
-      ".xml",
-      ".xhtml",
-      ".xsd",
-      ".xsl",
-      ".jsp",
-      ".gsp",
       ".adml",
       ".admx",
       ".ant",
@@ -7588,9 +8014,11 @@
       ".glade",
       ".gml",
       ".grxml",
+      ".gsp",
       ".iml",
       ".ivy",
       ".jelly",
+      ".jsp",
       ".jsproj",
       ".kml",
       ".launch",
@@ -7620,17 +8048,18 @@
       ".scxml",
       ".sfproj",
       ".shproj",
+      ".sld",
       ".srdf",
-      ".storyboard",
       ".stTheme",
+      ".storyboard",
       ".sublime-snippet",
       ".targets",
       ".tmCommand",
-      ".tml",
       ".tmLanguage",
       ".tmPreferences",
       ".tmSnippet",
       ".tmTheme",
+      ".tml",
       ".ts",
       ".tsx",
       ".ui",
@@ -7651,12 +8080,16 @@
       ".x3d",
       ".xacro",
       ".xaml",
+      ".xhtml",
       ".xib",
       ".xlf",
       ".xliff",
       ".xmi",
+      ".xml",
       ".xml.dist",
       ".xproj",
+      ".xsd",
+      ".xsl",
       ".xspec",
       ".xul",
       ".zcml"
@@ -7676,7 +8109,6 @@
     "name": "XML",
     "namespace": "xml",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -7684,8 +8116,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".xpm",
-      ".pm"
+      ".pm",
+      ".xpm"
     ],
     "fileNames": [],
     "liguistLanguageId": 781846279,
@@ -7699,6 +8131,8 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
       ".xsp-config",
       ".xsp.metadata"
@@ -7715,6 +8149,8 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
       ".xpl",
       ".xproc"
@@ -7731,11 +8167,13 @@
     "aceMode": "xquery",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/xquery",
+    "codeMirrorMode": "xquery",
     "extensions": [
-      ".xquery",
       ".xq",
       ".xql",
       ".xqm",
+      ".xquery",
       ".xqy"
     ],
     "fileNames": [],
@@ -7750,6 +8188,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csrc",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".xs"
     ],
@@ -7765,9 +8205,11 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
-      ".xslt",
-      ".xsl"
+      ".xsl",
+      ".xslt"
     ],
     "fileNames": [],
     "liguistLanguageId": 404,
@@ -7820,21 +8262,22 @@
     "name": "Xtend",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "yaml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-yaml",
+    "codeMirrorMode": "yaml",
     "extensions": [
-      ".yml",
       ".reek",
       ".rviz",
       ".sublime-syntax",
       ".syntax",
       ".yaml",
       ".yaml-tmlanguage",
+      ".yml",
       ".yml.mysql"
     ],
     "fileNames": [
@@ -7964,6 +8407,8 @@
     "aceMode": "clojure",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-clojure",
+    "codeMirrorMode": "clojure",
     "extensions": [
       ".edn"
     ],
@@ -7983,6 +8428,7 @@
       ".fish"
     ],
     "fileNames": [],
+    "group": "Shell",
     "liguistLanguageId": 415,
     "name": "fish",
     "namespace": "",
@@ -8002,7 +8448,6 @@
     "name": "mupad",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -8032,17 +8477,18 @@
     "name": "ooc",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-rst",
+    "codeMirrorMode": "rst",
     "extensions": [
-      ".rst",
       ".rest",
       ".rest.txt",
+      ".rst",
       ".rst.txt"
     ],
     "fileNames": [],
@@ -8050,7 +8496,6 @@
     "name": "reStructuredText",
     "namespace": "",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -8072,6 +8517,8 @@
     "aceMode": "clojure",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-clojure",
+    "codeMirrorMode": "clojure",
     "extensions": [
       ".wisp"
     ],
@@ -8088,8 +8535,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".prg",
       ".ch",
+      ".prg",
       ".prw"
     ],
     "fileNames": [],
