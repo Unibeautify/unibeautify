@@ -11,6 +11,10 @@ export interface Language {
     */
   namespace: string;
   /**
+   * Available since version.
+   */
+  since: string;
+  /**
    * Name of the parent language.
    * Languages in a group are counted in the statistics as the parent language.
    */
