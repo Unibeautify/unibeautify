@@ -162,6 +162,7 @@
         "no-constant-condition": true,
         "no-construct": true,
         "no-control-regex": true,
+        "no-commented-out-code": true,
         "no-debugger": true,
         "no-default-export": true,
         "no-delete-expression": true,

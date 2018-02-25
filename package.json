@@ -60,7 +60,7 @@
     "semver": "^5.5.0",
     "ts-jest": "^22.0.4",
     "tslint": "^5.7.0",
-    "tslint-clean-code": "^0.2.3",
+    "tslint-clean-code": "^0.2.4",
     "tslint-microsoft-contrib": "^5.0.1",
     "typedoc": "^0.10.0",
     "typescript": "^2.7.2"
