@@ -274,7 +274,7 @@ export const Options: OptionsRegistry = {
   },
   space_before_conditional: {
     default: true,
-    description: 'Add a space before conditional, "if(true)" vs "if (true)"',
+    description: "Add a space before conditional, \"if(true)\" vs \"if (true)\"",
     since: "0.7.0",
     type: "boolean"
   },
