@@ -1,5 +1,7 @@
 # Unibeautify
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Unibeautify/unibeautify.svg)](https://greenkeeper.io/)
+
 > One Beautifier to rule them all, One Beautifier to clean them, One Beautifier to bring them all and in the darkness sheen them
 
 | Travis CI (Linux / macOS) | AppVeyor (Windows) | Test Coverage |
