@@ -4,8 +4,13 @@ import * as yaml from "js-yaml";
 import * as fs from "fs";
 import * as path from "path";
 import * as _ from "lodash";
+import * as semver from "semver";
 
 import { Language } from "../src/";
+
+// tslint:disable-next-line:no-require-imports no-var-requires
+const pkg = require("../../package.json");
+const nextMinorVersion: string = semver.inc(pkg.version, "minor") as string;
 
 const outFileName: string = process.argv[2];
 const outFilePath = path.resolve(process.cwd(), outFileName);
@@ -58,8 +63,11 @@ function convertGitHubLanguageToUnibeautify(
       const [languageName, language] = value;
       return <Partial<Language>>{
         aceMode: language.ace_mode,
+        codeMirrorMimeType: language.codemirror_mime_type,
+        codeMirrorMode: language.codemirror_mode,
         extensions: language.extensions,
         fileNames: language.filenames,
+        group: language.group,
         liguistLanguageId: language.language_id,
         name: languageName,
         textMateScope: language.tm_scope
@@ -96,8 +104,11 @@ function mergeLanguage(
     aceMode: getString("aceMode", baseLanguage, newLanguage),
     aliases: getArray("aliases", baseLanguage, newLanguage),
     atomGrammars: getArray("atomGrammars", baseLanguage, newLanguage),
+    codeMirrorMimeType: getString("codeMirrorMimeType", baseLanguage, newLanguage) || undefined,
+    codeMirrorMode: getString("codeMirrorMode", baseLanguage, newLanguage) || undefined,
     extensions: getArray("extensions", baseLanguage, newLanguage),
     fileNames: getArray("fileNames", baseLanguage, newLanguage),
+    group: getString("group", baseLanguage, newLanguage) || undefined,
     liguistLanguageId: getNumber(
       "liguistLanguageId",
       baseLanguage,
@@ -105,9 +116,10 @@ function mergeLanguage(
     ),
     name: getString("name", baseLanguage, newLanguage),
     namespace: getString("namespace", baseLanguage, newLanguage),
+    since: getString("since", baseLanguage, newLanguage) || nextMinorVersion,
     sublimeSyntaxes: getArray("sublimeSyntaxes", baseLanguage, newLanguage),
-    textMateScope: getString("textMateScope", baseLanguage, newLanguage),
-    vscodeLanguages: getArray("vscodeLanguages", baseLanguage, newLanguage)
+    textMateScope: getString("textMateScope", baseLanguage, newLanguage) || undefined,
+    vscodeLanguages: getArray("vscodeLanguages", baseLanguage, newLanguage),
   };
 }
 

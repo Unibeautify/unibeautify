@@ -14,7 +14,7 @@
     "compile:ts": "tsc",
     "compile": "npm-run-all compile:ts copy-languages-json update-type-defs",
     "clean": "rimraf dist/",
-    "prepublish": "npm-run-all compile",
+    "prepublishOnly": "npm run build",
     "docs": "typedoc --out docs --module commonjs --readme README.md --name Unibeautify src",
     "lint": "tslint {src,test,script}/**/*.ts",
     "lint-fix": "tslint --fix {src,test,script}/**/*.ts",
@@ -47,25 +47,26 @@
     "@types/jest": "^22.1.2",
     "@types/js-yaml": "^3.10.1",
     "@types/json-stable-stringify": "^1.0.31",
-    "@types/lodash": "^4.14.71",
+    "@types/lodash": "^4.14.104",
     "@types/node": "^9.4.6",
     "@types/request": "^2.0.9",
-    "coveralls": "^3.0.0",
+    "@types/semver": "^5.5.0",
     "jest": "^22.2.2",
     "js-yaml": "^3.10.0",
     "json-stable-stringify": "^1.0.1",
     "npm-run-all": "^4.1.2",
     "request": "^2.83.0",
     "rimraf": "^2.5.4",
+    "semver": "^5.5.0",
     "ts-jest": "^22.0.4",
     "tslint": "^5.7.0",
     "tslint-clean-code": "^0.2.3",
     "tslint-microsoft-contrib": "^5.0.1",
     "typedoc": "^0.10.0",
-    "typescript": "^2.5.3"
+    "typescript": "^2.7.2"
   },
   "dependencies": {
-    "lodash": "^4.15.0"
+    "lodash": "^4.17.5"
   },
   "engines": {
     "node": ">=6.0.0"

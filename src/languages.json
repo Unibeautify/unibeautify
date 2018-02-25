@@ -11,6 +11,7 @@
     "liguistLanguageId": 0,
     "name": "1C Enterprise",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.bsl",
     "vscodeLanguages": []
@@ -26,8 +27,8 @@
     "liguistLanguageId": 1,
     "name": "ABAP",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -41,6 +42,7 @@
     "liguistLanguageId": 429,
     "name": "ABNF",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.abnf",
     "vscodeLanguages": []
@@ -49,6 +51,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".asc",
       ".ash"
@@ -57,6 +61,7 @@
     "liguistLanguageId": 2,
     "name": "AGS Script",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.c++",
     "vscodeLanguages": []
@@ -73,6 +78,7 @@
     "liguistLanguageId": 3,
     "name": "AMPL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ampl",
     "vscodeLanguages": []
@@ -88,8 +94,8 @@
     "liguistLanguageId": 4,
     "name": "ANTLR",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -103,6 +109,7 @@
     "liguistLanguageId": 5,
     "name": "API Blueprint",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.markdown.source.gfm.apib",
     "vscodeLanguages": []
@@ -111,6 +118,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/apl",
+    "codeMirrorMode": "apl",
     "extensions": [
       ".apl",
       ".dyalog"
@@ -119,6 +128,7 @@
     "liguistLanguageId": 6,
     "name": "APL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.apl",
     "vscodeLanguages": []
@@ -127,6 +137,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-ttcn-asn",
+    "codeMirrorMode": "asn.1",
     "extensions": [
       ".asn",
       ".asn1"
@@ -135,6 +147,7 @@
     "liguistLanguageId": 7,
     "name": "ASN.1",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.asn",
     "vscodeLanguages": []
@@ -143,12 +156,14 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-aspx",
+    "codeMirrorMode": "htmlembedded",
     "extensions": [
-      ".asp",
       ".asax",
       ".ascx",
       ".ashx",
       ".asmx",
+      ".asp",
       ".aspx",
       ".axd"
     ],
@@ -156,6 +171,7 @@
     "liguistLanguageId": 8,
     "name": "ASP",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.asp",
     "vscodeLanguages": []
@@ -173,6 +189,7 @@
     "liguistLanguageId": 9,
     "name": "ATS",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ats",
     "vscodeLanguages": []
@@ -188,6 +205,7 @@
     "liguistLanguageId": 10,
     "name": "ActionScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.actionscript.3",
     "vscodeLanguages": []
@@ -197,16 +215,16 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".adb",
       ".ada",
+      ".adb",
       ".ads"
     ],
     "fileNames": [],
     "liguistLanguageId": 11,
     "name": "Ada",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -220,6 +238,7 @@
     "liguistLanguageId": 147198098,
     "name": "Adobe Font Metrics",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.afm",
     "vscodeLanguages": []
@@ -235,8 +254,8 @@
     "liguistLanguageId": 12,
     "name": "Agda",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -250,21 +269,25 @@
     "liguistLanguageId": 13,
     "name": "Alloy",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [],
     "fileNames": [
       "APKBUILD"
     ],
+    "group": "Shell",
     "liguistLanguageId": 14,
     "name": "Alpine Abuild",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.shell",
     "vscodeLanguages": []
@@ -273,14 +296,17 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
-      ".as",
-      ".angelscript"
+      ".angelscript",
+      ".as"
     ],
     "fileNames": [],
     "liguistLanguageId": 389477596,
     "name": "AngelScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.angelscript",
     "vscodeLanguages": []
@@ -289,6 +315,8 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/xml",
+    "codeMirrorMode": "xml",
     "extensions": [],
     "fileNames": [
       "ant.xml",
@@ -297,6 +325,7 @@
     "liguistLanguageId": 15,
     "name": "Ant Build System",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.xml.ant",
     "vscodeLanguages": []
@@ -313,6 +342,7 @@
     "liguistLanguageId": 16,
     "name": "ApacheConf",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.apache-config",
     "vscodeLanguages": []
@@ -323,6 +353,8 @@
     "atomGrammars": [
       "Apex"
     ],
+    "codeMirrorMimeType": "text/x-java",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".cls",
       ".trigger"
@@ -331,6 +363,7 @@
     "liguistLanguageId": 17,
     "name": "Apex",
     "namespace": "apex",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.java",
     "vscodeLanguages": []
@@ -343,9 +376,11 @@
       ".agc"
     ],
     "fileNames": [],
+    "group": "Assembly",
     "liguistLanguageId": 18,
     "name": "Apollo Guidance Computer",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.agc",
     "vscodeLanguages": []
@@ -362,8 +397,8 @@
     "liguistLanguageId": 19,
     "name": "AppleScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -377,6 +412,7 @@
     "liguistLanguageId": 20,
     "name": "Arc",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -404,14 +440,15 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".asciidoc",
       ".adoc",
-      ".asc"
+      ".asc",
+      ".asciidoc"
     ],
     "fileNames": [],
     "liguistLanguageId": 22,
     "name": "AsciiDoc",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.asciidoc",
     "vscodeLanguages": []
@@ -427,6 +464,7 @@
     "liguistLanguageId": 23,
     "name": "AspectJ",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.aspectj",
     "vscodeLanguages": []
@@ -436,8 +474,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".asm",
       ".a51",
+      ".asm",
       ".inc",
       ".nasm"
     ],
@@ -445,6 +483,7 @@
     "liguistLanguageId": 24,
     "name": "Assembly",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.assembly",
     "vscodeLanguages": []
@@ -460,6 +499,7 @@
     "liguistLanguageId": 25,
     "name": "Augeas",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -476,6 +516,7 @@
     "liguistLanguageId": 26,
     "name": "AutoHotkey",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ahk",
     "vscodeLanguages": []
@@ -491,6 +532,7 @@
     "liguistLanguageId": 27,
     "name": "AutoIt",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.autoit",
     "vscodeLanguages": []
@@ -500,8 +542,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".awk",
       ".auk",
+      ".awk",
       ".gawk",
       ".mawk",
       ".nawk"
@@ -510,8 +552,8 @@
     "liguistLanguageId": 28,
     "name": "Awk",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -525,6 +567,7 @@
     "liguistLanguageId": 720859680,
     "name": "Ballerina",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ballerina",
     "vscodeLanguages": []
@@ -541,6 +584,7 @@
     "liguistLanguageId": 29,
     "name": "Batchfile",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.batchfile",
     "vscodeLanguages": []
@@ -556,8 +600,8 @@
     "liguistLanguageId": 30,
     "name": "Befunge",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -568,9 +612,11 @@
       ".bison"
     ],
     "fileNames": [],
+    "group": "Yacc",
     "liguistLanguageId": 31,
     "name": "Bison",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.bison",
     "vscodeLanguages": []
@@ -586,6 +632,7 @@
     "liguistLanguageId": 32,
     "name": "BitBake",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -599,9 +646,11 @@
       ".blade.php"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 33,
     "name": "Blade",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.php.blade",
     "vscodeLanguages": []
@@ -618,6 +667,7 @@
     "liguistLanguageId": 34,
     "name": "BlitzBasic",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.blitzmax",
     "vscodeLanguages": []
@@ -633,8 +683,8 @@
     "liguistLanguageId": 35,
     "name": "BlitzMax",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -648,6 +698,7 @@
     "liguistLanguageId": 36,
     "name": "Bluespec",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.bsv",
     "vscodeLanguages": []
@@ -663,6 +714,7 @@
     "liguistLanguageId": 37,
     "name": "Boo",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.boo",
     "vscodeLanguages": []
@@ -671,6 +723,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-brainfuck",
+    "codeMirrorMode": "brainfuck",
     "extensions": [
       ".b",
       ".bf"
@@ -679,6 +733,7 @@
     "liguistLanguageId": 38,
     "name": "Brainfuck",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.bf",
     "vscodeLanguages": []
@@ -694,6 +749,7 @@
     "liguistLanguageId": 39,
     "name": "Brightscript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.brightscript",
     "vscodeLanguages": []
@@ -709,8 +765,8 @@
     "liguistLanguageId": 40,
     "name": "Bro",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -720,19 +776,21 @@
       "C",
       "opencl"
     ],
+    "codeMirrorMimeType": "text/x-csrc",
+    "codeMirrorMode": "clike",
     "extensions": [
-      ".h",
       ".c",
-      ".cl",
       ".cats",
+      ".cl",
+      ".h",
       ".idc"
     ],
     "fileNames": [],
     "liguistLanguageId": 41,
     "name": "C",
     "namespace": "c",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -741,9 +799,11 @@
     "atomGrammars": [
       "C#"
     ],
+    "codeMirrorMimeType": "text/x-csharp",
+    "codeMirrorMode": "clike",
     "extensions": [
-      ".cs",
       ".cake",
+      ".cs",
       ".cshtml",
       ".csx"
     ],
@@ -751,6 +811,7 @@
     "liguistLanguageId": 42,
     "name": "C#",
     "namespace": "cs",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.cs",
     "vscodeLanguages": []
@@ -761,20 +822,23 @@
     "atomGrammars": [
       "C++"
     ],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
-      ".h",
-      ".hh",
-      ".cc",
-      ".cpp",
-      ".cxx",
       ".C",
       ".c++",
+      ".cc",
+      ".cp",
+      ".cpp",
+      ".cxx",
+      ".h",
+      ".h++",
+      ".hh",
       ".hpp",
       ".hxx",
-      ".h++",
-      ".cp",
       ".inc",
       ".inl",
+      ".ino",
       ".ipp",
       ".re",
       ".tcc",
@@ -784,8 +848,8 @@
     "liguistLanguageId": 43,
     "name": "C++",
     "namespace": "cpp",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -799,6 +863,7 @@
     "liguistLanguageId": 44,
     "name": "C-ObjDump",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "objdump.x86asm",
     "vscodeLanguages": []
@@ -807,13 +872,17 @@
     "aceMode": "haskell",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-haskell",
+    "codeMirrorMode": "haskell",
     "extensions": [
       ".chs"
     ],
     "fileNames": [],
+    "group": "Haskell",
     "liguistLanguageId": 45,
     "name": "C2hs Haskell",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.haskell",
     "vscodeLanguages": []
@@ -829,6 +898,7 @@
     "liguistLanguageId": 46,
     "name": "CLIPS",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.clips",
     "vscodeLanguages": []
@@ -837,6 +907,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-cmake",
+    "codeMirrorMode": "cmake",
     "extensions": [
       ".cmake",
       ".cmake.in"
@@ -847,18 +919,20 @@
     "liguistLanguageId": 47,
     "name": "CMake",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "cobol",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-cobol",
+    "codeMirrorMode": "cobol",
     "extensions": [
-      ".cob",
       ".cbl",
       ".ccp",
+      ".cob",
       ".cobol",
       ".cpy"
     ],
@@ -866,14 +940,16 @@
     "liguistLanguageId": 48,
     "name": "COBOL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
       ".dae"
     ],
@@ -881,6 +957,7 @@
     "liguistLanguageId": 49,
     "name": "COLLADA",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.xml",
     "vscodeLanguages": []
@@ -889,13 +966,17 @@
     "aceMode": "coffee",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-coffeescript",
+    "codeMirrorMode": "coffeescript",
     "extensions": [
       ".cson"
     ],
     "fileNames": [],
+    "group": "CoffeeScript",
     "liguistLanguageId": 424,
     "name": "CSON",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.coffee",
     "vscodeLanguages": []
@@ -906,6 +987,8 @@
     "atomGrammars": [
       "CSS"
     ],
+    "codeMirrorMimeType": "text/css",
+    "codeMirrorMode": "css",
     "extensions": [
       ".css"
     ],
@@ -913,6 +996,7 @@
     "liguistLanguageId": 50,
     "name": "CSS",
     "namespace": "css",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.css",
     "vscodeLanguages": []
@@ -930,6 +1014,7 @@
     "liguistLanguageId": 51,
     "name": "CSV",
     "namespace": "csv",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -945,6 +1030,7 @@
     "liguistLanguageId": 657332628,
     "name": "CWeb",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -960,6 +1046,7 @@
     "liguistLanguageId": 52,
     "name": "Cap'n Proto",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.capnp",
     "vscodeLanguages": []
@@ -975,6 +1062,7 @@
     "liguistLanguageId": 53,
     "name": "CartoCSS",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.css.mss",
     "vscodeLanguages": []
@@ -990,6 +1078,7 @@
     "liguistLanguageId": 54,
     "name": "Ceylon",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ceylon",
     "vscodeLanguages": []
@@ -1005,8 +1094,8 @@
     "liguistLanguageId": 55,
     "name": "Chapel",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1020,6 +1109,7 @@
     "liguistLanguageId": 56,
     "name": "Charity",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -1028,6 +1118,8 @@
     "aceMode": "java",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-java",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".ck"
     ],
@@ -1035,6 +1127,7 @@
     "liguistLanguageId": 57,
     "name": "ChucK",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.java",
     "vscodeLanguages": []
@@ -1050,8 +1143,8 @@
     "liguistLanguageId": 58,
     "name": "Cirru",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1065,6 +1158,7 @@
     "liguistLanguageId": 59,
     "name": "Clarion",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.clarion",
     "vscodeLanguages": []
@@ -1074,13 +1168,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".icl",
-      ".dcl"
+      ".dcl",
+      ".icl"
     ],
     "fileNames": [],
     "liguistLanguageId": 60,
     "name": "Clean",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.clean",
     "vscodeLanguages": []
@@ -1096,6 +1191,7 @@
     "liguistLanguageId": 61,
     "name": "Click",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.click",
     "vscodeLanguages": []
@@ -1104,10 +1200,12 @@
     "aceMode": "clojure",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-clojure",
+    "codeMirrorMode": "clojure",
     "extensions": [
-      ".clj",
       ".boot",
       ".cl2",
+      ".clj",
       ".cljc",
       ".cljs",
       ".cljs.hl",
@@ -1121,23 +1219,44 @@
     "liguistLanguageId": 62,
     "name": "Clojure",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "soy_template",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-soy",
+    "codeMirrorMode": "soy",
     "extensions": [
       ".soy"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 357046146,
     "name": "Closure Templates",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.soy",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".conll",
+      ".conllu"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 421026389,
+    "name": "CoNLL-U",
+    "namespace": "",
+    "since": "0.9.0",
+    "sublimeSyntaxes": [],
+    "textMateScope": "text.conllu",
     "vscodeLanguages": []
   },
   {
@@ -1146,11 +1265,13 @@
     "atomGrammars": [
       "CoffeeScript"
     ],
+    "codeMirrorMimeType": "text/x-coffeescript",
+    "codeMirrorMode": "coffeescript",
     "extensions": [
-      ".coffee",
       "._coffee",
       ".cake",
       ".cjsx",
+      ".coffee",
       ".iced"
     ],
     "fileNames": [
@@ -1159,6 +1280,7 @@
     "liguistLanguageId": 63,
     "name": "CoffeeScript",
     "namespace": "coffeescript",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.coffee",
     "vscodeLanguages": []
@@ -1170,14 +1292,15 @@
       "html"
     ],
     "extensions": [
+      ".cfc",
       ".cfm",
-      ".cfml",
-      ".cfc"
+      ".cfml"
     ],
     "fileNames": [],
     "liguistLanguageId": 64,
     "name": "ColdFusion",
     "namespace": "cfml",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.cfm",
     "vscodeLanguages": []
@@ -1190,9 +1313,11 @@
       ".cfc"
     ],
     "fileNames": [],
+    "group": "ColdFusion",
     "liguistLanguageId": 65,
     "name": "ColdFusion CFC",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.cfscript",
     "vscodeLanguages": []
@@ -1201,11 +1326,13 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
-      ".lisp",
       ".asd",
       ".cl",
       ".l",
+      ".lisp",
       ".lsp",
       ".ny",
       ".podsl",
@@ -1215,6 +1342,7 @@
     "liguistLanguageId": 66,
     "name": "Common Lisp",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.lisp",
     "vscodeLanguages": []
@@ -1223,6 +1351,8 @@
     "aceMode": "yaml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-yaml",
+    "codeMirrorMode": "yaml",
     "extensions": [
       ".cwl"
     ],
@@ -1230,6 +1360,7 @@
     "liguistLanguageId": 988547172,
     "name": "Common Workflow Language",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.cwl",
     "vscodeLanguages": []
@@ -1238,6 +1369,8 @@
     "aceMode": "pascal",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-pascal",
+    "codeMirrorMode": "pascal",
     "extensions": [
       ".cp",
       ".cps"
@@ -1246,6 +1379,7 @@
     "liguistLanguageId": 67,
     "name": "Component Pascal",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.pascal",
     "vscodeLanguages": []
@@ -1261,6 +1395,7 @@
     "liguistLanguageId": 68,
     "name": "Cool",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.cool",
     "vscodeLanguages": []
@@ -1277,8 +1412,8 @@
     "liguistLanguageId": 69,
     "name": "Coq",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1286,16 +1421,17 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".cppobjdump",
       ".c++-objdump",
       ".c++objdump",
       ".cpp-objdump",
+      ".cppobjdump",
       ".cxx-objdump"
     ],
     "fileNames": [],
     "liguistLanguageId": 70,
     "name": "Cpp-ObjDump",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "objdump.x86asm",
     "vscodeLanguages": []
@@ -1311,6 +1447,7 @@
     "liguistLanguageId": 71,
     "name": "Creole",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.creole",
     "vscodeLanguages": []
@@ -1321,6 +1458,8 @@
     "atomGrammars": [
       "Crystal"
     ],
+    "codeMirrorMimeType": "text/x-crystal",
+    "codeMirrorMode": "crystal",
     "extensions": [
       ".cr"
     ],
@@ -1328,6 +1467,7 @@
     "liguistLanguageId": 72,
     "name": "Crystal",
     "namespace": "crystal",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.crystal",
     "vscodeLanguages": []
@@ -1344,6 +1484,7 @@
     "liguistLanguageId": 73,
     "name": "Csound",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.csound",
     "vscodeLanguages": []
@@ -1359,6 +1500,7 @@
     "liguistLanguageId": 74,
     "name": "Csound Document",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.csound-document",
     "vscodeLanguages": []
@@ -1374,6 +1516,7 @@
     "liguistLanguageId": 75,
     "name": "Csound Score",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.csound-score",
     "vscodeLanguages": []
@@ -1382,6 +1525,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".cu",
       ".cuh"
@@ -1390,6 +1535,7 @@
     "liguistLanguageId": 77,
     "name": "Cuda",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.cuda-c++",
     "vscodeLanguages": []
@@ -1398,6 +1544,8 @@
     "aceMode": "javascript",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/javascript",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".cy"
     ],
@@ -1405,6 +1553,7 @@
     "liguistLanguageId": 78,
     "name": "Cycript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.js",
     "vscodeLanguages": []
@@ -1413,17 +1562,20 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-cython",
+    "codeMirrorMode": "python",
     "extensions": [
-      ".pyx",
       ".pxd",
-      ".pxi"
+      ".pxi",
+      ".pyx"
     ],
     "fileNames": [],
+    "group": "Python",
     "liguistLanguageId": 79,
     "name": "Cython",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1432,6 +1584,8 @@
     "atomGrammars": [
       "D"
     ],
+    "codeMirrorMimeType": "text/x-d",
+    "codeMirrorMode": "d",
     "extensions": [
       ".d",
       ".di"
@@ -1440,8 +1594,8 @@
     "liguistLanguageId": 80,
     "name": "D",
     "namespace": "d",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1455,6 +1609,7 @@
     "liguistLanguageId": 81,
     "name": "D-ObjDump",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "objdump.x86asm",
     "vscodeLanguages": []
@@ -1470,6 +1625,7 @@
     "liguistLanguageId": 82,
     "name": "DIGITAL Command Language",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -1485,6 +1641,7 @@
     "liguistLanguageId": 83,
     "name": "DM",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.dm",
     "vscodeLanguages": []
@@ -1494,13 +1651,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".zone",
-      ".arpa"
+      ".arpa",
+      ".zone"
     ],
     "fileNames": [],
     "liguistLanguageId": 84,
     "name": "DNS Zone",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.zone_file",
     "vscodeLanguages": []
@@ -1509,6 +1667,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csrc",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".d"
     ],
@@ -1516,6 +1676,7 @@
     "liguistLanguageId": 85,
     "name": "DTrace",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.c",
     "vscodeLanguages": []
@@ -1532,6 +1693,7 @@
     "liguistLanguageId": 86,
     "name": "Darcs Patch",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -1540,6 +1702,8 @@
     "aceMode": "dart",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/dart",
+    "codeMirrorMode": "dart",
     "extensions": [
       ".dart"
     ],
@@ -1547,8 +1711,8 @@
     "liguistLanguageId": 87,
     "name": "Dart",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1562,6 +1726,7 @@
     "liguistLanguageId": 974514097,
     "name": "DataWeave",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.data-weave",
     "vscodeLanguages": []
@@ -1570,6 +1735,8 @@
     "aceMode": "diff",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-diff",
+    "codeMirrorMode": "diff",
     "extensions": [
       ".diff",
       ".patch"
@@ -1578,6 +1745,7 @@
     "liguistLanguageId": 88,
     "name": "Diff",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.diff",
     "vscodeLanguages": []
@@ -1586,6 +1754,8 @@
     "aceMode": "dockerfile",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-dockerfile",
+    "codeMirrorMode": "dockerfile",
     "extensions": [
       ".dockerfile"
     ],
@@ -1595,6 +1765,7 @@
     "liguistLanguageId": 89,
     "name": "Dockerfile",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.dockerfile",
     "vscodeLanguages": []
@@ -1610,6 +1781,7 @@
     "liguistLanguageId": 90,
     "name": "Dogescript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -1618,9 +1790,11 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-dylan",
+    "codeMirrorMode": "dylan",
     "extensions": [
-      ".dylan",
       ".dyl",
+      ".dylan",
       ".intr",
       ".lid"
     ],
@@ -1628,8 +1802,8 @@
     "liguistLanguageId": 91,
     "name": "Dylan",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1643,6 +1817,7 @@
     "liguistLanguageId": 92,
     "name": "E",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -1651,6 +1826,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-ebnf",
+    "codeMirrorMode": "ebnf",
     "extensions": [
       ".ebnf"
     ],
@@ -1658,6 +1835,7 @@
     "liguistLanguageId": 430,
     "name": "EBNF",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ebnf",
     "vscodeLanguages": []
@@ -1666,6 +1844,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-ecl",
+    "codeMirrorMode": "ecl",
     "extensions": [
       ".ecl",
       ".eclxml"
@@ -1674,6 +1854,7 @@
     "liguistLanguageId": 93,
     "name": "ECL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -1686,9 +1867,11 @@
       ".ecl"
     ],
     "fileNames": [],
+    "group": "prolog",
     "liguistLanguageId": 94,
     "name": "ECLiPSe",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.prolog.eclipse",
     "vscodeLanguages": []
@@ -1697,16 +1880,18 @@
     "aceMode": "ejs",
     "aliases": [],
     "atomGrammars": [
-      "JavaScript Template",
-      "HTML (Angular)"
+      "HTML (Angular)",
+      "JavaScript Template"
     ],
     "extensions": [
       ".ejs"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 95,
     "name": "EJS",
     "namespace": "ejs",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.js",
     "vscodeLanguages": []
@@ -1715,6 +1900,8 @@
     "aceMode": "csharp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csharp",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".eq"
     ],
@@ -1722,6 +1909,7 @@
     "liguistLanguageId": 96,
     "name": "EQ",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.cs",
     "vscodeLanguages": []
@@ -1730,14 +1918,17 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
-      ".sch",
-      ".brd"
+      ".brd",
+      ".sch"
     ],
     "fileNames": [],
     "liguistLanguageId": 97,
     "name": "Eagle",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.xml",
     "vscodeLanguages": []
@@ -1746,13 +1937,17 @@
     "aceMode": "python",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-python",
+    "codeMirrorMode": "python",
     "extensions": [
       ".eb"
     ],
     "fileNames": [],
+    "group": "Python",
     "liguistLanguageId": 342840477,
     "name": "Easybuild",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.python",
     "vscodeLanguages": []
@@ -1761,13 +1956,17 @@
     "aceMode": "json",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".epj"
     ],
     "fileNames": [],
+    "group": "JavaScript",
     "liguistLanguageId": 98,
     "name": "Ecere Projects",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.json",
     "vscodeLanguages": []
@@ -1776,6 +1975,8 @@
     "aceMode": "json",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".edc"
     ],
@@ -1783,6 +1984,7 @@
     "liguistLanguageId": 342840478,
     "name": "Edje Data Collection",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.json",
     "vscodeLanguages": []
@@ -1791,6 +1993,8 @@
     "aceMode": "eiffel",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-eiffel",
+    "codeMirrorMode": "eiffel",
     "extensions": [
       ".e"
     ],
@@ -1798,8 +2002,8 @@
     "liguistLanguageId": 99,
     "name": "Eiffel",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1816,8 +2020,8 @@
     "liguistLanguageId": 100,
     "name": "Elixir",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1826,6 +2030,8 @@
     "atomGrammars": [
       "Elm"
     ],
+    "codeMirrorMimeType": "text/x-elm",
+    "codeMirrorMode": "elm",
     "extensions": [
       ".elm"
     ],
@@ -1833,6 +2039,7 @@
     "liguistLanguageId": 101,
     "name": "Elm",
     "namespace": "elm",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.elm",
     "vscodeLanguages": []
@@ -1841,6 +2048,8 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
       ".el",
       ".emacs",
@@ -1861,6 +2070,7 @@
     "liguistLanguageId": 102,
     "name": "Emacs Lisp",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.emacs.lisp",
     "vscodeLanguages": []
@@ -1869,6 +2079,8 @@
     "aceMode": "coffee",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-coffeescript",
+    "codeMirrorMode": "coffeescript",
     "extensions": [
       ".em",
       ".emberscript"
@@ -1877,6 +2089,7 @@
     "liguistLanguageId": 103,
     "name": "EmberScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.coffee",
     "vscodeLanguages": []
@@ -1887,9 +2100,11 @@
     "atomGrammars": [
       "Erlang"
     ],
+    "codeMirrorMimeType": "text/x-erlang",
+    "codeMirrorMode": "erlang",
     "extensions": [
-      ".erl",
       ".app.src",
+      ".erl",
       ".es",
       ".escript",
       ".hrl",
@@ -1905,14 +2120,16 @@
     "liguistLanguageId": 104,
     "name": "Erlang",
     "namespace": "erlang",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-fsharp",
+    "codeMirrorMode": "mllike",
     "extensions": [
       ".fs",
       ".fsi",
@@ -1922,6 +2139,7 @@
     "liguistLanguageId": 105,
     "name": "F#",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.fsharp",
     "vscodeLanguages": []
@@ -1931,13 +2149,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".fx",
-      ".flux"
+      ".flux",
+      ".fx"
     ],
     "fileNames": [],
     "liguistLanguageId": 106,
     "name": "FLUX",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -1946,6 +2165,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-factor",
+    "codeMirrorMode": "factor",
     "extensions": [
       ".factor"
     ],
@@ -1956,8 +2177,8 @@
     "liguistLanguageId": 108,
     "name": "Factor",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1965,8 +2186,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".fy",
-      ".fancypack"
+      ".fancypack",
+      ".fy"
     ],
     "fileNames": [
       "Fakefile"
@@ -1974,8 +2195,8 @@
     "liguistLanguageId": 109,
     "name": "Fancy",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -1989,6 +2210,7 @@
     "liguistLanguageId": 110,
     "name": "Fantom",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.fan",
     "vscodeLanguages": []
@@ -2004,6 +2226,7 @@
     "liguistLanguageId": 111,
     "name": "Filebench WML",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -2016,9 +2239,11 @@
       ".fs"
     ],
     "fileNames": [],
+    "group": "RenderScript",
     "liguistLanguageId": 112,
     "name": "Filterscript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -2028,13 +2253,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".for",
-      ".eam.fs"
+      ".eam.fs",
+      ".for"
     ],
     "fileNames": [],
     "liguistLanguageId": 113,
     "name": "Formatted",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -2043,22 +2269,24 @@
     "aceMode": "forth",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-forth",
+    "codeMirrorMode": "forth",
     "extensions": [
-      ".fth",
       ".4th",
       ".f",
       ".for",
       ".forth",
       ".fr",
       ".frt",
-      ".fs"
+      ".fs",
+      ".fth"
     ],
     "fileNames": [],
     "liguistLanguageId": 114,
     "name": "Forth",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -2067,13 +2295,15 @@
     "atomGrammars": [
       "Fortran - Modern"
     ],
+    "codeMirrorMimeType": "text/x-fortran",
+    "codeMirrorMode": "fortran",
     "extensions": [
-      ".f90",
       ".F90",
       ".f",
       ".f03",
       ".f08",
       ".f77",
+      ".f90",
       ".f95",
       ".for",
       ".fpp"
@@ -2082,6 +2312,7 @@
     "liguistLanguageId": 107,
     "name": "Fortran",
     "namespace": "fortran",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.fortran.modern",
     "vscodeLanguages": []
@@ -2097,6 +2328,7 @@
     "liguistLanguageId": 115,
     "name": "FreeMarker",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.ftl",
     "vscodeLanguages": []
@@ -2112,6 +2344,7 @@
     "liguistLanguageId": 116,
     "name": "Frege",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.haskell",
     "vscodeLanguages": []
@@ -2129,6 +2362,7 @@
     "liguistLanguageId": 117,
     "name": "G-code",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.gcode",
     "vscodeLanguages": []
@@ -2144,6 +2378,7 @@
     "liguistLanguageId": 118,
     "name": "GAMS",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -2163,6 +2398,7 @@
     "liguistLanguageId": 119,
     "name": "GAP",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.gap",
     "vscodeLanguages": []
@@ -2171,6 +2407,8 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
       ".md"
     ],
@@ -2178,6 +2416,7 @@
     "liguistLanguageId": 121,
     "name": "GCC Machine Description",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.lisp",
     "vscodeLanguages": []
@@ -2194,6 +2433,7 @@
     "liguistLanguageId": 122,
     "name": "GDB",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.gdb",
     "vscodeLanguages": []
@@ -2209,6 +2449,7 @@
     "liguistLanguageId": 123,
     "name": "GDScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.gdscript",
     "vscodeLanguages": []
@@ -2218,7 +2459,6 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".glsl",
       ".fp",
       ".frag",
       ".frg",
@@ -2227,6 +2467,7 @@
       ".fshader",
       ".geo",
       ".geom",
+      ".glsl",
       ".glslv",
       ".gshader",
       ".shader",
@@ -2241,14 +2482,16 @@
     "liguistLanguageId": 124,
     "name": "GLSL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "python",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-python",
+    "codeMirrorMode": "python",
     "extensions": [
       ".gn",
       ".gni"
@@ -2257,6 +2500,7 @@
     "liguistLanguageId": 302957008,
     "name": "GN",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.gn",
     "vscodeLanguages": []
@@ -2265,6 +2509,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".gml"
     ],
@@ -2272,6 +2518,7 @@
     "liguistLanguageId": 125,
     "name": "Game Maker Language",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.c++",
     "vscodeLanguages": []
@@ -2287,6 +2534,7 @@
     "liguistLanguageId": 792408528,
     "name": "Genie",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -2295,6 +2543,8 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
       ".kid"
     ],
@@ -2302,6 +2552,7 @@
     "liguistLanguageId": 126,
     "name": "Genshi",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.xml.genshi",
     "vscodeLanguages": []
@@ -2310,13 +2561,17 @@
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [
       ".ebuild"
     ],
     "fileNames": [],
+    "group": "Shell",
     "liguistLanguageId": 127,
     "name": "Gentoo Ebuild",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.shell",
     "vscodeLanguages": []
@@ -2325,13 +2580,17 @@
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [
       ".eclass"
     ],
     "fileNames": [],
+    "group": "Shell",
     "liguistLanguageId": 128,
     "name": "Gentoo Eclass",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.shell",
     "vscodeLanguages": []
@@ -2341,10 +2600,10 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".gbr",
       ".gbl",
       ".gbo",
       ".gbp",
+      ".gbr",
       ".gbs",
       ".gko",
       ".gpb",
@@ -2358,6 +2617,7 @@
     "liguistLanguageId": 404627610,
     "name": "Gerber Image",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.gerber",
     "vscodeLanguages": []
@@ -2374,6 +2634,7 @@
     "liguistLanguageId": 129,
     "name": "Gettext Catalog",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.po",
     "vscodeLanguages": []
@@ -2391,6 +2652,7 @@
     "liguistLanguageId": 76,
     "name": "Gherkin",
     "namespace": "gherkin",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.gherkin.feature",
     "vscodeLanguages": []
@@ -2399,6 +2661,8 @@
     "aceMode": "tcl",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-tcl",
+    "codeMirrorMode": "tcl",
     "extensions": [
       ".glf"
     ],
@@ -2406,6 +2670,7 @@
     "liguistLanguageId": 130,
     "name": "Glyph",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.tcl",
     "vscodeLanguages": []
@@ -2415,9 +2680,9 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".gp",
       ".gnu",
       ".gnuplot",
+      ".gp",
       ".plot",
       ".plt"
     ],
@@ -2425,8 +2690,8 @@
     "liguistLanguageId": 131,
     "name": "Gnuplot",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -2435,6 +2700,8 @@
     "atomGrammars": [
       "Go"
     ],
+    "codeMirrorMimeType": "text/x-go",
+    "codeMirrorMode": "go",
     "extensions": [
       ".go"
     ],
@@ -2442,8 +2709,8 @@
     "liguistLanguageId": 132,
     "name": "Go",
     "namespace": "go",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -2457,6 +2724,7 @@
     "liguistLanguageId": 133,
     "name": "Golo",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.golo",
     "vscodeLanguages": []
@@ -2475,6 +2743,7 @@
     "liguistLanguageId": 134,
     "name": "Gosu",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.gosu.2",
     "vscodeLanguages": []
@@ -2490,6 +2759,7 @@
     "liguistLanguageId": 135,
     "name": "Grace",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.grace",
     "vscodeLanguages": []
@@ -2505,6 +2775,7 @@
     "liguistLanguageId": 136,
     "name": "Gradle",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.groovy.gradle",
     "vscodeLanguages": []
@@ -2513,6 +2784,8 @@
     "aceMode": "haskell",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-haskell",
+    "codeMirrorMode": "haskell",
     "extensions": [
       ".gf"
     ],
@@ -2520,6 +2793,7 @@
     "liguistLanguageId": 137,
     "name": "Grammatical Framework",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.haskell",
     "vscodeLanguages": []
@@ -2535,6 +2809,7 @@
     "liguistLanguageId": 138,
     "name": "Graph Modeling Language",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -2544,13 +2819,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".graphql",
-      ".gql"
+      ".gql",
+      ".graphql"
     ],
     "fileNames": [],
     "liguistLanguageId": 139,
     "name": "GraphQL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.graphql",
     "vscodeLanguages": []
@@ -2567,6 +2843,7 @@
     "liguistLanguageId": 140,
     "name": "Graphviz (DOT)",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.dot",
     "vscodeLanguages": []
@@ -2575,6 +2852,8 @@
     "aceMode": "groovy",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-groovy",
+    "codeMirrorMode": "groovy",
     "extensions": [
       ".groovy",
       ".grt",
@@ -2587,21 +2866,25 @@
     "liguistLanguageId": 142,
     "name": "Groovy",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "jsp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-jsp",
+    "codeMirrorMode": "htmlembedded",
     "extensions": [
       ".gsp"
     ],
     "fileNames": [],
+    "group": "Groovy",
     "liguistLanguageId": 143,
     "name": "Groovy Server Pages",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.jsp",
     "vscodeLanguages": []
@@ -2610,14 +2893,18 @@
     "aceMode": "ruby",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-ruby",
+    "codeMirrorMode": "ruby",
     "extensions": [
       ".hcl",
-      ".tf"
+      ".tf",
+      ".tfvars"
     ],
     "fileNames": [],
     "liguistLanguageId": 144,
     "name": "HCL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.terraform",
     "vscodeLanguages": []
@@ -2627,16 +2914,17 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".hlsl",
       ".cginc",
       ".fx",
       ".fxh",
+      ".hlsl",
       ".hlsli"
     ],
     "fileNames": [],
     "liguistLanguageId": 145,
     "name": "HLSL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.hlsl",
     "vscodeLanguages": []
@@ -2647,9 +2935,11 @@
     "atomGrammars": [
       "HTML"
     ],
+    "codeMirrorMimeType": "text/html",
+    "codeMirrorMode": "htmlmixed",
     "extensions": [
-      ".html",
       ".htm",
+      ".html",
       ".html.hl",
       ".inc",
       ".st",
@@ -2660,6 +2950,7 @@
     "liguistLanguageId": 146,
     "name": "HTML",
     "namespace": "html",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.basic",
     "vscodeLanguages": []
@@ -2668,15 +2959,19 @@
     "aceMode": "django",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-django",
+    "codeMirrorMode": "django",
     "extensions": [
       ".jinja",
       ".mustache",
       ".njk"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 147,
     "name": "HTML+Django",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.django",
     "vscodeLanguages": []
@@ -2685,13 +2980,17 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/html",
+    "codeMirrorMode": "htmlmixed",
     "extensions": [
       ".ecr"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 148,
     "name": "HTML+ECR",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.ecr",
     "vscodeLanguages": []
@@ -2700,13 +2999,17 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/html",
+    "codeMirrorMode": "htmlmixed",
     "extensions": [
       ".eex"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 149,
     "name": "HTML+EEX",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.elixir",
     "vscodeLanguages": []
@@ -2715,17 +3018,21 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [
-      "HTML (Ruby - ERB)",
-      "HTML (Rails)"
+      "HTML (Rails)",
+      "HTML (Ruby - ERB)"
     ],
+    "codeMirrorMimeType": "application/x-erb",
+    "codeMirrorMode": "htmlembedded",
     "extensions": [
       ".erb",
       ".erb.deface"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 150,
     "name": "HTML+ERB",
     "namespace": "erb",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.erb",
     "vscodeLanguages": []
@@ -2734,13 +3041,17 @@
     "aceMode": "php",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-httpd-php",
+    "codeMirrorMode": "php",
     "extensions": [
       ".phtml"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 151,
     "name": "HTML+PHP",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.php",
     "vscodeLanguages": []
@@ -2749,6 +3060,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "message/http",
+    "codeMirrorMode": "http",
     "extensions": [
       ".http"
     ],
@@ -2756,6 +3069,7 @@
     "liguistLanguageId": 152,
     "name": "HTTP",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.httpspec",
     "vscodeLanguages": []
@@ -2764,6 +3078,8 @@
     "aceMode": "php",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-httpd-php",
+    "codeMirrorMode": "php",
     "extensions": [
       ".hh",
       ".php"
@@ -2772,6 +3088,7 @@
     "liguistLanguageId": 153,
     "name": "Hack",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.php",
     "vscodeLanguages": []
@@ -2780,33 +3097,38 @@
     "aceMode": "haml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-haml",
+    "codeMirrorMode": "haml",
     "extensions": [
       ".haml",
       ".haml.deface"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 154,
     "name": "Haml",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "handlebars",
     "aliases": [],
     "atomGrammars": [
-      "Handlebars",
-      "HTML (Handlebars)"
+      "HTML (Handlebars)",
+      "Handlebars"
     ],
     "extensions": [
-      ".hbs",
-      ".handlebars"
+      ".handlebars",
+      ".hbs"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 155,
     "name": "Handlebars",
     "namespace": "handlebars",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.handlebars",
     "vscodeLanguages": []
@@ -2822,6 +3144,7 @@
     "liguistLanguageId": 156,
     "name": "Harbour",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.harbour",
     "vscodeLanguages": []
@@ -2832,6 +3155,8 @@
     "atomGrammars": [
       "Haskell"
     ],
+    "codeMirrorMimeType": "text/x-haskell",
+    "codeMirrorMode": "haskell",
     "extensions": [
       ".hs",
       ".hsc"
@@ -2840,14 +3165,16 @@
     "liguistLanguageId": 157,
     "name": "Haskell",
     "namespace": "haskell",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "haxe",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-haxe",
+    "codeMirrorMode": "haxe",
     "extensions": [
       ".hx",
       ".hxsl"
@@ -2856,6 +3183,7 @@
     "liguistLanguageId": 158,
     "name": "Haxe",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.haxe.2",
     "vscodeLanguages": []
@@ -2871,6 +3199,7 @@
     "liguistLanguageId": 159,
     "name": "Hy",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -2886,6 +3215,7 @@
     "liguistLanguageId": 160,
     "name": "HyPhy",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -2894,16 +3224,18 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-idl",
+    "codeMirrorMode": "idl",
     "extensions": [
-      ".pro",
-      ".dlm"
+      ".dlm",
+      ".pro"
     ],
     "fileNames": [],
     "liguistLanguageId": 161,
     "name": "IDL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -2917,6 +3249,7 @@
     "liguistLanguageId": 162,
     "name": "IGOR Pro",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -2925,9 +3258,11 @@
     "aceMode": "ini",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-properties",
+    "codeMirrorMode": "properties",
     "extensions": [
-      ".ini",
       ".cfg",
+      ".ini",
       ".prefs",
       ".pro",
       ".properties"
@@ -2938,6 +3273,7 @@
     "liguistLanguageId": 163,
     "name": "INI",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ini",
     "vscodeLanguages": []
@@ -2946,6 +3282,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/mirc",
+    "codeMirrorMode": "mirc",
     "extensions": [
       ".irclog",
       ".weechatlog"
@@ -2954,6 +3292,7 @@
     "liguistLanguageId": 164,
     "name": "IRC log",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -2970,6 +3309,7 @@
     "liguistLanguageId": 165,
     "name": "Idris",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.idris",
     "vscodeLanguages": []
@@ -2979,13 +3319,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".ni",
-      ".i7x"
+      ".i7x",
+      ".ni"
     ],
     "fileNames": [],
     "liguistLanguageId": 166,
     "name": "Inform 7",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.inform7",
     "vscodeLanguages": []
@@ -3001,6 +3342,7 @@
     "liguistLanguageId": 167,
     "name": "Inno Setup",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -3016,8 +3358,8 @@
     "liguistLanguageId": 168,
     "name": "Io",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -3031,8 +3373,8 @@
     "liguistLanguageId": 169,
     "name": "Ioke",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -3046,6 +3388,7 @@
     "liguistLanguageId": 170,
     "name": "Isabelle",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.isabelle.theory",
     "vscodeLanguages": []
@@ -3058,9 +3401,11 @@
     "fileNames": [
       "ROOT"
     ],
+    "group": "Isabelle",
     "liguistLanguageId": 171,
     "name": "Isabelle ROOT",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.isabelle.root",
     "vscodeLanguages": []
@@ -3076,6 +3421,7 @@
     "liguistLanguageId": 172,
     "name": "J",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.j",
     "vscodeLanguages": []
@@ -3089,9 +3435,11 @@
       ".jflex"
     ],
     "fileNames": [],
+    "group": "Lex",
     "liguistLanguageId": 173,
     "name": "JFlex",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.jflex",
     "vscodeLanguages": []
@@ -3102,10 +3450,12 @@
     "atomGrammars": [
       "JSON"
     ],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
-      ".json",
-      ".geojson",
       ".JSON-tmLanguage",
+      ".geojson",
+      ".json",
       ".topojson"
     ],
     "fileNames": [
@@ -3114,9 +3464,11 @@
       "composer.lock",
       "mcmod.info"
     ],
+    "group": "JavaScript",
     "liguistLanguageId": 174,
     "name": "JSON",
     "namespace": "json",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.json",
     "vscodeLanguages": []
@@ -3125,6 +3477,8 @@
     "aceMode": "javascript",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".json5"
     ],
@@ -3134,6 +3488,7 @@
     "liguistLanguageId": 175,
     "name": "JSON5",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.js",
     "vscodeLanguages": []
@@ -3146,9 +3501,11 @@
       ".jsonld"
     ],
     "fileNames": [],
+    "group": "JavaScript",
     "liguistLanguageId": 176,
     "name": "JSONLD",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.js",
     "vscodeLanguages": []
@@ -3157,6 +3514,8 @@
     "aceMode": "jsoniq",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".jq"
     ],
@@ -3164,6 +3523,7 @@
     "liguistLanguageId": 177,
     "name": "JSONiq",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.jq",
     "vscodeLanguages": []
@@ -3175,14 +3535,18 @@
       "JSX",
       "JavaScript (JSX)"
     ],
+    "codeMirrorMimeType": "text/jsx",
+    "codeMirrorMode": "jsx",
     "extensions": [
-      ".jsx",
-      ".js"
+      ".js",
+      ".jsx"
     ],
     "fileNames": [],
+    "group": "JavaScript",
     "liguistLanguageId": 178,
     "name": "JSX",
     "namespace": "jsx",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.js.jsx",
     "vscodeLanguages": [
@@ -3200,6 +3564,7 @@
     "liguistLanguageId": 180,
     "name": "Jasmin",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.jasmin",
     "vscodeLanguages": []
@@ -3210,6 +3575,8 @@
     "atomGrammars": [
       "Java"
     ],
+    "codeMirrorMimeType": "text/x-java",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".java"
     ],
@@ -3217,21 +3584,25 @@
     "liguistLanguageId": 181,
     "name": "Java",
     "namespace": "java",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "jsp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-jsp",
+    "codeMirrorMode": "htmlembedded",
     "extensions": [
       ".jsp"
     ],
     "fileNames": [],
+    "group": "Java",
     "liguistLanguageId": 182,
     "name": "Java Server Pages",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.jsp",
     "vscodeLanguages": []
@@ -3242,8 +3613,9 @@
     "atomGrammars": [
       "JavaScript"
     ],
+    "codeMirrorMimeType": "text/javascript",
+    "codeMirrorMode": "javascript",
     "extensions": [
-      ".js",
       "._js",
       ".bones",
       ".es",
@@ -3251,6 +3623,7 @@
       ".frag",
       ".gs",
       ".jake",
+      ".js",
       ".jsb",
       ".jscad",
       ".jsfl",
@@ -3270,6 +3643,7 @@
     "liguistLanguageId": 183,
     "name": "JavaScript",
     "namespace": "js",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.js",
     "vscodeLanguages": [
@@ -3284,9 +3658,11 @@
       ".jison"
     ],
     "fileNames": [],
+    "group": "Yacc",
     "liguistLanguageId": 284531423,
     "name": "Jison",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.jison",
     "vscodeLanguages": []
@@ -3299,9 +3675,11 @@
       ".jisonlex"
     ],
     "fileNames": [],
+    "group": "Lex",
     "liguistLanguageId": 406395330,
     "name": "Jison Lex",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.jisonlex",
     "vscodeLanguages": []
@@ -3311,13 +3689,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".ol",
-      ".iol"
+      ".iol",
+      ".ol"
     ],
     "fileNames": [],
     "liguistLanguageId": 998078858,
     "name": "Jolie",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.jolie",
     "vscodeLanguages": []
@@ -3326,6 +3705,8 @@
     "aceMode": "julia",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-julia",
+    "codeMirrorMode": "julia",
     "extensions": [
       ".jl"
     ],
@@ -3333,14 +3714,16 @@
     "liguistLanguageId": 184,
     "name": "Julia",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "json",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".ipynb"
     ],
@@ -3350,6 +3733,7 @@
     "liguistLanguageId": 185,
     "name": "Jupyter Notebook",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.json",
     "vscodeLanguages": []
@@ -3365,6 +3749,7 @@
     "liguistLanguageId": 186,
     "name": "KRL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -3373,9 +3758,11 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
-      ".kicad_pcb",
       ".kicad_mod",
+      ".kicad_pcb",
       ".kicad_wks"
     ],
     "fileNames": [
@@ -3384,6 +3771,7 @@
     "liguistLanguageId": 187,
     "name": "KiCad Layout",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.pcb.sexp",
     "vscodeLanguages": []
@@ -3399,6 +3787,7 @@
     "liguistLanguageId": 140848857,
     "name": "KiCad Legacy Layout",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.pcb.board",
     "vscodeLanguages": []
@@ -3414,6 +3803,7 @@
     "liguistLanguageId": 622447435,
     "name": "KiCad Schematic",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.pcb.schematic",
     "vscodeLanguages": []
@@ -3422,6 +3812,8 @@
     "aceMode": "html",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/html",
+    "codeMirrorMode": "htmlmixed",
     "extensions": [
       ".kit"
     ],
@@ -3429,6 +3821,7 @@
     "liguistLanguageId": 188,
     "name": "Kit",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.basic",
     "vscodeLanguages": []
@@ -3437,6 +3830,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-kotlin",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".kt",
       ".ktm",
@@ -3446,6 +3841,7 @@
     "liguistLanguageId": 189,
     "name": "Kotlin",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.Kotlin",
     "vscodeLanguages": []
@@ -3454,6 +3850,8 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
       ".lfe"
     ],
@@ -3461,6 +3859,7 @@
     "liguistLanguageId": 190,
     "name": "LFE",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.lisp",
     "vscodeLanguages": []
@@ -3476,8 +3875,8 @@
     "liguistLanguageId": 191,
     "name": "LLVM",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -3491,6 +3890,7 @@
     "liguistLanguageId": 192,
     "name": "LOLCODE",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -3507,14 +3907,16 @@
     "liguistLanguageId": 193,
     "name": "LSL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
       ".lvproj"
     ],
@@ -3522,6 +3924,7 @@
     "liguistLanguageId": 194,
     "name": "LabVIEW",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.xml",
     "vscodeLanguages": []
@@ -3531,8 +3934,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".lasso",
       ".las",
+      ".lasso",
       ".lasso8",
       ".lasso9",
       ".ldml"
@@ -3541,6 +3944,7 @@
     "liguistLanguageId": 195,
     "name": "Lasso",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "file.lasso",
     "vscodeLanguages": []
@@ -3549,13 +3953,17 @@
     "aceMode": "smarty",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-smarty",
+    "codeMirrorMode": "smarty",
     "extensions": [
       ".latte"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 196,
     "name": "Latte",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.smarty",
     "vscodeLanguages": []
@@ -3565,15 +3973,15 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".lean",
-      ".hlean"
+      ".hlean",
+      ".lean"
     ],
     "fileNames": [],
     "liguistLanguageId": 197,
     "name": "Lean",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -3582,13 +3990,17 @@
     "atomGrammars": [
       "LESS"
     ],
+    "codeMirrorMimeType": "text/css",
+    "codeMirrorMode": "css",
     "extensions": [
       ".less"
     ],
     "fileNames": [],
+    "group": "CSS",
     "liguistLanguageId": 198,
     "name": "Less",
     "namespace": "less",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.css.less",
     "vscodeLanguages": []
@@ -3605,6 +4017,7 @@
     "liguistLanguageId": 199,
     "name": "Lex",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -3614,15 +4027,15 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".ly",
-      ".ily"
+      ".ily",
+      ".ly"
     ],
     "fileNames": [],
     "liguistLanguageId": 200,
     "name": "LilyPond",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -3637,6 +4050,7 @@
     "liguistLanguageId": 201,
     "name": "Limbo",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -3647,7 +4061,8 @@
     "atomGrammars": [],
     "extensions": [
       ".ld",
-      ".lds"
+      ".lds",
+      ".x"
     ],
     "fileNames": [
       "ld.script"
@@ -3655,6 +4070,7 @@
     "liguistLanguageId": 202,
     "name": "Linker Script",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -3670,6 +4086,7 @@
     "liguistLanguageId": 203,
     "name": "Linux Kernel Module",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -3685,6 +4102,7 @@
     "liguistLanguageId": 204,
     "name": "Liquid",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.liquid",
     "vscodeLanguages": []
@@ -3697,9 +4115,11 @@
       ".lagda"
     ],
     "fileNames": [],
+    "group": "Agda",
     "liguistLanguageId": 205,
     "name": "Literate Agda",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -3712,9 +4132,11 @@
       ".litcoffee"
     ],
     "fileNames": [],
+    "group": "CoffeeScript",
     "liguistLanguageId": 206,
     "name": "Literate CoffeeScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.litcoffee",
     "vscodeLanguages": []
@@ -3723,13 +4145,17 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-literate-haskell",
+    "codeMirrorMode": "haskell-literate",
     "extensions": [
       ".lhs"
     ],
     "fileNames": [],
+    "group": "Haskell",
     "liguistLanguageId": 207,
     "name": "Literate Haskell",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.tex.latex.haskell",
     "vscodeLanguages": []
@@ -3738,9 +4164,11 @@
     "aceMode": "livescript",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-livescript",
+    "codeMirrorMode": "livescript",
     "extensions": [
-      ".ls",
-      "._ls"
+      "._ls",
+      ".ls"
     ],
     "fileNames": [
       "Slakefile"
@@ -3748,8 +4176,8 @@
     "liguistLanguageId": 208,
     "name": "LiveScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -3757,14 +4185,15 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".xm",
       ".x",
-      ".xi"
+      ".xi",
+      ".xm"
     ],
     "fileNames": [],
     "liguistLanguageId": 209,
     "name": "Logos",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.logos",
     "vscodeLanguages": []
@@ -3781,14 +4210,16 @@
     "liguistLanguageId": 210,
     "name": "Logtalk",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "yaml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-yaml",
+    "codeMirrorMode": "yaml",
     "extensions": [
       ".lookml",
       ".model.lkml",
@@ -3798,6 +4229,7 @@
     "liguistLanguageId": 211,
     "name": "LookML",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.yaml",
     "vscodeLanguages": []
@@ -3813,6 +4245,7 @@
     "liguistLanguageId": 212,
     "name": "LoomScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.loomscript",
     "vscodeLanguages": []
@@ -3823,9 +4256,11 @@
     "atomGrammars": [
       "Lua"
     ],
+    "codeMirrorMimeType": "text/x-lua",
+    "codeMirrorMode": "lua",
     "extensions": [
-      ".lua",
       ".fcgi",
+      ".lua",
       ".nse",
       ".pd_lua",
       ".rbxs",
@@ -3835,22 +4270,25 @@
     "liguistLanguageId": 213,
     "name": "Lua",
     "namespace": "lua",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-mumps",
+    "codeMirrorMode": "mumps",
     "extensions": [
-      ".mumps",
-      ".m"
+      ".m",
+      ".mumps"
     ],
     "fileNames": [],
     "liguistLanguageId": 214,
     "name": "M",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -3866,6 +4304,7 @@
     "liguistLanguageId": 215,
     "name": "M4",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -3880,9 +4319,11 @@
     "fileNames": [
       "configure.ac"
     ],
+    "group": "M4",
     "liguistLanguageId": 216,
     "name": "M4Sugar",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -3892,13 +4333,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".ms",
-      ".mcr"
+      ".mcr",
+      ".ms"
     ],
     "fileNames": [],
     "liguistLanguageId": 217,
     "name": "MAXScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.maxscript",
     "vscodeLanguages": []
@@ -3915,6 +4357,7 @@
     "liguistLanguageId": 426,
     "name": "MQL4",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.mql5",
     "vscodeLanguages": []
@@ -3931,6 +4374,7 @@
     "liguistLanguageId": 427,
     "name": "MQL5",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.mql5",
     "vscodeLanguages": []
@@ -3939,6 +4383,8 @@
     "aceMode": "html",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/html",
+    "codeMirrorMode": "htmlmixed",
     "extensions": [
       ".mtml"
     ],
@@ -3946,6 +4392,7 @@
     "liguistLanguageId": 218,
     "name": "MTML",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.basic",
     "vscodeLanguages": []
@@ -3954,14 +4401,18 @@
     "aceMode": "forth",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-forth",
+    "codeMirrorMode": "forth",
     "extensions": [
-      ".muf",
-      ".m"
+      ".m",
+      ".muf"
     ],
     "fileNames": [],
+    "group": "Forth",
     "liguistLanguageId": 219,
     "name": "MUF",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -3970,9 +4421,11 @@
     "aceMode": "makefile",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-cmake",
+    "codeMirrorMode": "cmake",
     "extensions": [
-      ".mak",
       ".d",
+      ".mak",
       ".make",
       ".mk",
       ".mkfile"
@@ -3995,8 +4448,8 @@
     "liguistLanguageId": 220,
     "name": "Makefile",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -4011,6 +4464,7 @@
     "liguistLanguageId": 221,
     "name": "Mako",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.mako",
     "vscodeLanguages": []
@@ -4021,6 +4475,8 @@
     "atomGrammars": [
       "GitHub Markdown"
     ],
+    "codeMirrorMimeType": "text/x-gfm",
+    "codeMirrorMode": "gfm",
     "extensions": [
       ".markdown",
       ".md",
@@ -4036,6 +4492,7 @@
     "liguistLanguageId": 222,
     "name": "Markdown",
     "namespace": "markdown",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.gfm",
     "vscodeLanguages": []
@@ -4046,13 +4503,17 @@
     "atomGrammars": [
       "Marko"
     ],
+    "codeMirrorMimeType": "text/html",
+    "codeMirrorMode": "htmlmixed",
     "extensions": [
       ".marko"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 932782397,
     "name": "Marko",
     "namespace": "marko",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.marko",
     "vscodeLanguages": []
@@ -4068,6 +4529,7 @@
     "liguistLanguageId": 223,
     "name": "Mask",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.mask",
     "vscodeLanguages": []
@@ -4076,11 +4538,13 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-mathematica",
+    "codeMirrorMode": "mathematica",
     "extensions": [
-      ".mathematica",
       ".cdf",
       ".m",
       ".ma",
+      ".mathematica",
       ".mt",
       ".nb",
       ".nbp",
@@ -4091,30 +4555,34 @@
     "liguistLanguageId": 224,
     "name": "Mathematica",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "matlab",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-octave",
+    "codeMirrorMode": "octave",
     "extensions": [
-      ".matlab",
-      ".m"
+      ".m",
+      ".matlab"
     ],
     "fileNames": [],
     "liguistLanguageId": 225,
     "name": "Matlab",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [],
     "fileNames": [
       "pom.xml"
@@ -4122,6 +4590,7 @@
     "liguistLanguageId": 226,
     "name": "Maven POM",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.xml.pom",
     "vscodeLanguages": []
@@ -4130,9 +4599,11 @@
     "aceMode": "json",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/json",
+    "codeMirrorMode": "javascript",
     "extensions": [
-      ".maxpat",
       ".maxhelp",
+      ".maxpat",
       ".maxproj",
       ".mxt",
       ".pat"
@@ -4141,6 +4612,7 @@
     "liguistLanguageId": 227,
     "name": "Max",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.json",
     "vscodeLanguages": []
@@ -4157,6 +4629,7 @@
     "liguistLanguageId": 228,
     "name": "MediaWiki",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.mediawiki",
     "vscodeLanguages": []
@@ -4173,6 +4646,7 @@
     "liguistLanguageId": 229,
     "name": "Mercury",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.mercury",
     "vscodeLanguages": []
@@ -4189,6 +4663,7 @@
     "liguistLanguageId": 799141244,
     "name": "Meson",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.meson",
     "vscodeLanguages": []
@@ -4197,6 +4672,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".metal"
     ],
@@ -4204,6 +4681,7 @@
     "liguistLanguageId": 230,
     "name": "Metal",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.c++",
     "vscodeLanguages": []
@@ -4219,6 +4697,7 @@
     "liguistLanguageId": 231,
     "name": "MiniD",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -4227,6 +4706,8 @@
     "aceMode": "ruby",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-ruby",
+    "codeMirrorMode": "ruby",
     "extensions": [
       ".druby",
       ".duby",
@@ -4237,6 +4718,7 @@
     "liguistLanguageId": 232,
     "name": "Mirah",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ruby",
     "vscodeLanguages": []
@@ -4245,6 +4727,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-modelica",
+    "codeMirrorMode": "modelica",
     "extensions": [
       ".mo"
     ],
@@ -4252,6 +4736,7 @@
     "liguistLanguageId": 233,
     "name": "Modelica",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.modelica",
     "vscodeLanguages": []
@@ -4267,6 +4752,7 @@
     "liguistLanguageId": 234,
     "name": "Modula-2",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.modula2",
     "vscodeLanguages": []
@@ -4276,8 +4762,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".mms",
-      ".mmk"
+      ".mmk",
+      ".mms"
     ],
     "fileNames": [
       "descrip.mmk",
@@ -4286,6 +4772,7 @@
     "liguistLanguageId": 235,
     "name": "Module Management System",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -4302,6 +4789,7 @@
     "liguistLanguageId": 236,
     "name": "Monkey",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.monkey",
     "vscodeLanguages": []
@@ -4317,6 +4805,7 @@
     "liguistLanguageId": 237,
     "name": "Moocode",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -4332,8 +4821,8 @@
     "liguistLanguageId": 238,
     "name": "MoonScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -4358,6 +4847,7 @@
     "liguistLanguageId": 239,
     "name": "Myghty",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -4373,6 +4863,7 @@
     "liguistLanguageId": 240,
     "name": "NCL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ncl",
     "vscodeLanguages": []
@@ -4388,6 +4879,7 @@
     "liguistLanguageId": 241,
     "name": "NL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -4396,16 +4888,18 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-nsis",
+    "codeMirrorMode": "nsis",
     "extensions": [
-      ".nsi",
-      ".nsh"
+      ".nsh",
+      ".nsi"
     ],
     "fileNames": [],
     "liguistLanguageId": 242,
     "name": "NSIS",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -4420,6 +4914,7 @@
     "liguistLanguageId": 521429430,
     "name": "Nearley",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ne",
     "vscodeLanguages": []
@@ -4435,8 +4930,8 @@
     "liguistLanguageId": 243,
     "name": "Nemerle",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -4444,13 +4939,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".axs",
-      ".axi"
+      ".axi",
+      ".axs"
     ],
     "fileNames": [],
     "liguistLanguageId": 244,
     "name": "NetLinx",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.netlinx",
     "vscodeLanguages": []
@@ -4460,13 +4956,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".axs.erb",
-      ".axi.erb"
+      ".axi.erb",
+      ".axs.erb"
     ],
     "fileNames": [],
     "liguistLanguageId": 245,
     "name": "NetLinx+ERB",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.netlinx.erb",
     "vscodeLanguages": []
@@ -4475,6 +4972,8 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
       ".nlogo"
     ],
@@ -4482,6 +4981,7 @@
     "liguistLanguageId": 246,
     "name": "NetLogo",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.lisp",
     "vscodeLanguages": []
@@ -4490,23 +4990,46 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
-      ".nl",
       ".lisp",
-      ".lsp"
+      ".lsp",
+      ".nl"
     ],
     "fileNames": [],
     "liguistLanguageId": 247,
     "name": "NewLisp",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.lisp",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "groovy",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".nf"
+    ],
+    "fileNames": [
+      "nextflow.config"
+    ],
+    "liguistLanguageId": 506780613,
+    "name": "Nextflow",
+    "namespace": "",
+    "since": "0.9.0",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.nextflow",
     "vscodeLanguages": []
   },
   {
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-nginx-conf",
+    "codeMirrorMode": "nginx",
     "extensions": [
       ".nginxconf",
       ".vhost"
@@ -4517,6 +5040,7 @@
     "liguistLanguageId": 248,
     "name": "Nginx",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.nginx",
     "vscodeLanguages": []
@@ -4533,6 +5057,7 @@
     "liguistLanguageId": 249,
     "name": "Nim",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.nim",
     "vscodeLanguages": []
@@ -4548,6 +5073,7 @@
     "liguistLanguageId": 250,
     "name": "Ninja",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ninja",
     "vscodeLanguages": []
@@ -4563,6 +5089,7 @@
     "liguistLanguageId": 251,
     "name": "Nit",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.nit",
     "vscodeLanguages": []
@@ -4578,6 +5105,7 @@
     "liguistLanguageId": 252,
     "name": "Nix",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.nix",
     "vscodeLanguages": []
@@ -4586,6 +5114,8 @@
     "aceMode": "scheme",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-scheme",
+    "codeMirrorMode": "scheme",
     "extensions": [
       ".nu"
     ],
@@ -4595,6 +5125,7 @@
     "liguistLanguageId": 253,
     "name": "Nu",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.nu",
     "vscodeLanguages": []
@@ -4603,15 +5134,19 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-python",
+    "codeMirrorMode": "python",
     "extensions": [
       ".numpy",
       ".numpyw",
       ".numsc"
     ],
     "fileNames": [],
+    "group": "Python",
     "liguistLanguageId": 254,
     "name": "NumPy",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -4622,10 +5157,12 @@
     "atomGrammars": [
       "OCaml"
     ],
+    "codeMirrorMimeType": "text/x-ocaml",
+    "codeMirrorMode": "mllike",
     "extensions": [
-      ".ml",
       ".eliom",
       ".eliomi",
+      ".ml",
       ".ml4",
       ".mli",
       ".mll",
@@ -4635,6 +5172,7 @@
     "liguistLanguageId": 255,
     "name": "OCaml",
     "namespace": "ocaml",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ocaml",
     "vscodeLanguages": []
@@ -4650,6 +5188,7 @@
     "liguistLanguageId": 256,
     "name": "ObjDump",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "objdump.x86asm",
     "vscodeLanguages": []
@@ -4661,15 +5200,18 @@
       "Objective-C",
       "Objective-C++"
     ],
+    "codeMirrorMimeType": "text/x-objectivec",
+    "codeMirrorMode": "clike",
     "extensions": [
+      ".h",
       ".m",
-      ".mm",
-      ".h"
+      ".mm"
     ],
     "fileNames": [],
     "liguistLanguageId": 257,
     "name": "Objective-C",
     "namespace": "objectivec",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.objc",
     "vscodeLanguages": []
@@ -4678,6 +5220,8 @@
     "aceMode": "objectivec",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-objectivec",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".mm"
     ],
@@ -4685,6 +5229,7 @@
     "liguistLanguageId": 258,
     "name": "Objective-C++",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.objc++",
     "vscodeLanguages": []
@@ -4701,6 +5246,7 @@
     "liguistLanguageId": 259,
     "name": "Objective-J",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.js.objj",
     "vscodeLanguages": []
@@ -4716,6 +5262,7 @@
     "liguistLanguageId": 260,
     "name": "Omgrofl",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -4731,8 +5278,8 @@
     "liguistLanguageId": 261,
     "name": "Opa",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -4746,6 +5293,7 @@
     "liguistLanguageId": 262,
     "name": "Opal",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.opal",
     "vscodeLanguages": []
@@ -4754,14 +5302,18 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csrc",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".cl",
       ".opencl"
     ],
     "fileNames": [],
+    "group": "C",
     "liguistLanguageId": 263,
     "name": "OpenCL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.c",
     "vscodeLanguages": []
@@ -4771,14 +5323,15 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".p",
       ".cls",
+      ".p",
       ".w"
     ],
     "fileNames": [],
     "liguistLanguageId": 264,
     "name": "OpenEdge ABL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.abl",
     "vscodeLanguages": []
@@ -4787,11 +5340,15 @@
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [],
     "fileNames": [],
+    "group": "Shell",
     "liguistLanguageId": 265,
     "name": "OpenRC runscript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.shell",
     "vscodeLanguages": []
@@ -4807,6 +5364,7 @@
     "liguistLanguageId": 266,
     "name": "OpenSCAD",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.scad",
     "vscodeLanguages": []
@@ -4822,6 +5380,7 @@
     "liguistLanguageId": 374317347,
     "name": "OpenType Feature File",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.opentype",
     "vscodeLanguages": []
@@ -4837,6 +5396,7 @@
     "liguistLanguageId": 267,
     "name": "Org",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -4854,6 +5414,7 @@
     "liguistLanguageId": 268,
     "name": "Ox",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ox",
     "vscodeLanguages": []
@@ -4869,6 +5430,7 @@
     "liguistLanguageId": 269,
     "name": "Oxygene",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -4877,6 +5439,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-oz",
+    "codeMirrorMode": "oz",
     "extensions": [
       ".oz"
     ],
@@ -4884,6 +5448,7 @@
     "liguistLanguageId": 270,
     "name": "Oz",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.oz",
     "vscodeLanguages": []
@@ -4899,6 +5464,7 @@
     "liguistLanguageId": 348895984,
     "name": "P4",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.p4",
     "vscodeLanguages": []
@@ -4910,13 +5476,14 @@
       "Pawn"
     ],
     "extensions": [
-      ".pwn",
-      ".inc"
+      ".inc",
+      ".pwn"
     ],
     "fileNames": [],
     "liguistLanguageId": 271,
     "name": "PAWN",
     "namespace": "pawn",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.pawn",
     "vscodeLanguages": []
@@ -4927,13 +5494,15 @@
     "atomGrammars": [
       "PHP"
     ],
+    "codeMirrorMimeType": "application/x-httpd-php",
+    "codeMirrorMode": "php",
     "extensions": [
-      ".php",
-      ".module",
-      ".inc",
       ".aw",
       ".ctp",
       ".fcgi",
+      ".inc",
+      ".module",
+      ".php",
       ".php3",
       ".php4",
       ".php5",
@@ -4948,6 +5517,7 @@
     "liguistLanguageId": 272,
     "name": "PHP",
     "namespace": "php",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.php",
     "vscodeLanguages": []
@@ -4956,8 +5526,9 @@
     "aceMode": "sql",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-plsql",
+    "codeMirrorMode": "sql",
     "extensions": [
-      ".pls",
       ".bdy",
       ".ddl",
       ".fnc",
@@ -4965,6 +5536,7 @@
       ".pkb",
       ".pks",
       ".plb",
+      ".pls",
       ".plsql",
       ".prc",
       ".spc",
@@ -4978,6 +5550,7 @@
     "liguistLanguageId": 273,
     "name": "PLSQL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -4986,6 +5559,8 @@
     "aceMode": "pgsql",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sql",
+    "codeMirrorMode": "sql",
     "extensions": [
       ".sql"
     ],
@@ -4993,6 +5568,7 @@
     "liguistLanguageId": 274,
     "name": "PLpgSQL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.sql",
     "vscodeLanguages": []
@@ -5002,15 +5578,15 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".pov",
-      ".inc"
+      ".inc",
+      ".pov"
     ],
     "fileNames": [],
     "liguistLanguageId": 275,
     "name": "POV-Ray SDL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -5024,6 +5600,7 @@
     "liguistLanguageId": 276,
     "name": "Pan",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.pan",
     "vscodeLanguages": []
@@ -5039,6 +5616,7 @@
     "liguistLanguageId": 277,
     "name": "Papyrus",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.papyrus.skyrim",
     "vscodeLanguages": []
@@ -5054,6 +5632,7 @@
     "liguistLanguageId": 278,
     "name": "Parrot",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -5066,9 +5645,11 @@
       ".pasm"
     ],
     "fileNames": [],
+    "group": "Parrot",
     "liguistLanguageId": 279,
     "name": "Parrot Assembly",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -5081,9 +5662,11 @@
       ".pir"
     ],
     "fileNames": [],
+    "group": "Parrot",
     "liguistLanguageId": 280,
     "name": "Parrot Internal Representation",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.parrot.pir",
     "vscodeLanguages": []
@@ -5092,12 +5675,14 @@
     "aceMode": "pascal",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-pascal",
+    "codeMirrorMode": "pascal",
     "extensions": [
-      ".pas",
       ".dfm",
       ".dpr",
       ".inc",
       ".lpr",
+      ".pas",
       ".pascal",
       ".pp"
     ],
@@ -5105,8 +5690,8 @@
     "liguistLanguageId": 281,
     "name": "Pascal",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -5120,6 +5705,7 @@
     "liguistLanguageId": 840372442,
     "name": "Pep8",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.pep8",
     "vscodeLanguages": []
@@ -5131,19 +5717,21 @@
       "Perl",
       "Perl 6"
     ],
+    "codeMirrorMimeType": "text/x-perl",
+    "codeMirrorMode": "perl",
     "extensions": [
-      ".pl",
       ".PL",
-      ".pm",
-      ".pod",
-      ".t",
       ".al",
       ".cgi",
       ".fcgi",
       ".perl",
       ".ph",
+      ".pl",
       ".plx",
-      ".psgi"
+      ".pm",
+      ".pod",
+      ".psgi",
+      ".t"
     ],
     "fileNames": [
       "cpanfile"
@@ -5151,6 +5739,7 @@
     "liguistLanguageId": 282,
     "name": "Perl",
     "namespace": "perl",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.perl",
     "vscodeLanguages": []
@@ -5159,6 +5748,8 @@
     "aceMode": "perl",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-perl",
+    "codeMirrorMode": "perl",
     "extensions": [
       ".6pl",
       ".6pm",
@@ -5178,6 +5769,7 @@
     "liguistLanguageId": 283,
     "name": "Perl 6",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.perl6fe",
     "vscodeLanguages": []
@@ -5186,14 +5778,18 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/troff",
+    "codeMirrorMode": "troff",
     "extensions": [
-      ".pic",
-      ".chem"
+      ".chem",
+      ".pic"
     ],
     "fileNames": [],
+    "group": "Roff",
     "liguistLanguageId": 425,
     "name": "Pic",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.pic",
     "vscodeLanguages": []
@@ -5209,6 +5805,7 @@
     "liguistLanguageId": 284,
     "name": "Pickle",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -5224,6 +5821,7 @@
     "liguistLanguageId": 285,
     "name": "PicoLisp",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.lisp",
     "vscodeLanguages": []
@@ -5239,6 +5837,7 @@
     "liguistLanguageId": 286,
     "name": "PigLatin",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.pig_latin",
     "vscodeLanguages": []
@@ -5255,14 +5854,16 @@
     "liguistLanguageId": 287,
     "name": "Pike",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "perl",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-perl",
+    "codeMirrorMode": "perl",
     "extensions": [
       ".pod"
     ],
@@ -5270,6 +5871,7 @@
     "liguistLanguageId": 288,
     "name": "Pod",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -5285,6 +5887,7 @@
     "liguistLanguageId": 289,
     "name": "PogoScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.pogoscript",
     "vscodeLanguages": []
@@ -5300,6 +5903,7 @@
     "liguistLanguageId": 290,
     "name": "Pony",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.pony",
     "vscodeLanguages": []
@@ -5312,9 +5916,11 @@
       ".pcss"
     ],
     "fileNames": [],
+    "group": "CSS",
     "liguistLanguageId": 262764437,
     "name": "PostCSS",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.postcss",
     "vscodeLanguages": []
@@ -5324,14 +5930,15 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".ps",
       ".eps",
-      ".pfa"
+      ".pfa",
+      ".ps"
     ],
     "fileNames": [],
     "liguistLanguageId": 291,
     "name": "PostScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.postscript",
     "vscodeLanguages": []
@@ -5350,6 +5957,7 @@
     "liguistLanguageId": 292,
     "name": "PowerBuilder",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -5358,6 +5966,8 @@
     "aceMode": "powershell",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-powershell",
+    "codeMirrorMode": "powershell",
     "extensions": [
       ".ps1",
       ".psd1",
@@ -5367,8 +5977,8 @@
     "liguistLanguageId": 293,
     "name": "PowerShell",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -5382,8 +5992,8 @@
     "liguistLanguageId": 294,
     "name": "Processing",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -5400,6 +6010,7 @@
     "liguistLanguageId": 295,
     "name": "Prolog",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.prolog",
     "vscodeLanguages": []
@@ -5415,6 +6026,7 @@
     "liguistLanguageId": 296,
     "name": "Propeller Spin",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.spin",
     "vscodeLanguages": []
@@ -5423,6 +6035,8 @@
     "aceMode": "protobuf",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-protobuf",
+    "codeMirrorMode": "protobuf",
     "extensions": [
       ".proto"
     ],
@@ -5430,6 +6044,7 @@
     "liguistLanguageId": 297,
     "name": "Protocol Buffer",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.protobuf",
     "vscodeLanguages": []
@@ -5438,6 +6053,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/pgp",
+    "codeMirrorMode": "asciiarmor",
     "extensions": [
       ".asc",
       ".pub"
@@ -5446,6 +6063,7 @@
     "liguistLanguageId": 298,
     "name": "Public Key",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -5457,14 +6075,18 @@
       "Jade",
       "Pug"
     ],
+    "codeMirrorMimeType": "text/x-pug",
+    "codeMirrorMode": "pug",
     "extensions": [
       ".jade",
       ".pug"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 179,
     "name": "Pug",
     "namespace": "pug",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.jade",
     "vscodeLanguages": []
@@ -5475,6 +6097,8 @@
     "atomGrammars": [
       "Puppet"
     ],
+    "codeMirrorMimeType": "text/x-puppet",
+    "codeMirrorMode": "puppet",
     "extensions": [
       ".pp"
     ],
@@ -5484,6 +6108,7 @@
     "liguistLanguageId": 299,
     "name": "Puppet",
     "namespace": "puppet",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.puppet",
     "vscodeLanguages": []
@@ -5499,6 +6124,7 @@
     "liguistLanguageId": 300,
     "name": "Pure Data",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -5515,6 +6141,7 @@
     "liguistLanguageId": 301,
     "name": "PureBasic",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -5523,6 +6150,8 @@
     "aceMode": "haskell",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-haskell",
+    "codeMirrorMode": "haskell",
     "extensions": [
       ".purs"
     ],
@@ -5530,6 +6159,7 @@
     "liguistLanguageId": 302,
     "name": "PureScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.purescript",
     "vscodeLanguages": []
@@ -5540,14 +6170,16 @@
     "atomGrammars": [
       "Python"
     ],
+    "codeMirrorMimeType": "text/x-python",
+    "codeMirrorMode": "python",
     "extensions": [
-      ".py",
       ".bzl",
       ".cgi",
       ".fcgi",
       ".gyp",
       ".gypi",
       ".lmi",
+      ".py",
       ".py3",
       ".pyde",
       ".pyi",
@@ -5574,8 +6206,8 @@
     "liguistLanguageId": 303,
     "name": "Python",
     "namespace": "python",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -5584,9 +6216,11 @@
     "atomGrammars": [],
     "extensions": [],
     "fileNames": [],
+    "group": "Python",
     "liguistLanguageId": 428,
     "name": "Python console",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.python.console",
     "vscodeLanguages": []
@@ -5599,9 +6233,11 @@
       ".pytb"
     ],
     "fileNames": [],
+    "group": "Python",
     "liguistLanguageId": 304,
     "name": "Python traceback",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.python.traceback",
     "vscodeLanguages": []
@@ -5611,13 +6247,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".qml",
-      ".qbs"
+      ".qbs",
+      ".qml"
     ],
     "fileNames": [],
     "liguistLanguageId": 305,
     "name": "QML",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.qml",
     "vscodeLanguages": []
@@ -5627,21 +6264,23 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".pro",
-      ".pri"
+      ".pri",
+      ".pro"
     ],
     "fileNames": [],
     "liguistLanguageId": 306,
     "name": "QMake",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "r",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-rsrc",
+    "codeMirrorMode": "r",
     "extensions": [
       ".r",
       ".rd",
@@ -5653,14 +6292,16 @@
     "liguistLanguageId": 307,
     "name": "R",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "yaml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-yaml",
+    "codeMirrorMode": "yaml",
     "extensions": [
       ".raml"
     ],
@@ -5668,6 +6309,7 @@
     "liguistLanguageId": 308,
     "name": "RAML",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.yaml",
     "vscodeLanguages": []
@@ -5683,6 +6325,7 @@
     "liguistLanguageId": 309,
     "name": "RDoc",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.rdoc",
     "vscodeLanguages": []
@@ -5703,6 +6346,7 @@
     "liguistLanguageId": 310,
     "name": "REALbasic",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.vbnet",
     "vscodeLanguages": []
@@ -5712,14 +6356,15 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".rexx",
       ".pprx",
-      ".rex"
+      ".rex",
+      ".rexx"
     ],
     "fileNames": [],
     "liguistLanguageId": 311,
     "name": "REXX",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.rexx",
     "vscodeLanguages": []
@@ -5728,13 +6373,17 @@
     "aceMode": "rhtml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/x-erb",
+    "codeMirrorMode": "htmlembedded",
     "extensions": [
       ".rhtml"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 312,
     "name": "RHTML",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.erb",
     "vscodeLanguages": []
@@ -5743,6 +6392,8 @@
     "aceMode": "markdown",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-gfm",
+    "codeMirrorMode": "gfm",
     "extensions": [
       ".rmd"
     ],
@@ -5750,14 +6401,33 @@
     "liguistLanguageId": 313,
     "name": "RMarkdown",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.gfm",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "c_cpp",
+    "aliases": [],
+    "atomGrammars": [],
+    "extensions": [
+      ".x"
+    ],
+    "fileNames": [],
+    "liguistLanguageId": 1031374237,
+    "name": "RPC",
+    "namespace": "",
+    "since": "0.9.0",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.c",
     "vscodeLanguages": []
   },
   {
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-rpm-spec",
+    "codeMirrorMode": "rpm",
     "extensions": [
       ".spec"
     ],
@@ -5765,6 +6435,7 @@
     "liguistLanguageId": 314,
     "name": "RPM Spec",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.rpm-spec",
     "vscodeLanguages": []
@@ -5781,6 +6452,7 @@
     "liguistLanguageId": 315,
     "name": "RUNOFF",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.runoff",
     "vscodeLanguages": []
@@ -5799,6 +6471,7 @@
     "liguistLanguageId": 316,
     "name": "Racket",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.racket",
     "vscodeLanguages": []
@@ -5814,6 +6487,7 @@
     "liguistLanguageId": 317,
     "name": "Ragel",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -5829,6 +6503,7 @@
     "liguistLanguageId": 173616037,
     "name": "Rascal",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.rascal",
     "vscodeLanguages": []
@@ -5844,6 +6519,7 @@
     "liguistLanguageId": 318,
     "name": "Raw token data",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -5852,14 +6528,18 @@
     "aceMode": "rust",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-rustsrc",
+    "codeMirrorMode": "rust",
     "extensions": [
       ".re",
       ".rei"
     ],
     "fileNames": [],
+    "group": "OCaml",
     "liguistLanguageId": 869538413,
     "name": "Reason",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.reason",
     "vscodeLanguages": []
@@ -5869,16 +6549,17 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".reb",
       ".r",
       ".r2",
       ".r3",
+      ".reb",
       ".rebol"
     ],
     "fileNames": [],
     "liguistLanguageId": 319,
     "name": "Rebol",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.rebol",
     "vscodeLanguages": []
@@ -5895,6 +6576,7 @@
     "liguistLanguageId": 320,
     "name": "Red",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.red",
     "vscodeLanguages": []
@@ -5910,6 +6592,7 @@
     "liguistLanguageId": 321,
     "name": "Redcode",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -5919,13 +6602,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".regexp",
-      ".regex"
+      ".regex",
+      ".regexp"
     ],
     "fileNames": [],
     "liguistLanguageId": 363378884,
     "name": "Regular Expression",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.regexp",
     "vscodeLanguages": []
@@ -5941,6 +6625,7 @@
     "liguistLanguageId": 322,
     "name": "Ren'Py",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.renpy",
     "vscodeLanguages": []
@@ -5957,6 +6642,7 @@
     "liguistLanguageId": 323,
     "name": "RenderScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -5972,6 +6658,7 @@
     "liguistLanguageId": 431,
     "name": "Ring",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ring",
     "vscodeLanguages": []
@@ -5999,6 +6686,7 @@
     "liguistLanguageId": 324,
     "name": "RobotFramework",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.robot",
     "vscodeLanguages": []
@@ -6007,8 +6695,9 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/troff",
+    "codeMirrorMode": "troff",
     "extensions": [
-      ".man",
       ".1",
       ".1in",
       ".1m",
@@ -6026,6 +6715,7 @@
       ".8",
       ".9",
       ".l",
+      ".man",
       ".me",
       ".ms",
       ".n",
@@ -6041,6 +6731,7 @@
     "liguistLanguageId": 141,
     "name": "Roff",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.roff",
     "vscodeLanguages": []
@@ -6049,6 +6740,8 @@
     "aceMode": "clojure",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-clojure",
+    "codeMirrorMode": "clojure",
     "extensions": [
       ".rg"
     ],
@@ -6056,6 +6749,7 @@
     "liguistLanguageId": 325,
     "name": "Rouge",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.clojure",
     "vscodeLanguages": []
@@ -6067,8 +6761,9 @@
       "Ruby",
       "Ruby on Rails"
     ],
+    "codeMirrorMimeType": "text/x-ruby",
+    "codeMirrorMode": "ruby",
     "extensions": [
-      ".rb",
       ".builder",
       ".eye",
       ".fcgi",
@@ -6080,6 +6775,7 @@
       ".podspec",
       ".rabl",
       ".rake",
+      ".rb",
       ".rbuild",
       ".rbw",
       ".rbx",
@@ -6115,8 +6811,8 @@
     "liguistLanguageId": 326,
     "name": "Ruby",
     "namespace": "ruby",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6125,23 +6821,27 @@
     "atomGrammars": [
       "Rust"
     ],
+    "codeMirrorMimeType": "text/x-rustsrc",
+    "codeMirrorMode": "rust",
     "extensions": [
-      ".rs",
       ".rlib",
+      ".rs",
       ".rs.in"
     ],
     "fileNames": [],
     "liguistLanguageId": 327,
     "name": "Rust",
     "namespace": "rust",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sas",
+    "codeMirrorMode": "sas",
     "extensions": [
       ".sas"
     ],
@@ -6149,6 +6849,7 @@
     "liguistLanguageId": 328,
     "name": "SAS",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.sas",
     "vscodeLanguages": []
@@ -6159,13 +6860,17 @@
     "atomGrammars": [
       "SCSS"
     ],
+    "codeMirrorMimeType": "text/x-scss",
+    "codeMirrorMode": "css",
     "extensions": [
       ".scss"
     ],
     "fileNames": [],
+    "group": "CSS",
     "liguistLanguageId": 329,
     "name": "SCSS",
     "namespace": "scss",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.scss",
     "vscodeLanguages": []
@@ -6175,13 +6880,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".smt2",
-      ".smt"
+      ".smt",
+      ".smt2"
     ],
     "fileNames": [],
     "liguistLanguageId": 330,
     "name": "SMT",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.smt",
     "vscodeLanguages": []
@@ -6190,14 +6896,17 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/sparql-query",
+    "codeMirrorMode": "sparql",
     "extensions": [
-      ".sparql",
-      ".rq"
+      ".rq",
+      ".sparql"
     ],
     "fileNames": [],
     "liguistLanguageId": 331,
     "name": "SPARQL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.sparql",
     "vscodeLanguages": []
@@ -6207,13 +6916,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".sqf",
-      ".hqf"
+      ".hqf",
+      ".sqf"
     ],
     "fileNames": [],
     "liguistLanguageId": 332,
     "name": "SQF",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.sqf",
     "vscodeLanguages": []
@@ -6222,16 +6932,18 @@
     "aceMode": "sql",
     "aliases": [],
     "atomGrammars": [
-      "SQL (Rails)",
-      "SQL"
+      "SQL",
+      "SQL (Rails)"
     ],
+    "codeMirrorMimeType": "text/x-sql",
+    "codeMirrorMode": "sql",
     "extensions": [
-      ".sql",
       ".cql",
       ".ddl",
       ".inc",
       ".mysql",
       ".prc",
+      ".sql",
       ".tab",
       ".udf",
       ".viw"
@@ -6240,6 +6952,7 @@
     "liguistLanguageId": 333,
     "name": "SQL",
     "namespace": "sql",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.sql",
     "vscodeLanguages": []
@@ -6248,14 +6961,17 @@
     "aceMode": "sql",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sql",
+    "codeMirrorMode": "sql",
     "extensions": [
-      ".sql",
-      ".db2"
+      ".db2",
+      ".sql"
     ],
     "fileNames": [],
     "liguistLanguageId": 334,
     "name": "SQLPL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.sql",
     "vscodeLanguages": []
@@ -6264,6 +6980,8 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
       ".srt"
     ],
@@ -6271,6 +6989,7 @@
     "liguistLanguageId": 335,
     "name": "SRecode Template",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.lisp",
     "vscodeLanguages": []
@@ -6283,9 +7002,11 @@
       ".ston"
     ],
     "fileNames": [],
+    "group": "Smalltalk",
     "liguistLanguageId": 336,
     "name": "STON",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.smalltalk",
     "vscodeLanguages": []
@@ -6296,6 +7017,8 @@
     "atomGrammars": [
       "SVG"
     ],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
       ".svg"
     ],
@@ -6303,6 +7026,7 @@
     "liguistLanguageId": 337,
     "name": "SVG",
     "namespace": "svg",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.xml",
     "vscodeLanguages": []
@@ -6311,14 +7035,18 @@
     "aceMode": "python",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-python",
+    "codeMirrorMode": "python",
     "extensions": [
       ".sage",
       ".sagews"
     ],
     "fileNames": [],
+    "group": "Python",
     "liguistLanguageId": 338,
     "name": "Sage",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.python",
     "vscodeLanguages": []
@@ -6327,6 +7055,8 @@
     "aceMode": "yaml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-yaml",
+    "codeMirrorMode": "yaml",
     "extensions": [
       ".sls"
     ],
@@ -6334,6 +7064,7 @@
     "liguistLanguageId": 339,
     "name": "SaltStack",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.yaml.salt",
     "vscodeLanguages": []
@@ -6344,13 +7075,17 @@
     "atomGrammars": [
       "Sass"
     ],
+    "codeMirrorMimeType": "text/x-sass",
+    "codeMirrorMode": "sass",
     "extensions": [
       ".sass"
     ],
     "fileNames": [],
+    "group": "CSS",
     "liguistLanguageId": 340,
     "name": "Sass",
     "namespace": "sass",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.sass",
     "vscodeLanguages": []
@@ -6359,17 +7094,20 @@
     "aceMode": "scala",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-scala",
+    "codeMirrorMode": "clike",
     "extensions": [
-      ".scala",
+      ".kojo",
       ".sbt",
-      ".sc"
+      ".sc",
+      ".scala"
     ],
     "fileNames": [],
     "liguistLanguageId": 341,
     "name": "Scala",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6380,9 +7118,11 @@
       ".scaml"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 342,
     "name": "Scaml",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.scaml",
     "vscodeLanguages": []
@@ -6391,9 +7131,11 @@
     "aceMode": "scheme",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-scheme",
+    "codeMirrorMode": "scheme",
     "extensions": [
-      ".scm",
       ".sch",
+      ".scm",
       ".sld",
       ".sls",
       ".sps",
@@ -6403,8 +7145,8 @@
     "liguistLanguageId": 343,
     "name": "Scheme",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6412,16 +7154,16 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".sci",
       ".sce",
+      ".sci",
       ".tst"
     ],
     "fileNames": [],
     "liguistLanguageId": 344,
     "name": "Scilab",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6435,6 +7177,7 @@
     "liguistLanguageId": 345,
     "name": "Self",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -6450,6 +7193,7 @@
     "liguistLanguageId": 664257356,
     "name": "ShaderLab",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.shaderlab",
     "vscodeLanguages": []
@@ -6458,14 +7202,16 @@
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [
-      ".sh",
       ".bash",
       ".bats",
       ".cgi",
       ".command",
       ".fcgi",
       ".ksh",
+      ".sh",
       ".sh.in",
       ".tmux",
       ".tool",
@@ -6482,14 +7228,16 @@
     "liguistLanguageId": 346,
     "name": "Shell",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [
       ".sh-session"
     ],
@@ -6497,6 +7245,7 @@
     "liguistLanguageId": 347,
     "name": "ShellSession",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.shell-session",
     "vscodeLanguages": []
@@ -6512,6 +7261,7 @@
     "liguistLanguageId": 348,
     "name": "Shen",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.shen",
     "vscodeLanguages": []
@@ -6527,6 +7277,7 @@
     "liguistLanguageId": 349,
     "name": "Slash",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.slash",
     "vscodeLanguages": []
@@ -6535,13 +7286,17 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-slim",
+    "codeMirrorMode": "slim",
     "extensions": [
       ".slim"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 350,
     "name": "Slim",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.slim",
     "vscodeLanguages": []
@@ -6557,6 +7312,7 @@
     "liguistLanguageId": 351,
     "name": "Smali",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.smali",
     "vscodeLanguages": []
@@ -6565,22 +7321,26 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-stsrc",
+    "codeMirrorMode": "smalltalk",
     "extensions": [
-      ".st",
-      ".cs"
+      ".cs",
+      ".st"
     ],
     "fileNames": [],
     "liguistLanguageId": 352,
     "name": "Smalltalk",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "smarty",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-smarty",
+    "codeMirrorMode": "smarty",
     "extensions": [
       ".tpl"
     ],
@@ -6588,6 +7348,7 @@
     "liguistLanguageId": 353,
     "name": "Smarty",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.smarty",
     "vscodeLanguages": []
@@ -6596,15 +7357,30 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "extensions": [],
+    "fileNames": [],
+    "liguistLanguageId": 237469032,
+    "name": "Solidity",
+    "namespace": "",
+    "since": "0.9.0",
+    "sublimeSyntaxes": [],
+    "textMateScope": "source.solidity",
+    "vscodeLanguages": []
+  },
+  {
+    "aceMode": "text",
+    "aliases": [],
+    "atomGrammars": [],
     "extensions": [
-      ".sp",
       ".inc",
-      ".sma"
+      ".sma",
+      ".sp"
     ],
     "fileNames": [],
     "liguistLanguageId": 354,
     "name": "SourcePawn",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.sp",
     "vscodeLanguages": []
@@ -6629,6 +7405,7 @@
     "liguistLanguageId": 767169629,
     "name": "Spline Font Database",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.sfd",
     "vscodeLanguages": []
@@ -6637,6 +7414,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-c++src",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".nut"
     ],
@@ -6644,6 +7423,7 @@
     "liguistLanguageId": 355,
     "name": "Squirrel",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.c++",
     "vscodeLanguages": []
@@ -6659,6 +7439,7 @@
     "liguistLanguageId": 356,
     "name": "Stan",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.stan",
     "vscodeLanguages": []
@@ -6667,6 +7448,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-ocaml",
+    "codeMirrorMode": "mllike",
     "extensions": [
       ".ML",
       ".fun",
@@ -6677,6 +7460,7 @@
     "liguistLanguageId": 357,
     "name": "Standard ML",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ml",
     "vscodeLanguages": []
@@ -6686,8 +7470,8 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".do",
       ".ado",
+      ".do",
       ".doh",
       ".ihlp",
       ".mata",
@@ -6698,8 +7482,8 @@
     "liguistLanguageId": 358,
     "name": "Stata",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6710,9 +7494,11 @@
       ".styl"
     ],
     "fileNames": [],
+    "group": "CSS",
     "liguistLanguageId": 359,
     "name": "Stylus",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.stylus",
     "vscodeLanguages": []
@@ -6728,6 +7514,7 @@
     "liguistLanguageId": 360,
     "name": "SubRip Text",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.srt",
     "vscodeLanguages": []
@@ -6736,6 +7523,8 @@
     "aceMode": "javascript",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/javascript",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".sublime-build",
       ".sublime-commands",
@@ -6752,9 +7541,11 @@
       ".sublime_session"
     ],
     "fileNames": [],
+    "group": "JSON",
     "liguistLanguageId": 423,
     "name": "Sublime Text Config",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.js",
     "vscodeLanguages": []
@@ -6767,9 +7558,11 @@
       ".sss"
     ],
     "fileNames": [],
+    "group": "CSS",
     "liguistLanguageId": 826404698,
     "name": "SugarSS",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.css.postcss.sugarss",
     "vscodeLanguages": []
@@ -6786,6 +7579,7 @@
     "liguistLanguageId": 361,
     "name": "SuperCollider",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.supercollider",
     "vscodeLanguages": []
@@ -6794,6 +7588,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-swift",
+    "codeMirrorMode": "swift",
     "extensions": [
       ".swift"
     ],
@@ -6801,8 +7597,8 @@
     "liguistLanguageId": 362,
     "name": "Swift",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6821,6 +7617,8 @@
     "aceMode": "verilog",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-systemverilog",
+    "codeMirrorMode": "verilog",
     "extensions": [
       ".sv",
       ".svh",
@@ -6830,8 +7628,8 @@
     "liguistLanguageId": 363,
     "name": "SystemVerilog",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6839,15 +7637,16 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".8xp",
       ".8xk",
       ".8xk.txt",
+      ".8xp",
       ".8xp.txt"
     ],
     "fileNames": [],
     "liguistLanguageId": 422,
     "name": "TI Program",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -6863,6 +7662,7 @@
     "liguistLanguageId": 364,
     "name": "TLA",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.tla",
     "vscodeLanguages": []
@@ -6871,6 +7671,8 @@
     "aceMode": "toml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-toml",
+    "codeMirrorMode": "toml",
     "extensions": [
       ".toml"
     ],
@@ -6878,6 +7680,7 @@
     "liguistLanguageId": 365,
     "name": "TOML",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.toml",
     "vscodeLanguages": []
@@ -6893,6 +7696,7 @@
     "liguistLanguageId": 366,
     "name": "TXL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.txl",
     "vscodeLanguages": []
@@ -6901,31 +7705,37 @@
     "aceMode": "tcl",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-tcl",
+    "codeMirrorMode": "tcl",
     "extensions": [
-      ".tcl",
       ".adp",
+      ".tcl",
       ".tm"
     ],
     "fileNames": [],
     "liguistLanguageId": 367,
     "name": "Tcl",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "sh",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-sh",
+    "codeMirrorMode": "shell",
     "extensions": [
-      ".tcsh",
-      ".csh"
+      ".csh",
+      ".tcsh"
     ],
     "fileNames": [],
+    "group": "Shell",
     "liguistLanguageId": 368,
     "name": "Tcsh",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.shell",
     "vscodeLanguages": []
@@ -6936,8 +7746,9 @@
     "atomGrammars": [
       "LaTeX"
     ],
+    "codeMirrorMimeType": "text/x-stex",
+    "codeMirrorMode": "stex",
     "extensions": [
-      ".tex",
       ".aux",
       ".bbx",
       ".bib",
@@ -6951,14 +7762,15 @@
       ".mkiv",
       ".mkvi",
       ".sty",
+      ".tex",
       ".toc"
     ],
     "fileNames": [],
     "liguistLanguageId": 369,
     "name": "TeX",
     "namespace": "latex",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6972,6 +7784,7 @@
     "liguistLanguageId": 370,
     "name": "Tea",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.tea",
     "vscodeLanguages": []
@@ -6980,6 +7793,8 @@
     "aceMode": "lua",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-lua",
+    "codeMirrorMode": "lua",
     "extensions": [
       ".t"
     ],
@@ -6987,8 +7802,8 @@
     "liguistLanguageId": 371,
     "name": "Terra",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -6996,11 +7811,11 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".txt",
       ".fr",
       ".nb",
       ".ncl",
-      ".no"
+      ".no",
+      ".txt"
     ],
     "fileNames": [
       "COPYING",
@@ -7023,6 +7838,7 @@
     "liguistLanguageId": 372,
     "name": "Text",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -7031,6 +7847,8 @@
     "aceMode": "textile",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-textile",
+    "codeMirrorMode": "textile",
     "extensions": [
       ".textile"
     ],
@@ -7038,6 +7856,7 @@
     "liguistLanguageId": 373,
     "name": "Textile",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -7053,6 +7872,7 @@
     "liguistLanguageId": 374,
     "name": "Thrift",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.thrift",
     "vscodeLanguages": []
@@ -7080,6 +7900,7 @@
     "liguistLanguageId": 375,
     "name": "Turing",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.turing",
     "vscodeLanguages": []
@@ -7088,6 +7909,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/turtle",
+    "codeMirrorMode": "turtle",
     "extensions": [
       ".ttl"
     ],
@@ -7095,6 +7918,7 @@
     "liguistLanguageId": 376,
     "name": "Turtle",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.turtle",
     "vscodeLanguages": []
@@ -7105,13 +7929,17 @@
     "atomGrammars": [
       "HTML (Twig)"
     ],
+    "codeMirrorMimeType": "text/x-twig",
+    "codeMirrorMode": "twig",
     "extensions": [
       ".twig"
     ],
     "fileNames": [],
+    "group": "HTML",
     "liguistLanguageId": 377,
     "name": "Twig",
     "namespace": "twig",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.twig",
     "vscodeLanguages": []
@@ -7127,6 +7955,7 @@
     "liguistLanguageId": 632765617,
     "name": "Type Language",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.tl",
     "vscodeLanguages": []
@@ -7137,6 +7966,8 @@
     "atomGrammars": [
       "TypeScript"
     ],
+    "codeMirrorMimeType": "application/typescript",
+    "codeMirrorMode": "javascript",
     "extensions": [
       ".ts",
       ".tsx"
@@ -7145,6 +7976,7 @@
     "liguistLanguageId": 378,
     "name": "TypeScript",
     "namespace": "typescript",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ts",
     "vscodeLanguages": []
@@ -7153,13 +7985,17 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csrc",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".upc"
     ],
     "fileNames": [],
+    "group": "C",
     "liguistLanguageId": 379,
     "name": "Unified Parallel C",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.c",
     "vscodeLanguages": []
@@ -7168,6 +8004,8 @@
     "aceMode": "yaml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-yaml",
+    "codeMirrorMode": "yaml",
     "extensions": [
       ".anim",
       ".asset",
@@ -7180,6 +8018,7 @@
     "liguistLanguageId": 380,
     "name": "Unity3D Asset",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.yaml",
     "vscodeLanguages": []
@@ -7189,13 +8028,15 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".s",
-      ".ms"
+      ".ms",
+      ".s"
     ],
     "fileNames": [],
+    "group": "Assembly",
     "liguistLanguageId": 120,
     "name": "Unix Assembly",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.assembly",
     "vscodeLanguages": []
@@ -7204,6 +8045,8 @@
     "aceMode": "csharp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csharp",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".uno"
     ],
@@ -7211,6 +8054,7 @@
     "liguistLanguageId": 381,
     "name": "Uno",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.cs",
     "vscodeLanguages": []
@@ -7219,6 +8063,8 @@
     "aceMode": "java",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-java",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".uc"
     ],
@@ -7226,6 +8072,7 @@
     "liguistLanguageId": 382,
     "name": "UnrealScript",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.java",
     "vscodeLanguages": []
@@ -7242,6 +8089,7 @@
     "liguistLanguageId": 383,
     "name": "UrWeb",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ur",
     "vscodeLanguages": []
@@ -7257,6 +8105,7 @@
     "liguistLanguageId": 384,
     "name": "VCL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.varnish.vcl",
     "vscodeLanguages": []
@@ -7265,9 +8114,11 @@
     "aceMode": "vhdl",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-vhdl",
+    "codeMirrorMode": "vhdl",
     "extensions": [
-      ".vhdl",
       ".vhd",
+      ".vhdl",
       ".vhf",
       ".vhi",
       ".vho",
@@ -7279,8 +8130,8 @@
     "liguistLanguageId": 385,
     "name": "VHDL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -7297,14 +8148,16 @@
     "liguistLanguageId": 386,
     "name": "Vala",
     "namespace": "vala",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "verilog",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-verilog",
+    "codeMirrorMode": "verilog",
     "extensions": [
       ".v",
       ".veo"
@@ -7313,8 +8166,8 @@
     "liguistLanguageId": 387,
     "name": "Verilog",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -7335,6 +8188,7 @@
     "liguistLanguageId": 388,
     "name": "Vim script",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.viml",
     "vscodeLanguages": []
@@ -7343,12 +8197,14 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-vb",
+    "codeMirrorMode": "vb",
     "extensions": [
-      ".vb",
       ".bas",
       ".cls",
       ".frm",
       ".frx",
+      ".vb",
       ".vba",
       ".vbhtml",
       ".vbs"
@@ -7357,6 +8213,7 @@
     "liguistLanguageId": 389,
     "name": "Visual Basic",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.vbnet",
     "vscodeLanguages": []
@@ -7376,6 +8233,8 @@
     "aceMode": "d",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-d",
+    "codeMirrorMode": "d",
     "extensions": [
       ".volt"
     ],
@@ -7383,6 +8242,7 @@
     "liguistLanguageId": 390,
     "name": "Volt",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.d",
     "vscodeLanguages": []
@@ -7400,6 +8260,7 @@
     "liguistLanguageId": 391,
     "name": "Vue",
     "namespace": "vue",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.vue",
     "vscodeLanguages": []
@@ -7415,6 +8276,7 @@
     "liguistLanguageId": 392,
     "name": "Wavefront Material",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.wavefront.mtl",
     "vscodeLanguages": []
@@ -7430,6 +8292,7 @@
     "liguistLanguageId": 393,
     "name": "Wavefront Object",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.wavefront.obj",
     "vscodeLanguages": []
@@ -7445,6 +8308,7 @@
     "liguistLanguageId": 394,
     "name": "Web Ontology Language",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.xml",
     "vscodeLanguages": []
@@ -7453,6 +8317,8 @@
     "aceMode": "lisp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-common-lisp",
+    "codeMirrorMode": "commonlisp",
     "extensions": [
       ".wast",
       ".wat"
@@ -7461,6 +8327,7 @@
     "liguistLanguageId": 956556503,
     "name": "WebAssembly",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.webassembly",
     "vscodeLanguages": []
@@ -7469,6 +8336,8 @@
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-webidl",
+    "codeMirrorMode": "webidl",
     "extensions": [
       ".webidl"
     ],
@@ -7476,6 +8345,7 @@
     "liguistLanguageId": 395,
     "name": "WebIDL",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.webidl",
     "vscodeLanguages": []
@@ -7491,6 +8361,7 @@
     "liguistLanguageId": 396,
     "name": "World of Warcraft Addon Data",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.toc",
     "vscodeLanguages": []
@@ -7506,6 +8377,7 @@
     "liguistLanguageId": 397,
     "name": "X10",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.x10",
     "vscodeLanguages": []
@@ -7514,6 +8386,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csrc",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".xc"
     ],
@@ -7521,6 +8395,7 @@
     "liguistLanguageId": 398,
     "name": "XC",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.xc",
     "vscodeLanguages": []
@@ -7538,6 +8413,7 @@
     "liguistLanguageId": 225167241,
     "name": "XCompose",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "config.xcompose",
     "vscodeLanguages": []
@@ -7546,22 +8422,17 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [
-      "SLD",
-      "XML",
-      "XHTML",
-      "XSD",
-      "XSL",
+      "GSP",
       "JSP",
-      "GSP"
+      "SLD",
+      "XHTML",
+      "XML",
+      "XSD",
+      "XSL"
     ],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
-      ".sld",
-      ".xml",
-      ".xhtml",
-      ".xsd",
-      ".xsl",
-      ".jsp",
-      ".gsp",
       ".adml",
       ".admx",
       ".ant",
@@ -7588,9 +8459,11 @@
       ".glade",
       ".gml",
       ".grxml",
+      ".gsp",
       ".iml",
       ".ivy",
       ".jelly",
+      ".jsp",
       ".jsproj",
       ".kml",
       ".launch",
@@ -7620,17 +8493,18 @@
       ".scxml",
       ".sfproj",
       ".shproj",
+      ".sld",
       ".srdf",
-      ".storyboard",
       ".stTheme",
+      ".storyboard",
       ".sublime-snippet",
       ".targets",
       ".tmCommand",
-      ".tml",
       ".tmLanguage",
       ".tmPreferences",
       ".tmSnippet",
       ".tmTheme",
+      ".tml",
       ".ts",
       ".tsx",
       ".ui",
@@ -7651,12 +8525,16 @@
       ".x3d",
       ".xacro",
       ".xaml",
+      ".xhtml",
       ".xib",
       ".xlf",
       ".xliff",
       ".xmi",
+      ".xml",
       ".xml.dist",
       ".xproj",
+      ".xsd",
+      ".xsl",
       ".xspec",
       ".xul",
       ".zcml"
@@ -7675,8 +8553,8 @@
     "liguistLanguageId": 399,
     "name": "XML",
     "namespace": "xml",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -7684,13 +8562,14 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".xpm",
-      ".pm"
+      ".pm",
+      ".xpm"
     ],
     "fileNames": [],
     "liguistLanguageId": 781846279,
     "name": "XPM",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.c",
     "vscodeLanguages": []
@@ -7699,6 +8578,8 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
       ".xsp-config",
       ".xsp.metadata"
@@ -7707,6 +8588,7 @@
     "liguistLanguageId": 400,
     "name": "XPages",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.xml",
     "vscodeLanguages": []
@@ -7715,6 +8597,8 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
       ".xpl",
       ".xproc"
@@ -7723,6 +8607,7 @@
     "liguistLanguageId": 401,
     "name": "XProc",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.xml",
     "vscodeLanguages": []
@@ -7731,17 +8616,20 @@
     "aceMode": "xquery",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "application/xquery",
+    "codeMirrorMode": "xquery",
     "extensions": [
-      ".xquery",
       ".xq",
       ".xql",
       ".xqm",
+      ".xquery",
       ".xqy"
     ],
     "fileNames": [],
     "liguistLanguageId": 402,
     "name": "XQuery",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.xq",
     "vscodeLanguages": []
@@ -7750,6 +8638,8 @@
     "aceMode": "c_cpp",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-csrc",
+    "codeMirrorMode": "clike",
     "extensions": [
       ".xs"
     ],
@@ -7757,6 +8647,7 @@
     "liguistLanguageId": 403,
     "name": "XS",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.c",
     "vscodeLanguages": []
@@ -7765,14 +8656,17 @@
     "aceMode": "xml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/xml",
+    "codeMirrorMode": "xml",
     "extensions": [
-      ".xslt",
-      ".xsl"
+      ".xsl",
+      ".xslt"
     ],
     "fileNames": [],
     "liguistLanguageId": 404,
     "name": "XSLT",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.xml.xsl",
     "vscodeLanguages": []
@@ -7804,6 +8698,7 @@
     "liguistLanguageId": 405,
     "name": "Xojo",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.vbnet",
     "vscodeLanguages": []
@@ -7819,22 +8714,24 @@
     "liguistLanguageId": 406,
     "name": "Xtend",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "yaml",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-yaml",
+    "codeMirrorMode": "yaml",
     "extensions": [
-      ".yml",
       ".reek",
       ".rviz",
       ".sublime-syntax",
       ".syntax",
       ".yaml",
       ".yaml-tmlanguage",
+      ".yml",
       ".yml.mysql"
     ],
     "fileNames": [
@@ -7844,6 +8741,7 @@
     "liguistLanguageId": 407,
     "name": "YAML",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.yaml",
     "vscodeLanguages": []
@@ -7859,6 +8757,7 @@
     "liguistLanguageId": 408,
     "name": "YANG",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.yang",
     "vscodeLanguages": []
@@ -7875,6 +8774,7 @@
     "liguistLanguageId": 805122868,
     "name": "YARA",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.yara",
     "vscodeLanguages": []
@@ -7892,6 +8792,7 @@
     "liguistLanguageId": 409,
     "name": "Yacc",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.bison",
     "vscodeLanguages": []
@@ -7907,6 +8808,7 @@
     "liguistLanguageId": 410,
     "name": "Zephir",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.php.zephir",
     "vscodeLanguages": []
@@ -7924,6 +8826,7 @@
     "liguistLanguageId": 411,
     "name": "Zimpl",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "none",
     "vscodeLanguages": []
@@ -7940,6 +8843,7 @@
     "liguistLanguageId": 412,
     "name": "desktop",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.desktop",
     "vscodeLanguages": []
@@ -7956,6 +8860,7 @@
     "liguistLanguageId": 413,
     "name": "eC",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.c.ec",
     "vscodeLanguages": []
@@ -7964,6 +8869,8 @@
     "aceMode": "clojure",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-clojure",
+    "codeMirrorMode": "clojure",
     "extensions": [
       ".edn"
     ],
@@ -7971,6 +8878,7 @@
     "liguistLanguageId": 414,
     "name": "edn",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.clojure",
     "vscodeLanguages": []
@@ -7983,9 +8891,11 @@
       ".fish"
     ],
     "fileNames": [],
+    "group": "Shell",
     "liguistLanguageId": 415,
     "name": "fish",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.fish",
     "vscodeLanguages": []
@@ -8001,8 +8911,8 @@
     "liguistLanguageId": 416,
     "name": "mupad",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -8016,6 +8926,7 @@
     "liguistLanguageId": 417,
     "name": "nesC",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.nesc",
     "vscodeLanguages": []
@@ -8031,26 +8942,28 @@
     "liguistLanguageId": 418,
     "name": "ooc",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
     "aceMode": "text",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-rst",
+    "codeMirrorMode": "rst",
     "extensions": [
-      ".rst",
       ".rest",
       ".rest.txt",
+      ".rst",
       ".rst.txt"
     ],
     "fileNames": [],
     "liguistLanguageId": 419,
     "name": "reStructuredText",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "textMateScope": "",
     "vscodeLanguages": []
   },
   {
@@ -8064,6 +8977,7 @@
     "liguistLanguageId": 374521672,
     "name": "wdl",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.wdl",
     "vscodeLanguages": []
@@ -8072,6 +8986,8 @@
     "aceMode": "clojure",
     "aliases": [],
     "atomGrammars": [],
+    "codeMirrorMimeType": "text/x-clojure",
+    "codeMirrorMode": "clojure",
     "extensions": [
       ".wisp"
     ],
@@ -8079,6 +8995,7 @@
     "liguistLanguageId": 420,
     "name": "wisp",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.clojure",
     "vscodeLanguages": []
@@ -8088,14 +9005,15 @@
     "aliases": [],
     "atomGrammars": [],
     "extensions": [
-      ".prg",
       ".ch",
+      ".prg",
       ".prw"
     ],
     "fileNames": [],
     "liguistLanguageId": 421,
     "name": "xBase",
     "namespace": "",
+    "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.harbour",
     "vscodeLanguages": []

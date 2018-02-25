@@ -43,6 +43,7 @@ test("should get languages with a loaded beautifier supporting the given option"
     extensions: ["test"],
     name: "TestLang1",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -51,6 +52,7 @@ test("should get languages with a loaded beautifier supporting the given option"
     extensions: ["test"],
     name: "TestLang2",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -90,6 +92,7 @@ test("should get beautifiers with a loaded language supporting the given option"
     extensions: ["test"],
     name: "TestLang1",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -98,6 +101,7 @@ test("should get beautifiers with a loaded language supporting the given option"
     extensions: ["test"],
     name: "TestLang2",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -150,6 +154,7 @@ test("should correctly determine whether beautifier supports option for a langua
     extensions: ["test"],
     name: "TestLang1",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -158,6 +163,7 @@ test("should correctly determine whether beautifier supports option for a langua
     extensions: ["test"],
     name: "TestLang2",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -246,6 +252,7 @@ test("should get options supported for a language", () => {
     extensions: ["test"],
     name: "TestLang1",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -254,6 +261,7 @@ test("should get options supported for a language", () => {
     extensions: ["test"],
     name: "TestLang2",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -315,6 +323,7 @@ test("should get options supported by a beautifier for a language", () => {
     extensions: ["test"],
     name: "TestLang1",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -323,6 +332,7 @@ test("should get options supported by a beautifier for a language", () => {
     extensions: ["test"],
     name: "TestLang2",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
