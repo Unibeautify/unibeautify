@@ -7,6 +7,7 @@ test("should get all loaded languages", () => {
     extensions: ["test"],
     name: "TestLang",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -23,6 +24,7 @@ test("should return empty array when no languages are supported with a beautifie
     extensions: ["test"],
     name: "TestLang",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -37,6 +39,7 @@ test("should supported languages", () => {
     extensions: ["test"],
     name: "TestLang",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -64,6 +67,7 @@ test("should loaded languages which support a given beautifier", () => {
     extensions: ["test"],
     name: "TestLang1",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -72,6 +76,7 @@ test("should loaded languages which support a given beautifier", () => {
     extensions: ["test"],
     name: "TestLang2",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -99,6 +104,7 @@ test("should loaded languages which support a given beautifier", () => {
     extensions: ["test"],
     name: "TestLang1",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -107,6 +113,7 @@ test("should loaded languages which support a given beautifier", () => {
     extensions: ["test"],
     name: "TestLang2",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };

@@ -53,6 +53,7 @@ test("should successfully beautify text", () => {
     extensions: ["test"],
     name: "TestLang",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -86,6 +87,7 @@ test("should fail to find beautifier", () => {
     extensions: ["test"],
     name: "TestLang",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -119,6 +121,7 @@ test("should successfully transform option values for beautifier", () => {
     extensions: ["test"],
     name: "TestLang1",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };
@@ -127,6 +130,7 @@ test("should successfully transform option values for beautifier", () => {
     extensions: ["test"],
     name: "TestLang2",
     namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: []
   };

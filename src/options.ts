@@ -5,7 +5,13 @@ export interface Option {
   title?: string;
   type: "string" | "boolean" | "integer" | "array";
   description: string;
+  /**
+   * Available since version
+   */
   since: SemVer;
+  /**
+   * Deprecated since version
+   */
   deprecated?: SemVer;
   default?: any;
   enum?: any[];
