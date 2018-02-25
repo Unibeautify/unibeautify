@@ -14,7 +14,7 @@
     "compile:ts": "tsc",
     "compile": "npm-run-all compile:ts copy-languages-json update-type-defs",
     "clean": "rimraf dist/",
-    "prepublishOnly": "npm-run-all compile",
+    "prepublishOnly": "npm run build",
     "docs": "typedoc --out docs --module commonjs --readme README.md --name Unibeautify src",
     "lint": "tslint {src,test,script}/**/*.ts",
     "lint-fix": "tslint --fix {src,test,script}/**/*.ts",
