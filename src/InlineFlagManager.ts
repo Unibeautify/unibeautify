@@ -70,15 +70,47 @@ export class InlineFlagManager {
   }
 
   private shouldApplyHunk(hunk: IHunk): boolean {
-    const prevLineNum = hunk.oldStart - 1;
-    const prevLineCode = this.codeAtLine(prevLineNum);
+    const lineNumber = hunk.oldStart;
     return !(
-      prevLineCode &&
-      prevLineCode.indexOf("unibeautify:ignore-next-line") !== -1
+      this.shouldIgnoreThisLine(lineNumber) || this.isDisabledAtLine(lineNumber)
     );
+  }
+
+  private shouldIgnoreThisLine(lineNumber: number): boolean {
+    const prevLineNum = lineNumber - 1;
+    const prevLineCode = this.codeAtLine(prevLineNum);
+    return Boolean(
+      prevLineCode &&
+        prevLineCode.indexOf(InlineFlagPrefix.IgnoreNextLine) !== -1
+    );
+  }
+
+  private isDisabledAtLine(lineNumber: number): boolean {
+    const containsDisable = this.oldText.indexOf(InlineFlagPrefix.Disable);
+    if (containsDisable) {
+      const reversedLines = this.oldLines
+        .slice(0, Math.max(0, lineNumber - 1))
+        .reverse()
+        .join("\n");
+      const disableIndex = reversedLines.indexOf(InlineFlagPrefix.Disable);
+      const enableIndex = reversedLines.indexOf(InlineFlagPrefix.Enable);
+      if (disableIndex === -1) {
+        return false;
+      }
+      if (enableIndex === -1 || disableIndex < enableIndex) {
+        return true;
+      }
+    }
+    return false;
   }
 
   private codeAtLine(lineNumber: number): string | undefined {
     return this.oldLines[Math.max(0, lineNumber - 1)];
   }
+}
+
+enum InlineFlagPrefix {
+  IgnoreNextLine = "unibeautify:ignore-next-line",
+  Enable = "unibeautify:enable",
+  Disable = "unibeautify:disable"
 }
