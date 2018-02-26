@@ -44,6 +44,8 @@
   },
   "homepage": "https://github.com/Unibeautify/unibeautify#readme",
   "devDependencies": {
+    "@types/dedent": "^0.7.0",
+    "@types/diff": "^3.2.2",
     "@types/jest": "^22.1.2",
     "@types/js-yaml": "^3.10.1",
     "@types/json-stable-stringify": "^1.0.31",
@@ -51,6 +53,7 @@
     "@types/node": "^9.4.6",
     "@types/request": "^2.0.9",
     "@types/semver": "^5.5.0",
+    "dedent": "^0.7.0",
     "jest": "^22.2.2",
     "js-yaml": "^3.10.0",
     "json-stable-stringify": "^1.0.1",
@@ -66,6 +69,7 @@
     "typescript": "^2.7.2"
   },
   "dependencies": {
+    "diff": "^3.4.0",
     "lodash": "^4.17.5"
   },
   "engines": {

@@ -116,7 +116,7 @@
         ],
         "max-func-body-length": [
             true,
-            100,
+            50,
             {
                 "ignore-parameters-to-function-regex": "describe"
             }
@@ -136,7 +136,7 @@
         "missing-optional-annotation": true,
         "min-class-cohesion": false,
         "mocha-avoid-only": true,
-        "mocha-no-side-effect-code": true,
+        "mocha-no-side-effect-code": false,
         "mocha-unneeded-done": true,
         "new-parens": true,
         "newspaper-order": true,
