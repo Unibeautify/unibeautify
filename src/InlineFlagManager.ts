@@ -1,4 +1,11 @@
-import { structuredPatch, applyPatch, IUniDiff, IHunk } from "diff";
+import {
+  parsePatch,
+  createTwoFilesPatch,
+  createPatch,
+  applyPatch,
+  IUniDiff,
+  IHunk
+} from "diff";
 
 export class InlineFlagManager {
   private readonly oldLines: string[] = [];
@@ -8,7 +15,24 @@ export class InlineFlagManager {
 
   public get text(): string {
     const { patch, oldText } = this;
-    return applyPatch(oldText, patch).trim();
+    const afterPatchText = applyPatch(oldText, patch);
+    return this.fixEndOfFile(afterPatchText);
+  }
+
+  private fixEndOfFile(text: string): string {
+    const shouldEndWithNewline = this.endsWithNewline(this.newText);
+    const afterEndsWithNewline = this.endsWithNewline(text);
+    if (shouldEndWithNewline === afterEndsWithNewline) {
+      return text;
+    }
+    if (shouldEndWithNewline) {
+      return `${text}\n`;
+    }
+    return text.slice(0, -1);
+  }
+
+  private endsWithNewline(text: string): boolean {
+    return text.charAt(text.length - 1) === "\n";
   }
 
   private get patch(): IUniDiff {
@@ -28,8 +52,8 @@ export class InlineFlagManager {
     const options = {
       context: 0
     };
-    return this.fixPatch(
-      structuredPatch(
+    return parsePatch(
+      createTwoFilesPatch(
         oldFileName,
         newFileName,
         this.oldText,
@@ -38,18 +62,7 @@ export class InlineFlagManager {
         newHeader,
         options
       )
-    );
-  }
-
-  // See https://github.com/kpdecker/jsdiff/issues/157
-  private fixPatch(patch: IUniDiff): IUniDiff {
-    return {
-      ...patch,
-      hunks: patch.hunks.map(hunk => ({
-        ...hunk,
-        linedelimiters: hunk.lines.map(() => "\n")
-      }))
-    };
+    )[0];
   }
 
   private filterHunks(hunks: IHunk[]): IHunk[] {
@@ -66,6 +79,6 @@ export class InlineFlagManager {
   }
 
   private codeAtLine(lineNumber: number): string | undefined {
-    return this.oldLines[lineNumber - 1];
+    return this.oldLines[Math.max(0, lineNumber - 1)];
   }
 }

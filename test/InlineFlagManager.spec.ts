@@ -60,4 +60,20 @@ describe("ignore-next-line", () => {
     const finalText = manager.text;
     expect(finalText).toEqual(expectedText);
   });
+  test("should not add newline at end of file", () => {
+    const oldText = `console.log('hello world');`;
+    const newText = `console.log("hello world");`;
+    const expectedText = `console.log("hello world");`;
+    const manager = new InlineFlagManager(oldText, newText);
+    const finalText = manager.text;
+    expect(finalText).toEqual(expectedText);
+  });
+  test("should keep newline at end of file", () => {
+    const oldText = `console.log('hello world');\n`;
+    const newText = `console.log("hello world");\n`;
+    const expectedText = `console.log("hello world");\n`;
+    const manager = new InlineFlagManager(oldText, newText);
+    const finalText = manager.text;
+    expect(finalText).toEqual(expectedText);
+  });
 });

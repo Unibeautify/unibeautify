@@ -61,6 +61,7 @@
     "request": "^2.83.0",
     "rimraf": "^2.5.4",
     "semver": "^5.5.0",
+    "shelljs": "^0.8.1",
     "ts-jest": "^22.0.4",
     "tslint": "^5.7.0",
     "tslint-clean-code": "^0.2.4",
