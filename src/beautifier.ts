@@ -356,17 +356,20 @@ export class Unibeautify {
           language,
           langOptions
         );
-        return promise.then(newText => {
-          const manager = new InlineFlagManager(text, newText);
-          const finalText = manager.text;
-          return beautifier.beautify({
-            filePath: fileExtension,
-            language: language,
-            options,
-            projectPath: projectPath,
-            Promise,
-            text: finalText
-          });
+        return promise.then(currentText => {
+          return beautifier
+            .beautify({
+              filePath: fileExtension,
+              language: language,
+              options,
+              projectPath: projectPath,
+              Promise,
+              text: currentText
+            })
+            .then(newText => {
+              const manager = new InlineFlagManager(currentText, newText);
+              return manager.text;
+            });
         });
       },
       Promise.resolve(text)

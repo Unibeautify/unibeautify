@@ -201,3 +201,38 @@ test("should successfully transform option values for beautifier", () => {
     willBeReplaced: options.globalOption
   });
 });
+
+test.only("should successfully ignore-next-line", () => {
+  const unibeautify = new Unibeautify();
+  const lang: Language = {
+    atomGrammars: [],
+    extensions: ["test"],
+    name: "TestLang",
+    namespace: "test",
+    since: "0.1.0",
+    sublimeSyntaxes: [],
+    vscodeLanguages: []
+  };
+  unibeautify.loadLanguage(lang);
+
+  const originalText = "// unibeautify:ignore-next-line\ntest";
+  const beautifierResult = "Testing Result";
+  const beautifier: Beautifier = {
+    beautify: ({ Promise }) => {
+      return Promise.resolve(beautifierResult);
+    },
+    name: "TestBeautify",
+    options: {
+      TestLang: false
+    }
+  };
+  unibeautify.loadBeautifier(beautifier);
+
+  return expect(
+    unibeautify.beautify({
+      languageName: "TestLang",
+      options: {},
+      text: originalText
+    })
+  ).resolves.toBe(originalText);
+});
