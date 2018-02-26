@@ -1,6 +1,8 @@
-import { Language } from "./language";
 import * as _ from "lodash";
+
+import { Language } from "./language";
 import { OptionsRegistry } from "./options";
+import { InlineFlagManager } from "./InlineFlagManager";
 
 /**
 New name to rename the option (key) to.
@@ -354,14 +356,16 @@ export class Unibeautify {
           language,
           langOptions
         );
-        return promise.then(currentText => {
+        return promise.then(newText => {
+          const manager = new InlineFlagManager(text, newText);
+          const finalText = manager.text;
           return beautifier.beautify({
             filePath: fileExtension,
             language: language,
             options,
             projectPath: projectPath,
             Promise,
-            text: currentText
+            text: finalText
           });
         });
       },
