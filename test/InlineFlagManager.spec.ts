@@ -77,3 +77,63 @@ describe("ignore-next-line", () => {
     expect(finalText).toEqual(expectedText);
   });
 });
+
+describe("disable/enable", () => {
+  test("should apply changes without disable", () => {
+    const oldText = dedent`
+    console.log('hello world');
+    `;
+    const newText = dedent`
+    console.log("hello world");
+    `;
+    const expectedText = dedent`
+    console.log("hello world");
+    `;
+    const manager = new InlineFlagManager(oldText, newText);
+    const finalText = manager.text;
+    expect(finalText).toEqual(expectedText);
+  });
+  test("should ignore changes after disable", () => {
+    const oldText = dedent`
+    console.log('hello world');
+    // unibeautify:disable
+    console.log('hello world');
+    `;
+    const newText = dedent`
+    console.log("hello world");
+    // unibeautify:disable
+    console.log("hello world");
+    `;
+    const expectedText = dedent`
+    console.log("hello world");
+    // unibeautify:disable
+    console.log('hello world');
+    `;
+    const manager = new InlineFlagManager(oldText, newText);
+    const finalText = manager.text;
+    expect(finalText).toEqual(expectedText);
+  });
+  test("should ignore changes after disable until enable", () => {
+    const oldText = dedent`
+    // unibeautify:disable
+    console.log('hello world');
+    // unibeautify:enable
+    console.log('hello world');
+    `;
+    const newText = dedent`
+    // unibeautify:disable
+    console.log("hello world");
+    // unibeautify:enable
+    console.log("hello world");
+    `;
+    const expectedText = dedent`
+    // unibeautify:disable
+    console.log('hello world');
+    // unibeautify:enable
+    console.log("hello world");
+    `;
+    const manager = new InlineFlagManager(oldText, newText);
+    const finalText = manager.text;
+    expect(finalText).toEqual(expectedText);
+  });
+});
