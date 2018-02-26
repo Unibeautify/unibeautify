@@ -202,7 +202,7 @@ test("should successfully transform option values for beautifier", () => {
   });
 });
 
-test.only("should successfully ignore-next-line", () => {
+test("should successfully ignore-next-line", () => {
   const unibeautify = new Unibeautify();
   const lang: Language = {
     atomGrammars: [],
