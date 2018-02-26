@@ -15,16 +15,20 @@ export class InlineFlagManager {
 
   public get text(): string {
     const { patch, oldText } = this;
-    const afterPatch = applyPatch(oldText, patch);
+    const afterPatchText = applyPatch(oldText, patch);
+    return this.fixEndOfFile(afterPatchText);
+  }
+
+  private fixEndOfFile(text: string): string {
     const shouldEndWithNewline = this.endsWithNewline(this.newText);
-    const afterEndsWithNewline = this.endsWithNewline(afterPatch);
+    const afterEndsWithNewline = this.endsWithNewline(text);
     if (shouldEndWithNewline === afterEndsWithNewline) {
-      return afterPatch;
+      return text;
     }
     if (shouldEndWithNewline) {
-      return `${afterPatch}\n`;
+      return `${text}\n`;
     }
-    return afterPatch.slice(0, -1);
+    return text.slice(0, -1);
   }
 
   private endsWithNewline(text: string): boolean {
