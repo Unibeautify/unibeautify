@@ -161,7 +161,7 @@ describe("disable/enable", () => {
     expect(finalText).toEqual(expectedText);
   });
 
-  test.only("should ignore changes after disable inside block", () => {
+  test("should ignore changes after disable inside block", () => {
     const oldText = dedent`
     function helloWorld() {
     // unibeautify:disable
