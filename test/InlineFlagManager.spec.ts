@@ -185,4 +185,64 @@ describe("disable/enable", () => {
     expect(finalText).toEqual(expectedText);
   });
 
+  test("should ignore changes after multiple disable lines", () => {
+    const oldText = dedent`
+    function helloWorld() {
+        // unibeautify:disable
+    console.log("Test1");
+        // unibeautify:disable
+    console.log("Test2");
+    }
+    `;
+    const newText = dedent`
+    function helloWorld() {
+        // unibeautify:disable
+        console.log("Test1");
+        // unibeautify:disable
+        console.log("Test2");
+    }
+    `;
+    const expectedText = dedent`
+    function helloWorld() {
+        // unibeautify:disable
+    console.log("Test1");
+        // unibeautify:disable
+    console.log("Test2");
+    }
+    `;
+    const manager = new InlineFlagManager(oldText, newText);
+    const finalText = manager.text;
+    expect(finalText).toEqual(expectedText);
+  });
+
+  test("should ignore changes after multiple disable lines", () => {
+    const oldText = dedent`
+    function helloWorld() {
+    // unibeautify:disable
+    console.log("Test1");
+    // unibeautify:disable
+    console.log("Test2");
+    }
+    `;
+    const newText = dedent`
+    function helloWorld() {
+        // unibeautify:disable
+        console.log("Test1");
+        // unibeautify:disable
+        console.log("Test2");
+    }
+    `;
+    const expectedText = dedent`
+    function helloWorld() {
+    // unibeautify:disable
+    console.log("Test1");
+    // unibeautify:disable
+    console.log("Test2");
+    }
+    `;
+    const manager = new InlineFlagManager(oldText, newText);
+    const finalText = manager.text;
+    expect(finalText).toEqual(expectedText);
+  });
+
 });
