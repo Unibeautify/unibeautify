@@ -4,7 +4,7 @@ import {
   createPatch,
   applyPatch,
   IUniDiff,
-  IHunk
+  IHunk,
 } from "diff";
 
 export class InlineFlagManager {
@@ -43,7 +43,7 @@ export class InlineFlagManager {
     const filteredHunks = this.filterHunks(rawPatch.hunks);
     return {
       ...rawPatch,
-      hunks: filteredHunks
+      hunks: filteredHunks,
     };
   }
 
@@ -53,7 +53,7 @@ export class InlineFlagManager {
     const oldHeader = "";
     const newHeader = "";
     const options = {
-      context: 0
+      context: 0,
     };
     return parsePatch(
       createTwoFilesPatch(
@@ -114,5 +114,5 @@ export class InlineFlagManager {
 enum InlineFlagPrefix {
   IgnoreNextLine = "unibeautify:ignore-next-line",
   Enable = "unibeautify:enable",
-  Disable = "unibeautify:disable"
+  Disable = "unibeautify:disable",
 }
