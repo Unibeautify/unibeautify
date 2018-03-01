@@ -9,11 +9,11 @@ test("should get all loaded languages", () => {
     namespace: "test",
     since: "0.1.0",
     sublimeSyntaxes: [],
-    vscodeLanguages: []
+    vscodeLanguages: [],
   };
   unibeautify.loadLanguage(lang);
   expect(unibeautify.getLoadedLanguages().map(({ name }) => name)).toEqual([
-    lang.name
+    lang.name,
   ]);
 });
 
@@ -26,7 +26,7 @@ test("should return empty array when no languages are supported with a beautifie
     namespace: "test",
     since: "0.1.0",
     sublimeSyntaxes: [],
-    vscodeLanguages: []
+    vscodeLanguages: [],
   };
   unibeautify.loadLanguage(lang);
   expect(unibeautify.supportedLanguages.map(({ name }) => name)).toEqual([]);
@@ -41,7 +41,7 @@ test("should supported languages", () => {
     namespace: "test",
     since: "0.1.0",
     sublimeSyntaxes: [],
-    vscodeLanguages: []
+    vscodeLanguages: [],
   };
   unibeautify.loadLanguage(lang);
   const beautifierResult = "Testing Result";
@@ -51,12 +51,12 @@ test("should supported languages", () => {
     },
     name: "TestBeautify",
     options: {
-      TestLang: false
-    }
+      TestLang: false,
+    },
   };
   unibeautify.loadBeautifier(beautifier);
   expect(unibeautify.supportedLanguages.map(({ name }) => name)).toEqual([
-    lang.name
+    lang.name,
   ]);
 });
 
@@ -69,7 +69,7 @@ test("should loaded languages which support a given beautifier", () => {
     namespace: "test",
     since: "0.1.0",
     sublimeSyntaxes: [],
-    vscodeLanguages: []
+    vscodeLanguages: [],
   };
   const lang2: Language = {
     atomGrammars: [],
@@ -78,7 +78,7 @@ test("should loaded languages which support a given beautifier", () => {
     namespace: "test",
     since: "0.1.0",
     sublimeSyntaxes: [],
-    vscodeLanguages: []
+    vscodeLanguages: [],
   };
   unibeautify.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
@@ -88,8 +88,8 @@ test("should loaded languages which support a given beautifier", () => {
     },
     name: "TestBeautify",
     options: {
-      [lang1.name]: false
-    }
+      [lang1.name]: false,
+    },
   };
   unibeautify.loadBeautifier(beautifier);
   expect(
@@ -106,7 +106,7 @@ test("should loaded languages which support a given beautifier", () => {
     namespace: "test",
     since: "0.1.0",
     sublimeSyntaxes: [],
-    vscodeLanguages: []
+    vscodeLanguages: [],
   };
   const lang2: Language = {
     atomGrammars: [],
@@ -115,7 +115,7 @@ test("should loaded languages which support a given beautifier", () => {
     namespace: "test",
     since: "0.1.0",
     sublimeSyntaxes: [],
-    vscodeLanguages: []
+    vscodeLanguages: [],
   };
   unibeautify.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
@@ -125,8 +125,8 @@ test("should loaded languages which support a given beautifier", () => {
     },
     name: "TestBeautify",
     options: {
-      [lang1.name]: false
-    }
+      [lang1.name]: false,
+    },
   };
   unibeautify.loadBeautifier(beautifier);
   expect(
