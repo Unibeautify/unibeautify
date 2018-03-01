@@ -104,6 +104,12 @@ export const Options: OptionsRegistry = {
     since: "0.7.0",
     type: "boolean",
   },
+  indent_chained_methods: {
+    default: true,
+    description: "Indent chained method calls",
+    since: "0.10.0",
+    type: "boolean",
+  },
   indent_char: {
     default: " ",
     deprecated: "0.8.0",
@@ -389,6 +395,7 @@ export const Options: OptionsRegistry = {
   },
   unindent_chained_methods: {
     default: false,
+    deprecated: "0.10.0",
     description: "Do not indent chained method calls",
     since: "0.7.0",
     type: "boolean",
