@@ -32,16 +32,17 @@ export const Options: OptionsRegistry = {
   align_assignments: {
     default: false,
     description:
-      "If lists of assignments or properties should be vertically aligned for faster and easier reading.",
+      "If lists of assignments or properties should be vertically aligned for faster " +
+      "and easier reading.",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   arrow_parens: {
     default: "always",
     description: "Require parenthesis in arrow function arguments",
     enum: ["always", "as-needed"],
     since: "0.7.0",
-    type: "string"
+    type: "string",
   },
   brace_style: {
     default: "collapse",
@@ -51,56 +52,57 @@ export const Options: OptionsRegistry = {
       "collapse-preserve-inline",
       "expand",
       "end-expand",
-      "none"
+      "none",
     ],
     since: "0.7.0",
-    type: "string"
+    type: "string",
   },
   break_chained_methods: {
     default: false,
     description: "Break chained method calls across subsequent lines",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   comma_first: {
     default: false,
     description: "Put commas at the beginning of new line instead of end",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   end_of_line: {
     default: "System Default",
     description: "End-Of-Line (EOL) separator",
     enum: ["CRLF", "LF", "System Default"],
     since: "0.7.0",
-    type: "string"
+    type: "string",
   },
   end_with_comma: {
     default: false,
     description:
-      "If a terminating comma should be inserted into arrays, object literals, and destructured objects.",
+      "If a terminating comma should be inserted into arrays, object literals, and de" +
+      "structured objects.",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   end_with_newline: {
     default: false,
     description: "End output with newline",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   end_with_semicolon: {
     default: false,
     description: "Insert a semicolon at the end of statements",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   force_indentation: {
     default: false,
     description:
-      "if indentation should be forcefully applied to markup " +
-      "even if it disruptively adds unintended whitespace to the documents rendered output",
+      "if indentation should be forcefully applied to markup even if it disruptively " +
+      "adds unintended whitespace to the documents rendered output",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   indent_char: {
     default: " ",
@@ -108,19 +110,19 @@ export const Options: OptionsRegistry = {
     description: "Indentation character",
     enum: [" ", "\t"],
     since: "0.7.0",
-    type: "string"
+    type: "string",
   },
   indent_comments: {
     default: true,
     description: "Determines whether comments should be indented.",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   indent_inner_html: {
     default: false,
     description: "Indent <head> and <body> sections.",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   indent_level: {
     default: 0,
@@ -128,14 +130,14 @@ export const Options: OptionsRegistry = {
     minimum: 0,
     multipleOf: 1,
     since: "0.7.0",
-    type: "integer"
+    type: "integer",
   },
   indent_scripts: {
     default: "normal",
     description: "Indent scripts",
     enum: ["keep", "separate", "normal"],
     since: "0.7.0",
-    type: "string"
+    type: "string",
   },
   indent_size: {
     default: 2,
@@ -143,14 +145,14 @@ export const Options: OptionsRegistry = {
     minimum: 0,
     multipleOf: 1,
     since: "0.7.0",
-    type: "integer"
+    type: "integer",
   },
   indent_style: {
     default: "space",
     description: "Indentation style",
     enum: ["space", "tab"],
     since: "0.8.0",
-    type: "string"
+    type: "string",
   },
   indent_with_tabs: {
     default: true,
@@ -158,14 +160,14 @@ export const Options: OptionsRegistry = {
     description:
       "Indentation uses tabs, overrides `Indent Size` and `Indent Char`",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   jslint_happy: {
     default: false,
     description: "Enable jslint-stricter mode",
     since: "0.7.0",
     title: "JSLint Happy",
-    type: "boolean"
+    type: "boolean",
   },
   jsx_brackets: {
     default: false,
@@ -173,20 +175,20 @@ export const Options: OptionsRegistry = {
       "Put the > of a multi-line JSX element at the end of the last line",
     since: "0.7.0",
     title: "JSX Brackets",
-    type: "boolean"
+    type: "boolean",
   },
   keep_array_indentation: {
     default: false,
     description: "Preserve array indentation",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   max_preserve_newlines: {
     default: 10,
     description: "Number of line-breaks to be preserved in one chunk",
     multipleOf: 1,
     since: "0.7.0",
-    type: "integer"
+    type: "integer",
   },
   multiline_ternary: {
     default: "always",
@@ -194,113 +196,117 @@ export const Options: OptionsRegistry = {
       "Enforces new lines between the operands of a ternary expression",
     enum: ["always", "always-multiline", "never"],
     since: "0.7.0",
-    type: "string"
+    type: "string",
   },
   newline_before_tags: {
     default: ["head", "body", "/html"],
     description: "List of tags which should have an extra newline before them.",
     items: {
-      type: "string"
+      type: "string",
     },
     since: "0.7.0",
-    type: "array"
+    type: "array",
   },
   newline_between_rules: {
     default: true,
     description: "Add a newline between CSS rules",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   no_leading_zero: {
     default: false,
     description:
-      "If in CSS values leading 0s immediately preceeding a decimal should be removed or prevented.",
+      "If in CSS values leading 0s immediately preceeding a decimal should be removed" +
+      " or prevented.",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   object_curly_spacing: {
     default: true,
     description:
-      "Inserts a space before/after brackets for object literals, destructuring assignments, and import/export specifiers",
+      "Inserts a space before/after brackets for object literals, destructuring assig" +
+      "nments, and import/export specifiers",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   pragma_insert: {
     default: false,
     description:
       "Insert a marker at the top of a file specifying the file has been beautified",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   pragma_require: {
     default: false,
     description:
       "Restrict beautifying files to only those with a pragma at the top",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   preserve_newlines: {
     default: true,
     description: "Preserve line-breaks",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   quotes: {
     default: "none",
     description:
-      "Convert the quote characters delimiting strings from either double or single quotes to the other.",
+      "Convert the quote characters delimiting strings from either double or single q" +
+      "uotes to the other.",
     enum: ["none", "double", "single"],
     since: "0.7.0",
-    type: "string"
+    type: "string",
   },
   remove_trailing_whitespace: {
     default: false,
     description: "Remove trailing whitespace",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   selector_separator_newline: {
     default: false,
     description: "Add a newline between multiple selectors",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   space_after_anon_function: {
     default: false,
     description:
       "Add a space before an anonymous function's parentheses. ie. function ()",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   space_before_conditional: {
     default: true,
-    description: "Add a space before conditional, \"if(true)\" vs \"if (true)\"",
+    description: 'Add a space before conditional, "if(true)" vs "if (true)"',
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   space_in_empty_paren: {
     default: false,
     description: "Add padding spaces within empty parentheses, ie. f( )",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   space_in_paren: {
     default: false,
     description: "Add padding spaces within parentheses, ie. f( a, b )",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   typesafe_equality_operators: {
     default: false,
-    description: "Use typesafe equality operators (`===` and `!==` instead of `==` and `!=`)",
+    description:
+      "Use typesafe equality operators (`===` and `!==` instead of `==` and `!=`)",
     since: "0.10.0",
-    type: "boolean"
+    type: "boolean",
   },
   unescape_strings: {
     default: false,
     description: "Decode printable characters encoded in xNN notation",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   unformatted: {
     default: [
@@ -371,28 +377,28 @@ export const Options: OptionsRegistry = {
       "h3",
       "h4",
       "h5",
-      "h6"
+      "h6",
     ],
     description:
       "List of tags (defaults to inline) that should not be reformatted",
     items: {
-      type: "string"
+      type: "string",
     },
     since: "0.7.0",
-    type: "array"
+    type: "array",
   },
   unindent_chained_methods: {
     default: false,
     description: "Do not indent chained method calls",
     since: "0.7.0",
-    type: "boolean"
+    type: "boolean",
   },
   wrap_attributes: {
     default: "auto",
     description: "Wrap attributes to new lines",
     enum: ["auto", "force", "force-aligned"],
     since: "0.7.0",
-    type: "string"
+    type: "string",
   },
   wrap_attributes_indent_size: {
     default: 4,
@@ -400,7 +406,7 @@ export const Options: OptionsRegistry = {
     minimum: 0,
     multipleOf: 1,
     since: "0.7.0",
-    type: "integer"
+    type: "integer",
   },
   wrap_line_length: {
     default: 80,
@@ -408,13 +414,13 @@ export const Options: OptionsRegistry = {
     minimum: 0,
     multipleOf: 1,
     since: "0.7.0",
-    type: "integer"
+    type: "integer",
   },
   wrap_prose: {
     default: "preserve",
     description: "Wrap markdown text to new lines",
     enum: ["always", "never", "preserve"],
     since: "0.7.0",
-    type: "string"
-  }
+    type: "string",
+  },
 };

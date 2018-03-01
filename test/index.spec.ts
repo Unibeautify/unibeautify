@@ -6,7 +6,7 @@ test("should fail to find language", () => {
     unibeautify.beautify({
       languageName: "TestLang",
       options: {},
-      text: "test"
+      text: "test",
     })
   ).rejects.toThrowError("Cannot find language.");
 });
@@ -16,7 +16,7 @@ test("should find JavaScript language and no Beautifier for Language", () => {
     unibeautify.beautify({
       languageName: "JavaScript",
       options: {},
-      text: "test"
+      text: "test",
     })
   ).rejects.toThrowError("Beautifiers not found for Language: JavaScript");
 });
@@ -32,8 +32,8 @@ test("should find JavaScript Language and Beautifier", () => {
     },
     name: "JavaScript Beautifier",
     options: {
-      JavaScript: false
-    }
+      JavaScript: false,
+    },
   };
   unibeautify2.loadBeautifier(beautifier);
 
@@ -41,7 +41,7 @@ test("should find JavaScript Language and Beautifier", () => {
     unibeautify2.beautify({
       languageName: "JavaScript",
       options: {},
-      text: "test"
+      text: "test",
     })
   ).resolves.toEqual(beautifierResult);
 });
@@ -56,8 +56,8 @@ test("should find JavaScript Language and not Beautifier", () => {
     },
     name: "Not JavaScript Beautifier",
     options: {
-      "Not JavaScript": false
-    }
+      "Not JavaScript": false,
+    },
   };
   unibeautify2.loadBeautifier(beautifier);
 
@@ -65,7 +65,7 @@ test("should find JavaScript Language and not Beautifier", () => {
     unibeautify2.beautify({
       languageName: "JavaScript",
       options: {},
-      text: "test"
+      text: "test",
     })
   ).rejects.toThrowError("Beautifiers not found for Language: JavaScript");
 });
