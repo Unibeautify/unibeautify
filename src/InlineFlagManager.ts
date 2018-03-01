@@ -9,8 +9,11 @@ import {
 
 export class InlineFlagManager {
   private readonly oldLines: string[] = [];
+  private readonly containsDisable: boolean;
   constructor(private oldText: string, private newText: string) {
     this.oldLines = oldText.split("\n");
+    this.containsDisable =
+      this.oldText.indexOf(InlineFlagPrefix.Disable) !== -1;
   }
 
   public get text(): string {
@@ -86,10 +89,9 @@ export class InlineFlagManager {
   }
 
   private isDisabledAtLine(lineNumber: number): boolean {
-    const containsDisable = this.oldText.indexOf(InlineFlagPrefix.Disable);
-    if (containsDisable) {
+    if (this.containsDisable) {
       const reversedLines = this.oldLines
-        .slice(0, Math.max(0, lineNumber - 1))
+        .slice(0, Math.max(0, lineNumber))
         .reverse()
         .join("\n");
       const disableIndex = reversedLines.indexOf(InlineFlagPrefix.Disable);
