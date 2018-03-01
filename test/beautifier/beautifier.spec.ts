@@ -9,12 +9,12 @@ test("should load beautifier", () => {
     },
     name: "TestBeautify",
     options: {
-      TestLang: false
-    }
+      TestLang: false,
+    },
   };
   unibeautify.loadBeautifier(beautifier);
   expect(unibeautify.loadedBeautifiers.map(curr => curr.name)).toEqual([
-    beautifier.name
+    beautifier.name,
   ]);
 });
 
@@ -27,8 +27,8 @@ test("should load beautifiers", () => {
     },
     name: "TestBeautify1",
     options: {
-      TestLang: false
-    }
+      TestLang: false,
+    },
   };
   const beautifier2: Beautifier = {
     beautify: ({ Promise }) => {
@@ -36,13 +36,13 @@ test("should load beautifiers", () => {
     },
     name: "TestBeautify2",
     options: {
-      TestLang: false
-    }
+      TestLang: false,
+    },
   };
   unibeautify.loadBeautifiers([beautifier1, beautifier2]);
   expect(unibeautify.loadedBeautifiers.map(curr => curr.name)).toEqual([
     beautifier1.name,
-    beautifier2.name
+    beautifier2.name,
   ]);
 });
 
@@ -55,7 +55,7 @@ test("should successfully beautify text", () => {
     namespace: "test",
     since: "0.1.0",
     sublimeSyntaxes: [],
-    vscodeLanguages: []
+    vscodeLanguages: [],
   };
   unibeautify.loadLanguage(lang);
 
@@ -66,8 +66,8 @@ test("should successfully beautify text", () => {
     },
     name: "TestBeautify",
     options: {
-      TestLang: false
-    }
+      TestLang: false,
+    },
   };
   unibeautify.loadBeautifier(beautifier);
 
@@ -75,7 +75,7 @@ test("should successfully beautify text", () => {
     unibeautify.beautify({
       languageName: "TestLang",
       options: {},
-      text: "test"
+      text: "test",
     })
   ).resolves.toBe(beautifierResult);
 });
@@ -89,7 +89,7 @@ test("should fail to find beautifier", () => {
     namespace: "test",
     since: "0.1.0",
     sublimeSyntaxes: [],
-    vscodeLanguages: []
+    vscodeLanguages: [],
   };
   unibeautify.loadLanguage(lang);
 
@@ -97,7 +97,7 @@ test("should fail to find beautifier", () => {
     unibeautify.beautify({
       languageName: "TestLang",
       options: {},
-      text: "test"
+      text: "test",
     })
   ).rejects.toThrowError(`Beautifiers not found for Language: ${lang.name}`);
 });
@@ -109,7 +109,7 @@ test("should fail to find language", () => {
     unibeautify.beautify({
       languageName: "TestLang",
       options: {},
-      text: "test"
+      text: "test",
     })
   ).rejects.toThrowError("Cannot find language.");
 });
@@ -123,7 +123,7 @@ test("should successfully transform option values for beautifier", () => {
     namespace: "test",
     since: "0.1.0",
     sublimeSyntaxes: [],
-    vscodeLanguages: []
+    vscodeLanguages: [],
   };
   const lang2: Language = {
     atomGrammars: [],
@@ -132,7 +132,7 @@ test("should successfully transform option values for beautifier", () => {
     namespace: "test",
     since: "0.1.0",
     sublimeSyntaxes: [],
-    vscodeLanguages: []
+    vscodeLanguages: [],
   };
   unibeautify.loadLanguages([lang1, lang2]);
 
@@ -145,27 +145,27 @@ test("should successfully transform option values for beautifier", () => {
     options: {
       _: {
         globalOption: true,
-        willBeReplaced: "globalOption"
+        willBeReplaced: "globalOption",
       },
       [lang1.name]: {
         basicTransform: num => num + 1,
         complexTransform: [
           ["value1", "basicTransform"],
-          optionValues => optionValues.value1 + optionValues.basicTransform
+          optionValues => optionValues.value1 + optionValues.basicTransform,
         ],
         renamed1: "value1",
         value1: true,
-        willBeReplaced: "value1"
+        willBeReplaced: "value1",
       },
-      [lang2.name]: true
-    }
+      [lang2.name]: true,
+    },
   };
   unibeautify.loadBeautifier(beautifier);
 
   const options = {
     basicTransform: 2,
     globalOption: 789,
-    value1: 123
+    value1: 123,
   };
   const result1 = Unibeautify.getOptionsForBeautifier(
     beautifier,
@@ -186,7 +186,7 @@ test("should successfully transform option values for beautifier", () => {
     globalOption: options.globalOption,
     renamed1: options.value1,
     value1: options.value1,
-    willBeReplaced: options.value1
+    willBeReplaced: options.value1,
   });
 
   const result2 = Unibeautify.getOptionsForBeautifier(
@@ -198,7 +198,7 @@ test("should successfully transform option values for beautifier", () => {
   expect(result2.willBeReplaced).toEqual(options.globalOption); // "Replace global option with language-specific option"
   expect(result2).toEqual({
     globalOption: options.globalOption,
-    willBeReplaced: options.globalOption
+    willBeReplaced: options.globalOption,
   });
 });
 
@@ -211,7 +211,7 @@ test("should successfully ignore-next-line", () => {
     namespace: "test",
     since: "0.1.0",
     sublimeSyntaxes: [],
-    vscodeLanguages: []
+    vscodeLanguages: [],
   };
   unibeautify.loadLanguage(lang);
 
@@ -223,8 +223,8 @@ test("should successfully ignore-next-line", () => {
     },
     name: "TestBeautify",
     options: {
-      TestLang: false
-    }
+      TestLang: false,
+    },
   };
   unibeautify.loadBeautifier(beautifier);
 
@@ -232,7 +232,7 @@ test("should successfully ignore-next-line", () => {
     unibeautify.beautify({
       languageName: "TestLang",
       options: {},
-      text: originalText
+      text: originalText,
     })
   ).resolves.toBe(originalText);
 });
