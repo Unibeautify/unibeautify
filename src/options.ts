@@ -290,6 +290,12 @@ export const Options: OptionsRegistry = {
     since: "0.7.0",
     type: "boolean"
   },
+  typesafe_equality_operators: {
+    default: false,
+    description: "Use typesafe equality operators (`===` and `!==` instead of `==` and `!=`)",
+    since: "0.10.0",
+    type: "boolean"
+  },
   unescape_strings: {
     default: false,
     description: "Decode printable characters encoded in xNN notation",
