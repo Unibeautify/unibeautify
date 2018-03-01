@@ -172,7 +172,7 @@ export const Options: OptionsRegistry = {
   jsx_brackets: {
     default: false,
     description:
-      "Put the > of a multi-line JSX element at the end of the last line",
+      "Put the `>` of a multi-line JSX element at the end of the last line",
     since: "0.7.0",
     title: "JSX Brackets",
     type: "boolean",
@@ -273,25 +273,25 @@ export const Options: OptionsRegistry = {
   space_after_anon_function: {
     default: false,
     description:
-      "Add a space before an anonymous function's parentheses. ie. function ()",
+      "Add a space before an anonymous function's parentheses. ie. `function ()`",
     since: "0.7.0",
     type: "boolean",
   },
   space_before_conditional: {
     default: true,
-    description: 'Add a space before conditional, "if(true)" vs "if (true)"',
+    description: "Add a space before conditional, `if(true)` vs `if (true)`",
     since: "0.7.0",
     type: "boolean",
   },
   space_in_empty_paren: {
     default: false,
-    description: "Add padding spaces within empty parentheses, ie. f( )",
+    description: "Add padding spaces within empty parentheses, ie. `f( )`",
     since: "0.7.0",
     type: "boolean",
   },
   space_in_paren: {
     default: false,
-    description: "Add padding spaces within parentheses, ie. f( a, b )",
+    description: "Add padding spaces within parentheses, ie. `f( a, b )`",
     since: "0.7.0",
     type: "boolean",
   },
