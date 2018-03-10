@@ -999,7 +999,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.css",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "css"
+    ]
   },
   {
     "aceMode": "text",
@@ -2829,7 +2831,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.graphql",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "graphql"
+    ]
   },
   {
     "aceMode": "text",
@@ -2953,7 +2957,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.basic",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "html"
+    ]
   },
   {
     "aceMode": "django",
@@ -2963,6 +2969,7 @@
     "codeMirrorMode": "django",
     "extensions": [
       ".jinja",
+      ".jinja2",
       ".mustache",
       ".njk"
     ],
@@ -3454,13 +3461,24 @@
     "codeMirrorMode": "javascript",
     "extensions": [
       ".JSON-tmLanguage",
+      ".avsc",
       ".geojson",
+      ".gltf",
       ".json",
-      ".topojson"
+      ".jsonl",
+      ".tfstate",
+      ".tfstate.backup",
+      ".topojson",
+      ".webapp",
+      ".webmanifest"
     ],
     "fileNames": [
       ".arcconfig",
+      ".htmlhintrc",
+      ".jscsrc",
       ".jshintrc",
+      ".tern-config",
+      ".tern-project",
       "composer.lock",
       "mcmod.info"
     ],
@@ -3471,7 +3489,10 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.json",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "json",
+      "jsonc"
+    ]
   },
   {
     "aceMode": "javascript",
@@ -3483,7 +3504,8 @@
       ".json5"
     ],
     "fileNames": [
-      ".babelrc"
+      ".babelrc",
+      ".jslintrc"
     ],
     "liguistLanguageId": 175,
     "name": "JSON5",
@@ -4003,7 +4025,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.css.less",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "less"
+    ]
   },
   {
     "aceMode": "text",
@@ -4495,7 +4519,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.gfm",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "markdown"
+    ]
   },
   {
     "aceMode": "text",
@@ -5923,7 +5949,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.postcss",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "postcss"
+    ]
   },
   {
     "aceMode": "text",
@@ -6873,7 +6901,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.scss",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "scss"
+    ]
   },
   {
     "aceMode": "text",
@@ -7979,7 +8009,10 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ts",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "typescript",
+      "typescriptreact"
+    ]
   },
   {
     "aceMode": "c_cpp",
@@ -8263,7 +8296,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.vue",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "vue"
+    ]
   },
   {
     "aceMode": "text",
