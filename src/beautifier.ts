@@ -561,7 +561,7 @@ export class Unibeautify {
     language: Language,
     options: OptionValues
   ): OptionValues {
-    let beautifierOptions = beautifier.options[language.name];
+    const beautifierOptions = beautifier.options[language.name];
     // Transform options
     if (typeof beautifierOptions === "boolean") {
       if (beautifierOptions === true) {
@@ -643,7 +643,7 @@ export function optionKeys(
   beautifier: Beautifier,
   language: Language
 ): BeautifierOptionName[] {
-  let beautifierOptions = beautifier.options[language.name];
+  const beautifierOptions = beautifier.options[language.name];
   // Transform options
   if (typeof beautifierOptions === "boolean") {
     return [];
