@@ -422,7 +422,7 @@ test("should get languages with a loaded beautifier supporting a transform of th
     name: "TestBeautify",
     options: {
       [lang1.name]: {
-        "op2": optionName,
+        op2: optionName,
       },
     },
   };
