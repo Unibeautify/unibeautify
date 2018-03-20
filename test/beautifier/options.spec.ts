@@ -273,9 +273,6 @@ test("should get options supported for a language", () => {
     },
     name: "TestBeautify1",
     options: {
-      _: {
-        [optionName1]: optionName2,
-      },
       [lang1.name]: {
         [optionName1]: false,
       },
@@ -393,4 +390,44 @@ test("should get options supported by a beautifier for a language", () => {
       })
     )
   ).toEqual([]);
+});
+
+test("should get languages with a loaded beautifier supporting a transform of the option name", () => {
+  const unibeautify = new Unibeautify();
+  const optionName = "op1";
+  const options1: OptionsRegistry = {
+    [optionName]: {
+      default: true,
+      description: "Test option",
+      since: "0.0.0",
+      type: "boolean",
+    },
+  };
+  unibeautify.loadOptions(options1);
+  const lang1: Language = {
+    atomGrammars: [],
+    extensions: ["test"],
+    name: "TestLang1",
+    namespace: "test",
+    since: "0.1.0",
+    sublimeSyntaxes: [],
+    vscodeLanguages: [],
+  };
+  unibeautify.loadLanguage(lang1);
+  const beautifierResult = "Testing Result";
+  const beautifier: Beautifier = {
+    beautify: ({ Promise }) => {
+      return Promise.resolve(beautifierResult);
+    },
+    name: "TestBeautify",
+    options: {
+      [lang1.name]: {
+        "op2": optionName,
+      },
+    },
+  };
+  unibeautify.loadBeautifier(beautifier);
+  expect(
+    unibeautify.getLanguagesSupportingOption(optionName).map(({ name }) => name)
+  ).toEqual([lang1.name]);
 });
