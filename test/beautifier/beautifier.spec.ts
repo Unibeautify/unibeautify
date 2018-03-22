@@ -143,10 +143,6 @@ test("should successfully transform option values for beautifier", () => {
     },
     name: "TestBeautify",
     options: {
-      _: {
-        globalOption: true,
-        willBeReplaced: "globalOption",
-      },
       [lang1.name]: {
         basicTransform: num => num + 1,
         complexTransform: [
@@ -164,7 +160,6 @@ test("should successfully transform option values for beautifier", () => {
 
   const options = {
     basicTransform: 2,
-    globalOption: 789,
     value1: 123,
   };
   const result1 = Unibeautify.getOptionsForBeautifier(
@@ -178,12 +173,10 @@ test("should successfully transform option values for beautifier", () => {
   expect(result1.complexTransform).toEqual(
     options.value1 + options.basicTransform
   ); // "Perform complex transformation"
-  expect(result1.globalOption).toEqual(options.globalOption); // "Include global option"
   expect(result1.willBeReplaced).toEqual(options.value1); // "Replace global option with language-specific option"
   expect(result1).toEqual({
     basicTransform: options.basicTransform + 1,
     complexTransform: options.value1 + options.basicTransform,
-    globalOption: options.globalOption,
     renamed1: options.value1,
     value1: options.value1,
     willBeReplaced: options.value1,
@@ -194,12 +187,6 @@ test("should successfully transform option values for beautifier", () => {
     lang2,
     options
   );
-  expect(result2.globalOption).toEqual(options.globalOption); // "Include global option"
-  expect(result2.willBeReplaced).toEqual(options.globalOption); // "Replace global option with language-specific option"
-  expect(result2).toEqual({
-    globalOption: options.globalOption,
-    willBeReplaced: options.globalOption,
-  });
 });
 
 test("should successfully ignore-next-line", () => {
