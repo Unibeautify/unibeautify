@@ -19,7 +19,6 @@ export class ExecutableDependency extends Dependency {
   }
 
   public run(args: RunArg[], options: RunOptions = {}): Promise<RunResponse> {
-    // return Promise.reject(new Error("test"));
     return Promise.resolve({
       exitCode: 0,
       stderr: "",
