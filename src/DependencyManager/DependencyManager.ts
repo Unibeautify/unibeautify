@@ -28,7 +28,7 @@ export class DependencyManager {
     return this.lookup[name] as T;
   }
 
-  public load(): Promise<any> {
+  public load(): Promise<void[]> {
     return Promise.all(
       this.dependencies.map(dep => {
         return dep.load().then(isInstalled => {
