@@ -561,16 +561,7 @@ export class Unibeautify {
     language: Language,
     options: OptionValues
   ): OptionValues {
-    const globalOptions = beautifier.options._;
-    let beautifierOptions = beautifier.options[language.name];
-    // Global options
-    if (typeof globalOptions === "object") {
-      if (beautifierOptions === true) {
-        beautifierOptions = globalOptions;
-      } else if (typeof beautifierOptions === "object") {
-        beautifierOptions = Object.assign({}, globalOptions, beautifierOptions);
-      }
-    }
+    const beautifierOptions = beautifier.options[language.name];
     // Transform options
     if (typeof beautifierOptions === "boolean") {
       if (beautifierOptions === true) {
@@ -652,16 +643,7 @@ export function optionKeys(
   beautifier: Beautifier,
   language: Language
 ): BeautifierOptionName[] {
-  const globalOptions = beautifier.options._;
-  let beautifierOptions = beautifier.options[language.name];
-  // Global options
-  if (typeof globalOptions === "object") {
-    if (beautifierOptions === true) {
-      beautifierOptions = globalOptions;
-    } else if (typeof beautifierOptions === "object") {
-      beautifierOptions = Object.assign({}, globalOptions, beautifierOptions);
-    }
-  }
+  const beautifierOptions = beautifier.options[language.name];
   // Transform options
   if (typeof beautifierOptions === "boolean") {
     return [];
