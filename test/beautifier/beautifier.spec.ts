@@ -134,7 +134,16 @@ test("should successfully transform option values for beautifier", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguages([lang1, lang2]);
+  const lang3: Language = {
+    atomGrammars: [],
+    extensions: ["test"],
+    name: "TestLang3",
+    namespace: "test",
+    since: "0.1.0",
+    sublimeSyntaxes: [],
+    vscodeLanguages: [],
+  };
+  unibeautify.loadLanguages([lang1, lang2, lang3]);
 
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
@@ -149,8 +158,10 @@ test("should successfully transform option values for beautifier", () => {
           ["value1", "basicTransform"],
           optionValues => optionValues.value1 + optionValues.basicTransform,
         ],
+        isUndefined: undefined,
         renamed1: "value1",
         value1: true,
+        value2: false,
         willBeReplaced: "value1",
       },
       [lang2.name]: true,
@@ -185,6 +196,12 @@ test("should successfully transform option values for beautifier", () => {
   const result2 = Unibeautify.getOptionsForBeautifier(
     beautifier,
     lang2,
+    options
+  );
+
+  const result3 = Unibeautify.getOptionsForBeautifier(
+    beautifier,
+    lang3,
     options
   );
 });

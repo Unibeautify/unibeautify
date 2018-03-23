@@ -584,12 +584,16 @@ export class Unibeautify {
         } else if (typeof op === "boolean") {
           if (op === true) {
             transformedOptions[fieldKey] = options[fieldKey];
+          } else {
+            // TODO when the option is false
           }
         } else if (_.isArray(op)) {
           const [fields, fn] = op as BeautifyOptionTransform;
           const vals = _.map(fields, field => options[field]);
           const obj = _.zipObject(fields, vals);
           transformedOptions[fieldKey] = fn(obj);
+        } else {
+          return new Error("Invalid option");
         }
       });
       return transformedOptions;
@@ -661,6 +665,8 @@ export function optionKeys(
         }
       } else if (isOptionTransform(op)) {
         options.push(...op[0]);
+      } else {
+        return new Error("Invalid option");
       }
     });
     return options;
