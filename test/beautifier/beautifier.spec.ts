@@ -179,6 +179,8 @@ test("should successfully transform option values for beautifier", () => {
     options
   );
   expect(result1.value1).toEqual(options.value1); // "Allow option"
+  expect(result1.value2).toBeUndefined();
+  expect(result1.isUndefined).toBeUndefined();
   expect(result1.renamed1).toEqual(options.value1); // "Rename option"
   expect(result1.basicTransform).toEqual(options.basicTransform + 1); // "Perform basic transformation"
   expect(result1.complexTransform).toEqual(

@@ -591,7 +591,7 @@ export class Unibeautify {
           const obj = _.zipObject(fields, vals);
           transformedOptions[fieldKey] = fn(obj);
         } else {
-          return new Error("Invalid option");
+          return new Error(`Invalid option "${fieldKey}" with value ${JSON.stringify(op)}.`);
         }
       });
       return transformedOptions;
@@ -664,7 +664,7 @@ export function optionKeys(
       } else if (isOptionTransform(op)) {
         options.push(...op[0]);
       } else {
-        return new Error("Invalid option");
+        return new Error(`Invalid option "${fieldKey}" with value ${JSON.stringify(op)}.`);
       }
     });
     return options;
