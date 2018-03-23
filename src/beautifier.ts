@@ -584,8 +584,6 @@ export class Unibeautify {
         } else if (typeof op === "boolean") {
           if (op === true) {
             transformedOptions[fieldKey] = options[fieldKey];
-          } else {
-            // TODO when the option is false
           }
         } else if (_.isArray(op)) {
           const [fields, fn] = op as BeautifyOptionTransform;
