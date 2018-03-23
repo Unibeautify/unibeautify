@@ -45,3 +45,6 @@ exclude_patterns:
 - "**/node_modules/"
 - "/test/"
 - "**/*.d.ts"
+plugins:
+  fixme:
+    enabled: true

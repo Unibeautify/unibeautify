@@ -177,6 +177,7 @@ test("should correctly determine whether beautifier supports option for a langua
     options: {
       [lang1.name]: {
         [optionName]: false,
+        isUndefined: undefined,
       },
     },
   };
