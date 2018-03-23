@@ -310,7 +310,6 @@
             "property-declaration",
             "member-variable-declaration"
         ],
-        "typeof-compare": true,
         "unified-signatures": true,
         "use-isnan": true,
         "use-named-parameter": true,

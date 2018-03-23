@@ -140,6 +140,7 @@ test("should get beautifiers with a loaded language supporting the given option"
 test("should correctly determine whether beautifier supports option for a language", () => {
   const unibeautify = new Unibeautify();
   const optionName = "op1";
+  const undefinedOptionName = "isUndefined";
   const options1: OptionsRegistry = {
     [optionName]: {
       default: false,
@@ -177,6 +178,7 @@ test("should correctly determine whether beautifier supports option for a langua
     options: {
       [lang1.name]: {
         [optionName]: false,
+        [undefinedOptionName]: undefined,
       },
     },
   };
@@ -200,11 +202,18 @@ test("should correctly determine whether beautifier supports option for a langua
   ).toEqual(false);
   expect(
     unibeautify.doesBeautifierSupportOptionForLanguage({
-      beautifier: beautifier2,
+      beautifier: beautifier1,
       language: lang1,
       optionName,
     })
-  ).toEqual(true);
+  ).toEqual(false);
+  expect(
+    unibeautify.doesBeautifierSupportOptionForLanguage({
+      beautifier: beautifier2,
+      language: lang1,
+      optionName: undefinedOptionName,
+    })
+  ).toEqual(false);
   expect(
     unibeautify.doesBeautifierSupportOptionForLanguage({
       beautifier: beautifier1,
