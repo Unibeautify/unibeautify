@@ -1,8 +1,8 @@
-import { SemVer } from "semver";
+import { Version } from "./Version";
 
 export abstract class Dependency {
   private _isInstalled: boolean = false;
-  private _version?: SemVer;
+  private _version?: Version;
   private _errors: Error[] = [];
 
   constructor(protected options: DependencyOptions) {}
@@ -36,9 +36,9 @@ export abstract class Dependency {
       });
   }
 
-  private parseVersion(version: string): SemVer {
+  private parseVersion(version: string): Version {
     const { parseVersion } = this.options;
-    return new SemVer(parseVersion ? parseVersion(version) : version, true);
+    return new Version(parseVersion ? parseVersion(version) : version);
   }
 
   protected abstract loadVersion(): Promise<string>;
@@ -63,7 +63,7 @@ export abstract class Dependency {
     return !Boolean(this.options.optional);
   }
 
-  public get version(): SemVer | undefined {
+  public get version(): Version | undefined {
     return this._version;
   }
 

@@ -27,12 +27,12 @@ export class DependencyManager {
     return this.lookup[name] as T;
   }
 
-  public load(): Promise<void> {
+  public load(): Promise<boolean> {
     return Promise.all(
       this.dependencies.map(dep => {
         return dep.load();
       })
-    ).then(() => void 0);
+    ).then(() => true);
   }
 }
 

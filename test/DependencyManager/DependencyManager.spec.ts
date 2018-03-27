@@ -1,45 +1,91 @@
-import * as proxyquire from "proxyquire";
 import {
   DependencyOptions,
   DependencyType,
-  DependencyManager
+  DependencyManager,
+  NodeDependency
 } from "../../src/DependencyManager";
 
-test.skip("should fail to load dependencies", () => {
-  const CustomDependencyManager: typeof DependencyManager = proxyquire.noPreserveCache()(
-    "../../src/DependencyManager/DependencyManager.js",
-    {}
-  ).DependencyManager;
+test("should fail to load dependencies", async () => {
+  expect.assertions(1);
   const options: DependencyOptions = {
-    name: "FakeDep",
-    package: "fakedep",
+    name: "NotFound",
+    package: "notfound",
     type: DependencyType.Node
   };
-  const manager = new CustomDependencyManager([options]);
+  const manager = new DependencyManager([options]);
 
-  expect.assertions(1);
-  expect(manager.load()).rejects.toThrowError(
-    'Dependency "FakeDep" is required and not installed.'
-  );
+  return await manager.load().catch(error => {
+    expect(error.message).toMatch(
+      'Dependency "NotFound" is required and not installed.'
+    );
+  });
 });
 
-test.skip("should successfully load dependencies", () => {
-  const CustomDependencyManager: typeof DependencyManager = proxyquire.noPreserveCache()(
-    "../../src/DependencyManager/DependencyManager.js",
-    {
-      fakedep: {},
-      "fakedep/package.json": {
-        version: "1.0.0"
-      }
-    }
-  ).DependencyManager;
-  const options: DependencyOptions = {
-    name: "FakeDep",
-    package: "fakedep",
-    type: DependencyType.Node
-  };
-  const manager = new CustomDependencyManager([options]);
+describe("successfully loads dependency", () => {
+  test("should successfully load dependencies", async () => {
+    expect.assertions(1);
+    const options: DependencyOptions = {
+      name: "FakeDep",
+      package: "fakedep",
+      type: DependencyType.Node
+    };
+    const manager = new DependencyManager([options]);
 
-  expect.assertions(1);
-  expect(manager.load()).resolves.toBe(true);
+    return await expect(manager.load()).resolves.toBe(true);
+  });
+
+  test("should have package", async () => {
+    expect.assertions(1);
+    const packageName = "fakedep";
+    const options: DependencyOptions = {
+      name: packageName,
+      package: packageName,
+      type: DependencyType.Node
+    };
+    const manager = new DependencyManager([options]);
+
+    return await manager.load().then(() => {
+      expect(manager.has(packageName)).toBe(true);
+    });
+  });
+
+  test("should get package", async () => {
+    expect.assertions(1);
+    const packageName = "fakedep";
+    const options: DependencyOptions = {
+      name: packageName,
+      package: packageName,
+      type: DependencyType.Node
+    };
+    const manager = new DependencyManager([options]);
+
+    return await manager.load().then(() => {
+      const dep = manager.get<NodeDependency>(packageName);
+      expect(dep).not.toBe(undefined);
+    });
+  });
+
+  test("should get package vesion", async () => {
+    expect.assertions(5);
+    const packageName = "fakedep";
+    const options: DependencyOptions = {
+      name: packageName,
+      package: packageName,
+      type: DependencyType.Node
+    };
+    const manager = new DependencyManager([options]);
+
+    return await manager.load().then(() => {
+      const dep = manager.get<NodeDependency>(packageName);
+      expect(dep).not.toBe(undefined);
+      if (dep) {
+        expect(dep.version).not.toBe(undefined);
+        if (dep.version) {
+          expect(dep.version.rawVersion).toBe("1.0.0");
+          expect(dep.version.greaterThan("0.1.0")).toBe(true);
+          expect(dep.version.greaterThan("1.1.0")).toBe(false);
+        }
+      }
+    });
+  });
 });
