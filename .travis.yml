@@ -23,7 +23,8 @@ before_script:
   - ./cc-test-reporter before-build
 script:
   - npm run lint
-  - npm test
+  - npm run build-test
+  - jest --maxWorkers=4
 notifications:
   email:
     on_success: never
