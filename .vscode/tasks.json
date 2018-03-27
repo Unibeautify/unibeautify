@@ -18,6 +18,19 @@
                 "kind": "test",
                 "isDefault": true
             }
+        },
+        {
+            "type": "npm",
+            "script": "build",
+            "problemMatcher": []
+        },
+        {
+            "identifier": "build-test",
+            "type": "npm",
+            "script": "build-test",
+            "problemMatcher": [
+                "$tsc"
+            ]
         }
     ]
 }

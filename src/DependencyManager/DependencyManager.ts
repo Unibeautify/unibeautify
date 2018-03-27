@@ -1,5 +1,4 @@
 // tslint:disable:no-reserved-keywords
-import { SemVer } from "semver";
 import { DependencyFactory } from "./DependencyFactory";
 import { Dependency, DependencyOptions } from "./Dependency";
 
@@ -28,18 +27,12 @@ export class DependencyManager {
     return this.lookup[name] as T;
   }
 
-  public load(): Promise<void[]> {
+  public load(): Promise<void> {
     return Promise.all(
       this.dependencies.map(dep => {
-        return dep.load().then(isInstalled => {
-          if (dep.required && !isInstalled) {
-            throw new Error(
-              `Dependency "${dep.name}" is required and not installed.`
-            );
-          }
-        });
+        return dep.load();
       })
-    );
+    ).then(() => void 0);
   }
 }
 

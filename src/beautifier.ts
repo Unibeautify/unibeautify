@@ -5,7 +5,6 @@ import { OptionsRegistry } from "./options";
 import { InlineFlagManager } from "./InlineFlagManager";
 import {
   DependencyOptions,
-  Dependency,
   DependencyManager
 } from "./DependencyManager";
 
@@ -372,7 +371,6 @@ export class Unibeautify {
       (
         promise: Promise<string>,
         beautifier: BeautifierInternal,
-        index: number
       ) => {
         const options: OptionValues = Unibeautify.getOptionsForBeautifier(
           beautifier,

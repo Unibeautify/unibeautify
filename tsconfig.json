@@ -1,18 +1,30 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "noImplicitAny": true,
-        "removeComments": false,
-        "preserveConstEnums": true,
-        "strictNullChecks": true,
-        "sourceMap": true,
-        "target": "es6",
-        "declaration": true,
-        "moduleResolution": "node",
-        "outDir": "./dist/"
-    },
-    "exclude": [
-        "node_modules",
-        "./dist/"
-    ]
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "alwaysStrict": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "target": "es2016",
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": false,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "lib": [
+      "es2015",
+      "es2016",
+      "es2017.object",
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "outDir": "dist",
+    "rootDir": "."
+  },
+  "include": [
+    "scripts/**/*",
+    "src/**/*",
+    "test/**/*"
+  ]
 }

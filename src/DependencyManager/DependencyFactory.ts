@@ -1,8 +1,6 @@
 import {
   Dependency,
   DependencyType,
-  NodeDependencyOptions,
-  ExecutableDependencyOptions,
   DependencyOptions
 } from "./Dependency";
 import { NodeDependency } from "./NodeDependency";

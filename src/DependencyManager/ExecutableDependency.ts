@@ -1,7 +1,5 @@
 import {
   Dependency,
-  BaseDependencyOptions,
-  DependencyType,
   ExecutableDependencyOptions
 } from "./Dependency";
 
@@ -18,11 +16,11 @@ export class ExecutableDependency extends Dependency {
     return this.options.versionArgs || ["--version"];
   }
 
-  public run(args: RunArg[], options: RunOptions = {}): Promise<RunResponse> {
+  public run(_args: RunArg[], _options: RunOptions = {}): Promise<RunResponse> {
     return Promise.resolve({
       exitCode: 0,
       stderr: "",
-      stdout: "test"
+      stdout: "executable run output"
     });
   }
 }

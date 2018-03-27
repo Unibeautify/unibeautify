@@ -1,7 +1,6 @@
 import {
   parsePatch,
   createTwoFilesPatch,
-  createPatch,
   applyPatch,
   IUniDiff,
   IHunk,

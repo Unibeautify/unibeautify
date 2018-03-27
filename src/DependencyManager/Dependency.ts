@@ -3,6 +3,7 @@ import { SemVer } from "semver";
 export abstract class Dependency {
   private _isInstalled: boolean = false;
   private _version?: SemVer;
+  private _errors: Error[] = [];
 
   constructor(protected options: DependencyOptions) {}
 
@@ -14,14 +15,24 @@ export abstract class Dependency {
   }
 
   public reload(): Promise<boolean> {
+    this.clearErrors();
     return this.loadVersion()
       .then(version => {
         this._version = this.parseVersion(version);
         return (this._isInstalled = true);
       })
-      .catch(error => {
+      .catch((error: Error) => {
+        this.addError(error);
         this._version = undefined;
         return (this._isInstalled = false);
+      })
+      .then(isInstalled => {
+        if (this.required && !isInstalled) {
+          throw new Error(
+            `Dependency "${this.name}" is required and not installed.`
+          );
+        }
+        return isInstalled;
       });
   }
 
@@ -35,16 +46,29 @@ export abstract class Dependency {
   public get isInstalled(): boolean {
     return this._isInstalled;
   }
+
+  private addError(error: Error): void {
+    this._errors.push(error);
+  }
+
+  private clearErrors(): void {
+    this._errors = [];
+  }
+
   public get name(): string {
     return this.options.name;
+  }
+
+  public get required(): boolean {
+    return !Boolean(this.options.optional);
   }
 
   public get version(): SemVer | undefined {
     return this._version;
   }
 
-  public get required(): boolean {
-    return !Boolean(this.options.optional);
+  public get errors() {
+    return this._errors;
   }
 }
 

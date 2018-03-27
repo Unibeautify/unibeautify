@@ -1,7 +1,5 @@
 import {
   Dependency,
-  BaseDependencyOptions,
-  DependencyType,
   NodeDependencyOptions
 } from "./Dependency";
 
@@ -9,7 +7,6 @@ import {
 const requireg = require("requireg");
 
 export class NodeDependency extends Dependency {
-  private cachedPackage: any;
 
   constructor(protected options: NodeDependencyOptions) {
     super(options);
