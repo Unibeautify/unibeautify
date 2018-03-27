@@ -1,8 +1,4 @@
-import {
-  Dependency,
-  DependencyType,
-  DependencyOptions
-} from "./Dependency";
+import { Dependency, DependencyType, DependencyOptions } from "./Dependency";
 import { NodeDependency } from "./NodeDependency";
 import { ExecutableDependency } from "./ExecutableDependency";
 
@@ -18,7 +14,7 @@ export class DependencyFactory {
         return new ExecutableDependency(options);
       default:
         throw new Error(
-          `Dependency type not found for: ${JSON.stringify(options)}`
+          `Dependency type not found for: ${JSON.stringify(options)}`,
         );
     }
   }

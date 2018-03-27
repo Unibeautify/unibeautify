@@ -1,7 +1,7 @@
 import {
   NodeDependency,
   DependencyType,
-  DependencyOptions
+  DependencyOptions,
 } from "../../src/DependencyManager";
 
 test("should fail to load Node dependency", async () => {
@@ -9,13 +9,13 @@ test("should fail to load Node dependency", async () => {
   const options: DependencyOptions = {
     name: "NotFound",
     package: "NotFound",
-    type: DependencyType.Node
+    type: DependencyType.Node,
   };
   const dependency = new NodeDependency(options);
 
   return await dependency.load().catch(error => {
     expect(error.message).toMatch(
-      'Dependency "NotFound" is required and not installed.'
+      'Dependency "NotFound" is required and not installed.',
     );
     expect(dependency.isInstalled).toBe(false);
     expect(dependency.errors).toHaveLength(1);
@@ -28,7 +28,7 @@ describe("successfully loaded Node dependency", () => {
     const options: DependencyOptions = {
       name: "FakeDep",
       package: "fakedep",
-      type: DependencyType.Node
+      type: DependencyType.Node,
     };
     const dependency = new NodeDependency(options);
 

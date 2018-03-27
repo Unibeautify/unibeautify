@@ -5,4 +5,7 @@
     "jest.rootPath": ".",
     "jest.pathToConfig": "jest.config.js",
     "jest.showCoverageOnLoad": true,
+    "prettier.semi": true,
+    "prettier.singleQuote": false,
+    "prettier.trailingComma": "all"
 }

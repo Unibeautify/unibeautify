@@ -1,7 +1,4 @@
-import {
-  Dependency,
-  ExecutableDependencyOptions
-} from "./Dependency";
+import { Dependency, ExecutableDependencyOptions } from "./Dependency";
 
 export class ExecutableDependency extends Dependency {
   constructor(protected options: ExecutableDependencyOptions) {
@@ -20,7 +17,7 @@ export class ExecutableDependency extends Dependency {
     return Promise.resolve({
       exitCode: 0,
       stderr: "",
-      stdout: "executable run output"
+      stdout: "executable run output",
     });
   }
 }

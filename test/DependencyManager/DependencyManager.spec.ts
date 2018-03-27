@@ -2,7 +2,7 @@ import {
   DependencyOptions,
   DependencyType,
   DependencyManager,
-  NodeDependency
+  NodeDependency,
 } from "../../src/DependencyManager";
 
 test("should fail to load dependencies", async () => {
@@ -10,13 +10,13 @@ test("should fail to load dependencies", async () => {
   const options: DependencyOptions = {
     name: "NotFound",
     package: "notfound",
-    type: DependencyType.Node
+    type: DependencyType.Node,
   };
   const manager = new DependencyManager([options]);
 
   return await manager.load().catch(error => {
     expect(error.message).toMatch(
-      'Dependency "NotFound" is required and not installed.'
+      'Dependency "NotFound" is required and not installed.',
     );
   });
 });
@@ -27,7 +27,7 @@ describe("successfully loads dependency", () => {
     const options: DependencyOptions = {
       name: "FakeDep",
       package: "fakedep",
-      type: DependencyType.Node
+      type: DependencyType.Node,
     };
     const manager = new DependencyManager([options]);
 
@@ -40,7 +40,7 @@ describe("successfully loads dependency", () => {
     const options: DependencyOptions = {
       name: packageName,
       package: packageName,
-      type: DependencyType.Node
+      type: DependencyType.Node,
     };
     const manager = new DependencyManager([options]);
 
@@ -55,7 +55,7 @@ describe("successfully loads dependency", () => {
     const options: DependencyOptions = {
       name: packageName,
       package: packageName,
-      type: DependencyType.Node
+      type: DependencyType.Node,
     };
     const manager = new DependencyManager([options]);
 
@@ -71,7 +71,7 @@ describe("successfully loads dependency", () => {
     const options: DependencyOptions = {
       name: packageName,
       package: packageName,
-      type: DependencyType.Node
+      type: DependencyType.Node,
     };
     const manager = new DependencyManager([options]);
 

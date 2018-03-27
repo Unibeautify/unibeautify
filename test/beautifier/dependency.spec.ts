@@ -3,7 +3,7 @@ import {
   Language,
   Beautifier,
   DependencyOptions,
-  DependencyType
+  DependencyType,
 } from "../../src/";
 
 test("should throw Error when dependency type is unknown", () => {
@@ -15,12 +15,12 @@ test("should throw Error when dependency type is unknown", () => {
     namespace: "test",
     since: "0.1.0",
     sublimeSyntaxes: [],
-    vscodeLanguages: []
+    vscodeLanguages: [],
   };
   unibeautify.loadLanguage(lang);
   const beautifierResult = "Testing Result";
   const dependency: any = {
-    type: "wrong"
+    type: "wrong",
   };
   const beautifier: Beautifier = {
     beautify: ({ Promise }) => {
@@ -29,8 +29,8 @@ test("should throw Error when dependency type is unknown", () => {
     dependencies: [dependency],
     name: "TestBeautify",
     options: {
-      TestLang: false
-    }
+      TestLang: false,
+    },
   };
   return expect(() => {
     unibeautify.loadBeautifier(beautifier);
@@ -47,7 +47,7 @@ describe("Node", () => {
       namespace: "test",
       since: "0.1.0",
       sublimeSyntaxes: [],
-      vscodeLanguages: []
+      vscodeLanguages: [],
     };
     unibeautify.loadLanguage(lang);
 
@@ -55,7 +55,7 @@ describe("Node", () => {
     const dependency: DependencyOptions = {
       name: "Fakedep",
       package: "fake",
-      type: DependencyType.Node
+      type: DependencyType.Node,
     };
     const beautifier: Beautifier = {
       beautify: ({ Promise }) => {
@@ -64,8 +64,8 @@ describe("Node", () => {
       dependencies: [dependency],
       name: "TestBeautify",
       options: {
-        TestLang: false
-      }
+        TestLang: false,
+      },
     };
     unibeautify.loadBeautifier(beautifier);
 
@@ -73,10 +73,10 @@ describe("Node", () => {
       unibeautify.beautify({
         languageName: "TestLang",
         options: {},
-        text: "test"
-      })
+        text: "test",
+      }),
     ).rejects.toThrowError(
-      'Dependency "Fakedep" is required and not installed.'
+      'Dependency "Fakedep" is required and not installed.',
     );
   });
 });
@@ -91,7 +91,7 @@ describe("Executable", () => {
       namespace: "test",
       since: "0.1.0",
       sublimeSyntaxes: [],
-      vscodeLanguages: []
+      vscodeLanguages: [],
     };
     unibeautify.loadLanguage(lang);
 
@@ -100,7 +100,7 @@ describe("Executable", () => {
       name: "Fake Program",
       parseVersion: text => "",
       program: "fakeprogram",
-      type: DependencyType.Executable
+      type: DependencyType.Executable,
     };
     const beautifier: Beautifier = {
       beautify: ({ Promise, dependencies }) => {
@@ -110,8 +110,8 @@ describe("Executable", () => {
       dependencies: [dependency],
       name: "TestBeautify",
       options: {
-        TestLang: false
-      }
+        TestLang: false,
+      },
     };
     unibeautify.loadBeautifier(beautifier);
 
@@ -119,10 +119,10 @@ describe("Executable", () => {
       unibeautify.beautify({
         languageName: "TestLang",
         options: {},
-        text: "test"
-      })
+        text: "test",
+      }),
     ).rejects.toThrowError(
-      'Dependency "Fake Program" is required and not installed.'
+      'Dependency "Fake Program" is required and not installed.',
     );
   });
 });

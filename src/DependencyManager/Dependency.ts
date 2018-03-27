@@ -29,7 +29,7 @@ export abstract class Dependency {
       .then(isInstalled => {
         if (this.required && !isInstalled) {
           throw new Error(
-            `Dependency "${this.name}" is required and not installed.`
+            `Dependency "${this.name}" is required and not installed.`,
           );
         }
         return isInstalled;
@@ -82,7 +82,7 @@ export interface BaseDependencyOptions {
 
 export enum DependencyType {
   Node = "node",
-  Executable = "exec"
+  Executable = "exec",
 }
 
 export interface NodeDependencyOptions extends BaseDependencyOptions {
