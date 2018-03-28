@@ -22,12 +22,31 @@ test("should fail to load Node dependency", async () => {
   });
 });
 
-describe("successfully loaded Node dependency", () => {
-  test("should successfully load Node dependency", async () => {
+describe("successfully loaded local Node dependency", () => {
+  test("should successfully load local Node dependency", async () => {
     expect.assertions(4);
     const options: DependencyOptions = {
       name: "FakeDep",
       package: "fakedep",
+      type: DependencyType.Node,
+    };
+    const dependency = new NodeDependency(options);
+
+    return await dependency.load().then(isInstalled => {
+      expect(isInstalled).toBe(true);
+      expect(dependency.isInstalled).toBe(true);
+      expect(dependency.errors).toHaveLength(0);
+      expect(dependency.package).not.toBe(undefined);
+    });
+  });
+});
+
+describe("successfully loaded global Node dependency", () => {
+  test("should successfully load global Node dependency", async () => {
+    expect.assertions(4);
+    const options: DependencyOptions = {
+      name: "FakeDep",
+      package: "global-fakedep",
       type: DependencyType.Node,
     };
     const dependency = new NodeDependency(options);

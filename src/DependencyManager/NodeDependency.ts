@@ -23,21 +23,34 @@ export class NodeDependency extends Dependency {
 
   // tslint:disable-next-line:no-reserved-keywords
   private require(id?: string): any {
-    // tslint:disable-next-line:no-require-imports non-literal-require
-    return require(this.resolve(id));
+    const modulePath = this.resolve(id);
+    if (modulePath) {
+      // tslint:disable-next-line:no-require-imports non-literal-require
+      return require(modulePath);
+    } else {
+      throw new Error(`Cannot find module ${id}`);
+    }
   }
 
-  private resolve(file?: string): string {
+  private resolve(file?: string): string | undefined {
     const path = this.fullPath(file);
     return this.resolveLocal(path) || this.resolveGlobal(path);
   }
 
-  private resolveLocal(path: string): string {
-    return require.resolve(path);
+  private resolveLocal(path: string): string | undefined {
+    try {
+      return require.resolve(path);
+    } catch (error) {
+      return undefined;
+    }
   }
 
-  private resolveGlobal(path: string): string {
-    return requireg.resolve(path);
+  private resolveGlobal(path: string): string | undefined {
+    try {
+      return requireg.resolve(path);
+    } catch (error) {
+      return undefined;
+    }
   }
 
   private fullPath(filePath?: string): string {
