@@ -38,19 +38,21 @@ export class NodeDependency extends Dependency {
   }
 
   private resolveLocal(path: string): string | undefined {
-    try {
-      return require.resolve(path);
-    } catch (error) {
-      return undefined;
-    }
+    return this.resolveWith(require.resolve)(path);
   }
 
   private resolveGlobal(path: string): string | undefined {
-    try {
-      return requireg.resolve(path);
-    } catch (error) {
-      return undefined;
-    }
+    return this.resolveWith(requireg.resolve)(path);
+  }
+
+  private resolveWith(resolver: (path: string) => string): (path: string) => string | undefined {
+    return (path: string) => {
+      try {
+        return resolver(path);
+      } catch (error) {
+        return undefined;
+      }
+    };
   }
 
   private fullPath(filePath?: string): string {

@@ -47,7 +47,7 @@ export abstract class Dependency {
     return this._isInstalled;
   }
 
-  private addError(error: Error): void {
+  protected addError(error: Error): void {
     this._errors.push(error);
   }
 
