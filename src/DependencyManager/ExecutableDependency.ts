@@ -17,7 +17,7 @@ export class ExecutableDependency extends Dependency {
 
   public run(args: RunArg[], options: RunOptions = {}): Promise<RunResponse> {
     return this.resolveArgs(args).then(finalArgs =>
-      this.spawn({ exe: this.program, args: finalArgs, options }),
+      this.spawn({ exe: this.program, args: finalArgs, options })
     );
   }
 

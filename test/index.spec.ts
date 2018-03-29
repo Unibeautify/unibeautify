@@ -7,7 +7,7 @@ test("should fail to find language", () => {
       languageName: "TestLang",
       options: {},
       text: "test",
-    }),
+    })
   ).rejects.toThrowError("Cannot find language.");
 });
 
@@ -17,7 +17,7 @@ test("should find JavaScript language and no Beautifier for Language", () => {
       languageName: "JavaScript",
       options: {},
       text: "test",
-    }),
+    })
   ).rejects.toThrowError("Beautifiers not found for Language: JavaScript");
 });
 
@@ -42,7 +42,7 @@ test("should find JavaScript Language and Beautifier", () => {
       languageName: "JavaScript",
       options: {},
       text: "test",
-    }),
+    })
   ).resolves.toEqual(beautifierResult);
 });
 
@@ -66,6 +66,6 @@ test("should find JavaScript Language and not Beautifier", () => {
       languageName: "JavaScript",
       options: {},
       text: "test",
-    }),
+    })
   ).rejects.toThrowError("Beautifiers not found for Language: JavaScript");
 });

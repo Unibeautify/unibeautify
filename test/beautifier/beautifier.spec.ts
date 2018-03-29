@@ -76,7 +76,7 @@ test("should successfully beautify text", () => {
       languageName: "TestLang",
       options: {},
       text: "test",
-    }),
+    })
   ).resolves.toBe(beautifierResult);
 });
 
@@ -98,7 +98,7 @@ test("should fail to find beautifier", () => {
       languageName: "TestLang",
       options: {},
       text: "test",
-    }),
+    })
   ).rejects.toThrowError(`Beautifiers not found for Language: ${lang.name}`);
 });
 
@@ -110,7 +110,7 @@ test("should fail to find language", () => {
       languageName: "TestLang",
       options: {},
       text: "test",
-    }),
+    })
   ).rejects.toThrowError("Cannot find language.");
 });
 
@@ -176,7 +176,7 @@ test("should successfully transform option values for beautifier", () => {
   const result1 = Unibeautify.getOptionsForBeautifier(
     beautifier,
     lang1,
-    options,
+    options
   );
   expect(result1.value1).toEqual(options.value1); // "Allow option"
   expect(result1.value2).toBeUndefined();
@@ -184,7 +184,7 @@ test("should successfully transform option values for beautifier", () => {
   expect(result1.renamed1).toEqual(options.value1); // "Rename option"
   expect(result1.basicTransform).toEqual(options.basicTransform + 1); // "Perform basic transformation"
   expect(result1.complexTransform).toEqual(
-    options.value1 + options.basicTransform,
+    options.value1 + options.basicTransform
   ); // "Perform complex transformation"
   expect(result1.willBeReplaced).toEqual(options.value1); // "Replace global option with language-specific option"
   expect(result1).toEqual({
@@ -198,13 +198,13 @@ test("should successfully transform option values for beautifier", () => {
   const result2 = Unibeautify.getOptionsForBeautifier(
     beautifier,
     lang2,
-    options,
+    options
   );
 
   const result3 = Unibeautify.getOptionsForBeautifier(
     beautifier,
     lang3,
-    options,
+    options
   );
 });
 
@@ -239,6 +239,6 @@ test("should successfully ignore-next-line", () => {
       languageName: "TestLang",
       options: {},
       text: originalText,
-    }),
+    })
   ).resolves.toBe(originalText);
 });

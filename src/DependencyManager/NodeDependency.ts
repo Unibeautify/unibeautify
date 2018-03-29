@@ -45,7 +45,9 @@ export class NodeDependency extends Dependency {
     return this.resolveWith(requireg.resolve)(path);
   }
 
-  private resolveWith(resolver: (path: string) => string): (path: string) => string | undefined {
+  private resolveWith(
+    resolver: (path: string) => string
+  ): (path: string) => string | undefined {
     return (path: string) => {
       try {
         return resolver(path);

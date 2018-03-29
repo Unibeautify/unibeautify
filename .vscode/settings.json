@@ -7,5 +7,6 @@
     "jest.showCoverageOnLoad": true,
     "prettier.semi": true,
     "prettier.singleQuote": false,
-    "prettier.trailingComma": "all"
+    "prettier.trailingComma": "es5",
+    "prettier.printWidth": 80
 }

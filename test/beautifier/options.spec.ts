@@ -71,9 +71,7 @@ test("should get languages with a loaded beautifier supporting the given option"
   };
   unibeautify.loadBeautifier(beautifier);
   expect(
-    unibeautify
-      .getLanguagesSupportingOption(optionName)
-      .map(({ name }) => name),
+    unibeautify.getLanguagesSupportingOption(optionName).map(({ name }) => name)
   ).toEqual([lang1.name]);
 });
 
@@ -135,7 +133,7 @@ test("should get beautifiers with a loaded language supporting the given option"
   expect(
     unibeautify
       .getBeautifiersSupportingOption(optionName)
-      .map(({ name }) => name),
+      .map(({ name }) => name)
   ).toEqual([beautifier2.name]);
 });
 
@@ -200,35 +198,35 @@ test("should correctly determine whether beautifier supports option for a langua
       beautifier: beautifier1,
       language: lang1,
       optionName,
-    }),
+    })
   ).toEqual(false);
   expect(
     unibeautify.doesBeautifierSupportOptionForLanguage({
       beautifier: beautifier1,
       language: lang1,
       optionName,
-    }),
+    })
   ).toEqual(false);
   expect(
     unibeautify.doesBeautifierSupportOptionForLanguage({
       beautifier: beautifier2,
       language: lang1,
       optionName: undefinedOptionName,
-    }),
+    })
   ).toEqual(false);
   expect(
     unibeautify.doesBeautifierSupportOptionForLanguage({
       beautifier: beautifier1,
       language: lang2,
       optionName,
-    }),
+    })
   ).toEqual(false);
   expect(
     unibeautify.doesBeautifierSupportOptionForLanguage({
       beautifier: beautifier2,
       language: lang2,
       optionName,
-    }),
+    })
   ).toEqual(false);
 });
 
@@ -307,10 +305,10 @@ test("should get options supported for a language", () => {
   };
   unibeautify.loadBeautifiers([beautifier1, beautifier2]);
   expect(
-    Object.keys(unibeautify.getOptionsSupportedForLanguage(lang1)),
+    Object.keys(unibeautify.getOptionsSupportedForLanguage(lang1))
   ).toEqual([optionName1, optionName2, optionName3]);
   expect(
-    Object.keys(unibeautify.getOptionsSupportedForLanguage(lang2)),
+    Object.keys(unibeautify.getOptionsSupportedForLanguage(lang2))
   ).toEqual([optionName2]);
 });
 
@@ -374,32 +372,32 @@ test("should get options supported by a beautifier for a language", () => {
       unibeautify.getOptionsSupportedByBeautifierForLanguage({
         beautifier: beautifier1,
         language: lang1,
-      }),
-    ),
+      })
+    )
   ).toEqual([]);
   expect(
     Object.keys(
       unibeautify.getOptionsSupportedByBeautifierForLanguage({
         beautifier: beautifier2,
         language: lang1,
-      }),
-    ),
+      })
+    )
   ).toEqual([optionName]);
   expect(
     Object.keys(
       unibeautify.getOptionsSupportedByBeautifierForLanguage({
         beautifier: beautifier1,
         language: lang2,
-      }),
-    ),
+      })
+    )
   ).toEqual([]);
   expect(
     Object.keys(
       unibeautify.getOptionsSupportedByBeautifierForLanguage({
         beautifier: beautifier2,
         language: lang2,
-      }),
-    ),
+      })
+    )
   ).toEqual([]);
 });
 
@@ -439,8 +437,6 @@ test("should get languages with a loaded beautifier supporting a transform of th
   };
   unibeautify.loadBeautifier(beautifier);
   expect(
-    unibeautify
-      .getLanguagesSupportingOption(optionName)
-      .map(({ name }) => name),
+    unibeautify.getLanguagesSupportingOption(optionName).map(({ name }) => name)
   ).toEqual([lang1.name]);
 });

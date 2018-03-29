@@ -95,7 +95,10 @@ export class InlineFlagManager {
         .join("\n");
       const disableIndex = reversedLines.indexOf(InlineFlagPrefix.Disable);
       const enableIndex = reversedLines.indexOf(InlineFlagPrefix.Enable);
-      if (disableIndex !== -1 && (enableIndex === -1 || disableIndex < enableIndex)) {
+      if (
+        disableIndex !== -1 &&
+        (enableIndex === -1 || disableIndex < enableIndex)
+      ) {
         return true;
       }
     }

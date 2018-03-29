@@ -74,9 +74,9 @@ describe("Node", () => {
         languageName: "TestLang",
         options: {},
         text: "test",
-      }),
+      })
     ).rejects.toThrowError(
-      'Dependency "Fakedep" is required and not installed.',
+      'Dependency "Fakedep" is required and not installed.'
     );
   });
 });
@@ -120,9 +120,9 @@ describe("Executable", () => {
         languageName: "TestLang",
         options: {},
         text: "test",
-      }),
+      })
     ).rejects.toThrowError(
-      'Dependency "Fake Program" is required and not installed.',
+      'Dependency "Fake Program" is required and not installed.'
     );
   });
 });

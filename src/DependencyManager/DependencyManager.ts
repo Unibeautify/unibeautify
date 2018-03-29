@@ -8,14 +8,14 @@ export class DependencyManager {
 
   constructor(dependencies: DependencyOptions[]) {
     this.dependencies = dependencies.map(dependency =>
-      new DependencyFactory(dependency).dependency(),
+      new DependencyFactory(dependency).dependency()
     );
     this.lookup = this.dependencies.reduce(
       (lookup, dep) => ({
         ...lookup,
         [dep.name]: dep,
       }),
-      {},
+      {}
     );
   }
 
@@ -31,7 +31,7 @@ export class DependencyManager {
     return Promise.all(
       this.dependencies.map(dep => {
         return dep.load();
-      }),
+      })
     ).then(() => true);
   }
 }

@@ -14,7 +14,7 @@ test("should fail when beautifiers option containers unknown beautifier", () => 
         },
       },
       text: "test",
-    }),
+    })
   ).rejects.toThrowError(`Beautifier not found: ${beautifierName}`);
 });
 
@@ -52,7 +52,7 @@ test("should use named beautifier from beautifiers option", () => {
         },
       },
       text: "test",
-    }),
+    })
   ).resolves.toEqual(beautifierResult);
 });
 
@@ -80,7 +80,7 @@ test("should fail to use named beautifier which does not support language", () =
         },
       },
       text: "test",
-    }),
+    })
   ).rejects.toThrowError(`Beautifier not found: ${beautifierName}`);
 });
 
@@ -117,7 +117,7 @@ test("should use all beautifiers for language when beautifiers option is empty",
         },
       },
       text: "Test",
-    }),
+    })
   ).resolves.toEqual(beautifierResult);
 });
 
@@ -152,7 +152,7 @@ test("should use all beautifiers for language when beautifiers option is missing
         JavaScript: {},
       },
       text: "Test",
-    }),
+    })
   ).resolves.toEqual(beautifierResult);
 });
 
@@ -189,6 +189,6 @@ test("should use beautifiers in order of beautifiers option", () => {
         },
       },
       text: "0",
-    }),
+    })
   ).resolves.toBe(beautifierResult);
 });

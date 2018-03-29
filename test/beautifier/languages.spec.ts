@@ -93,7 +93,7 @@ test("should loaded languages which support a given beautifier", () => {
   };
   unibeautify.loadBeautifier(beautifier);
   expect(
-    unibeautify.getLanguagesForBeautifier(beautifier).map(({ name }) => name),
+    unibeautify.getLanguagesForBeautifier(beautifier).map(({ name }) => name)
   ).toEqual([lang1.name]);
 });
 
@@ -130,9 +130,9 @@ test("should loaded languages which support a given beautifier", () => {
   };
   unibeautify.loadBeautifier(beautifier);
   expect(
-    unibeautify.getBeautifiersForLanguage(lang1).map(({ name }) => name),
+    unibeautify.getBeautifiersForLanguage(lang1).map(({ name }) => name)
   ).toEqual([beautifier.name]);
   expect(
-    unibeautify.getBeautifiersForLanguage(lang2).map(({ name }) => name),
+    unibeautify.getBeautifiersForLanguage(lang2).map(({ name }) => name)
   ).toEqual([]);
 });
