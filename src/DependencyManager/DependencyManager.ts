@@ -23,8 +23,12 @@ export class DependencyManager {
     return Boolean(this.get(name));
   }
 
-  public get<T extends Dependency>(name: string): T | undefined {
-    return this.lookup[name] as T;
+  public get<T extends Dependency>(name: string): T {
+    const dep = this.lookup[name] as T | undefined;
+    if (!dep) {
+      throw new Error(`Dependency with name ${name} not found.`);
+    }
+    return dep;
   }
 
   public load(): Promise<boolean> {

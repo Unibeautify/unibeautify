@@ -141,5 +141,39 @@ describe("successfully loaded Executable dependency", () => {
         });
       });
     });
+
+    test("should successfully parse partial (major.minor) version with RegExp pattern", async () => {
+      expect.assertions(2);
+      const options: DependencyOptions = {
+        name: "Node",
+        parseVersion: /v(\d+\.\d+)/,
+        program: "node",
+        type: DependencyType.Executable,
+      };
+      const dependency = new ExecutableDependency(options);
+      return await dependency.load().then(() => {
+        expect(dependency.isInstalled).toBe(true);
+        return dependency.run(["--help"]).then(({ stdout }) => {
+          expect(stdout).toContain("node");
+        });
+      });
+    });
+
+    test("should fail to parse version from text without numbers with RegExp pattern", async () => {
+      expect.assertions(2);
+      const options: DependencyOptions = {
+        name: "Node",
+        parseVersion: /v/,
+        program: "node",
+        type: DependencyType.Executable,
+      };
+      const dependency = new ExecutableDependency(options);
+      return await dependency.load().catch(error => {
+        expect(dependency.isInstalled).toBe(false);
+        expect(error.message).toMatch(
+          'Dependency "Node" is required and not installed.'
+        );
+      });
+    });
   });
 });
