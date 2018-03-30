@@ -55,4 +55,91 @@ describe("successfully loaded Executable dependency", () => {
       });
     });
   });
+
+  describe("Parse Version", () => {
+    test("should successfully parse version with function", async () => {
+      expect.assertions(2);
+      const options: DependencyOptions = {
+        name: "Node",
+        parseVersion: (text: string) => {
+          const matches = text.match(/v(\d+.\d+.\d+)/);
+          return matches ? matches[1] : undefined;
+        },
+        program: "node",
+        type: DependencyType.Executable,
+      };
+      const dependency = new ExecutableDependency(options);
+      return await dependency.load().then(() => {
+        expect(dependency.isInstalled).toBe(true);
+        return dependency.run(["--help"]).then(({ stdout }) => {
+          expect(stdout).toContain("node");
+        });
+      });
+    });
+    test("should successfully parse version with string pattern", async () => {
+      expect.assertions(2);
+      const options: DependencyOptions = {
+        name: "Node",
+        parseVersion: "v(\\d+.\\d+.\\d+)",
+        program: "node",
+        type: DependencyType.Executable,
+      };
+      const dependency = new ExecutableDependency(options);
+      return await dependency.load().then(() => {
+        expect(dependency.isInstalled).toBe(true);
+        return dependency.run(["--help"]).then(({ stdout }) => {
+          expect(stdout).toContain("node");
+        });
+      });
+    });
+    test("should successfully parse version with RegExp pattern", async () => {
+      expect.assertions(2);
+      const options: DependencyOptions = {
+        name: "Node",
+        parseVersion: /v(\d+\.\d+\.\d+)/,
+        program: "node",
+        type: DependencyType.Executable,
+      };
+      const dependency = new ExecutableDependency(options);
+      return await dependency.load().then(() => {
+        expect(dependency.isInstalled).toBe(true);
+        return dependency.run(["--help"]).then(({ stdout }) => {
+          expect(stdout).toContain("node");
+        });
+      });
+    });
+
+    test("should successfully parse version with array of string patterns", async () => {
+      expect.assertions(2);
+      const options: DependencyOptions = {
+        name: "Node",
+        parseVersion: ["invalid", "v(\\d+.\\d+.\\d+)"],
+        program: "node",
+        type: DependencyType.Executable,
+      };
+      const dependency = new ExecutableDependency(options);
+      return await dependency.load().then(() => {
+        expect(dependency.isInstalled).toBe(true);
+        return dependency.run(["--help"]).then(({ stdout }) => {
+          expect(stdout).toContain("node");
+        });
+      });
+    });
+    test("should successfully parse version with array of RegExp patterns", async () => {
+      expect.assertions(2);
+      const options: DependencyOptions = {
+        name: "Node",
+        parseVersion: [/invalid/, /v(\d+\.\d+\.\d+)/],
+        program: "node",
+        type: DependencyType.Executable,
+      };
+      const dependency = new ExecutableDependency(options);
+      return await dependency.load().then(() => {
+        expect(dependency.isInstalled).toBe(true);
+        return dependency.run(["--help"]).then(({ stdout }) => {
+          expect(stdout).toContain("node");
+        });
+      });
+    });
+  });
 });
