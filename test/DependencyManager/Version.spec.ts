@@ -53,5 +53,4 @@ describe("valid version text", () => {
       expect(version.satisfies(">=1.2.4")).toBe(false);
     });
   });
-
 });

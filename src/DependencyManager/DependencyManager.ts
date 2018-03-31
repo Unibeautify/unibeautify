@@ -4,7 +4,9 @@ import { Dependency, DependencyOptions } from "./Dependency";
 
 export class DependencyManager {
   private readonly dependencies: Dependency[];
-  private readonly lookup: { [name: string]: Dependency };
+  private readonly lookup: {
+    [name: string]: Dependency;
+  };
 
   constructor(dependencies: DependencyOptions[]) {
     this.dependencies = dependencies.map(dependency =>

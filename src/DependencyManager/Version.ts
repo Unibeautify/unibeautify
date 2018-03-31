@@ -4,7 +4,10 @@ export class Version {
   public readonly semVer: SemVer.SemVer;
 
   constructor(public readonly rawVersion: string) {
-    this.semVer = new SemVer.SemVer(SemVer.coerce(this.rawVersion) || this.rawVersion, true);
+    this.semVer = new SemVer.SemVer(
+      SemVer.coerce(this.rawVersion) || this.rawVersion,
+      true
+    );
   }
 
   public isGreaterThan(anotherVersion: string): boolean {
