@@ -16,7 +16,7 @@ test("should fail to load dependencies", async () => {
 
   return await manager.load().catch(error => {
     expect(error.message).toMatch(
-      "Dependency 'NotFound' is required and not installed."
+      "Dependency \"NotFound\" is required and not installed."
     );
   });
 });
