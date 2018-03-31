@@ -15,7 +15,7 @@ test("should fail to load Executable dependency", async () => {
 
   return await dependency.load().catch(error => {
     expect(error.message).toMatch(
-      "Dependency \"NotFound\" is required and not installed."
+      'Dependency "NotFound" is required and not installed.'
     );
     expect(dependency.isInstalled).toBe(false);
     expect(dependency.errors).toHaveLength(1);
@@ -171,7 +171,7 @@ describe("successfully loaded Executable dependency", () => {
       return await dependency.load().catch(error => {
         expect(dependency.isInstalled).toBe(false);
         expect(error.message).toMatch(
-          "Dependency \"Node\" is required and not installed."
+          'Dependency "Node" is required and not installed.'
         );
       });
     });
