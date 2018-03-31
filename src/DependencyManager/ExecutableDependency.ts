@@ -8,22 +8,31 @@ export class ExecutableDependency extends Dependency {
   }
 
   protected loadVersion() {
-    return this.run(this.versionArgs).then(({ stdout }) => stdout);
+    return this.run({ args: this.versionArgs }).then(({ stdout }) => stdout);
   }
 
   private get versionArgs(): string[] {
     return this.options.versionArgs || ["--version"];
   }
 
-  public run(args: RunArg[], options: RunOptions = {}): Promise<RunResponse> {
+  public run({
+    args,
+    options = {},
+    stdin,
+  }: {
+    args: RunArg[];
+    options?: RunOptions;
+    stdin?: string;
+  }): Promise<RunResponse> {
     return this.resolveArgs(args).then(finalArgs =>
-      this.spawn({ exe: this.program, args: finalArgs, options })
+      this.spawn({ exe: this.program, args: finalArgs, options, stdin })
     );
   }
 
   private resolveArgs(args: RunArg[]): Promise<string[]> {
-    const truthyArgs: any[] = args.filter(Boolean);
-    return Promise.all(truthyArgs);
+    return Promise.all(args as any[]).then(resolvedArgs =>
+      resolvedArgs.filter(Boolean)
+    );
   }
 
   private get program(): string {

@@ -50,7 +50,7 @@ describe("successfully loaded Executable dependency", () => {
 
     return await dependency.load().then(() => {
       expect(dependency.isInstalled).toBe(true);
-      return dependency.run(["--help"]).then(({ stdout }) => {
+      return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
         expect(stdout).toContain("node");
       });
     });
@@ -71,7 +71,7 @@ describe("successfully loaded Executable dependency", () => {
       const dependency = new ExecutableDependency(options);
       return await dependency.load().then(() => {
         expect(dependency.isInstalled).toBe(true);
-        return dependency.run(["--help"]).then(({ stdout }) => {
+        return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
           expect(stdout).toContain("node");
         });
       });
@@ -87,7 +87,7 @@ describe("successfully loaded Executable dependency", () => {
       const dependency = new ExecutableDependency(options);
       return await dependency.load().then(() => {
         expect(dependency.isInstalled).toBe(true);
-        return dependency.run(["--help"]).then(({ stdout }) => {
+        return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
           expect(stdout).toContain("node");
         });
       });
@@ -103,7 +103,7 @@ describe("successfully loaded Executable dependency", () => {
       const dependency = new ExecutableDependency(options);
       return await dependency.load().then(() => {
         expect(dependency.isInstalled).toBe(true);
-        return dependency.run(["--help"]).then(({ stdout }) => {
+        return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
           expect(stdout).toContain("node");
         });
       });
@@ -120,7 +120,7 @@ describe("successfully loaded Executable dependency", () => {
       const dependency = new ExecutableDependency(options);
       return await dependency.load().then(() => {
         expect(dependency.isInstalled).toBe(true);
-        return dependency.run(["--help"]).then(({ stdout }) => {
+        return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
           expect(stdout).toContain("node");
         });
       });
@@ -136,7 +136,7 @@ describe("successfully loaded Executable dependency", () => {
       const dependency = new ExecutableDependency(options);
       return await dependency.load().then(() => {
         expect(dependency.isInstalled).toBe(true);
-        return dependency.run(["--help"]).then(({ stdout }) => {
+        return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
           expect(stdout).toContain("node");
         });
       });
@@ -153,7 +153,7 @@ describe("successfully loaded Executable dependency", () => {
       const dependency = new ExecutableDependency(options);
       return await dependency.load().then(() => {
         expect(dependency.isInstalled).toBe(true);
-        return dependency.run(["--help"]).then(({ stdout }) => {
+        return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
           expect(stdout).toContain("node");
         });
       });
