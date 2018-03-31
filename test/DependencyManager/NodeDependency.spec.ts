@@ -15,7 +15,7 @@ test("should fail to load Node dependency", async () => {
 
   return await dependency.load().catch(error => {
     expect(error.message).toMatch(
-      'Dependency "NotFound" is required and not installed.'
+      "Dependency 'NotFound' is required and not installed."
     );
     expect(dependency.isInstalled).toBe(false);
     expect(dependency.errors).toHaveLength(1);
