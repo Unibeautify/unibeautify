@@ -27,7 +27,7 @@ request(languagesUrl, (error, response, body) => {
   }
 
   try {
-    const githubLanguages: GitHubLanguages = yaml.safeLoad(body);
+    const githubLanguages: GitHubLanguages = yaml.safeLoad(body) as any;
     const languages = convertGitHubLanguageToUnibeautify(githubLanguages);
 
     const finalLanguages = mergeLanguages(originalLanguages, languages);
