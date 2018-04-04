@@ -17,4 +17,14 @@ export class Version {
   public satisfies(ranger: string): boolean {
     return SemVer.satisfies(this.semVer, ranger);
   }
+
+  public get major(): number {
+    return this.semVer.major;
+  }
+  public get minor(): number {
+    return this.semVer.minor;
+  }
+  public get patch(): number {
+    return this.semVer.patch;
+  }
 }
