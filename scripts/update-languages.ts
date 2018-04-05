@@ -70,7 +70,7 @@ function convertGitHubLanguageToUnibeautify(
         group: language.group,
         liguistLanguageId: language.language_id,
         name: languageName,
-        textMateScope: language.tm_scope
+        textMateScope: language.tm_scope,
       };
     })
     .value();
@@ -104,8 +104,10 @@ function mergeLanguage(
     aceMode: getString("aceMode", baseLanguage, newLanguage),
     aliases: getArray("aliases", baseLanguage, newLanguage),
     atomGrammars: getArray("atomGrammars", baseLanguage, newLanguage),
-    codeMirrorMimeType: getString("codeMirrorMimeType", baseLanguage, newLanguage) || undefined,
-    codeMirrorMode: getString("codeMirrorMode", baseLanguage, newLanguage) || undefined,
+    codeMirrorMimeType:
+      getString("codeMirrorMimeType", baseLanguage, newLanguage) || undefined,
+    codeMirrorMode:
+      getString("codeMirrorMode", baseLanguage, newLanguage) || undefined,
     extensions: getArray("extensions", baseLanguage, newLanguage),
     fileNames: getArray("fileNames", baseLanguage, newLanguage),
     group: getString("group", baseLanguage, newLanguage) || undefined,
@@ -118,7 +120,8 @@ function mergeLanguage(
     namespace: getString("namespace", baseLanguage, newLanguage),
     since: getString("since", baseLanguage, newLanguage) || nextMinorVersion,
     sublimeSyntaxes: getArray("sublimeSyntaxes", baseLanguage, newLanguage),
-    textMateScope: getString("textMateScope", baseLanguage, newLanguage) || undefined,
+    textMateScope:
+      getString("textMateScope", baseLanguage, newLanguage) || undefined,
     vscodeLanguages: getArray("vscodeLanguages", baseLanguage, newLanguage),
   };
 }

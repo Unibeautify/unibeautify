@@ -3,10 +3,7 @@ import * as _ from "lodash";
 import { Language } from "./language";
 import { OptionsRegistry } from "./options";
 import { InlineFlagManager } from "./InlineFlagManager";
-import {
-  DependencyOptions,
-  DependencyManager
-} from "./DependencyManager";
+import { DependencyOptions, DependencyManager } from "./DependencyManager";
 
 /**
 New name to rename the option (key) to.
@@ -205,7 +202,7 @@ export class Unibeautify {
           this.doesBeautifierSupportOptionForLanguage({
             beautifier,
             language,
-            optionName
+            optionName,
           })
         ) !== -1
     );
@@ -220,8 +217,8 @@ export class Unibeautify {
         ...options,
         ...this.getOptionsSupportedByBeautifierForLanguage({
           beautifier,
-          language
-        })
+          language,
+        }),
       }),
       {}
     );
@@ -232,7 +229,7 @@ export class Unibeautify {
    */
   public getOptionsSupportedByBeautifierForLanguage({
     beautifier,
-    language
+    language,
   }: {
     beautifier: Beautifier;
     language: Language;
@@ -246,7 +243,7 @@ export class Unibeautify {
       }
       return {
         ...options,
-        [key]: option
+        [key]: option,
       };
     }, {});
   }
@@ -275,7 +272,7 @@ export class Unibeautify {
 
     const {
       selectedBeautifiers,
-      missingBeautifierName
+      missingBeautifierName,
     } = this.beautifiersForLanguageAndOptions(lang, langOptions);
     if (selectedBeautifiers.length === 0) {
       return Promise.reject(
@@ -294,7 +291,7 @@ export class Unibeautify {
       langOptions,
       language: lang,
       projectPath: data.projectPath,
-      text: data.text
+      text: data.text,
     });
   }
 
@@ -308,7 +305,7 @@ export class Unibeautify {
       atomGrammar: data.atomGrammar,
       extension: data.fileExtension,
       name: data.languageName,
-      sublimeSyntax: data.sublimeSyntax
+      sublimeSyntax: data.sublimeSyntax,
     });
     return langs.length > 0 ? langs[0] : null;
   }
@@ -334,7 +331,7 @@ export class Unibeautify {
       .find(curr => !!curr);
     return {
       missingBeautifierName,
-      selectedBeautifiers
+      selectedBeautifiers,
     };
   }
 
@@ -358,7 +355,7 @@ export class Unibeautify {
     langOptions,
     fileExtension,
     projectPath,
-    text
+    text,
   }: {
     beautifiers: BeautifierInternal[];
     language: Language;
@@ -368,10 +365,7 @@ export class Unibeautify {
     projectPath: BeautifyData["projectPath"];
   }): Promise<string> {
     return beautifiers.reduce(
-      (
-        promise: Promise<string>,
-        beautifier: BeautifierInternal,
-      ) => {
+      (promise: Promise<string>, beautifier: BeautifierInternal) => {
         const options: OptionValues = Unibeautify.getOptionsForBeautifier(
           beautifier,
           language,
@@ -388,7 +382,7 @@ export class Unibeautify {
                 options,
                 projectPath: projectPath,
                 Promise,
-                text: currentText
+                text: currentText,
               })
               .then(newText => {
                 const manager = new InlineFlagManager(currentText, newText);
@@ -526,7 +520,7 @@ export class Unibeautify {
           this.doesBeautifierSupportOptionForLanguage({
             beautifier,
             language,
-            optionName
+            optionName,
           })
         ) !== -1
     );
@@ -538,7 +532,7 @@ export class Unibeautify {
   public doesBeautifierSupportOptionForLanguage({
     beautifier,
     language,
-    optionName
+    optionName,
   }: {
     beautifier: Beautifier;
     language: Language;
@@ -618,7 +612,9 @@ export class Unibeautify {
           const obj = _.zipObject(fields, vals);
           transformedOptions[fieldKey] = fn(obj);
         } else {
-          return new Error(`Invalid option "${fieldKey}" with value ${JSON.stringify(op)}.`);
+          return new Error(
+            `Invalid option "${fieldKey}" with value ${JSON.stringify(op)}.`
+          );
         }
       });
       return transformedOptions;
@@ -646,7 +642,7 @@ export class Unibeautify {
   private internalBeautifier(beautifier: Beautifier): BeautifierInternal {
     return {
       ...beautifier,
-      dependencyManager: new DependencyManager(beautifier.dependencies || [])
+      dependencyManager: new DependencyManager(beautifier.dependencies || []),
     };
   }
 
@@ -698,7 +694,9 @@ export function optionKeys(
       } else if (isOptionTransform(op)) {
         options.push(...op[0]);
       } else {
-        return new Error(`Invalid option "${fieldKey}" with value ${JSON.stringify(op)}.`);
+        return new Error(
+          `Invalid option "${fieldKey}" with value ${JSON.stringify(op)}.`
+        );
       }
     });
     return options;
