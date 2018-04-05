@@ -121,6 +121,31 @@ describe("successfully loaded Executable dependency", () => {
             });
         });
       });
+
+      test("should accept stdin parameter", () => {
+        expect.assertions(2);
+        const options: DependencyOptions = {
+          name: "Node",
+          program: "node",
+          type: DependencyType.Executable,
+        };
+        const dependency = new ExecutableDependency(options);
+        return dependency.load().then(() => {
+          expect(dependency.isInstalled).toBe(true);
+          const stdin = "happy output";
+          return dependency
+            .run({
+              args: [
+                "-e",
+                'console.log("start");process.stdin.pipe(process.stdout);',
+              ],
+              stdin,
+            })
+            .then(result => {
+              expect(result.stdout).toContain(`start\n${stdin}`);
+            });
+        });
+      });
     });
 
     test("should only load once", async () => {
