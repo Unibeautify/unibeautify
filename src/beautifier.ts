@@ -3,6 +3,7 @@ import * as _ from "lodash";
 import { Language } from "./language";
 import { OptionsRegistry } from "./options";
 import { InlineFlagManager } from "./InlineFlagManager";
+import { DependencyOptions, DependencyManager } from "./DependencyManager";
 
 /**
 New name to rename the option (key) to.
@@ -84,6 +85,10 @@ export interface BeautifierBeautifyData {
   Promise.
   */
   Promise: typeof Promise;
+  /**
+   * Dependencies
+   */
+  dependencies: DependencyManager;
 }
 
 export interface LanguageOptionValues {
@@ -155,9 +160,17 @@ export interface Beautifier {
   // tslint:disable-next-line:no-reserved-keywords
   package?: object;
   /**
+   * Runtime dependencies of the beautifier.
+   */
+  dependencies?: DependencyOptions[];
+  /**
   Beautify the given code with the beautifier.
   */
   beautify(data: BeautifierBeautifyData): Promise<string>;
+}
+
+export interface BeautifierInternal extends Beautifier {
+  dependencyManager: DependencyManager;
 }
 
 /**
@@ -175,7 +188,7 @@ export class Unibeautify {
   /**
 
   */
-  private beautifiers: Beautifier[] = [];
+  private beautifiers: BeautifierInternal[] = [];
 
   /**
    * Get loaded languages which have a loaded beautifier supporting the given option
@@ -189,7 +202,7 @@ export class Unibeautify {
           this.doesBeautifierSupportOptionForLanguage({
             beautifier,
             language,
-            optionName
+            optionName,
           })
         ) !== -1
     );
@@ -204,8 +217,8 @@ export class Unibeautify {
         ...options,
         ...this.getOptionsSupportedByBeautifierForLanguage({
           beautifier,
-          language
-        })
+          language,
+        }),
       }),
       {}
     );
@@ -216,7 +229,7 @@ export class Unibeautify {
    */
   public getOptionsSupportedByBeautifierForLanguage({
     beautifier,
-    language
+    language,
   }: {
     beautifier: Beautifier;
     language: Language;
@@ -230,7 +243,7 @@ export class Unibeautify {
       }
       return {
         ...options,
-        [key]: option
+        [key]: option,
       };
     }, {});
   }
@@ -259,7 +272,7 @@ export class Unibeautify {
 
     const {
       selectedBeautifiers,
-      missingBeautifierName
+      missingBeautifierName,
     } = this.beautifiersForLanguageAndOptions(lang, langOptions);
     if (selectedBeautifiers.length === 0) {
       return Promise.reject(
@@ -273,12 +286,12 @@ export class Unibeautify {
     }
 
     return this.beautifyWithBeautifiers({
-      beautifiers: selectedBeautifiers as Beautifier[],
+      beautifiers: selectedBeautifiers as BeautifierInternal[],
       fileExtension: data.fileExtension,
       langOptions,
       language: lang,
       projectPath: data.projectPath,
-      text: data.text
+      text: data.text,
     });
   }
 
@@ -292,7 +305,7 @@ export class Unibeautify {
       atomGrammar: data.atomGrammar,
       extension: data.fileExtension,
       name: data.languageName,
-      sublimeSyntax: data.sublimeSyntax
+      sublimeSyntax: data.sublimeSyntax,
     });
     return langs.length > 0 ? langs[0] : null;
   }
@@ -301,12 +314,14 @@ export class Unibeautify {
     lang: Language,
     langOptions: OptionValues
   ): {
-    selectedBeautifiers: (Beautifier | undefined)[];
+    selectedBeautifiers: (BeautifierInternal | undefined)[];
     missingBeautifierName: string | undefined;
   } {
-    const allBeautifiers: Beautifier[] = this.getBeautifiersForLanguage(lang);
+    const allBeautifiers: BeautifierInternal[] = this.getBeautifiersForLanguage(
+      lang
+    );
     const beautifierNames: string[] = langOptions.beautifiers || [];
-    const selectedBeautifiers: (Beautifier | undefined)[] =
+    const selectedBeautifiers: (BeautifierInternal | undefined)[] =
       beautifierNames.length > 0
         ? this.beautifiersWithNames(beautifierNames, allBeautifiers)
         : allBeautifiers;
@@ -316,20 +331,20 @@ export class Unibeautify {
       .find(curr => !!curr);
     return {
       missingBeautifierName,
-      selectedBeautifiers
+      selectedBeautifiers,
     };
   }
 
   private beautifiersWithNames(
     names: string[],
-    beautifiers: Beautifier[]
-  ): (Beautifier | undefined)[] {
+    beautifiers: BeautifierInternal[]
+  ): (BeautifierInternal | undefined)[] {
     const beautifiersByName = beautifiers.reduce(
       (index, current) => {
         index[current.name] = current;
         return index;
       },
-      {} as { [beautifierName: string]: Beautifier }
+      {} as { [beautifierName: string]: BeautifierInternal }
     );
     return names.map(name => beautifiersByName[name]);
   }
@@ -340,9 +355,9 @@ export class Unibeautify {
     langOptions,
     fileExtension,
     projectPath,
-    text
+    text,
   }: {
-    beautifiers: Beautifier[];
+    beautifiers: BeautifierInternal[];
     language: Language;
     langOptions: OptionValues;
     text: BeautifyData["text"];
@@ -350,26 +365,30 @@ export class Unibeautify {
     projectPath: BeautifyData["projectPath"];
   }): Promise<string> {
     return beautifiers.reduce(
-      (promise: Promise<string>, beautifier: Beautifier, index: number) => {
+      (promise: Promise<string>, beautifier: BeautifierInternal) => {
         const options: OptionValues = Unibeautify.getOptionsForBeautifier(
           beautifier,
           language,
           langOptions
         );
         return promise.then(currentText => {
-          return beautifier
-            .beautify({
-              filePath: fileExtension,
-              language: language,
-              options,
-              projectPath: projectPath,
-              Promise,
-              text: currentText
-            })
-            .then(newText => {
-              const manager = new InlineFlagManager(currentText, newText);
-              return manager.text;
-            });
+          const { dependencyManager } = beautifier;
+          return dependencyManager.load().then(() => {
+            return beautifier
+              .beautify({
+                dependencies: dependencyManager,
+                filePath: fileExtension,
+                language: language,
+                options,
+                projectPath: projectPath,
+                Promise,
+                text: currentText,
+              })
+              .then(newText => {
+                const manager = new InlineFlagManager(currentText, newText);
+                return manager.text;
+              });
+          });
         });
       },
       Promise.resolve(text)
@@ -474,9 +493,11 @@ export class Unibeautify {
   /**
    * Find and return the appropriate Beautifiers for the given Language.
    */
-  public getBeautifiersForLanguage(language: Language): Beautifier[] {
-    return _.filter(this.beautifiers, (beautifier: Beautifier): boolean =>
-      this.doesBeautifierSupportLanguage(beautifier, language)
+  public getBeautifiersForLanguage(language: Language): BeautifierInternal[] {
+    return _.filter(
+      this.beautifiers,
+      (beautifier: BeautifierInternal): boolean =>
+        this.doesBeautifierSupportLanguage(beautifier, language)
     );
   }
 
@@ -499,7 +520,7 @@ export class Unibeautify {
           this.doesBeautifierSupportOptionForLanguage({
             beautifier,
             language,
-            optionName
+            optionName,
           })
         ) !== -1
     );
@@ -511,7 +532,7 @@ export class Unibeautify {
   public doesBeautifierSupportOptionForLanguage({
     beautifier,
     language,
-    optionName
+    optionName,
   }: {
     beautifier: Beautifier;
     language: Language;
@@ -591,7 +612,9 @@ export class Unibeautify {
           const obj = _.zipObject(fields, vals);
           transformedOptions[fieldKey] = fn(obj);
         } else {
-          return new Error(`Invalid option "${fieldKey}" with value ${JSON.stringify(op)}.`);
+          return new Error(
+            `Invalid option "${fieldKey}" with value ${JSON.stringify(op)}.`
+          );
         }
       });
       return transformedOptions;
@@ -604,7 +627,7 @@ export class Unibeautify {
   Load a Beautifier
   */
   public loadBeautifier(beautifier: Beautifier): Unibeautify {
-    this.beautifiers.push(beautifier);
+    this.beautifiers.push(this.internalBeautifier(beautifier));
     return this;
   }
 
@@ -612,8 +635,15 @@ export class Unibeautify {
   Load multiple beautifiers.
   */
   public loadBeautifiers(beautifiers: Beautifier[]): Unibeautify {
-    this.beautifiers.push(...beautifiers);
+    beautifiers.forEach(beautifier => this.loadBeautifier(beautifier));
     return this;
+  }
+
+  private internalBeautifier(beautifier: Beautifier): BeautifierInternal {
+    return {
+      ...beautifier,
+      dependencyManager: new DependencyManager(beautifier.dependencies || []),
+    };
   }
 
   /**
@@ -664,7 +694,9 @@ export function optionKeys(
       } else if (isOptionTransform(op)) {
         options.push(...op[0]);
       } else {
-        return new Error(`Invalid option "${fieldKey}" with value ${JSON.stringify(op)}.`);
+        return new Error(
+          `Invalid option "${fieldKey}" with value ${JSON.stringify(op)}.`
+        );
       }
     });
     return options;

@@ -1,4 +1,12 @@
 {
     "editor.insertSpaces": true,
-    "editor.tabSize": 4
+    "editor.tabSize": 2,
+    "jest.autoEnable": true,
+    "jest.rootPath": ".",
+    "jest.pathToConfig": "jest.config.js",
+    "jest.showCoverageOnLoad": true,
+    "prettier.semi": true,
+    "prettier.singleQuote": false,
+    "prettier.trailingComma": "es5",
+    "prettier.printWidth": 80
 }

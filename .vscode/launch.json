@@ -7,7 +7,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest Tests",
+      "name": "Debug Tests",
+      "runtimeVersion": "9.10.1",
       "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
       "args": ["--config", "jest.config.js", "--runInBand"],
       "runtimeArgs": ["--nolazy"],

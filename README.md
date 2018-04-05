@@ -1,6 +1,7 @@
 # Unibeautify
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/Unibeautify/unibeautify.svg)](https://greenkeeper.io/)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b472e3d8388e14a6d9ea/maintainability)](https://codeclimate.com/github/Unibeautify/unibeautify/maintainability)
 
 > One Beautifier to rule them all, One Beautifier to clean them, One Beautifier to bring them all and in the darkness sheen them
 

@@ -244,5 +244,4 @@ describe("disable/enable", () => {
     const finalText = manager.text;
     expect(finalText).toEqual(expectedText);
   });
-
 });

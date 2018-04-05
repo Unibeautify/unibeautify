@@ -45,6 +45,8 @@ exclude_patterns:
 - "**/node_modules/"
 - "/test/"
 - "**/*.d.ts"
+- "__mocks__/"
+- "jest.*.js"
 plugins:
   fixme:
     enabled: true
