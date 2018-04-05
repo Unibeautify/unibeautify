@@ -1,7 +1,7 @@
 import * as SemVer from "semver";
 
 export class Version {
-  public readonly semVer: SemVer.SemVer;
+  private readonly semVer: SemVer.SemVer;
 
   constructor(public readonly rawVersion: string) {
     this.semVer = new SemVer.SemVer(
