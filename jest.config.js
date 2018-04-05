@@ -7,7 +7,7 @@ module.exports = {
     "./test/setupTests.js"
   ],
   transform: {
-    "^.+\\.tsx?$": "ts-jest",
+    "^.+\\.tsx?$": "ts-jest"
   },
   testRegex: "test/.+\\.(test|spec)\\.ts$",
   testPathIgnorePatterns: [

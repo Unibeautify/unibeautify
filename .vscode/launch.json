@@ -7,38 +7,18 @@
     {
       "type": "node",
       "request": "launch",
-      "runtimeVersion": "7.10.0", // Fix breakpoints & debugger
-      "protocol": "legacy",
       "name": "Debug Tests",
+      "runtimeVersion": "9.10.1",
       "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
-      "cwd": "${workspaceFolder}",
-      "args": ["--runInBand", "--config", "jest.vscode-config.js"],
+      "args": ["--config", "jest.config.js", "--runInBand"],
       "runtimeArgs": ["--nolazy"],
       "console": "internalConsole",
       "env": {
         "NODE_ENV": "test"
       },
+      "protocol": "inspector",
       "sourceMaps": true,
-      "outFiles": ["${workspaceRoot}/dist/**/*.js"],
-      "preLaunchTask": "build-test"
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "runtimeVersion": "7.10.0", // Fix breakpoints & debugger
-      "protocol": "legacy",
-      "name": "Debug Test File",
-      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
-      "cwd": "${workspaceFolder}",
-      "args": ["--config", "jest.vscode-config.js", "--runInBand", "${fileBasenameNoExtension}"],
-      "runtimeArgs": ["--nolazy"],
-      "console": "internalConsole",
-      "env": {
-        "NODE_ENV": "test"
-      },
-      "sourceMaps": true,
-      "outFiles": ["${workspaceRoot}/dist/**/*.js"],
-      "preLaunchTask": "build-test"
+      "outFiles": ["${workspaceRoot}/dist/"]
     }
   ]
 }

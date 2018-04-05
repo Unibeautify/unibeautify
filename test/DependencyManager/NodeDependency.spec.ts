@@ -42,7 +42,7 @@ describe("successfully loaded local Node dependency", () => {
 });
 
 describe("successfully loaded global Node dependency", () => {
-  test("should successfully load global Node dependency", async () => {
+  test("should successfully load global Node dependency", () => {
     expect.assertions(4);
     const options: DependencyOptions = {
       name: "FakeDep",
@@ -51,7 +51,7 @@ describe("successfully loaded global Node dependency", () => {
     };
     const dependency = new NodeDependency(options);
 
-    return await dependency.load().then(isInstalled => {
+    return dependency.load().then(isInstalled => {
       expect(isInstalled).toBe(true);
       expect(dependency.isInstalled).toBe(true);
       expect(dependency.errors).toHaveLength(0);
