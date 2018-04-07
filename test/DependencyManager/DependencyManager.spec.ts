@@ -18,7 +18,7 @@ test("should fail to load dependencies", async () => {
     expect(error.message).toMatch(
       'Dependency "NotFound" is required and not installed.'
     );
-    expect(error.message).toMatch("Cannot find module package.json");
+    expect(error.message).toMatch("Cannot find module notfound/package.json");
   });
 });
 
