@@ -433,45 +433,23 @@ export class Unibeautify {
      */
     vscodeLanguage?: string;
   }): Language[] {
-    const langs: Language[][] = [];
-    // Name
-    langs.push(
-      _.filter(this.languages, (language: Language): boolean =>
-        _.isEqual(language.name, query.name)
-      )
-    );
-    // Namespace
-    langs.push(
-      _.filter(this.languages, (language: Language): boolean =>
-        _.isEqual(language.namespace, query.namespace)
-      )
-    );
-    // Extension
-    langs.push(
-      _.filter(this.languages, (language: Language): boolean =>
-        _.includes(language.extensions, query.extension)
-      )
-    );
-    // Atom Grammar
-    langs.push(
-      _.filter(this.languages, (language: Language): boolean =>
-        _.includes(language.atomGrammars, query.atomGrammar)
-      )
-    );
-    // Sublime Syntax
-    langs.push(
-      _.filter(this.languages, (language: Language): boolean =>
-        _.includes(language.sublimeSyntaxes, query.sublimeSyntax)
-      )
-    );
-    // VSCode Language ID
-    langs.push(
-      _.filter(this.languages, (language: Language): boolean =>
-        _.includes(language.vscodeLanguages, query.vscodeLanguage)
-      )
-    );
-    // Return unique array of Languages
-    return _.uniq(_.flatten(langs));
+    const langs: Language[] = [
+      ...this.languages.filter(lang => lang.name === query.name),
+      ...this.languages.filter(lang => lang.namespace === query.namespace),
+      ...this.languages.filter(lang => query.extension && lang.extensions.indexOf(query.extension) !== -1),
+      ...this.languages.filter(lang => query.atomGrammar && lang.atomGrammars.indexOf(query.atomGrammar) !== -1),
+      ...this.languages.filter(lang => query.sublimeSyntax && lang.sublimeSyntaxes.indexOf(query.sublimeSyntax) !== -1),
+      ...this.languages.filter(lang => query.vscodeLanguage && lang.vscodeLanguages.indexOf(query.vscodeLanguage) !== -1),
+    ];
+
+    return this.unique(langs);
+  }
+
+  private unique(array: any[]): any[] {
+    return array.reduce((acc, val) => acc.indexOf(val) === -1
+      ? acc.concat(val)
+      : acc
+    , []);
   }
 
   /**
@@ -485,8 +463,8 @@ export class Unibeautify {
    * Get first loaded beautifier for given language.
    */
   private getBeautifierForLanguage(language: Language): Beautifier | undefined {
-    return _.find(this.beautifiers, (beautifier: Beautifier): boolean =>
-      this.doesBeautifierSupportLanguage(beautifier, language)
+    return this.beautifiers.find(
+      beautifier => this.doesBeautifierSupportLanguage(beautifier, language)
     );
   }
 
@@ -494,10 +472,8 @@ export class Unibeautify {
    * Find and return the appropriate Beautifiers for the given Language.
    */
   public getBeautifiersForLanguage(language: Language): BeautifierInternal[] {
-    return _.filter(
-      this.beautifiers,
-      (beautifier: BeautifierInternal): boolean =>
-        this.doesBeautifierSupportLanguage(beautifier, language)
+    return this.beautifiers.filter(
+      beautifier => this.doesBeautifierSupportLanguage(beautifier, language)
     );
   }
 
@@ -591,36 +567,47 @@ export class Unibeautify {
         return {};
       }
     } else if (typeof beautifierOptions === "object") {
-      const transformedOptions: OptionValues = {};
-      Object.keys(beautifierOptions).forEach(fieldKey => {
-        const op = (<BeautifierLanguageOptionComplex>beautifierOptions)[
-          fieldKey
-        ];
-        if (typeof op === "string") {
-          transformedOptions[fieldKey] = options[op as string];
-        } else if (typeof op === "function") {
-          transformedOptions[
-            fieldKey
-          ] = (op as BeautifyOptionTransformSingleFunction)(options[fieldKey]);
-        } else if (typeof op === "boolean") {
-          if (op === true) {
-            transformedOptions[fieldKey] = options[fieldKey];
-          }
-        } else if (_.isArray(op)) {
-          const [fields, fn] = op as BeautifyOptionTransform;
-          const vals = _.map(fields, field => options[field]);
-          const obj = _.zipObject(fields, vals);
-          transformedOptions[fieldKey] = fn(obj);
+      return Object.keys(beautifierOptions).reduce((acc, key) => {
+        const option = beautifierOptions[key];
+        if (typeof option === "string") {
+          return {
+            [key]: options[option],
+            ...acc,
+          };
+        } else if (typeof option === "function") {
+          return {
+            [key]: option(options[key]),
+            ...acc,
+          };
+        } else if (option === true) {
+          return {
+            [key]: options[key],
+            ...acc,
+          };
+        } else if (option instanceof Array) {
+          const [fields, fn] = option;
+          const values = fields.map(field => options[field]);
+          const obj = this.zipObject(fields, values);
+          return {
+            [key]: fn(obj),
+            ...acc,
+          };
         } else {
           return new Error(
-            `Invalid option "${fieldKey}" with value ${JSON.stringify(op)}.`
+            `Invalid option "${key}" with value ${JSON.stringify(option)}.`
           );
         }
-      });
-      return transformedOptions;
+      }, {});
     } else {
       return options;
     }
+  }
+
+  private static zipObject(keys: string[], values: string[]) {
+    return keys.reduce((acc, key, idx) => ({
+      [key]: values[idx],
+      ...acc,
+    }), {});
   }
 
   /**

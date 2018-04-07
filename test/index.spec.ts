@@ -1,5 +1,4 @@
-import unibeautify, { Beautifier } from "../src/";
-import * as _ from "lodash";
+import unibeautify, { Beautifier, newUnibeautify } from "../src/";
 
 test("should fail to find language", () => {
   expect(
@@ -23,7 +22,7 @@ test("should find JavaScript language and no Beautifier for Language", () => {
 
 test("should find JavaScript Language and Beautifier", () => {
   expect.assertions(1);
-  const unibeautify2 = _.cloneDeep(unibeautify);
+  const unibeautify2 = newUnibeautify();
 
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
@@ -47,7 +46,7 @@ test("should find JavaScript Language and Beautifier", () => {
 });
 
 test("should find JavaScript Language and not Beautifier", () => {
-  const unibeautify2 = _.cloneDeep(unibeautify);
+  const unibeautify2 = newUnibeautify();
 
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
