@@ -29,7 +29,10 @@ export abstract class Dependency {
       .then(isInstalled => {
         if (this.required && !isInstalled) {
           throw new Error(
-            `Dependency "${this.name}" is required and not installed.`
+            [
+              `Dependency "${this.name}" is required and not installed.`,
+              ...this.errors.map(error => `  - ${error.message}`),
+            ].join("\n")
           );
         }
         return isInstalled;
