@@ -5,7 +5,7 @@ import {
 } from "../../src/DependencyManager";
 
 test("should fail to load Executable dependency", async () => {
-  expect.assertions(3);
+  expect.assertions(4);
   const options: DependencyOptions = {
     name: "NotFound",
     program: "NotFound",
@@ -17,6 +17,7 @@ test("should fail to load Executable dependency", async () => {
     expect(error.message).toMatch(
       'Dependency "NotFound" is required and not installed.'
     );
+    expect(error.message).toMatch("spawn NotFound ENOENT");
     expect(dependency.isInstalled).toBe(false);
     expect(dependency.errors).toHaveLength(1);
   });
@@ -279,7 +280,7 @@ describe("successfully loaded Executable dependency", () => {
     });
 
     test("should fail to parse version from text without numbers with RegExp pattern", () => {
-      expect.assertions(2);
+      expect.assertions(3);
       const options: DependencyOptions = {
         name: "Node",
         parseVersion: /v/,
@@ -292,6 +293,7 @@ describe("successfully loaded Executable dependency", () => {
         expect(error.message).toMatch(
           'Dependency "Node" is required and not installed.'
         );
+        expect(error.message).toMatch("Invalid Version:");
       });
     });
 

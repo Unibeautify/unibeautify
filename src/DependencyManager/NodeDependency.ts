@@ -23,17 +23,17 @@ export class NodeDependency extends Dependency {
 
   // tslint:disable-next-line:no-reserved-keywords
   private require(id?: string): any {
-    const modulePath = this.resolve(id);
+    const path = this.fullPath(id);
+    const modulePath = this.resolve(path);
     if (modulePath) {
       // tslint:disable-next-line:no-require-imports non-literal-require
       return require(modulePath);
     } else {
-      throw new Error(`Cannot find module ${id}`);
+      throw new Error(`Cannot find module ${path}`);
     }
   }
 
-  private resolve(file?: string): string | undefined {
-    const path = this.fullPath(file);
+  private resolve(path: string): string | undefined {
     return this.resolveLocal(path) || this.resolveGlobal(path);
   }
 
