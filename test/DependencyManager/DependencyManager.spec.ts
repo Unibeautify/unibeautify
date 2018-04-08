@@ -6,7 +6,7 @@ import {
 } from "../../src/DependencyManager";
 
 test("should fail to load dependencies", async () => {
-  expect.assertions(1);
+  expect.assertions(2);
   const options: DependencyOptions = {
     name: "NotFound",
     package: "notfound",
@@ -18,6 +18,7 @@ test("should fail to load dependencies", async () => {
     expect(error.message).toMatch(
       'Dependency "NotFound" is required and not installed.'
     );
+    expect(error.message).toMatch("Cannot find module notfound/package.json");
   });
 });
 
