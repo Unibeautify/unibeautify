@@ -561,36 +561,36 @@ export class Unibeautify {
         return {};
       }
     } else if (typeof beautifierOptions === "object") {
-      return Object.keys(beautifierOptions).reduce((acc, key) => {
+      return Object.keys(beautifierOptions).reduce((acc: OptionValues, key: string) => {
         const option = beautifierOptions[key];
         if (typeof option === "string") {
           return {
-            [key]: options[option],
             ...acc,
+            [key]: options[option],
           };
         } else if (typeof option === "function") {
           return {
-            [key]: option(options[key]),
             ...acc,
+            [key]: option(options[key]),
           };
         } else if (option === true) {
           return {
-            [key]: options[key],
             ...acc,
+            [key]: options[key],
           };
         } else if (option instanceof Array) {
           const [fields, fn] = option;
           const values = fields.map(field => options[field]);
           const obj = zipObject(fields, values);
           return {
-            [key]: fn(obj),
             ...acc,
+            [key]: fn(obj),
           };
         }
 
         console.log(`Invalid option "${key}" with value ${JSON.stringify(option)}.`);
         return acc;
-      }, {});
+      }, {} as OptionValues);
     } else {
       return options;
     }
