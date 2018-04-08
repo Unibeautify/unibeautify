@@ -588,6 +588,7 @@ export class Unibeautify {
           };
         }
 
+        // tslint:disable-next-line
         console.log(`Invalid option "${key}" with value ${JSON.stringify(option)}.`);
         return acc;
       }, {} as OptionValues);
