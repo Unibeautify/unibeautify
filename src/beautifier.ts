@@ -4,6 +4,7 @@ import { Language } from "./language";
 import { OptionsRegistry } from "./options";
 import { InlineFlagManager } from "./InlineFlagManager";
 import { DependencyOptions, DependencyManager } from "./DependencyManager";
+import { zipObject, unique } from "./utils";
 
 /**
 New name to rename the option (key) to.
@@ -442,14 +443,7 @@ export class Unibeautify {
       ...this.languages.filter(lang => query.vscodeLanguage && lang.vscodeLanguages.indexOf(query.vscodeLanguage) !== -1),
     ];
 
-    return this.unique(langs);
-  }
-
-  private unique(array: any[]): any[] {
-    return array.reduce((acc, val) => acc.indexOf(val) === -1
-      ? acc.concat(val)
-      : acc
-    , []);
+    return unique(langs);
   }
 
   /**
@@ -587,27 +581,19 @@ export class Unibeautify {
         } else if (option instanceof Array) {
           const [fields, fn] = option;
           const values = fields.map(field => options[field]);
-          const obj = this.zipObject(fields, values);
+          const obj = zipObject(fields, values);
           return {
             [key]: fn(obj),
             ...acc,
           };
-        } else {
-          return new Error(
-            `Invalid option "${key}" with value ${JSON.stringify(option)}.`
-          );
         }
+
+        console.log(`Invalid option "${key}" with value ${JSON.stringify(option)}.`);
+        return acc;
       }, {});
     } else {
       return options;
     }
-  }
-
-  private static zipObject(keys: string[], values: string[]) {
-    return keys.reduce((acc, key, idx) => ({
-      [key]: values[idx],
-      ...acc,
-    }), {});
   }
 
   /**
