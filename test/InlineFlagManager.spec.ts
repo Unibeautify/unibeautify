@@ -1,5 +1,4 @@
 // tslint:disable:no-multiline-string
-import * as _ from "lodash";
 import * as dedent from "dedent";
 
 import { InlineFlagManager } from "../src/InlineFlagManager";

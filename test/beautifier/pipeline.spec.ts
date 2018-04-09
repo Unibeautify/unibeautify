@@ -1,5 +1,4 @@
 import { newUnibeautify, Beautifier } from "../../src/";
-import * as _ from "lodash";
 
 test("should fail when beautifiers option containers unknown beautifier", () => {
   const unibeautify = newUnibeautify();
