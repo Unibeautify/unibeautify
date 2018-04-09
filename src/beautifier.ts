@@ -443,7 +443,7 @@ export class Unibeautify {
       ...this.languages.filter(lang => query.vscodeLanguage && lang.vscodeLanguages.indexOf(query.vscodeLanguage) !== -1),
     ];
 
-    return unique(langs);
+    return unique<Language>(langs);
   }
 
   /**
