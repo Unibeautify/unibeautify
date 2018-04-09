@@ -2,9 +2,14 @@ import {
   Unibeautify,
   Language,
   Beautifier,
-  DependencyOptions,
+  DependencyDefinition,
   DependencyType,
+  DependencyManager,
 } from "../../src/";
+
+beforeEach(() => {
+  DependencyManager.clearRegistry();
+});
 
 test("should throw Error when dependency type is unknown", () => {
   const unibeautify = new Unibeautify();
@@ -52,7 +57,7 @@ describe("Node", () => {
     unibeautify.loadLanguage(lang);
 
     const beautifierResult = "Testing Result";
-    const dependency: DependencyOptions = {
+    const dependency: DependencyDefinition = {
       name: "Fakedep",
       package: "fake",
       type: DependencyType.Node,
@@ -96,7 +101,7 @@ describe("Executable", () => {
     unibeautify.loadLanguage(lang);
 
     const beautifierResult = "Testing Result";
-    const dependency: DependencyOptions = {
+    const dependency: DependencyDefinition = {
       name: "Fake Program",
       parseVersion: text => "",
       program: "fakeprogram",

@@ -1,11 +1,11 @@
-import { Dependency, NodeDependencyOptions } from "./Dependency";
+import { Dependency, NodeDependencyDefinition, DependencyOptions } from "./Dependency";
 
 // tslint:disable-next-line:no-require-imports no-var-requires
 const requireg = require("requireg");
 
 export class NodeDependency extends Dependency {
-  constructor(protected options: NodeDependencyOptions) {
-    super(options);
+  constructor(protected definition: NodeDependencyDefinition, options: DependencyOptions = {}) {
+    super(definition, options);
   }
 
   protected loadVersion() {
@@ -65,6 +65,6 @@ export class NodeDependency extends Dependency {
   }
 
   private get packageName(): string {
-    return this.options.package;
+    return this.definition.package;
   }
 }

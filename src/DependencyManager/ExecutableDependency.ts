@@ -1,10 +1,17 @@
 import { spawn, SpawnOptions } from "child_process";
 
-import { Dependency, ExecutableDependencyOptions } from "./Dependency";
+import {
+  Dependency,
+  ExecutableDependencyDefinition,
+  DependencyOptions,
+} from "./Dependency";
 
 export class ExecutableDependency extends Dependency {
-  constructor(protected options: ExecutableDependencyOptions) {
-    super(options);
+  constructor(
+    protected definition: ExecutableDependencyDefinition,
+    options: DependencyOptions = {}
+  ) {
+    super(definition, options);
   }
 
   protected loadVersion() {
@@ -12,7 +19,7 @@ export class ExecutableDependency extends Dependency {
   }
 
   private get versionArgs(): string[] {
-    return this.options.versionArgs || ["--version"];
+    return this.definition.versionArgs || ["--version"];
   }
 
   public run({
@@ -25,7 +32,7 @@ export class ExecutableDependency extends Dependency {
     stdin?: any;
   }): Promise<RunResponse> {
     return this.resolveArgs(args).then(finalArgs =>
-      this.spawn({ exe: this.program, args: finalArgs, options, stdin })
+      this.spawn({ exe: this.pathOrProgram, args: finalArgs, options, stdin })
     );
   }
 
@@ -35,8 +42,16 @@ export class ExecutableDependency extends Dependency {
     );
   }
 
+  private get pathOrProgram(): string {
+    return this.programPath || this.program;
+  }
+
   private get program(): string {
-    return this.options.program;
+    return this.definition.program;
+  }
+
+  private get programPath(): string | undefined {
+    return this.options.path;
   }
 
   private spawn({

@@ -5,7 +5,7 @@ export abstract class Dependency {
   private _version?: Version;
   private _errors: Error[] = [];
 
-  constructor(protected options: DependencyOptions) {}
+  constructor(protected definition: DependencyDefinition, protected options: DependencyOptions) {}
 
   public load(): Promise<boolean> {
     if (this.isInstalled) {
@@ -44,7 +44,7 @@ export abstract class Dependency {
   }
 
   private versionFromText(text: string): string | undefined {
-    const { parseVersion } = this.options;
+    const { parseVersion } = this.definition;
     if (!parseVersion) {
       return text;
     }
@@ -93,11 +93,11 @@ export abstract class Dependency {
   }
 
   public get name(): string {
-    return this.options.name;
+    return this.definition.name;
   }
 
   public get required(): boolean {
-    return !Boolean(this.options.optional);
+    return !Boolean(this.definition.optional);
   }
 
   public get version(): Version | undefined {
@@ -109,7 +109,7 @@ export abstract class Dependency {
   }
 }
 
-export interface BaseDependencyOptions {
+export interface BaseDependencyDefinition {
   // tslint:disable-next-line:no-reserved-keywords
   type: DependencyType;
   name: string;
@@ -132,14 +132,14 @@ export type DependencyVersionParserFunction = (
   text: string
 ) => string | undefined;
 
-export interface NodeDependencyOptions extends BaseDependencyOptions {
+export interface NodeDependencyDefinition extends BaseDependencyDefinition {
   // tslint:disable-next-line:no-reserved-keywords
   type: DependencyType.Node;
   // tslint:disable-next-line:no-reserved-keywords
   package: string;
 }
 
-export interface ExecutableDependencyOptions extends BaseDependencyOptions {
+export interface ExecutableDependencyDefinition extends BaseDependencyDefinition {
   // tslint:disable-next-line:no-reserved-keywords
   type: DependencyType.Executable;
   program: string;
@@ -149,6 +149,16 @@ export interface ExecutableDependencyOptions extends BaseDependencyOptions {
   };
 }
 
-export type DependencyOptions =
-  | NodeDependencyOptions
-  | ExecutableDependencyOptions;
+export type DependencyDefinition =
+  | NodeDependencyDefinition
+  | ExecutableDependencyDefinition;
+
+export interface DependencyOptions {
+  // prefer_beautifier_config?: string;
+  // executables?: { [executableName: string]: ExecutableConfig };
+  path?: string;
+}
+
+// export interface ExecutableConfig {
+//   path?: string;
+// }

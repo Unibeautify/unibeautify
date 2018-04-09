@@ -16,7 +16,7 @@ module.exports = {
     "<rootDir>/node_modules/",
   ],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
-  collectCoverage: true,
+  // collectCoverage: true,
   coverageReporters: ["json", "lcov", "text", "html"],
   coveragePathIgnorePatterns: [
     "<rootDir>/__mocks__/",

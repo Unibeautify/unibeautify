@@ -1,18 +1,24 @@
 import {
-  DependencyOptions,
+  DependencyDefinition,
   DependencyType,
   DependencyManager,
   NodeDependency,
 } from "../../src/DependencyManager";
 
+beforeEach(() => {
+  DependencyManager.clearRegistry();
+});
+
+const beautifierName = "beautifierName";
+
 test("should fail to load dependencies", async () => {
   expect.assertions(2);
-  const options: DependencyOptions = {
+  const options: DependencyDefinition = {
     name: "NotFound",
     package: "notfound",
     type: DependencyType.Node,
   };
-  const manager = new DependencyManager([options]);
+  const manager = new DependencyManager(beautifierName, [options]);
 
   return await manager.load().catch(error => {
     expect(error.message).toMatch(
@@ -25,12 +31,12 @@ test("should fail to load dependencies", async () => {
 describe("successfully loads dependency", () => {
   test("should successfully load dependencies", async () => {
     expect.assertions(1);
-    const options: DependencyOptions = {
+    const options: DependencyDefinition = {
       name: "FakeDep",
       package: "fakedep",
       type: DependencyType.Node,
     };
-    const manager = new DependencyManager([options]);
+    const manager = new DependencyManager(beautifierName, [options]);
 
     return await expect(manager.load()).resolves.toBe(true);
   });
@@ -38,12 +44,12 @@ describe("successfully loads dependency", () => {
   test("should have package", async () => {
     expect.assertions(1);
     const packageName = "fakedep";
-    const options: DependencyOptions = {
+    const options: DependencyDefinition = {
       name: packageName,
       package: packageName,
       type: DependencyType.Node,
     };
-    const manager = new DependencyManager([options]);
+    const manager = new DependencyManager(beautifierName, [options]);
 
     return await manager.load().then(() => {
       expect(manager.has(packageName)).toBe(true);
@@ -53,12 +59,12 @@ describe("successfully loads dependency", () => {
   test("should get package", async () => {
     expect.assertions(1);
     const packageName = "fakedep";
-    const options: DependencyOptions = {
+    const options: DependencyDefinition = {
       name: packageName,
       package: packageName,
       type: DependencyType.Node,
     };
-    const manager = new DependencyManager([options]);
+    const manager = new DependencyManager(beautifierName, [options]);
 
     return await manager.load().then(() => {
       const dep = manager.get<NodeDependency>(packageName);
@@ -69,12 +75,12 @@ describe("successfully loads dependency", () => {
   test("should get package vesion", async () => {
     expect.assertions(6);
     const packageName = "fakedep";
-    const options: DependencyOptions = {
+    const options: DependencyDefinition = {
       name: packageName,
       package: packageName,
       type: DependencyType.Node,
     };
-    const manager = new DependencyManager([options]);
+    const manager = new DependencyManager(beautifierName, [options]);
 
     return await manager.load().then(() => {
       expect(manager.has(packageName)).toBe(true);
@@ -93,11 +99,11 @@ describe("successfully loads dependency", () => {
 });
 
 describe("get", () => {
-  test("should throw error if package not found", async () => {
+  test("should throw error if package not found", () => {
     expect.assertions(1);
     const packageName = "fakedep";
-    const manager = new DependencyManager([]);
-    return await manager.load().then(() => {
+    const manager = new DependencyManager(beautifierName, []);
+    return manager.load().then(() => {
       expect(() => manager.get<NodeDependency>(packageName)).toThrowError();
     });
   });

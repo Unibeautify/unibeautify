@@ -1,33 +1,58 @@
 import {
   ExecutableDependency,
   DependencyType,
+  DependencyDefinition,
   DependencyOptions,
 } from "../../src/DependencyManager";
 
-test("should fail to load Executable dependency", async () => {
-  expect.assertions(4);
-  const options: DependencyOptions = {
-    name: "NotFound",
-    program: "NotFound",
-    type: DependencyType.Executable,
-  };
-  const dependency = new ExecutableDependency(options);
+describe("fail to load Executable dependency", () => {
+  test("should fail to load Executable dependency", async () => {
+    expect.assertions(4);
+    const def: DependencyDefinition = {
+      name: "NotFound",
+      program: "NotFound",
+      type: DependencyType.Executable,
+    };
+    const dependency = new ExecutableDependency(def);
 
-  return await dependency.load().catch(error => {
-    expect(error.message).toMatch(
-      'Dependency "NotFound" is required and not installed.'
-    );
-    expect(error.message).toMatch("spawn NotFound ENOENT");
-    expect(dependency.isInstalled).toBe(false);
-    expect(dependency.errors).toHaveLength(1);
+    return await dependency.load().catch(error => {
+      expect(error.message).toMatch(
+        'Dependency "NotFound" is required and not installed.'
+      );
+      expect(error.message).toMatch("spawn NotFound ENOENT");
+      expect(dependency.isInstalled).toBe(false);
+      expect(dependency.errors).toHaveLength(1);
+    });
+  });
+
+  test("should fail to load Executable dependency with incorrect path", () => {
+    expect.assertions(4);
+    const def: DependencyDefinition = {
+      name: "Node",
+      program: "node",
+      type: DependencyType.Executable,
+    };
+    const options: DependencyOptions = {
+      path: "/this/is/not/going/to/work",
+    };
+    const dependency = new ExecutableDependency(def, options);
+
+    return dependency.load().catch(error => {
+      expect(error.message).toMatch(
+        'Dependency "Node" is required and not installed.'
+      );
+      expect(error.message).toMatch(`spawn ${options.path} ENOENT`);
+      expect(dependency.isInstalled).toBe(false);
+      expect(dependency.errors).toHaveLength(1);
+    });
   });
 });
 
-describe("successfully loaded Executable dependency", () => {
+describe("successfully load Executable dependency", () => {
   describe("Load", () => {
     test("should successfully load Executable dependency", async () => {
       expect.assertions(3);
-      const options: DependencyOptions = {
+      const options: DependencyDefinition = {
         name: "Node",
         program: "node",
         type: DependencyType.Executable,
@@ -43,7 +68,7 @@ describe("successfully loaded Executable dependency", () => {
 
     test("should successfully run command for Executable dependency", async () => {
       expect.assertions(2);
-      const options: DependencyOptions = {
+      const options: DependencyDefinition = {
         name: "Node",
         program: "node",
         type: DependencyType.Executable,
@@ -61,7 +86,7 @@ describe("successfully loaded Executable dependency", () => {
     describe("Run", () => {
       test("should return stdout", () => {
         expect.assertions(2);
-        const options: DependencyOptions = {
+        const options: DependencyDefinition = {
           name: "Node",
           program: "node",
           type: DependencyType.Executable,
@@ -82,7 +107,7 @@ describe("successfully loaded Executable dependency", () => {
 
       test("should return stderr", () => {
         expect.assertions(2);
-        const options: DependencyOptions = {
+        const options: DependencyDefinition = {
           name: "Node",
           program: "node",
           type: DependencyType.Executable,
@@ -103,7 +128,7 @@ describe("successfully loaded Executable dependency", () => {
 
       test("should return exit code", () => {
         expect.assertions(3);
-        const options: DependencyOptions = {
+        const options: DependencyDefinition = {
           name: "Node",
           program: "node",
           type: DependencyType.Executable,
@@ -125,7 +150,7 @@ describe("successfully loaded Executable dependency", () => {
 
       test("should accept stdin parameter", () => {
         expect.assertions(2);
-        const options: DependencyOptions = {
+        const options: DependencyDefinition = {
           name: "Node",
           program: "node",
           type: DependencyType.Executable,
@@ -151,7 +176,7 @@ describe("successfully loaded Executable dependency", () => {
 
     test("should only load once", async () => {
       expect.assertions(5);
-      const options: DependencyOptions = {
+      const options: DependencyDefinition = {
         name: "Node",
         program: "node",
         type: DependencyType.Executable,
@@ -179,7 +204,7 @@ describe("successfully loaded Executable dependency", () => {
   describe("Parse Version", () => {
     test("should successfully parse version with function", () => {
       expect.assertions(2);
-      const options: DependencyOptions = {
+      const options: DependencyDefinition = {
         name: "Node",
         parseVersion: (text: string) => {
           const matches = text.match(/v(\d+.\d+.\d+)/);
@@ -198,7 +223,7 @@ describe("successfully loaded Executable dependency", () => {
     });
     test("should successfully parse version with string pattern", () => {
       expect.assertions(2);
-      const options: DependencyOptions = {
+      const options: DependencyDefinition = {
         name: "Node",
         parseVersion: "v(\\d+.\\d+.\\d+)",
         program: "node",
@@ -214,7 +239,7 @@ describe("successfully loaded Executable dependency", () => {
     });
     test("should successfully parse version with RegExp pattern", () => {
       expect.assertions(2);
-      const options: DependencyOptions = {
+      const options: DependencyDefinition = {
         name: "Node",
         parseVersion: /v(\d+\.\d+\.\d+)/,
         program: "node",
@@ -231,7 +256,7 @@ describe("successfully loaded Executable dependency", () => {
 
     test("should successfully parse version with array of string patterns", () => {
       expect.assertions(2);
-      const options: DependencyOptions = {
+      const options: DependencyDefinition = {
         name: "Node",
         parseVersion: ["invalid", "v(\\d+.\\d+.\\d+)"],
         program: "node",
@@ -247,7 +272,7 @@ describe("successfully loaded Executable dependency", () => {
     });
     test("should successfully parse version with array of RegExp patterns", () => {
       expect.assertions(2);
-      const options: DependencyOptions = {
+      const options: DependencyDefinition = {
         name: "Node",
         parseVersion: [/invalid/, /v(\d+\.\d+\.\d+)/],
         program: "node",
@@ -264,7 +289,7 @@ describe("successfully loaded Executable dependency", () => {
 
     test("should successfully parse partial (major.minor) version with RegExp pattern", () => {
       expect.assertions(2);
-      const options: DependencyOptions = {
+      const options: DependencyDefinition = {
         name: "Node",
         parseVersion: /v(\d+\.\d+)/,
         program: "node",
@@ -281,7 +306,7 @@ describe("successfully loaded Executable dependency", () => {
 
     test("should fail to parse version from text without numbers with RegExp pattern", () => {
       expect.assertions(3);
-      const options: DependencyOptions = {
+      const options: DependencyDefinition = {
         name: "Node",
         parseVersion: /v/,
         program: "node",
@@ -300,7 +325,7 @@ describe("successfully loaded Executable dependency", () => {
     test("should successfully parse version and return first valid version from array of patterns", () => {
       expect.assertions(14);
 
-      const options1: DependencyOptions = {
+      const options1: DependencyDefinition = {
         name: "Fake Program 1",
         parseVersion: ["invalid", "v(\\d+.\\d+.\\d+)", "v(\\d+)"],
         program: "node",
@@ -308,7 +333,7 @@ describe("successfully loaded Executable dependency", () => {
         versionArgs: ["-e", "console.log('v1.2.3')"],
       };
       const dependency1 = new ExecutableDependency(options1);
-      const options2: DependencyOptions = {
+      const options2: DependencyDefinition = {
         name: "Fake Program 2",
         parseVersion: ["invalid", "v(\\d+)", "v(\\d+.\\d+.\\d+)"],
         program: "node",
