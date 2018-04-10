@@ -154,11 +154,5 @@ export type DependencyDefinition =
   | ExecutableDependencyDefinition;
 
 export interface DependencyOptions {
-  // prefer_beautifier_config?: string;
-  // executables?: { [executableName: string]: ExecutableConfig };
   path?: string;
 }
-
-// export interface ExecutableConfig {
-//   path?: string;
-// }
