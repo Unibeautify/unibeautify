@@ -1,9 +1,17 @@
-import { Dependency, DependencyType, DependencyDefinition, DependencyOptions } from "./Dependency";
+import {
+  Dependency,
+  DependencyType,
+  DependencyDefinition,
+  DependencyOptions,
+} from "./Dependency";
 import { NodeDependency } from "./NodeDependency";
 import { ExecutableDependency } from "./ExecutableDependency";
 
 export class DependencyFactory {
-  constructor(private definition: DependencyDefinition, private options: DependencyOptions) {}
+  constructor(
+    private definition: DependencyDefinition,
+    private options: DependencyOptions
+  ) {}
 
   public dependency(): Dependency {
     const { definition, options } = this;

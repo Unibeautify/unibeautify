@@ -3,7 +3,9 @@ import { Unibeautify, Language, Beautifier } from "../../src/";
 test("should fail to load undefined beautifier", () => {
   const unibeautify = new Unibeautify();
   const beautifier: Beautifier = undefined as any;
-  expect(() => unibeautify.loadBeautifier(beautifier)).toThrowError("Beautifier is missing a \"name\" property.");
+  expect(() => unibeautify.loadBeautifier(beautifier)).toThrowError(
+    'Beautifier is missing a "name" property.'
+  );
 });
 
 test("should fail to load beautifier without name", () => {
@@ -18,7 +20,9 @@ test("should fail to load beautifier without name", () => {
       TestLang: false,
     },
   };
-  expect(() => unibeautify.loadBeautifier(beautifier)).toThrowError("Beautifier is missing a \"name\" property.");
+  expect(() => unibeautify.loadBeautifier(beautifier)).toThrowError(
+    'Beautifier is missing a "name" property.'
+  );
 });
 
 test("should load beautifier", () => {

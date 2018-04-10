@@ -1,10 +1,17 @@
-import { Dependency, NodeDependencyDefinition, DependencyOptions } from "./Dependency";
+import {
+  Dependency,
+  NodeDependencyDefinition,
+  DependencyOptions,
+} from "./Dependency";
 
 // tslint:disable-next-line:no-require-imports no-var-requires
 const requireg = require("requireg");
 
 export class NodeDependency extends Dependency {
-  constructor(protected definition: NodeDependencyDefinition, options: DependencyOptions = {}) {
+  constructor(
+    protected definition: NodeDependencyDefinition,
+    options: DependencyOptions = {}
+  ) {
     super(definition, options);
   }
 
