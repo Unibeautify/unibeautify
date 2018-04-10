@@ -1,4 +1,3 @@
-// tslint:disable:newspaper-order
 // tslint:disable:no-reserved-keywords
 import { DependencyFactory } from "./DependencyFactory";
 import {
@@ -22,6 +21,14 @@ export class DependencyManager {
     this.initializeDependencies();
   }
 
+  public load(): Promise<boolean> {
+    return Promise.all(
+      this.dependencyDefinitions
+        .map(def => this.get(def.name))
+        .map(dep => dep.load())
+    ).then(() => true);
+  }
+
   private initializeDependencies(): void {
     const lookup = DependencyManager.registry;
     const beautifierLookup = lookup[this.beautifierName] || {};
@@ -38,20 +45,8 @@ export class DependencyManager {
     });
   }
 
-  private optionsForDependency(dependencyName: string): DependencyOptions {
-    return this.options[dependencyName];
-  }
-
   public has(name: string): boolean {
     return Boolean(this.get(name));
-  }
-
-  public load(): Promise<boolean> {
-    return Promise.all(
-      this.dependencyDefinitions
-        .map(def => this.get(def.name))
-        .map(dep => dep.load())
-    ).then(() => true);
   }
 
   public get<T extends Dependency>(dependencyName: string): T {
@@ -63,6 +58,10 @@ export class DependencyManager {
       throw new Error(`Dependency with name ${dependencyName} not found.`);
     }
     return dep;
+  }
+
+  private optionsForDependency(dependencyName: string): DependencyOptions {
+    return this.options[dependencyName];
   }
 
   protected get registry(): DependencyRegistry[string] {
