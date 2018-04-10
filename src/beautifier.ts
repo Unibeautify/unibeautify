@@ -438,10 +438,25 @@ export class Unibeautify {
     const langs: Language[] = [
       ...this.languages.filter(lang => lang.name === query.name),
       ...this.languages.filter(lang => lang.namespace === query.namespace),
-      ...this.languages.filter(lang => query.extension && lang.extensions.indexOf(query.extension) !== -1),
-      ...this.languages.filter(lang => query.atomGrammar && lang.atomGrammars.indexOf(query.atomGrammar) !== -1),
-      ...this.languages.filter(lang => query.sublimeSyntax && lang.sublimeSyntaxes.indexOf(query.sublimeSyntax) !== -1),
-      ...this.languages.filter(lang => query.vscodeLanguage && lang.vscodeLanguages.indexOf(query.vscodeLanguage) !== -1),
+      ...this.languages.filter(
+        lang =>
+          query.extension && lang.extensions.indexOf(query.extension) !== -1
+      ),
+      ...this.languages.filter(
+        lang =>
+          query.atomGrammar &&
+          lang.atomGrammars.indexOf(query.atomGrammar) !== -1
+      ),
+      ...this.languages.filter(
+        lang =>
+          query.sublimeSyntax &&
+          lang.sublimeSyntaxes.indexOf(query.sublimeSyntax) !== -1
+      ),
+      ...this.languages.filter(
+        lang =>
+          query.vscodeLanguage &&
+          lang.vscodeLanguages.indexOf(query.vscodeLanguage) !== -1
+      ),
     ];
 
     return unique<Language>(langs);
@@ -458,8 +473,8 @@ export class Unibeautify {
    * Get first loaded beautifier for given language.
    */
   private getBeautifierForLanguage(language: Language): Beautifier | undefined {
-    return this.beautifiers.find(
-      beautifier => this.doesBeautifierSupportLanguage(beautifier, language)
+    return this.beautifiers.find(beautifier =>
+      this.doesBeautifierSupportLanguage(beautifier, language)
     );
   }
 
@@ -467,8 +482,8 @@ export class Unibeautify {
    * Find and return the appropriate Beautifiers for the given Language.
    */
   public getBeautifiersForLanguage(language: Language): Beautifier[] {
-    return this.beautifiers.filter(
-      beautifier => this.doesBeautifierSupportLanguage(beautifier, language)
+    return this.beautifiers.filter(beautifier =>
+      this.doesBeautifierSupportLanguage(beautifier, language)
     );
   }
 
@@ -562,37 +577,42 @@ export class Unibeautify {
         return {};
       }
     } else if (typeof beautifierOptions === "object") {
-      return Object.keys(beautifierOptions).reduce((acc: OptionValues, key: string) => {
-        const option = beautifierOptions[key];
-        if (typeof option === "string") {
-          return {
-            ...acc,
-            [key]: options[option],
-          };
-        } else if (typeof option === "function") {
-          return {
-            ...acc,
-            [key]: option(options[key]),
-          };
-        } else if (option === true) {
-          return {
-            ...acc,
-            [key]: options[key],
-          };
-        } else if (option instanceof Array) {
-          const [fields, fn] = option;
-          const values = fields.map(field => options[field]);
-          const obj = zipObject(fields, values);
-          return {
-            ...acc,
-            [key]: fn(obj),
-          };
-        }
+      return Object.keys(beautifierOptions).reduce(
+        (acc: OptionValues, key: string) => {
+          const option = beautifierOptions[key];
+          if (typeof option === "string") {
+            return {
+              ...acc,
+              [key]: options[option],
+            };
+          } else if (typeof option === "function") {
+            return {
+              ...acc,
+              [key]: option(options[key]),
+            };
+          } else if (option === true) {
+            return {
+              ...acc,
+              [key]: options[key],
+            };
+          } else if (option instanceof Array) {
+            const [fields, fn] = option;
+            const values = fields.map(field => options[field]);
+            const obj = zipObject(fields, values);
+            return {
+              ...acc,
+              [key]: fn(obj),
+            };
+          }
 
-        // tslint:disable-next-line
-        console.log(`Invalid option "${key}" with value ${JSON.stringify(option)}.`);
-        return acc;
-      }, {} as OptionValues);
+          // tslint:disable-next-line
+          console.log(
+            `Invalid option "${key}" with value ${JSON.stringify(option)}.`
+          );
+          return acc;
+        },
+        {} as OptionValues
+      );
     } else {
       return options;
     }
