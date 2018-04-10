@@ -5,7 +5,10 @@ export abstract class Dependency {
   private _version?: Version;
   private _errors: Error[] = [];
 
-  constructor(protected definition: DependencyDefinition, protected options: DependencyOptions) {}
+  constructor(
+    protected definition: DependencyDefinition,
+    protected options: DependencyOptions
+  ) {}
 
   public load(): Promise<boolean> {
     if (this.isInstalled) {
@@ -139,7 +142,8 @@ export interface NodeDependencyDefinition extends BaseDependencyDefinition {
   package: string;
 }
 
-export interface ExecutableDependencyDefinition extends BaseDependencyDefinition {
+export interface ExecutableDependencyDefinition
+  extends BaseDependencyDefinition {
   // tslint:disable-next-line:no-reserved-keywords
   type: DependencyType.Executable;
   program: string;
