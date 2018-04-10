@@ -7,10 +7,39 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug Tests",
+      "name": "Debug All Tests",
       "runtimeVersion": "9.10.1",
       "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
-      "args": ["--config", "jest.config.js", "--runInBand"],
+      "args": [
+        "--config",
+        "jest.config.js",
+        "--runInBand",
+        "--coverage",
+        "false"
+      ],
+      "runtimeArgs": ["--nolazy"],
+      "console": "internalConsole",
+      "env": {
+        "NODE_ENV": "test"
+      },
+      "protocol": "inspector",
+      "sourceMaps": true,
+      "outFiles": ["${workspaceRoot}/dist/"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Current Tests File",
+      "runtimeVersion": "9.10.1",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "--config",
+        "jest.config.js",
+        "--runInBand",
+        "--coverage",
+        "false",
+        "${fileBasename}"
+      ],
       "runtimeArgs": ["--nolazy"],
       "console": "internalConsole",
       "env": {

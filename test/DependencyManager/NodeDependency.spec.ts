@@ -1,12 +1,12 @@
 import {
   NodeDependency,
   DependencyType,
-  DependencyOptions,
+  DependencyDefinition,
 } from "../../src/DependencyManager";
 
 test("should fail to load Node dependency", async () => {
   expect.assertions(5);
-  const options: DependencyOptions = {
+  const options: DependencyDefinition = {
     name: "NotFound",
     package: "notfound",
     type: DependencyType.Node,
@@ -30,7 +30,7 @@ test("should fail to load Node dependency", async () => {
 describe("successfully loaded local Node dependency", () => {
   test("should successfully load local Node dependency", async () => {
     expect.assertions(4);
-    const options: DependencyOptions = {
+    const options: DependencyDefinition = {
       name: "FakeDep",
       package: "fakedep",
       type: DependencyType.Node,
@@ -49,7 +49,7 @@ describe("successfully loaded local Node dependency", () => {
 describe("successfully loaded global Node dependency", () => {
   test("should successfully load global Node dependency", () => {
     expect.assertions(4);
-    const options: DependencyOptions = {
+    const options: DependencyDefinition = {
       name: "FakeDep",
       package: "global-fakedep",
       type: DependencyType.Node,
