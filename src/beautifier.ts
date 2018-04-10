@@ -366,10 +366,11 @@ export class Unibeautify {
           langOptions
         );
         return promise.then(currentText => {
+          const beautifierOptions = langOptions[beautifier.name] || {};
           const dependencyManager = new DependencyManager(
             beautifier.name,
             beautifier.dependencies || [],
-            langOptions
+            beautifierOptions
           );
           return dependencyManager.load().then(() => {
             return beautifier

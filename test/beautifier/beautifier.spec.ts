@@ -1,5 +1,26 @@
 import { Unibeautify, Language, Beautifier } from "../../src/";
 
+test("should fail to load undefined beautifier", () => {
+  const unibeautify = new Unibeautify();
+  const beautifier: Beautifier = undefined as any;
+  expect(() => unibeautify.loadBeautifier(beautifier)).toThrowError("Beautifier is missing a \"name\" property.");
+});
+
+test("should fail to load beautifier without name", () => {
+  const unibeautify = new Unibeautify();
+  const beautifierResult = "Testing Result";
+  const beautifier: Beautifier = {
+    beautify: ({ Promise }) => {
+      return Promise.resolve(beautifierResult);
+    },
+    name: undefined as any,
+    options: {
+      TestLang: false,
+    },
+  };
+  expect(() => unibeautify.loadBeautifier(beautifier)).toThrowError("Beautifier is missing a \"name\" property.");
+});
+
 test("should load beautifier", () => {
   const unibeautify = new Unibeautify();
   const beautifierResult = "Testing Result";

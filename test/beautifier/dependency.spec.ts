@@ -39,7 +39,7 @@ test("should throw Error when dependency type is unknown", () => {
   };
   return expect(() => {
     unibeautify.loadBeautifier(beautifier);
-  }).toThrowError("");
+  }).toThrowError('Dependency type not found for: {"type":"wrong"}');
 });
 
 describe("Node", () => {
@@ -109,7 +109,7 @@ describe("Executable", () => {
     };
     const beautifier: Beautifier = {
       beautify: ({ Promise, dependencies }) => {
-        dependencies.get("");
+        dependencies.get(dependency.name);
         return Promise.resolve(beautifierResult);
       },
       dependencies: [dependency],
@@ -129,5 +129,95 @@ describe("Executable", () => {
     ).rejects.toThrowError(
       'Dependency "Fake Program" is required and not installed.'
     );
+  });
+
+  test("should successfully beautify text when dependency is installed", () => {
+    const unibeautify = new Unibeautify();
+    const lang: Language = {
+      atomGrammars: [],
+      extensions: ["test"],
+      name: "TestLang",
+      namespace: "test",
+      since: "0.1.0",
+      sublimeSyntaxes: [],
+      vscodeLanguages: [],
+    };
+    unibeautify.loadLanguage(lang);
+
+    const beautifierResult = "Testing Result";
+    const dependency: DependencyDefinition = {
+      name: "Node",
+      program: "node",
+      type: DependencyType.Executable,
+    };
+    const beautifier: Beautifier = {
+      beautify: ({ Promise, dependencies }) => {
+        dependencies.get(dependency.name);
+        return Promise.resolve(beautifierResult);
+      },
+      dependencies: [dependency],
+      name: "TestBeautify",
+      options: {
+        TestLang: false,
+      },
+    };
+    unibeautify.loadBeautifier(beautifier);
+
+    return expect(
+      unibeautify.beautify({
+        languageName: "TestLang",
+        options: {},
+        text: "test",
+      })
+    ).resolves.toBe(beautifierResult);
+  });
+
+  test("should throw Error when path configuration for dependency is incorrect", () => {
+    const unibeautify = new Unibeautify();
+    const lang: Language = {
+      atomGrammars: [],
+      extensions: ["test"],
+      name: "TestLang",
+      namespace: "test",
+      since: "0.1.0",
+      sublimeSyntaxes: [],
+      vscodeLanguages: [],
+    };
+    unibeautify.loadLanguage(lang);
+
+    const beautifierResult = "Testing Result";
+    const dependency: DependencyDefinition = {
+      name: "Node",
+      program: "node",
+      type: DependencyType.Executable,
+    };
+    const beautifier: Beautifier = {
+      beautify: ({ Promise, dependencies }) => {
+        dependencies.get(dependency.name);
+        return Promise.resolve(beautifierResult);
+      },
+      dependencies: [dependency],
+      name: "TestBeautify",
+      options: {
+        TestLang: false,
+      },
+    };
+    unibeautify.loadBeautifier(beautifier);
+
+    return expect(
+      unibeautify.beautify({
+        languageName: "TestLang",
+        options: {
+          TestLang: {
+            [beautifier.name]: {
+              Node: {
+                path: "/this/path/is/wrong",
+              },
+            } as any,
+          },
+        },
+        text: "test",
+      })
+    ).rejects.toThrowError('Dependency "Node" is required and not installed.');
   });
 });
