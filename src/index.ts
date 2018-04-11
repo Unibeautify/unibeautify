@@ -11,7 +11,7 @@ import { Languages } from "./languages";
 export function newUnibeautify(): Unibeautify {
   const unibeautify = new Unibeautify();
   unibeautify.loadOptions(Options);
-  unibeautify.loadLanguages(Languages);
+  unibeautify.languageManager.loadLanguages(Languages);
   return unibeautify;
 }
 export default newUnibeautify(); // tslint:disable-line no-default-export export-name

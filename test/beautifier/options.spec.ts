@@ -56,7 +56,7 @@ test("should get languages with a loaded beautifier supporting the given option"
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguages([lang1, lang2]);
+  unibeautify.languageManager.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
     beautify: ({ Promise }) => {
@@ -105,7 +105,7 @@ test("should get beautifiers with a loaded language supporting the given option"
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguages([lang1, lang2]);
+  unibeautify.languageManager.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier1: Beautifier = {
     beautify: ({ Promise }) => {
@@ -168,7 +168,7 @@ test("should correctly determine whether beautifier supports option for a langua
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguages([lang1, lang2]);
+  unibeautify.languageManager.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier1: Beautifier = {
     beautify: ({ Promise }) => {
@@ -274,7 +274,7 @@ test("should get options supported for a language", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguages([lang1, lang2]);
+  unibeautify.languageManager.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier1: Beautifier = {
     beautify: ({ Promise }) => {
@@ -342,7 +342,7 @@ test("should get options supported by a beautifier for a language", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguages([lang1, lang2]);
+  unibeautify.languageManager.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier1: Beautifier = {
     beautify: ({ Promise }) => {
@@ -425,7 +425,7 @@ test(
       sublimeSyntaxes: [],
       vscodeLanguages: [],
     };
-    unibeautify.loadLanguage(lang1);
+    unibeautify.languageManager.loadLanguage(lang1);
     const beautifierResult = "Testing Result";
     const beautifier: Beautifier = {
       beautify: ({ Promise }) => {

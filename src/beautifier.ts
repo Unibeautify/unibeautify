@@ -1,6 +1,6 @@
 import * as _ from "lodash";
 
-import { Language } from "./language";
+import { Language, LanguageManager } from "./language";
 import { OptionsRegistry } from "./options";
 import { InlineFlagManager } from "./InlineFlagManager";
 import { DependencyDefinition, DependencyManager } from "./DependencyManager";
@@ -181,11 +181,13 @@ export class Unibeautify {
   /**
 
   */
-  private languages: Language[] = [];
+  private beautifiers: Beautifier[] = [];
   /**
 
   */
-  private beautifiers: Beautifier[] = [];
+  public languageManager = new LanguageManager();
+
+
 
   /**
    * Get loaded languages which have a loaded beautifier supporting the given option
@@ -249,7 +251,7 @@ export class Unibeautify {
    * Get all loaded languages which have at least one supporting beautifier.
    */
   public get supportedLanguages(): Language[] {
-    return this.getLoadedLanguages().filter(language =>
+    return this.languageManager.getLoadedLanguages().filter(language =>
       Boolean(this.getBeautifierForLanguage(language))
     );
   }
@@ -258,7 +260,7 @@ export class Unibeautify {
   Beautify code
   */
   public beautify(data: BeautifyData): Promise<string> {
-    const lang: Language | null = this.getLanguage(data);
+    const lang: Language | null = this.languageManager.getLanguage(data);
     if (lang == null) {
       return Promise.reject(new Error("Cannot find language."));
     }
@@ -290,21 +292,6 @@ export class Unibeautify {
       projectPath: data.projectPath,
       text: data.text,
     });
-  }
-
-  private getLanguage(data: {
-    atomGrammar?: BeautifyData["atomGrammar"];
-    fileExtension?: BeautifyData["fileExtension"];
-    languageName?: BeautifyData["languageName"];
-    sublimeSyntax?: BeautifyData["sublimeSyntax"];
-  }): Language | null {
-    const langs: Language[] = this.findLanguages({
-      atomGrammar: data.atomGrammar,
-      extension: data.fileExtension,
-      name: data.languageName,
-      sublimeSyntax: data.sublimeSyntax,
-    });
-    return langs.length > 0 ? langs[0] : null;
   }
 
   private beautifiersForLanguageAndOptions(
@@ -398,78 +385,6 @@ export class Unibeautify {
   }
 
   /**
-  Find and return the appropriate Languages that match any of the given filter criteria.
-  An empty array will be returned if there are no matches.
-
-  Precedence:
-  - name
-  - namespace
-  - extension
-  - atomGrammar
-  - sublimeSyntax
-  - vscodeLanguage
-  */
-  public findLanguages(query: {
-    /**
-    Language name
-    */
-    name?: string;
-    /**
-    Language namespace
-    */
-    namespace?: string;
-    /**
-    Language extension
-    */
-    extension?: string;
-    /**
-    Language Atom grammar
-    */
-    atomGrammar?: string;
-    /*
-    Language Sublime Syntax
-    */
-    sublimeSyntax?: string;
-    /**
-     * VSCode Language ID
-     */
-    vscodeLanguage?: string;
-  }): Language[] {
-    const langs: Language[] = [
-      ...this.languages.filter(lang => lang.name === query.name),
-      ...this.languages.filter(lang => lang.namespace === query.namespace),
-      ...this.languages.filter(
-        lang =>
-          query.extension && lang.extensions.indexOf(query.extension) !== -1
-      ),
-      ...this.languages.filter(
-        lang =>
-          query.atomGrammar &&
-          lang.atomGrammars.indexOf(query.atomGrammar) !== -1
-      ),
-      ...this.languages.filter(
-        lang =>
-          query.sublimeSyntax &&
-          lang.sublimeSyntaxes.indexOf(query.sublimeSyntax) !== -1
-      ),
-      ...this.languages.filter(
-        lang =>
-          query.vscodeLanguage &&
-          lang.vscodeLanguages.indexOf(query.vscodeLanguage) !== -1
-      ),
-    ];
-
-    return unique<Language>(langs);
-  }
-
-  /**
-  Get a shallow copy of the languages currently loaded.
-  */
-  public getLoadedLanguages(): Language[] {
-    return this.languages.slice();
-  }
-
-  /**
    * Get first loaded beautifier for given language.
    */
   private getBeautifierForLanguage(language: Language): Beautifier | undefined {
@@ -502,7 +417,7 @@ export class Unibeautify {
   ): Beautifier[] {
     return this.beautifiers.filter(
       beautifier =>
-        this.languages.findIndex(language =>
+        this.languageManager.getLanguages.findIndex(language =>
           this.doesBeautifierSupportOptionForLanguage({
             beautifier,
             language,
@@ -532,7 +447,7 @@ export class Unibeautify {
    */
   public getLanguagesForBeautifier(beautifier: Beautifier): Language[] {
     const { options } = beautifier;
-    return this.languages.filter(lang => options.hasOwnProperty(lang.name));
+    return this.languageManager.getLanguages.filter(lang => options.hasOwnProperty(lang.name));
   }
 
   /**
@@ -640,22 +555,6 @@ export class Unibeautify {
   */
   public loadBeautifiers(beautifiers: Beautifier[]): Unibeautify {
     beautifiers.forEach(beautifier => this.loadBeautifier(beautifier));
-    return this;
-  }
-
-  /**
-  Load a Language
-  */
-  public loadLanguage(language: Language): Unibeautify {
-    this.languages.push(language);
-    return this;
-  }
-
-  /**
-  Load multiple Languages
-  */
-  public loadLanguages(languages: Language[]): Unibeautify {
-    this.languages.push(...languages);
     return this;
   }
 

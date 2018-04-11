@@ -11,8 +11,8 @@ test("should get all loaded languages", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguage(lang);
-  expect(unibeautify.getLoadedLanguages().map(({ name }) => name)).toEqual([
+  unibeautify.languageManager.loadLanguage(lang);
+  expect(unibeautify.languageManager.getLoadedLanguages().map(({ name }) => name)).toEqual([
     lang.name,
   ]);
 });
@@ -28,7 +28,7 @@ test("should return empty array when no languages are supported with a beautifie
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguage(lang);
+  unibeautify.languageManager.loadLanguage(lang);
   expect(unibeautify.supportedLanguages.map(({ name }) => name)).toEqual([]);
 });
 
@@ -43,7 +43,7 @@ test("should supported languages", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguage(lang);
+  unibeautify.languageManager.loadLanguage(lang);
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
     beautify: ({ Promise }) => {
@@ -80,7 +80,7 @@ test("should loaded languages which support a given beautifier", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguages([lang1, lang2]);
+  unibeautify.languageManager.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
     beautify: ({ Promise }) => {
@@ -117,7 +117,7 @@ test("should loaded languages which support a given beautifier", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguages([lang1, lang2]);
+  unibeautify.languageManager.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
     beautify: ({ Promise }) => {

@@ -82,7 +82,7 @@ test("should successfully beautify text", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguage(lang);
+  unibeautify.languageManager.loadLanguage(lang);
 
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
@@ -116,7 +116,7 @@ test("should fail to find beautifier", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguage(lang);
+  unibeautify.languageManager.loadLanguage(lang);
 
   return expect(
     unibeautify.beautify({
@@ -168,7 +168,7 @@ test("should successfully transform option values for beautifier", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguages([lang1, lang2, lang3]);
+  unibeautify.languageManager.loadLanguages([lang1, lang2, lang3]);
 
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
@@ -244,7 +244,7 @@ test("should successfully ignore-next-line", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguage(lang);
+  unibeautify.languageManager.loadLanguage(lang);
 
   const originalText = "// unibeautify:ignore-next-line\ntest";
   const beautifierResult = "Testing Result";

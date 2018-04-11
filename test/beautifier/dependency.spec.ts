@@ -22,7 +22,7 @@ test("should throw Error when dependency type is unknown", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.loadLanguage(lang);
+  unibeautify.languageManager.loadLanguage(lang);
   const beautifierResult = "Testing Result";
   const dependency: any = {
     type: "wrong",
@@ -54,7 +54,7 @@ describe("Node", () => {
       sublimeSyntaxes: [],
       vscodeLanguages: [],
     };
-    unibeautify.loadLanguage(lang);
+    unibeautify.languageManager.loadLanguage(lang);
 
     const beautifierResult = "Testing Result";
     const dependency: DependencyDefinition = {
@@ -98,7 +98,7 @@ describe("Executable", () => {
       sublimeSyntaxes: [],
       vscodeLanguages: [],
     };
-    unibeautify.loadLanguage(lang);
+    unibeautify.languageManager.loadLanguage(lang);
 
     const beautifierResult = "Testing Result";
     const dependency: DependencyDefinition = {
@@ -142,7 +142,7 @@ describe("Executable", () => {
       sublimeSyntaxes: [],
       vscodeLanguages: [],
     };
-    unibeautify.loadLanguage(lang);
+    unibeautify.languageManager.loadLanguage(lang);
 
     const beautifierResult = "Testing Result";
     const dependency: DependencyDefinition = {
@@ -183,7 +183,7 @@ describe("Executable", () => {
       sublimeSyntaxes: [],
       vscodeLanguages: [],
     };
-    unibeautify.loadLanguage(lang);
+    unibeautify.languageManager.loadLanguage(lang);
 
     const beautifierResult = "Testing Result";
     const dependency: DependencyDefinition = {
