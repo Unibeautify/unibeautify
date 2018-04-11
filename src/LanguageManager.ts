@@ -8,36 +8,6 @@ export class LanguageManager {
   */
   private _languages: Language[] = [];
 
-  /**
-  Get a shallow copy of the languages currently loaded.
-  */
-  public getLoadedLanguages(): Language[] {
-    return this._languages.slice();
-  }
-
-  /**
-  Get a raw copy of the languages currently loaded.
-  */
-  public get languages(): Language[] {
-    return this._languages;
-  }
-
-  /**
-  Load a Language
-  */
-  public loadLanguage(language: Language): LanguageManager {
-    this._languages.push(language);
-    return this;
-  }
-
-  /**
-  Load multiple Languages
-  */
-  public loadLanguages(languages: Language[]): LanguageManager {
-    this._languages.push(...languages);
-    return this;
-  }
-
   public getLanguage(data: {
     atomGrammar?: BeautifyData["atomGrammar"];
     fileExtension?: BeautifyData["fileExtension"];
@@ -89,8 +59,37 @@ export class LanguageManager {
           lang.vscodeLanguages.indexOf(query.vscodeLanguage) !== -1
       ),
     ];
-
     return unique<Language>(langs);
+  }
+
+  /**
+  Get a shallow copy of the languages currently loaded.
+  */
+  public getLoadedLanguages(): Language[] {
+    return this._languages.slice();
+  }
+
+  /**
+  Get a raw copy of the languages currently loaded.
+  */
+  public get languages(): Language[] {
+    return this._languages;
+  }
+
+  /**
+  Load a Language
+  */
+  public loadLanguage(language: Language): LanguageManager {
+    this._languages.push(language);
+    return this;
+  }
+
+  /**
+  Load multiple Languages
+  */
+  public loadLanguages(languages: Language[]): LanguageManager {
+    this._languages.push(...languages);
+    return this;
   }
 }
 

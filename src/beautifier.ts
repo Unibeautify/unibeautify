@@ -1,5 +1,3 @@
-import * as _ from "lodash";
-
 import { Language } from "./language";
 import { LanguageManager, LanguageQuery } from "./LanguageManager";
 import { OptionsRegistry } from "./options";
@@ -183,11 +181,11 @@ export class Unibeautify {
   /**
 
   */
-  public languageManager = new LanguageManager();
+  public languageManager: LanguageManager = new LanguageManager();
   /**
 
   */
-  public optionsManager = new OptionsManager();
+  public optionsManager: OptionsManager = new OptionsManager();
 
   /**
    * Get loaded languages which have a loaded beautifier supporting the given option
