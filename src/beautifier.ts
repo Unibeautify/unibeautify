@@ -1,6 +1,7 @@
 import * as _ from "lodash";
 
-import { Language, LanguageManager } from "./language";
+import { Language } from "./language";
+import { LanguageManager, LanguageQuery } from "./LanguageManager"
 import { OptionsRegistry } from "./options";
 import { InlineFlagManager } from "./InlineFlagManager";
 import { DependencyDefinition, DependencyManager } from "./DependencyManager";
@@ -186,7 +187,6 @@ export class Unibeautify {
 
   */
   public languageManager = new LanguageManager();
-
 
 
   /**
@@ -384,6 +384,10 @@ export class Unibeautify {
     return manager.text;
   }
 
+  public findLanguages(query: LanguageQuery): Language[] {
+    return this.languageManager.findLanguages(query);
+  }
+
   /**
    * Get first loaded beautifier for given language.
    */
@@ -417,7 +421,7 @@ export class Unibeautify {
   ): Beautifier[] {
     return this.beautifiers.filter(
       beautifier =>
-        this.languageManager.getLanguages.findIndex(language =>
+        this.languageManager.languages.findIndex(language =>
           this.doesBeautifierSupportOptionForLanguage({
             beautifier,
             language,
@@ -447,7 +451,7 @@ export class Unibeautify {
    */
   public getLanguagesForBeautifier(beautifier: Beautifier): Language[] {
     const { options } = beautifier;
-    return this.languageManager.getLanguages.filter(lang => options.hasOwnProperty(lang.name));
+    return this.languageManager.languages.filter(lang => options.hasOwnProperty(lang.name));
   }
 
   /**
@@ -555,6 +559,22 @@ export class Unibeautify {
   */
   public loadBeautifiers(beautifiers: Beautifier[]): Unibeautify {
     beautifiers.forEach(beautifier => this.loadBeautifier(beautifier));
+    return this;
+  }
+
+  /**
+  Load a Language
+  */
+  public loadLanguage(language: Language): Unibeautify {
+    this.languageManager.loadLanguage(language);
+    return this;
+  }
+
+  /**
+  Load multiple Languages
+  */
+  public loadLanguages(languages: Language[]): Unibeautify {
+    this.languageManager.loadLanguages(languages);
     return this;
   }
 
