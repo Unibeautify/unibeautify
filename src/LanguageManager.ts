@@ -3,7 +3,6 @@ import { BeautifyData } from "./beautifier";
 import { Language } from "./language";
 
 export class LanguageManager {
-
   constructor(protected _languages: Language[]) {}
 
   public getLanguage(data: {

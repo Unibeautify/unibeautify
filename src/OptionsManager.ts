@@ -2,7 +2,6 @@ import { OptionsRegistry } from "./options";
 import * as _ from "lodash";
 
 export class OptionsManager {
-
   constructor(protected _options: OptionsRegistry) {}
 
   /**
