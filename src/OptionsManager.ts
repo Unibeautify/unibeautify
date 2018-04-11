@@ -2,10 +2,10 @@ import { OptionsRegistry } from "./options";
 import * as _ from "lodash";
 
 export class OptionsManager {
-  /**
 
-  */
-  private _options: OptionsRegistry = {};
+  constructor(
+    protected _options: OptionsRegistry
+  ) {}
 
   /**
    * Get a shallow copy of the options currently loaded.

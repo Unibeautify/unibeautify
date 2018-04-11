@@ -177,15 +177,23 @@ export class Unibeautify {
   /**
 
   */
+ private options: OptionsRegistry = {};
+  /**
+
+  */
+ private languages: Language[] = [];
+  /**
+
+  */
   private beautifiers: Beautifier[] = [];
   /**
 
   */
-  public languageManager: LanguageManager = new LanguageManager();
+  public languageManager: LanguageManager = new LanguageManager(this.languages);
   /**
 
   */
-  public optionsManager: OptionsManager = new OptionsManager();
+  public optionsManager: OptionsManager = new OptionsManager(this.options);
 
   /**
    * Get loaded languages which have a loaded beautifier supporting the given option
