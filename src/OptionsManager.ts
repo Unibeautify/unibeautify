@@ -1,4 +1,3 @@
-import { BeautifyOptionTransform, BeautifyOptionTransformSingleFunction } from "./beautifier";
 import { OptionsRegistry } from "./options";
 import * as _ from "lodash";
 

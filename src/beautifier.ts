@@ -385,15 +385,15 @@ export class Unibeautify {
   }
 
   /**
-  * @deprecated use LanguageManager
-  */
+   * @deprecated use LanguageManager
+   */
   public findLanguages(query: LanguageQuery): Language[] {
     return this.languageManager.findLanguages(query);
   }
 
   /**
-  * @deprecated use LanguageManager
-  */
+   * @deprecated use LanguageManager
+   */
   public getLoadedLanguages(): Language[] {
     return this.languageManager.getLoadedLanguages();
   }
@@ -575,24 +575,24 @@ export class Unibeautify {
   }
 
   /**
-  * @deprecated use LanguageManager
-  */
+   * @deprecated use LanguageManager
+   */
   public loadLanguage(language: Language): Unibeautify {
     this.languageManager.loadLanguage(language);
     return this;
   }
 
   /**
-  * @deprecated use LanguageManager
-  */
+   * @deprecated use LanguageManager
+   */
   public loadLanguages(languages: Language[]): Unibeautify {
     this.languageManager.loadLanguages(languages);
     return this;
   }
 
   /**
-  * @deprecated use OptionsManager
-  */
+   * @deprecated use OptionsManager
+   */
   public loadOptions(options: OptionsRegistry): Unibeautify {
     this.optionsManager.loadOptions(options);
     return this;
