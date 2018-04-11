@@ -7,7 +7,7 @@
   "scripts": {
     "jest": "jest",
     "jest-watch": "jest --watch",
-    "test": "npm-run-all build-test jest",
+    "test": "npm-run-all lint build-test jest",
     "build-test": "npm-run-all clean compile copy-languages-json",
     "dev": "tsc --watch",
     "copy-languages-json": "cp src/languages.json dist/src/languages.json",

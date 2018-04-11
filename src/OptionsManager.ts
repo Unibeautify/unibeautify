@@ -3,9 +3,7 @@ import * as _ from "lodash";
 
 export class OptionsManager {
 
-  constructor(
-    protected _options: OptionsRegistry
-  ) {}
+  constructor(protected _options: OptionsRegistry) {}
 
   /**
    * Get a shallow copy of the options currently loaded.

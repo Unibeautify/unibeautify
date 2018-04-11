@@ -177,11 +177,11 @@ export class Unibeautify {
   /**
 
   */
- private options: OptionsRegistry = {};
+  private options: OptionsRegistry = {};
   /**
 
   */
- private languages: Language[] = [];
+  private languages: Language[] = [];
   /**
 
   */

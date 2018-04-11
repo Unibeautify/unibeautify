@@ -4,9 +4,7 @@ import { Language } from "./language";
 
 export class LanguageManager {
 
-  constructor(
-    protected _languages: Language[]
-  ) {}
+  constructor(protected _languages: Language[]) {}
 
   public getLanguage(data: {
     atomGrammar?: BeautifyData["atomGrammar"];
