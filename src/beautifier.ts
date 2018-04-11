@@ -1,8 +1,9 @@
 import * as _ from "lodash";
 
 import { Language } from "./language";
-import { LanguageManager, LanguageQuery } from "./LanguageManager"
+import { LanguageManager, LanguageQuery } from "./LanguageManager";
 import { OptionsRegistry } from "./options";
+import { OptionsManager } from "./OptionsManager";
 import { InlineFlagManager } from "./InlineFlagManager";
 import { DependencyDefinition, DependencyManager } from "./DependencyManager";
 import { zipObject, unique } from "./utils";
@@ -178,16 +179,15 @@ export class Unibeautify {
   /**
 
   */
-  private options: OptionsRegistry = {};
-  /**
-
-  */
   private beautifiers: Beautifier[] = [];
   /**
 
   */
   public languageManager = new LanguageManager();
+  /**
 
+  */
+  public optionsManager = new OptionsManager();
 
   /**
    * Get loaded languages which have a loaded beautifier supporting the given option
@@ -234,7 +234,7 @@ export class Unibeautify {
     language: Language;
   }): OptionsRegistry {
     const keys: BeautifierOptionName[] = optionKeys(beautifier, language);
-    const allOptions = this.options;
+    const allOptions = this.optionsManager.options;
     return keys.reduce((options, key) => {
       const option = allOptions[key];
       if (!option) {
@@ -251,7 +251,7 @@ export class Unibeautify {
    * Get all loaded languages which have at least one supporting beautifier.
    */
   public get supportedLanguages(): Language[] {
-    return this.languageManager.getLoadedLanguages().filter(language =>
+    return this.getLoadedLanguages().filter(language =>
       Boolean(this.getBeautifierForLanguage(language))
     );
   }
@@ -384,8 +384,18 @@ export class Unibeautify {
     return manager.text;
   }
 
+  /**
+  * @deprecated use LanguageManager
+  */
   public findLanguages(query: LanguageQuery): Language[] {
     return this.languageManager.findLanguages(query);
+  }
+
+  /**
+  * @deprecated use LanguageManager
+  */
+  public getLoadedLanguages(): Language[] {
+    return this.languageManager.getLoadedLanguages();
   }
 
   /**
@@ -451,14 +461,16 @@ export class Unibeautify {
    */
   public getLanguagesForBeautifier(beautifier: Beautifier): Language[] {
     const { options } = beautifier;
-    return this.languageManager.languages.filter(lang => options.hasOwnProperty(lang.name));
+    return this.languageManager.languages.filter(lang =>
+      options.hasOwnProperty(lang.name)
+    );
   }
 
   /**
    * Get a shallow copy of the options currently loaded.
    */
   public get loadedOptions(): OptionsRegistry {
-    return { ...this.options };
+    return this.optionsManager.loadedOptions;
   }
 
   /**
@@ -563,7 +575,7 @@ export class Unibeautify {
   }
 
   /**
-  Load a Language
+  * @deprecated use LanguageManager
   */
   public loadLanguage(language: Language): Unibeautify {
     this.languageManager.loadLanguage(language);
@@ -571,7 +583,7 @@ export class Unibeautify {
   }
 
   /**
-  Load multiple Languages
+  * @deprecated use LanguageManager
   */
   public loadLanguages(languages: Language[]): Unibeautify {
     this.languageManager.loadLanguages(languages);
@@ -579,10 +591,10 @@ export class Unibeautify {
   }
 
   /**
-  Load Options
+  * @deprecated use OptionsManager
   */
   public loadOptions(options: OptionsRegistry): Unibeautify {
-    _.merge(this.options, options);
+    this.optionsManager.loadOptions(options);
     return this;
   }
 }
@@ -620,11 +632,13 @@ export function optionKeys(
     return [];
   }
 }
+
 function isOptionTransformSingleFunction(
   option: any
 ): option is BeautifyOptionTransformSingleFunction {
   return typeof option === "function";
 }
+
 function isOptionTransform(option: any): option is BeautifyOptionTransform {
   return Array.isArray(option);
 }

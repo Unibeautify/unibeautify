@@ -82,7 +82,7 @@ test("should successfully beautify text", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.languageManager.loadLanguage(lang);
+  unibeautify.loadLanguage(lang);
 
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
@@ -168,7 +168,7 @@ test("should successfully transform option values for beautifier", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.languageManager.loadLanguages([lang1, lang2, lang3]);
+  unibeautify.loadLanguages([lang1, lang2, lang3]);
 
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {

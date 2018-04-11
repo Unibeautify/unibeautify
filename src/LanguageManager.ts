@@ -8,7 +8,6 @@ export class LanguageManager {
   */
   private _languages: Language[] = [];
 
-
   /**
   Get a shallow copy of the languages currently loaded.
   */
