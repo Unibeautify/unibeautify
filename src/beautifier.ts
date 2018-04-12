@@ -189,11 +189,11 @@ export class Unibeautify {
   /**
 
   */
-  public languageManager: LanguageManager = new LanguageManager(this.languages);
+  private languageManager: LanguageManager = new LanguageManager(this.languages);
   /**
 
   */
-  public optionsManager: OptionsManager = new OptionsManager(this.options);
+  private optionsManager: OptionsManager = new OptionsManager(this.options);
 
   /**
    * Get loaded languages which have a loaded beautifier supporting the given option
@@ -581,7 +581,7 @@ export class Unibeautify {
   }
 
   /**
-   * @deprecated use LanguageManager
+   * Load a single language
    */
   public loadLanguage(language: Language): Unibeautify {
     this.languageManager.loadLanguage(language);
@@ -589,7 +589,7 @@ export class Unibeautify {
   }
 
   /**
-   * @deprecated use LanguageManager
+   * Load multiple languages
    */
   public loadLanguages(languages: Language[]): Unibeautify {
     this.languageManager.loadLanguages(languages);
@@ -597,7 +597,7 @@ export class Unibeautify {
   }
 
   /**
-   * @deprecated use OptionsManager
+   * Load multiple options
    */
   public loadOptions(options: OptionsRegistry): Unibeautify {
     this.optionsManager.loadOptions(options);

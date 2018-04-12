@@ -116,7 +116,7 @@ test("should fail to find beautifier", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.languageManager.loadLanguage(lang);
+  unibeautify.loadLanguage(lang);
 
   return expect(
     unibeautify.beautify({
@@ -244,7 +244,7 @@ test("should successfully ignore-next-line", () => {
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
-  unibeautify.languageManager.loadLanguage(lang);
+  unibeautify.loadLanguage(lang);
 
   const originalText = "// unibeautify:ignore-next-line\ntest";
   const beautifierResult = "Testing Result";
