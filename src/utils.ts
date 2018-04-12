@@ -23,7 +23,6 @@ export function filterMultiCriteria(array: any[], filters: any) {
             return filters[key] && arr[key].indexOf(filters[key]) !== -1;
           }
           return arr[key] === filters[key];
-        // return (arr[key] === filters[key]) || (filters[key] && arr[key].indexOf(filters[key]) !== -1)
       }
       return false;
     })
