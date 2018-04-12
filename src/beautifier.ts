@@ -507,12 +507,8 @@ export class Unibeautify {
   ): OptionValues {
     const beautifierOptions = beautifier.options[language.name];
     // Transform options
-    if (typeof beautifierOptions === "boolean") {
-      if (beautifierOptions === true) {
-        return options;
-      } else {
+    if (typeof beautifierOptions === "boolean" && beautifierOptions === false) {
         return {};
-      }
     } else if (typeof beautifierOptions === "object") {
       return Object.keys(beautifierOptions).reduce(
         (acc: OptionValues, key: string) => {
