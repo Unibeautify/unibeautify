@@ -1,4 +1,4 @@
-import { unique } from "./utils";
+import { unique, filterMultiCriteria } from "./utils";
 import { BeautifyData } from "./beautifier";
 import { Language } from "./language";
 
@@ -33,29 +33,16 @@ export class LanguageManager {
   - vscodeLanguage
   */
   public findLanguages(query: LanguageQuery): Language[] {
-    const langs: Language[] = [
-      ...this._languages.filter(lang => lang.name === query.name),
-      ...this._languages.filter(lang => lang.namespace === query.namespace),
-      ...this._languages.filter(
-        lang =>
-          query.extension && lang.extensions.indexOf(query.extension) !== -1
-      ),
-      ...this._languages.filter(
-        lang =>
-          query.atomGrammar &&
-          lang.atomGrammars.indexOf(query.atomGrammar) !== -1
-      ),
-      ...this._languages.filter(
-        lang =>
-          query.sublimeSyntax &&
-          lang.sublimeSyntaxes.indexOf(query.sublimeSyntax) !== -1
-      ),
-      ...this._languages.filter(
-        lang =>
-          query.vscodeLanguage &&
-          lang.vscodeLanguages.indexOf(query.vscodeLanguage) !== -1
-      ),
-    ];
+    const filters = {
+      name: query.name,
+      namespace: query.namespace,
+      // tslint:disable-next-line:object-literal-sort-keys
+      extensions: query.extension,
+      atomGrammars: query.atomGrammar,
+      sublimeSyntaxes: query.sublimeSyntax,
+      vscodeLanguages: query.vscodeLanguage
+    };
+    const langs: Language[] = filterMultiCriteria(this._languages, filters);
     return unique<Language>(langs);
   }
 
