@@ -174,25 +174,14 @@ export interface Beautifier {
 Beautifier
 */
 export class Unibeautify {
-  /**
-
-  */
   private options: OptionsRegistry = {};
-  /**
 
-  */
   private languages: Language[] = [];
-  /**
 
-  */
   private beautifiers: Beautifier[] = [];
-  /**
 
-  */
   private languageManager: LanguageManager = new LanguageManager(this.languages);
-  /**
 
-  */
   private optionsManager: OptionsManager = new OptionsManager(this.options);
 
   /**
@@ -506,7 +495,6 @@ export class Unibeautify {
     options: OptionValues
   ): OptionValues {
     const beautifierOptions = beautifier.options[language.name];
-    // Transform options
     if (typeof beautifierOptions === "boolean" && beautifierOptions === false) {
         return {};
     } else if (typeof beautifierOptions === "object") {

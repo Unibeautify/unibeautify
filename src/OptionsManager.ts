@@ -10,27 +10,20 @@ import {
 } from "./beautifier";
 
 export class OptionsManager {
-  constructor(protected _options: OptionsRegistry) {}
+  constructor(public options: OptionsRegistry) {}
 
   /**
    * Get a shallow copy of the options currently loaded.
    */
   public get loadedOptions(): OptionsRegistry {
-    return { ...this._options };
-  }
-
-  /**
-   * Get a raw copy of the options currently loaded.
-   */
-  public get options(): OptionsRegistry {
-    return this._options;
+    return { ...this.options };
   }
 
   /**
   Load Options
   */
   public loadOptions(options: OptionsRegistry): OptionsManager {
-    _.merge(this._options, options);
+    _.merge(this.options, options);
     return this;
   }
 }

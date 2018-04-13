@@ -3,7 +3,7 @@ import { BeautifyData } from "./beautifier";
 import { Language } from "./language";
 
 export class LanguageManager {
-  constructor(protected _languages: Language[]) {}
+  constructor(public languages: Language[]) {}
 
   public getLanguage(data: {
     atomGrammar?: BeautifyData["atomGrammar"];
@@ -42,7 +42,7 @@ export class LanguageManager {
       sublimeSyntaxes: query.sublimeSyntax,
       vscodeLanguages: query.vscodeLanguage
     };
-    const langs: Language[] = filterMultiCriteria(this._languages, filters);
+    const langs: Language[] = filterMultiCriteria(this.languages, filters);
     return unique<Language>(langs);
   }
 
@@ -50,21 +50,14 @@ export class LanguageManager {
   Get a shallow copy of the languages currently loaded.
   */
   public getLoadedLanguages(): Language[] {
-    return this._languages.slice();
-  }
-
-  /**
-  Get a raw copy of the languages currently loaded.
-  */
-  public get languages(): Language[] {
-    return this._languages;
+    return this.languages.slice();
   }
 
   /**
   Load a Language
   */
   public loadLanguage(language: Language): LanguageManager {
-    this._languages.push(language);
+    this.languages.push(language);
     return this;
   }
 
@@ -72,7 +65,7 @@ export class LanguageManager {
   Load multiple Languages
   */
   public loadLanguages(languages: Language[]): LanguageManager {
-    this._languages.push(...languages);
+    this.languages.push(...languages);
     return this;
   }
 }
