@@ -4,9 +4,6 @@ import {
   DependencyOptions,
 } from "./Dependency";
 
-// tslint:disable-next-line:no-require-imports no-var-requires
-const requireg = require("requireg");
-
 export class NodeDependency extends Dependency {
   constructor(
     protected definition: NodeDependencyDefinition,
@@ -49,6 +46,8 @@ export class NodeDependency extends Dependency {
   }
 
   private resolveGlobal(path: string): string | undefined {
+    // tslint:disable-next-line:no-require-imports no-var-requires
+    const requireg = require("requireg");
     return this.resolveWith(requireg.resolve)(path);
   }
 

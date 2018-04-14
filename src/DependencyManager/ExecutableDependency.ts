@@ -1,4 +1,4 @@
-import { spawn, SpawnOptions } from "child_process";
+import { spawn as Spawn, SpawnOptions } from "child_process";
 
 import {
   Dependency,
@@ -66,6 +66,8 @@ export class ExecutableDependency extends Dependency {
     stdin?: any;
   }): Promise<RunResponse> {
     return new Promise((resolve, reject) => {
+      // tslint:disable-next-line:no-require-imports
+      const spawn: typeof Spawn = require("child_process").spawn;
       const cmd = spawn(exe, args, options);
       let stdout = "";
       let stderr = "";
