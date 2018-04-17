@@ -282,6 +282,7 @@ export class Unibeautify {
     return this.beautifyWithBeautifiers({
       beautifiers: selectedBeautifiers as Beautifier[],
       fileExtension: data.fileExtension,
+      filePath: data.filePath,
       langOptions,
       language: lang,
       projectPath: data.projectPath,
@@ -331,6 +332,7 @@ export class Unibeautify {
     language,
     langOptions,
     fileExtension,
+    filePath,
     projectPath,
     text,
   }: {
@@ -339,6 +341,7 @@ export class Unibeautify {
     langOptions: OptionValues;
     text: BeautifyData["text"];
     fileExtension: BeautifyData["fileExtension"];
+    filePath: BeautifyData["filePath"];
     projectPath: BeautifyData["projectPath"];
   }): Promise<string> {
     return beautifiers.reduce(
@@ -359,7 +362,7 @@ export class Unibeautify {
             return beautifier
               .beautify({
                 dependencies: dependencyManager,
-                filePath: fileExtension,
+                filePath: filePath,
                 language: language,
                 options,
                 projectPath: projectPath,
