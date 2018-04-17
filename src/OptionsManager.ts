@@ -33,7 +33,6 @@ export function optionKeys(
   language: Language
 ): BeautifierOptionName[] {
   const beautifierOptions = beautifier.options[language.name];
-  // Transform options
   if (typeof beautifierOptions === "boolean") {
     return [];
   } else if (typeof beautifierOptions === "object") {
