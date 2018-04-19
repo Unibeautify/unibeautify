@@ -6,7 +6,7 @@ import {
   BeautifierOptionName,
   BeautifierLanguageOptionComplex,
   BeautifyOptionTransformSingleFunction,
-  BeautifyOptionTransform
+  BeautifyOptionTransform,
 } from "./beautifier";
 
 export class OptionsManager {

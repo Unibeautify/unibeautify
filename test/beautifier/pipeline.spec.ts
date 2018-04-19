@@ -22,7 +22,7 @@ test("should use named beautifier from beautifiers option", () => {
   const beautifierResult = "Testing Result";
   const beautifierName = "CustomBeautifier";
   const desiredBeautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: beautifierName,
@@ -31,7 +31,7 @@ test("should use named beautifier from beautifiers option", () => {
     },
   };
   const otherBeautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve("Bad");
     },
     name: "Other",
@@ -60,7 +60,7 @@ test("should fail to use named beautifier which does not support language", () =
   const beautifierResult = "Testing Result";
   const beautifierName = "CustomBeautifier";
   const beautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: beautifierName,
@@ -87,7 +87,7 @@ test("should use all beautifiers for language when beautifiers option is empty",
   const unibeautify = newUnibeautify();
   const beautifierResult = "Test Output";
   const beautifier1: Beautifier = {
-    beautify: ({ Promise, text }) => {
+    beautify: ({ text }) => {
       return Promise.resolve(`${text} Out`);
     },
     name: "Beautifier1",
@@ -96,7 +96,7 @@ test("should use all beautifiers for language when beautifiers option is empty",
     },
   };
   const beautifier2: Beautifier = {
-    beautify: ({ Promise, text }) => {
+    beautify: ({ text }) => {
       return Promise.resolve(`${text}put`);
     },
     name: "Beautifier2",
@@ -124,7 +124,7 @@ test("should use all beautifiers for language when beautifiers option is missing
   const unibeautify = newUnibeautify();
   const beautifierResult = "Test Output";
   const beautifier1: Beautifier = {
-    beautify: ({ Promise, text }) => {
+    beautify: ({ text }) => {
       return Promise.resolve(`${text} Out`);
     },
     name: "Beautifier1",
@@ -133,7 +133,7 @@ test("should use all beautifiers for language when beautifiers option is missing
     },
   };
   const beautifier2: Beautifier = {
-    beautify: ({ Promise, text }) => {
+    beautify: ({ text }) => {
       return Promise.resolve(`${text}put`);
     },
     name: "Beautifier2",
@@ -159,7 +159,7 @@ test("should use beautifiers in order of beautifiers option", () => {
   const unibeautify = newUnibeautify();
   const beautifierResult = "012";
   const beautifier1: Beautifier = {
-    beautify: ({ Promise, text }) => {
+    beautify: ({ text }) => {
       return Promise.resolve(`${text}1`);
     },
     name: "Beautifier1",
@@ -168,7 +168,7 @@ test("should use beautifiers in order of beautifiers option", () => {
     },
   };
   const beautifier2: Beautifier = {
-    beautify: ({ Promise, text }) => {
+    beautify: ({ text }) => {
       return Promise.resolve(`${text}2`);
     },
     name: "Beautifier2",

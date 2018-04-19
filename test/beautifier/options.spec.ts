@@ -59,7 +59,7 @@ test("should get languages with a loaded beautifier supporting the given option"
   unibeautify.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify",
@@ -108,7 +108,7 @@ test("should get beautifiers with a loaded language supporting the given option"
   unibeautify.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier1: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify1",
@@ -119,7 +119,7 @@ test("should get beautifiers with a loaded language supporting the given option"
     },
   };
   const beautifier2: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify2",
@@ -171,7 +171,7 @@ test("should correctly determine whether beautifier supports option for a langua
   unibeautify.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier1: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify1",
@@ -183,7 +183,7 @@ test("should correctly determine whether beautifier supports option for a langua
     },
   };
   const beautifier2: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify2",
@@ -277,7 +277,7 @@ test("should get options supported for a language", () => {
   unibeautify.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier1: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify1",
@@ -289,7 +289,7 @@ test("should get options supported for a language", () => {
     },
   };
   const beautifier2: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify2",
@@ -345,7 +345,7 @@ test("should get options supported by a beautifier for a language", () => {
   unibeautify.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier1: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify1",
@@ -356,7 +356,7 @@ test("should get options supported by a beautifier for a language", () => {
     },
   };
   const beautifier2: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify2",
@@ -428,7 +428,7 @@ test(
     unibeautify.loadLanguage(lang1);
     const beautifierResult = "Testing Result";
     const beautifier: Beautifier = {
-      beautify: ({ Promise }) => {
+      beautify: () => {
         return Promise.resolve(beautifierResult);
       },
       name: "TestBeautify",

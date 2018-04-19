@@ -170,12 +170,11 @@
         "no-disable-auto-sanitization": true,
         "no-document-domain": true,
         "no-document-write": true,
-        "no-duplicate-case": true,
+        "no-duplicate-switch-case": true,
         "no-duplicate-parameter-names": true,
         "no-duplicate-super": true,
         "no-empty": true,
         "no-empty-interface": true,
-        "no-empty-interfaces": true,
         "no-empty-line-after-opening-brace": false,
         "no-exec-script": true,
         "no-flag-args": true,
@@ -214,7 +213,7 @@
         "no-shadowed-variable": true,
         "no-single-line-block-comment": true,
         "no-sparse-arrays": true,
-        "no-stateless-class": true,
+        "no-unnecessary-class": true,
         "no-string-based-set-immediate": true,
         "no-string-based-set-interval": true,
         "no-string-based-set-timeout": true,
@@ -235,7 +234,12 @@
         "no-unsupported-browser-code": false,
         "no-unused-expression": true,
         "no-var-requires": true,
-        "no-var-self": true,
+        "no-this-assignment": [
+          true,
+          {
+            "allow-destructuring": true
+          }
+        ],
         "no-void-expression": false,
         "no-with-statement": true,
         "non-literal-require": true,
@@ -313,7 +317,6 @@
         "unified-signatures": true,
         "use-isnan": true,
         "use-named-parameter": true,
-        "valid-typeof": true,
         "no-useless-files": true,
         "no-map-without-usage": true,
         "no-complex-conditionals": [

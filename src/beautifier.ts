@@ -83,13 +83,13 @@ export interface BeautifierBeautifyData {
   */
   projectPath?: string;
   /**
-  Promise.
-  */
-  Promise: typeof Promise;
-  /**
    * Dependencies
    */
   dependencies: DependencyManager;
+  /**
+   * Beautifier-specific configuration
+   */
+  beautifierConfig?: ResolvedConfig;
 }
 
 export interface LanguageOptionValues {
@@ -165,9 +165,30 @@ export interface Beautifier {
    */
   dependencies?: DependencyDefinition[];
   /**
+   * Function to retrieve beautifier-specific configuration file and/or parsed value.
+   */
+  resolveConfig?(resolveConfigData: ResolveConfigData): Promise<ResolvedConfig>;
+  /**
   Beautify the given code with the beautifier.
   */
   beautify(data: BeautifierBeautifyData): Promise<string>;
+}
+
+export interface ResolveConfigData {
+  dependencies: DependencyManager;
+  filePath?: string;
+  projectPath?: string;
+}
+
+export interface ResolvedConfig {
+  /**
+   * The parsed configuration object
+   */
+  config?: any;
+  /**
+   * The path to the config file that was found
+   */
+  filePath?: string;
 }
 
 /**
@@ -180,7 +201,9 @@ export class Unibeautify {
 
   private beautifiers: Beautifier[] = [];
 
-  private languageManager: LanguageManager = new LanguageManager(this.languages);
+  private languageManager: LanguageManager = new LanguageManager(
+    this.languages
+  );
 
   private optionsManager: OptionsManager = new OptionsManager(this.options);
 
@@ -327,6 +350,7 @@ export class Unibeautify {
     return names.map(name => beautifiersByName[name]);
   }
 
+  // tslint:disable:max-func-body-length
   private beautifyWithBeautifiers({
     beautifiers,
     language,
@@ -358,19 +382,46 @@ export class Unibeautify {
             beautifier.dependencies || [],
             beautifierOptions
           );
-          return dependencyManager.load().then(() => {
-            return beautifier
-              .beautify({
-                dependencies: dependencyManager,
-                filePath: filePath,
-                language: language,
-                options,
-                projectPath: projectPath,
-                Promise,
-                text: currentText,
-              })
-              .then(newText => this.handleInlineFlags(currentText, newText));
-          });
+          return dependencyManager
+            .load()
+            .then(() => {
+              if (
+                beautifierOptions.prefer_beautifier_config &&
+                beautifier.resolveConfig
+              ) {
+                return beautifier.resolveConfig({
+                  dependencies: dependencyManager,
+                  filePath,
+                  projectPath,
+                });
+              }
+              return Promise.resolve({});
+            })
+            .then((beautifierConfig: ResolvedConfig) => {
+              return beautifier
+                .beautify({
+                  beautifierConfig,
+                  dependencies: dependencyManager,
+                  filePath: filePath,
+                  language: language,
+                  options,
+                  projectPath: projectPath,
+                  text: currentText,
+                })
+                .then(newText => {
+                  if (typeof newText !== "string") {
+                    return Promise.reject(
+                      new Error(
+                        `Beautifier response type must be "string" not "${typeof newText}": ${newText}`
+                      )
+                    );
+                  }
+                  return Promise.resolve(newText);
+                })
+                .then((newText: string) =>
+                  this.handleInlineFlags(currentText, newText)
+                );
+            });
         });
       },
       Promise.resolve(text)
@@ -499,7 +550,7 @@ export class Unibeautify {
   ): OptionValues {
     const beautifierOptions = beautifier.options[language.name];
     if (typeof beautifierOptions === "boolean" && beautifierOptions === false) {
-        return {};
+      return {};
     } else if (typeof beautifierOptions === "object") {
       return Object.keys(beautifierOptions).reduce(
         (acc: OptionValues, key: string) => {

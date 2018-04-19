@@ -3,7 +3,7 @@ import { BeautifyData } from "./beautifier";
 import { Language } from "./language";
 
 export class LanguageManager {
-  constructor(public languages: Language[]) {}
+  constructor(public readonly languages: Language[]) {}
 
   public getLanguage(data: {
     atomGrammar?: BeautifyData["atomGrammar"];
@@ -40,7 +40,7 @@ export class LanguageManager {
       extensions: query.extension,
       atomGrammars: query.atomGrammar,
       sublimeSyntaxes: query.sublimeSyntax,
-      vscodeLanguages: query.vscodeLanguage
+      vscodeLanguages: query.vscodeLanguage,
     };
     const langs: Language[] = filterMultiCriteria(this.languages, filters);
     return unique<Language>(langs);

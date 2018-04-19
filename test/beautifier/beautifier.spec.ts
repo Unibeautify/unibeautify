@@ -12,7 +12,7 @@ test("should fail to load beautifier without name", () => {
   const unibeautify = new Unibeautify();
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: undefined as any,
@@ -29,7 +29,7 @@ test("should load beautifier", () => {
   const unibeautify = new Unibeautify();
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify",
@@ -47,7 +47,7 @@ test("should load beautifiers", () => {
   const unibeautify = new Unibeautify();
   const beautifierResult = "Testing Result";
   const beautifier1: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify1",
@@ -56,7 +56,7 @@ test("should load beautifiers", () => {
     },
   };
   const beautifier2: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify2",
@@ -86,7 +86,7 @@ test("should successfully beautify text", () => {
 
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify",
@@ -172,7 +172,7 @@ test("should successfully transform option values for beautifier", () => {
 
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify",
@@ -249,7 +249,7 @@ test("should successfully ignore-next-line", () => {
   const originalText = "// unibeautify:ignore-next-line\ntest";
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify",
@@ -266,4 +266,39 @@ test("should successfully ignore-next-line", () => {
       text: originalText,
     })
   ).resolves.toBe(originalText);
+});
+
+test("should throw error if beautify returns undefined", () => {
+  const unibeautify = new Unibeautify();
+  const lang: Language = {
+    atomGrammars: [],
+    extensions: ["test"],
+    name: "TestLang",
+    namespace: "test",
+    since: "0.1.0",
+    sublimeSyntaxes: [],
+    vscodeLanguages: [],
+  };
+  unibeautify.loadLanguage(lang);
+
+  const beautifier: Beautifier = {
+    beautify: () => {
+      return Promise.resolve(undefined as any);
+    },
+    name: "TestBeautify",
+    options: {
+      TestLang: false,
+    },
+  };
+  unibeautify.loadBeautifier(beautifier);
+
+  return expect(
+    unibeautify.beautify({
+      languageName: "TestLang",
+      options: {},
+      text: "test",
+    })
+  ).rejects.toThrowError(
+    'Beautifier response type must be "string" not "undefined": undefined'
+  );
 });
