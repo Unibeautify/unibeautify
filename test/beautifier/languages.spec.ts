@@ -12,9 +12,9 @@ test("should get all loaded languages", () => {
     vscodeLanguages: [],
   };
   unibeautify.loadLanguage(lang);
-  expect(unibeautify.getLoadedLanguages().map(({ name }) => name)).toEqual([
-    lang.name,
-  ]);
+  expect(
+    unibeautify.getLoadedLanguages().map(({ name }) => name)
+  ).toEqual([lang.name]);
 });
 
 test("should return empty array when no languages are supported with a beautifier", () => {

@@ -14,3 +14,17 @@ export function unique<T>(array: T[]): T[] {
     [] as T[]
   );
 }
+
+export function filterMultiCriteria(array: any[], filters: any) {
+  return array.filter(arr =>
+    Object.keys(filters).some(key => {
+      if (arr[key] || filters[key]) {
+          if (Array.isArray(arr[key])) {
+            return filters[key] && arr[key].indexOf(filters[key]) !== -1;
+          }
+          return arr[key] === filters[key];
+      }
+      return false;
+    })
+  );
+}

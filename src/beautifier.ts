@@ -1,7 +1,7 @@
-import * as _ from "lodash";
-
 import { Language } from "./language";
+import { LanguageManager, LanguageQuery } from "./LanguageManager";
 import { OptionsRegistry } from "./options";
+import { OptionsManager, optionKeys } from "./OptionsManager";
 import { InlineFlagManager } from "./InlineFlagManager";
 import { DependencyDefinition, DependencyManager } from "./DependencyManager";
 import { zipObject, unique } from "./utils";
@@ -174,18 +174,15 @@ export interface Beautifier {
 Beautifier
 */
 export class Unibeautify {
-  /**
-
-  */
   private options: OptionsRegistry = {};
-  /**
 
-  */
   private languages: Language[] = [];
-  /**
 
-  */
   private beautifiers: Beautifier[] = [];
+
+  private languageManager: LanguageManager = new LanguageManager(this.languages);
+
+  private optionsManager: OptionsManager = new OptionsManager(this.options);
 
   /**
    * Get loaded languages which have a loaded beautifier supporting the given option
@@ -232,7 +229,7 @@ export class Unibeautify {
     language: Language;
   }): OptionsRegistry {
     const keys: BeautifierOptionName[] = optionKeys(beautifier, language);
-    const allOptions = this.options;
+    const allOptions = this.optionsManager.options;
     return keys.reduce((options, key) => {
       const option = allOptions[key];
       if (!option) {
@@ -258,7 +255,7 @@ export class Unibeautify {
   Beautify code
   */
   public beautify(data: BeautifyData): Promise<string> {
-    const lang: Language | null = this.getLanguage(data);
+    const lang: Language | null = this.languageManager.getLanguage(data);
     if (lang == null) {
       return Promise.reject(new Error("Cannot find language."));
     }
@@ -285,26 +282,12 @@ export class Unibeautify {
     return this.beautifyWithBeautifiers({
       beautifiers: selectedBeautifiers as Beautifier[],
       fileExtension: data.fileExtension,
+      filePath: data.filePath,
       langOptions,
       language: lang,
       projectPath: data.projectPath,
       text: data.text,
     });
-  }
-
-  private getLanguage(data: {
-    atomGrammar?: BeautifyData["atomGrammar"];
-    fileExtension?: BeautifyData["fileExtension"];
-    languageName?: BeautifyData["languageName"];
-    sublimeSyntax?: BeautifyData["sublimeSyntax"];
-  }): Language | null {
-    const langs: Language[] = this.findLanguages({
-      atomGrammar: data.atomGrammar,
-      extension: data.fileExtension,
-      name: data.languageName,
-      sublimeSyntax: data.sublimeSyntax,
-    });
-    return langs.length > 0 ? langs[0] : null;
   }
 
   private beautifiersForLanguageAndOptions(
@@ -349,6 +332,7 @@ export class Unibeautify {
     language,
     langOptions,
     fileExtension,
+    filePath,
     projectPath,
     text,
   }: {
@@ -357,6 +341,7 @@ export class Unibeautify {
     langOptions: OptionValues;
     text: BeautifyData["text"];
     fileExtension: BeautifyData["fileExtension"];
+    filePath: BeautifyData["filePath"];
     projectPath: BeautifyData["projectPath"];
   }): Promise<string> {
     return beautifiers.reduce(
@@ -377,7 +362,7 @@ export class Unibeautify {
             return beautifier
               .beautify({
                 dependencies: dependencyManager,
-                filePath: fileExtension,
+                filePath: filePath,
                 language: language,
                 options,
                 projectPath: projectPath,
@@ -398,75 +383,17 @@ export class Unibeautify {
   }
 
   /**
-  Find and return the appropriate Languages that match any of the given filter criteria.
-  An empty array will be returned if there are no matches.
-
-  Precedence:
-  - name
-  - namespace
-  - extension
-  - atomGrammar
-  - sublimeSyntax
-  - vscodeLanguage
-  */
-  public findLanguages(query: {
-    /**
-    Language name
-    */
-    name?: string;
-    /**
-    Language namespace
-    */
-    namespace?: string;
-    /**
-    Language extension
-    */
-    extension?: string;
-    /**
-    Language Atom grammar
-    */
-    atomGrammar?: string;
-    /*
-    Language Sublime Syntax
-    */
-    sublimeSyntax?: string;
-    /**
-     * VSCode Language ID
-     */
-    vscodeLanguage?: string;
-  }): Language[] {
-    const langs: Language[] = [
-      ...this.languages.filter(lang => lang.name === query.name),
-      ...this.languages.filter(lang => lang.namespace === query.namespace),
-      ...this.languages.filter(
-        lang =>
-          query.extension && lang.extensions.indexOf(query.extension) !== -1
-      ),
-      ...this.languages.filter(
-        lang =>
-          query.atomGrammar &&
-          lang.atomGrammars.indexOf(query.atomGrammar) !== -1
-      ),
-      ...this.languages.filter(
-        lang =>
-          query.sublimeSyntax &&
-          lang.sublimeSyntaxes.indexOf(query.sublimeSyntax) !== -1
-      ),
-      ...this.languages.filter(
-        lang =>
-          query.vscodeLanguage &&
-          lang.vscodeLanguages.indexOf(query.vscodeLanguage) !== -1
-      ),
-    ];
-
-    return unique<Language>(langs);
+   * @deprecated use LanguageManager
+   */
+  public findLanguages(query: LanguageQuery): Language[] {
+    return this.languageManager.findLanguages(query);
   }
 
   /**
-  Get a shallow copy of the languages currently loaded.
-  */
+   * @deprecated use LanguageManager
+   */
   public getLoadedLanguages(): Language[] {
-    return this.languages.slice();
+    return this.languageManager.getLoadedLanguages();
   }
 
   /**
@@ -502,7 +429,7 @@ export class Unibeautify {
   ): Beautifier[] {
     return this.beautifiers.filter(
       beautifier =>
-        this.languages.findIndex(language =>
+        this.languageManager.languages.findIndex(language =>
           this.doesBeautifierSupportOptionForLanguage({
             beautifier,
             language,
@@ -532,14 +459,16 @@ export class Unibeautify {
    */
   public getLanguagesForBeautifier(beautifier: Beautifier): Language[] {
     const { options } = beautifier;
-    return this.languages.filter(lang => options.hasOwnProperty(lang.name));
+    return this.languageManager.languages.filter(lang =>
+      options.hasOwnProperty(lang.name)
+    );
   }
 
   /**
    * Get a shallow copy of the options currently loaded.
    */
   public get loadedOptions(): OptionsRegistry {
-    return { ...this.options };
+    return this.optionsManager.loadedOptions;
   }
 
   /**
@@ -569,13 +498,8 @@ export class Unibeautify {
     options: OptionValues
   ): OptionValues {
     const beautifierOptions = beautifier.options[language.name];
-    // Transform options
-    if (typeof beautifierOptions === "boolean") {
-      if (beautifierOptions === true) {
-        return options;
-      } else {
+    if (typeof beautifierOptions === "boolean" && beautifierOptions === false) {
         return {};
-      }
     } else if (typeof beautifierOptions === "object") {
       return Object.keys(beautifierOptions).reduce(
         (acc: OptionValues, key: string) => {
@@ -644,68 +568,26 @@ export class Unibeautify {
   }
 
   /**
-  Load a Language
-  */
+   * Load a single language
+   */
   public loadLanguage(language: Language): Unibeautify {
-    this.languages.push(language);
+    this.languageManager.loadLanguage(language);
     return this;
   }
 
   /**
-  Load multiple Languages
-  */
+   * Load multiple languages
+   */
   public loadLanguages(languages: Language[]): Unibeautify {
-    this.languages.push(...languages);
+    this.languageManager.loadLanguages(languages);
     return this;
   }
 
   /**
-  Load Options
-  */
+   * Load multiple options
+   */
   public loadOptions(options: OptionsRegistry): Unibeautify {
-    _.merge(this.options, options);
+    this.optionsManager.loadOptions(options);
     return this;
   }
-}
-
-export function optionKeys(
-  beautifier: Beautifier,
-  language: Language
-): BeautifierOptionName[] {
-  const beautifierOptions = beautifier.options[language.name];
-  // Transform options
-  if (typeof beautifierOptions === "boolean") {
-    return [];
-  } else if (typeof beautifierOptions === "object") {
-    const options: BeautifierOptionName[] = [];
-    Object.keys(beautifierOptions).forEach(fieldKey => {
-      const op = (<BeautifierLanguageOptionComplex>beautifierOptions)[fieldKey];
-      if (typeof op === "string") {
-        options.push(op);
-      } else if (isOptionTransformSingleFunction(op)) {
-        options.push(fieldKey as BeautifierOptionName);
-      } else if (typeof op === "boolean") {
-        if (op === true) {
-          options.push(fieldKey as BeautifierOptionName);
-        }
-      } else if (isOptionTransform(op)) {
-        options.push(...op[0]);
-      } else {
-        return new Error(
-          `Invalid option "${fieldKey}" with value ${JSON.stringify(op)}.`
-        );
-      }
-    });
-    return options;
-  } else {
-    return [];
-  }
-}
-function isOptionTransformSingleFunction(
-  option: any
-): option is BeautifyOptionTransformSingleFunction {
-  return typeof option === "function";
-}
-function isOptionTransform(option: any): option is BeautifyOptionTransform {
-  return Array.isArray(option);
 }
