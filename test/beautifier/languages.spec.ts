@@ -46,7 +46,7 @@ test("should supported languages", () => {
   unibeautify.loadLanguage(lang);
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify",
@@ -83,7 +83,7 @@ test("should loaded languages which support a given beautifier", () => {
   unibeautify.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify",
@@ -120,7 +120,7 @@ test("should loaded languages which support a given beautifier", () => {
   unibeautify.loadLanguages([lang1, lang2]);
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "TestBeautify",

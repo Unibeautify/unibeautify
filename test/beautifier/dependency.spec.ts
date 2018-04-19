@@ -28,7 +28,7 @@ test("should throw Error when dependency type is unknown", () => {
     type: "wrong",
   };
   const beautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     dependencies: [dependency],
@@ -63,7 +63,7 @@ describe("Node", () => {
       type: DependencyType.Node,
     };
     const beautifier: Beautifier = {
-      beautify: ({ Promise }) => {
+      beautify: () => {
         return Promise.resolve(beautifierResult);
       },
       dependencies: [dependency],
@@ -108,7 +108,7 @@ describe("Executable", () => {
       type: DependencyType.Executable,
     };
     const beautifier: Beautifier = {
-      beautify: ({ Promise, dependencies }) => {
+      beautify: ({ dependencies }) => {
         dependencies.get(dependency.name);
         return Promise.resolve(beautifierResult);
       },
@@ -151,8 +151,8 @@ describe("Executable", () => {
       type: DependencyType.Executable,
     };
     const beautifier: Beautifier = {
-      beautify: ({ Promise, dependencies }) => {
-        dependencies.get(dependency.name);
+      beautify: ({ dependencies }) => {
+        expect(() => dependencies.get(dependency.name)).not.toThrowError();
         return Promise.resolve(beautifierResult);
       },
       dependencies: [dependency],
@@ -192,7 +192,7 @@ describe("Executable", () => {
       type: DependencyType.Executable,
     };
     const beautifier: Beautifier = {
-      beautify: ({ Promise, dependencies }) => {
+      beautify: ({ dependencies }) => {
         dependencies.get(dependency.name);
         return Promise.resolve(beautifierResult);
       },

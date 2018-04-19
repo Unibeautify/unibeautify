@@ -3,7 +3,7 @@ import { BeautifyData } from "./beautifier";
 import { Language } from "./language";
 
 export class LanguageManager {
-  constructor(public languages: Language[]) {}
+  constructor(public readonly languages: Language[]) {}
 
   public getLanguage(data: {
     atomGrammar?: BeautifyData["atomGrammar"];

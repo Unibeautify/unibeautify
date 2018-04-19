@@ -26,7 +26,7 @@ test("should find JavaScript Language and Beautifier", () => {
 
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "JavaScript Beautifier",
@@ -50,7 +50,7 @@ test("should find JavaScript Language and not Beautifier", () => {
 
   const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
-    beautify: ({ Promise }) => {
+    beautify: () => {
       return Promise.resolve(beautifierResult);
     },
     name: "Not JavaScript Beautifier",
