@@ -40,7 +40,7 @@ export class LanguageManager {
       extensions: query.extension,
       atomGrammars: query.atomGrammar,
       sublimeSyntaxes: query.sublimeSyntax,
-      vscodeLanguages: query.vscodeLanguage
+      vscodeLanguages: query.vscodeLanguage,
     };
     const langs: Language[] = filterMultiCriteria(this.languages, filters);
     return unique<Language>(langs);
