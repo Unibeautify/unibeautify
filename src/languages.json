@@ -29,7 +29,9 @@
     "namespace": "",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "abap"
+    ]
   },
   {
     "aceMode": "text",
@@ -587,7 +589,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.batchfile",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "bat"
+    ]
   },
   {
     "aceMode": "text",
@@ -791,7 +795,9 @@
     "namespace": "c",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "c"
+    ]
   },
   {
     "aceMode": "csharp",
@@ -814,7 +820,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.cs",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "csharp"
+    ]
   },
   {
     "aceMode": "c_cpp",
@@ -850,7 +858,9 @@
     "namespace": "cpp",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "cpp"
+    ]
   },
   {
     "aceMode": "assembly_x86",
@@ -1223,7 +1233,9 @@
     "namespace": "",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "clojure"
+    ]
   },
   {
     "aceMode": "soy_template",
@@ -1285,7 +1297,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.coffee",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "coffeescript"
+    ]
   },
   {
     "aceMode": "coldfusion",
@@ -1750,7 +1764,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.diff",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "diff"
+    ]
   },
   {
     "aceMode": "dockerfile",
@@ -1770,7 +1786,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.dockerfile",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "dockerfile"
+    ]
   },
   {
     "aceMode": "text",
@@ -2144,7 +2162,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.fsharp",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "fsharp"
+    ]
   },
   {
     "aceMode": "text",
@@ -2713,7 +2733,9 @@
     "namespace": "go",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "go"
+    ]
   },
   {
     "aceMode": "text",
@@ -2872,7 +2894,9 @@
     "namespace": "",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "groovy"
+    ]
   },
   {
     "aceMode": "jsp",
@@ -3138,7 +3162,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.handlebars",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "handlebars"
+    ]
   },
   {
     "aceMode": "text",
@@ -3283,7 +3309,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.ini",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "ini"
+    ]
   },
   {
     "aceMode": "text",
@@ -3608,7 +3636,9 @@
     "namespace": "java",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "java"
+    ]
   },
   {
     "aceMode": "jsp",
@@ -4296,7 +4326,9 @@
     "namespace": "lua",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "lua"
+    ]
   },
   {
     "aceMode": "text",
@@ -4474,7 +4506,9 @@
     "namespace": "",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "makefile"
+    ]
   },
   {
     "aceMode": "text",
@@ -5240,7 +5274,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.objc",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "objective-c"
+    ]
   },
   {
     "aceMode": "objectivec",
@@ -5258,7 +5294,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.objc++",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "objective-cpp"
+    ]
   },
   {
     "aceMode": "text",
@@ -5546,7 +5584,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.php",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "php"
+    ]
   },
   {
     "aceMode": "sql",
@@ -5768,7 +5808,10 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.perl",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "perl",
+      "perl6"
+    ]
   },
   {
     "aceMode": "perl",
@@ -6007,7 +6050,9 @@
     "namespace": "",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "powershell"
+    ]
   },
   {
     "aceMode": "text",
@@ -6117,7 +6162,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.jade",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "jade"
+    ]
   },
   {
     "aceMode": "text",
@@ -6236,7 +6283,9 @@
     "namespace": "python",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "python"
+    ]
   },
   {
     "aceMode": "text",
@@ -6322,7 +6371,9 @@
     "namespace": "",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "r"
+    ]
   },
   {
     "aceMode": "yaml",
@@ -6841,7 +6892,9 @@
     "namespace": "ruby",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "ruby"
+    ]
   },
   {
     "aceMode": "rust",
@@ -6862,7 +6915,9 @@
     "namespace": "rust",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "rust"
+    ]
   },
   {
     "aceMode": "text",
@@ -6985,7 +7040,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.sql",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "sql"
+    ]
   },
   {
     "aceMode": "sql",
@@ -7118,7 +7175,10 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.sass",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "scss",
+      "sass"
+    ]
   },
   {
     "aceMode": "scala",
@@ -7260,7 +7320,9 @@
     "namespace": "",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "shellscript"
+    ]
   },
   {
     "aceMode": "sh",
@@ -7629,7 +7691,9 @@
     "namespace": "",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "swift"
+    ]
   },
   {
     "atomGrammars": [
@@ -7801,7 +7865,10 @@
     "namespace": "latex",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "latex",
+      "tex"
+    ]
   },
   {
     "aceMode": "text",
@@ -8249,7 +8316,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.vbnet",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "vb"
+    ]
   },
   {
     "atomGrammars": [
@@ -8590,7 +8659,9 @@
     "namespace": "xml",
     "since": "0.9.0",
     "sublimeSyntaxes": [],
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "xml"
+    ]
   },
   {
     "aceMode": "c_cpp",
@@ -8704,7 +8775,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.xml.xsl",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "xsl"
+    ]
   },
   {
     "atomGrammars": [
@@ -8779,7 +8852,9 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "source.yaml",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "yaml"
+    ]
   },
   {
     "aceMode": "text",
