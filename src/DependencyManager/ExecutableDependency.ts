@@ -15,9 +15,11 @@ export class ExecutableDependency extends Dependency {
   }
 
   protected loadVersion() {
-    return this.run({ args: this.versionArgs }).then(({ stdout, exitCode, stderr }) => {
-      return stdout || stderr;
-    });
+    return this.run({ args: this.versionArgs }).then(
+      ({ stdout, exitCode, stderr }) => {
+        return stdout || stderr;
+      }
+    );
   }
 
   private get versionArgs(): string[] {
