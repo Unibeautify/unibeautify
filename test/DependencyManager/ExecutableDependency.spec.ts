@@ -201,6 +201,20 @@ describe("successfully load Executable dependency", () => {
     });
   });
 
+  test("should successfully extract version from stderr", () => {
+    expect.assertions(1);
+    const options: DependencyDefinition = {
+      name: "Node",
+      program: "node",
+      type: DependencyType.Executable,
+      versionArgs: ["-e", "console.error('v1.2.3');"],
+    };
+    const dependency = new ExecutableDependency(options);
+    return dependency.load().then(() => {
+      expect(dependency.isInstalled).toBe(true);
+    });
+  });
+
   describe("Parse Version", () => {
     test("should successfully parse version with function", () => {
       expect.assertions(2);
