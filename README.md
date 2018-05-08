@@ -39,8 +39,8 @@ See [`test/` directory](https://github.com/Unibeautify/unibeautify/tree/master/t
 ```bash
 # Be sure to lint
 npm run lint
-# And compile
-npm run compile
+# And build
+npm run build
 # And test
 npm test
 ```
