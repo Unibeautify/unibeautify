@@ -118,6 +118,22 @@ export interface BaseDependencyDefinition {
   name: string;
   parseVersion?: DependencyVersionParser;
   optional?: boolean;
+  homepageUrl?: string;
+  installationUrl?: string;
+  bugsUrl?: string;
+  badges?: Badge[];
+}
+
+export interface Badge {
+  description: string;
+  /**
+   * url for the badge's image URL
+   */
+  url: string;
+  /**
+   * href for the link users will follow when clicking the badge and description.
+   */
+  href: string;
 }
 
 export enum DependencyType {
