@@ -3,7 +3,11 @@ import { LanguageManager, LanguageQuery } from "./LanguageManager";
 import { OptionsRegistry } from "./options";
 import { OptionsManager, optionKeys } from "./OptionsManager";
 import { InlineFlagManager } from "./InlineFlagManager";
-import { DependencyDefinition, DependencyManager, Badge } from "./DependencyManager";
+import {
+  DependencyDefinition,
+  DependencyManager,
+  Badge,
+} from "./DependencyManager";
 import { zipObject, unique } from "./utils";
 
 /**
