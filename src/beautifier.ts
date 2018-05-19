@@ -3,7 +3,11 @@ import { LanguageManager, LanguageQuery } from "./LanguageManager";
 import { OptionsRegistry } from "./options";
 import { OptionsManager, optionKeys } from "./OptionsManager";
 import { InlineFlagManager } from "./InlineFlagManager";
-import { DependencyDefinition, DependencyManager } from "./DependencyManager";
+import {
+  DependencyDefinition,
+  DependencyManager,
+  Badge,
+} from "./DependencyManager";
 import { zipObject, unique } from "./utils";
 
 /**
@@ -172,6 +176,10 @@ export interface Beautifier {
   Beautify the given code with the beautifier.
   */
   beautify(data: BeautifierBeautifyData): Promise<string>;
+  /**
+   * Badges to display in automatically generated documentation.
+   */
+  badges?: Badge[];
 }
 
 export interface ResolveConfigData {
