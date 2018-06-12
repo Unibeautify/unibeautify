@@ -373,8 +373,6 @@ export const Options: OptionsRegistry = {
       "address",
       "big",
       "dt",
-      "ins",
-      "small",
       "strike",
       "tt",
       "pre",
