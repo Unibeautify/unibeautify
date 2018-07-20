@@ -8,10 +8,11 @@ import { Unibeautify } from "./beautifier";
 import { Options } from "./options";
 import { Languages } from "./languages";
 
+// tslint:disable no-default-export export-name
 export function newUnibeautify(): Unibeautify {
   const unibeautify = new Unibeautify();
   unibeautify.loadOptions(Options);
   unibeautify.loadLanguages(Languages);
   return unibeautify;
 }
-export default newUnibeautify(); // tslint:disable-line no-default-export export-name
+export default newUnibeautify();
