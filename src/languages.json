@@ -1319,7 +1319,10 @@
     "since": "0.9.0",
     "sublimeSyntaxes": [],
     "textMateScope": "text.html.cfm",
-    "vscodeLanguages": []
+    "vscodeLanguages": [
+      "cfml",
+      "cfmhtml"
+    ]
   },
   {
     "aceMode": "coldfusion",
