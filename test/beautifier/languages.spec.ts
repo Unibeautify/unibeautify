@@ -1,4 +1,10 @@
-import { Unibeautify, Language, Beautifier, OptionsRegistry } from "../../src/";
+import {
+  Unibeautify,
+  Language,
+  Beautifier,
+  LanguageManager,
+  Languages,
+} from "../../src/";
 
 test("should get all loaded languages", () => {
   const unibeautify = new Unibeautify();
@@ -135,4 +141,19 @@ test("should loaded languages which support a given beautifier", () => {
   expect(
     unibeautify.getBeautifiersForLanguage(lang2).map(({ name }) => name)
   ).toEqual([]);
+});
+
+test("should return javascript when getting the language", () => {
+  const languageData = {
+    fileExtension: ".js",
+    languageName: "JavaScript",
+    vscodeLanguage: "javascript",
+  };
+  const languageManager = new LanguageManager(Languages);
+  const returnedLanguage = languageManager.getLanguage(languageData);
+  let languageName;
+  if (returnedLanguage) {
+    languageName = returnedLanguage.name;
+  }
+  expect(languageName).toEqual("JavaScript");
 });
