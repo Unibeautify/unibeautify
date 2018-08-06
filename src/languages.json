@@ -4897,7 +4897,8 @@
     ],
     "name": "Mustache",
     "namespace": "mustache",
-    "sublimeSyntaxes": []
+    "sublimeSyntaxes": [],
+    "vscodeLanguages": []
   },
   {
     "aceMode": "text",
@@ -6755,7 +6756,8 @@
     ],
     "name": "Riot",
     "namespace": "riot",
-    "sublimeSyntaxes": []
+    "sublimeSyntaxes": [],
+    "vscodeLanguages": []
   },
   {
     "aceMode": "text",
@@ -7487,7 +7489,8 @@
     "extensions": [],
     "name": "Spacebars",
     "namespace": "spacebars",
-    "sublimeSyntaxes": []
+    "sublimeSyntaxes": [],
+    "vscodeLanguages": []
   },
   {
     "aceMode": "yaml",
@@ -7708,7 +7711,8 @@
     ],
     "name": "Swig",
     "namespace": "swig",
-    "sublimeSyntaxes": []
+    "sublimeSyntaxes": [],
+    "vscodeLanguages": []
   },
   {
     "aceMode": "verilog",
@@ -7986,7 +7990,8 @@
     ],
     "name": "Titanium Style Sheets",
     "namespace": "tss",
-    "sublimeSyntaxes": []
+    "sublimeSyntaxes": [],
+    "vscodeLanguages": []
   },
   {
     "aceMode": "text",
@@ -8332,7 +8337,8 @@
     ],
     "name": "Visualforce",
     "namespace": "visualforce",
-    "sublimeSyntaxes": []
+    "sublimeSyntaxes": [],
+    "vscodeLanguages": []
   },
   {
     "aceMode": "d",
@@ -8791,7 +8797,8 @@
     ],
     "name": "XTemplate",
     "namespace": "xtemplate",
-    "sublimeSyntaxes": []
+    "sublimeSyntaxes": [],
+    "vscodeLanguages": []
   },
   {
     "aceMode": "text",
