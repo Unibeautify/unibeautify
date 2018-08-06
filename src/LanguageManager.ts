@@ -10,13 +10,16 @@ export class LanguageManager {
     fileExtension?: BeautifyData["fileExtension"];
     languageName?: BeautifyData["languageName"];
     sublimeSyntax?: BeautifyData["sublimeSyntax"];
+    vscodeLanguage?: BeautifyData["vscodeLanguage"];
   }): Language | null {
     const langs: Language[] = this.findLanguages({
       atomGrammar: data.atomGrammar,
       extension: data.fileExtension,
       name: data.languageName,
       sublimeSyntax: data.sublimeSyntax,
+      vscodeLanguage: data.vscodeLanguage,
     });
+    // Here is where we should compare the returned langs with the "data." filters to find the best match
     return langs.length > 0 ? langs[0] : null;
   }
 
