@@ -12,6 +12,13 @@ export class LanguageManager {
     sublimeSyntax?: BeautifyData["sublimeSyntax"];
     vscodeLanguage?: BeautifyData["vscodeLanguage"];
   }): Language | null {
+    const filters = {
+      atomGrammars: data.atomGrammar,
+      extensions: data.fileExtension,
+      name: data.languageName,
+      sublimeSyntaxes: data.sublimeSyntax,
+      vscodeLanguages: data.vscodeLanguage,
+    };
     const langs: Language[] = this.findLanguages({
       atomGrammar: data.atomGrammar,
       extension: data.fileExtension,
@@ -19,8 +26,7 @@ export class LanguageManager {
       sublimeSyntax: data.sublimeSyntax,
       vscodeLanguage: data.vscodeLanguage,
     });
-    // Here is where we should compare the returned langs with the "data." filters to find the best match
-    return langs.length > 0 ? langs[0] : null;
+    return this.getBestMatchLanguage(langs, filters);
   }
 
   /**
@@ -47,6 +53,28 @@ export class LanguageManager {
     };
     const langs: Language[] = filterMultiCriteria(this.languages, filters);
     return unique<Language>(langs);
+  }
+
+  private getBestMatchLanguage(langs: any[], data: any) {
+    let bestMatch = langs[0];
+    let highest = 0;
+    langs.forEach(lang => {
+      let score = 0;
+      Object.keys(data).forEach(key => {
+        if (Array.isArray(lang[key])) {
+          if (data[key] && lang[key].indexOf(data[key]) !== -1) {
+            score = score + 1;
+          }
+        } else if (data[key] === lang[key]) {
+          score = score + 1;
+        }
+      });
+      if (score > highest) {
+        bestMatch = lang;
+        highest = score;
+      }
+    });
+    return bestMatch;
   }
 
   /**
