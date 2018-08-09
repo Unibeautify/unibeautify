@@ -55,17 +55,22 @@ export class LanguageManager {
     return unique<Language>(langs);
   }
 
-  private getBestMatchLanguage(langs: any[], data: any) {
+  private getBestMatchLanguage(
+    langs: Language[],
+    filters: { [T in keyof Language]?: any }
+  ) {
     let bestMatch = langs[0];
     let highest = 0;
+    const keys: (keyof Language)[] = Object.keys(filters) as any;
     langs.forEach(lang => {
       let score = 0;
-      Object.keys(data).forEach(key => {
-        if (Array.isArray(lang[key])) {
-          if (data[key] && lang[key].indexOf(data[key]) !== -1) {
+      keys.forEach(key => {
+        const value = lang[key];
+        if (Array.isArray(value)) {
+          if (filters[key] && value.indexOf(filters[key]) !== -1) {
             score = score + 1;
           }
-        } else if (data[key] === lang[key]) {
+        } else if (filters[key] === lang[key]) {
           score = score + 1;
         }
       });
