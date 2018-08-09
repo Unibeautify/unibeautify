@@ -157,3 +157,16 @@ test("should return javascript when getting the language", () => {
   }
   expect(languageName).toEqual("JavaScript");
 });
+
+test("should return Hack as language even thought it ties with php", () => {
+  const languageData = {
+    fileExtension: ".php",
+  };
+  const languageManager = new LanguageManager(Languages);
+  const returnedLanguage = languageManager.getLanguage(languageData);
+  let languageName;
+  if (returnedLanguage) {
+    languageName = returnedLanguage.name;
+  }
+  expect(languageName).toEqual("Hack");
+});
