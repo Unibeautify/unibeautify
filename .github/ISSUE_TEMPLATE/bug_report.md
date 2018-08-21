@@ -1,6 +1,7 @@
 ---
 name: Bug Report
-about: Create a report to help us improve. This is only for bug reports, please use one of the other issue templates for requests.
+about: Create a report to help us improve. This is only for bug reports, please use
+  one of the other issue templates for requests.
 
 ---
 
