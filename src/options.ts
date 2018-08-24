@@ -104,6 +104,13 @@ export const Options: OptionsRegistry = {
     since: "0.7.0",
     type: "boolean",
   },
+  identifier_case: {
+    default: "lowercase",
+    description: "Case type for identifiers",
+    enum: ["lowercase", "uppercase", "capitalize"],
+    since: "0.17.0",
+    type: "string",
+  },
   indent_chained_methods: {
     default: true,
     description: "Indent chained method calls",
@@ -189,6 +196,13 @@ export const Options: OptionsRegistry = {
     since: "0.7.0",
     type: "boolean",
   },
+  keyword_case: {
+    default: "lowercase",
+    description: "Case type for keywords",
+    enum: ["lowercase", "uppercase", "capitalize"],
+    since: "0.17.0",
+    type: "string",
+  },
   max_preserve_newlines: {
     default: 10,
     description: "Number of line-breaks to be preserved in one chunk",
@@ -263,6 +277,12 @@ export const Options: OptionsRegistry = {
     enum: ["none", "double", "single"],
     since: "0.7.0",
     type: "string",
+  },
+  remove_comments: {
+    default: false,
+    description: "Remove comments from code",
+    since: "0.17.0",
+    type: "boolean",
   },
   remove_trailing_whitespace: {
     default: false,
