@@ -278,12 +278,6 @@ export const Options: OptionsRegistry = {
     since: "0.7.0",
     type: "string",
   },
-  remove_comments: {
-    default: false,
-    description: "Remove comments from code",
-    since: "0.17.0",
-    type: "boolean",
-  },
   remove_trailing_whitespace: {
     default: false,
     description: "Remove trailing whitespace",
