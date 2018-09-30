@@ -63,7 +63,7 @@
     "request": "2.88.0",
     "rimraf": "2.6.2",
     "shelljs": "0.8.2",
-    "ts-jest": "23.10.2",
+    "ts-jest": "23.10.3",
     "tslint": "5.11.0",
     "tslint-clean-code": "0.2.7",
     "tslint-microsoft-contrib": "5.2.1",
