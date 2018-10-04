@@ -12,13 +12,8 @@ cache:
   directories:
   - node_modules # NPM packages
 before_script:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter;
-    elif [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > ./cc-test-reporter;
-    else
-      echo Error:TRAVIS_OS_NAME && exit 1;
-    fi
+  - OS_NAME=$(uname | tr A-Z a-z)
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-${OS_NAME}-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 script:
