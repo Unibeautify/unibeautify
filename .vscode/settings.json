@@ -8,5 +8,7 @@
     "prettier.semi": true,
     "prettier.singleQuote": false,
     "prettier.trailingComma": "es5",
-    "prettier.printWidth": 80
+    "prettier.printWidth": 80,
+    "markdown.preview.scrollEditorWithPreview": false,
+    "markdown.preview.scrollPreviewWithEditor": true
 }

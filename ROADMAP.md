@@ -6,6 +6,8 @@
   - [ ] CLI
   - [ ] Core (Node.js API)
 
+- [x] Update the README #102
+
 - [ ] Core
   - [ ] Standard Options & Languages
   - [ ] Add Option
