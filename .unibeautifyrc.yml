@@ -14,3 +14,8 @@ TypeScript:
   quotes: "double"
   space_after_anon_function: false
   wrap_line_length: 80
+Markdown:
+  beautifiers:
+    - Prettier
+  wrap_line_length: 80
+  wrap_prose: always
