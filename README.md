@@ -96,7 +96,8 @@ Unibeautify CLI go to:
 
 > :warning: **Important:** We do not recommend using Unibeautify CLI with your
 > Continuous Integration (CI) service, such as Travis CI. Instead, you should
-> consider using Unibeautify CI which is a more optimized solution.
+> consider using [Unibeautify CI](https://github.com/apps/unibeautify-ci) which
+> is a more optimized solution.
 
 ## How to use
 
