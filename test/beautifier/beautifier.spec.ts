@@ -203,15 +203,15 @@ test("should successfully transform option values for beautifier", () => {
     lang1,
     options
   );
-  expect(result1.value1).toEqual(options.value1); // "Allow option"
+  expect(result1.value1).toEqual(options.value1); // Allow option
   expect(result1.value2).toBeUndefined();
   expect(result1.isUndefined).toBeUndefined();
-  expect(result1.renamed1).toEqual(options.value1); // "Rename option"
-  expect(result1.basicTransform).toEqual(options.basicTransform + 1); // "Perform basic transformation"
+  expect(result1.renamed1).toEqual(options.value1); // Rename option
+  expect(result1.basicTransform).toEqual(options.basicTransform + 1); // Perform basic transformation
   expect(result1.complexTransform).toEqual(
     options.value1 + options.basicTransform
-  ); // "Perform complex transformation"
-  expect(result1.willBeReplaced).toEqual(options.value1); // "Replace global option with language-specific option"
+  ); // Perform complex transformation
+  expect(result1.willBeReplaced).toEqual(options.value1); // Replace global option with language-specific option
   expect(result1).toEqual({
     basicTransform: options.basicTransform + 1,
     complexTransform: options.value1 + options.basicTransform,
