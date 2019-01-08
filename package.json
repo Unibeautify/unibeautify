@@ -46,7 +46,7 @@
   "devDependencies": {
     "@types/dedent": "0.7.0",
     "@types/diff": "3.5.2",
-    "@types/jest": "23.3.11",
+    "@types/jest": "23.3.12",
     "@types/js-yaml": "3.11.4",
     "@types/json-stable-stringify": "1.0.32",
     "@types/lodash": "4.14.119",
@@ -71,10 +71,10 @@
     "typescript": "3.2.2"
   },
   "dependencies": {
-    "diff": "^4.0.0",
-    "lodash": "^4.17.10",
-    "requireg": "^0.2.0",
-    "semver": "^5.5.0"
+    "diff": "^4.0.1",
+    "lodash": "^4.17.11",
+    "requireg": "^0.2.1",
+    "semver": "^5.6.0"
   },
   "engines": {
     "node": ">=6.0.0"
