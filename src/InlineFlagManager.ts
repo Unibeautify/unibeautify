@@ -2,8 +2,8 @@ import {
   parsePatch,
   createTwoFilesPatch,
   applyPatch,
-  IUniDiff,
-  IHunk,
+  ParsedDiff,
+  Hunk,
 } from "diff";
 
 export class InlineFlagManager {
@@ -37,7 +37,7 @@ export class InlineFlagManager {
     return text.charAt(text.length - 1) === "\n";
   }
 
-  private get patch(): IUniDiff {
+  private get patch(): ParsedDiff {
     const { rawPatch } = this;
     const filteredHunks = this.filterHunks(rawPatch.hunks);
     return {
@@ -46,7 +46,7 @@ export class InlineFlagManager {
     };
   }
 
-  private get rawPatch(): IUniDiff {
+  private get rawPatch(): ParsedDiff {
     const oldFileName = "Old";
     const newFileName = "New";
     const oldHeader = "";
@@ -67,11 +67,11 @@ export class InlineFlagManager {
     )[0];
   }
 
-  private filterHunks(hunks: IHunk[]): IHunk[] {
+  private filterHunks(hunks: Hunk[]): Hunk[] {
     return hunks.filter(this.shouldApplyHunk.bind(this));
   }
 
-  private shouldApplyHunk(hunk: IHunk): boolean {
+  private shouldApplyHunk(hunk: Hunk): boolean {
     const lineNumber = hunk.oldStart;
     return !(
       this.shouldIgnoreThisLine(lineNumber) || this.isDisabledAtLine(lineNumber)
