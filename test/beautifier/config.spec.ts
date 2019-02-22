@@ -170,3 +170,55 @@ describe("prefer beautifier config enabled", () => {
     ).resolves.toBe(beautifierResult);
   });
 });
+
+describe("prefer beautifier config enabled", () => {
+  test("should use path to beautifier config file", () => {
+    const unibeautify = new Unibeautify();
+    const lang: Language = {
+      atomGrammars: [],
+      extensions: ["test"],
+      name: "TestLang",
+      namespace: "test",
+      since: "0.1.0",
+      sublimeSyntaxes: [],
+      vscodeLanguages: [],
+    };
+    unibeautify.loadLanguage(lang);
+
+    const beautifierResult = "C:\\path1\\path2";
+    const dependency: DependencyDefinition = {
+      name: "Node",
+      program: "node",
+      type: DependencyType.Executable,
+    };
+    const beautifier: Beautifier = {
+      beautify: ({ dependencies, beautifierConfig }) => {
+        expect(() => dependencies.get(dependency.name)).not.toThrowError();
+        return Promise.resolve(
+          beautifierConfig &&
+            (beautifierConfig.filePath || beautifierConfig.config)
+        );
+      },
+      dependencies: [dependency],
+      name: "TestBeautify",
+      options: {
+        TestLang: false,
+      },
+    };
+    unibeautify.loadBeautifier(beautifier);
+    return expect(
+      unibeautify.beautify({
+        languageName: lang.name,
+        options: {
+          [lang.name]: {
+            [beautifier.name]: {
+              beautifier_config_path: beautifierResult,
+              prefer_beautifier_config: true,
+            },
+          },
+        },
+        text: "test",
+      })
+    ).resolves.toBe(beautifierResult);
+  });
+});
