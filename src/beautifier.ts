@@ -394,9 +394,11 @@ export class Unibeautify {
             .load()
             .then(() => {
               if (beautifierOptions.prefer_beautifier_config) {
-                if (beautifierOptions.beautifier_config_path) {
-                  return Promise.resolve({
+                if (beautifierOptions.beautifier_config_path && beautifier.resolveConfig) {
+                  return beautifier.resolveConfig({
+                    dependencies: dependencyManager,
                     filePath: beautifierOptions.beautifier_config_path,
+                    projectPath
                   });
                 } else if (beautifier.resolveConfig) {
                   return beautifier.resolveConfig({

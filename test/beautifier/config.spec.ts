@@ -173,6 +173,7 @@ describe("prefer beautifier config enabled", () => {
 
 describe("prefer beautifier config enabled", () => {
   test("should use path to beautifier config file", () => {
+    expect.assertions(3);
     const unibeautify = new Unibeautify();
     const lang: Language = {
       atomGrammars: [],
@@ -185,7 +186,8 @@ describe("prefer beautifier config enabled", () => {
     };
     unibeautify.loadLanguage(lang);
 
-    const beautifierResult = "C:\\path1\\path2";
+    const beautifierResult = "Testing Result";
+    const configPath = "C:\\path1\\path2";
     const dependency: DependencyDefinition = {
       name: "Node",
       program: "node",
@@ -194,15 +196,19 @@ describe("prefer beautifier config enabled", () => {
     const beautifier: Beautifier = {
       beautify: ({ dependencies, beautifierConfig }) => {
         expect(() => dependencies.get(dependency.name)).not.toThrowError();
-        return Promise.resolve(
-          beautifierConfig &&
-            (beautifierConfig.filePath || beautifierConfig.config)
-        );
+        return Promise.resolve(beautifierConfig && beautifierConfig.config);
       },
       dependencies: [dependency],
       name: "TestBeautify",
       options: {
         TestLang: false,
+      },
+      resolveConfig: ({ dependencies, filePath, projectPath }) => {
+        expect(() => dependencies.get(dependency.name)).not.toThrowError();
+        return Promise.resolve({
+          config: beautifierResult,
+          filePath: configPath,
+        });
       },
     };
     unibeautify.loadBeautifier(beautifier);
@@ -212,7 +218,7 @@ describe("prefer beautifier config enabled", () => {
         options: {
           [lang.name]: {
             [beautifier.name]: {
-              beautifier_config_path: beautifierResult,
+              beautifier_config_path: configPath,
               prefer_beautifier_config: true,
             },
           },
