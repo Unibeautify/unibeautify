@@ -393,20 +393,19 @@ export class Unibeautify {
           return dependencyManager
             .load()
             .then(() => {
-              if (beautifierOptions.prefer_beautifier_config) {
-                if (beautifierOptions.beautifier_config_path && beautifier.resolveConfig) {
-                  return beautifier.resolveConfig({
-                    dependencies: dependencyManager,
-                    filePath: beautifierOptions.beautifier_config_path,
-                    projectPath
-                  });
-                } else if (beautifier.resolveConfig) {
-                  return beautifier.resolveConfig({
-                    dependencies: dependencyManager,
-                    filePath,
-                    projectPath,
-                  });
+              if (
+                beautifierOptions.prefer_beautifier_config &&
+                beautifier.resolveConfig
+              ) {
+                let resolveConfigPath: string | undefined = filePath;
+                if (beautifierOptions.beautifier_config_path) {
+                  resolveConfigPath = beautifierOptions.beautifier_config_path;
                 }
+                return beautifier.resolveConfig({
+                  dependencies: dependencyManager,
+                  filePath: resolveConfigPath,
+                  projectPath,
+                });
               }
               return Promise.resolve({});
             })
