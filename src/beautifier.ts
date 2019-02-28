@@ -397,10 +397,11 @@ export class Unibeautify {
                 beautifierOptions.prefer_beautifier_config &&
                 beautifier.resolveConfig
               ) {
-                let resolveConfigPath: string | undefined = filePath;
-                if (beautifierOptions.beautifier_config_path) {
-                  resolveConfigPath = beautifierOptions.beautifier_config_path;
-                }
+                const resolveConfigPath:
+                  | string
+                  | undefined = beautifierOptions.beautifier_config_path
+                  ? beautifierOptions.beautifier_config_path
+                  : filePath;
                 return beautifier.resolveConfig({
                   dependencies: dependencyManager,
                   filePath: resolveConfigPath,
