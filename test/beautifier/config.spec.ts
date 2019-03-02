@@ -170,3 +170,60 @@ describe("prefer beautifier config enabled", () => {
     ).resolves.toBe(beautifierResult);
   });
 });
+
+describe("prefer beautifier config enabled", () => {
+  test("should use path to beautifier config file", () => {
+    expect.assertions(3);
+    const unibeautify = new Unibeautify();
+    const lang: Language = {
+      atomGrammars: [],
+      extensions: ["test"],
+      name: "TestLang",
+      namespace: "test",
+      since: "0.1.0",
+      sublimeSyntaxes: [],
+      vscodeLanguages: [],
+    };
+    unibeautify.loadLanguage(lang);
+
+    const beautifierResult = "Testing Result";
+    const configPath = "C:\\path1\\path2";
+    const dependency: DependencyDefinition = {
+      name: "Node",
+      program: "node",
+      type: DependencyType.Executable,
+    };
+    const beautifier: Beautifier = {
+      beautify: ({ dependencies, beautifierConfig }) => {
+        expect(() => dependencies.get(dependency.name)).not.toThrowError();
+        return Promise.resolve(beautifierConfig && beautifierConfig.config);
+      },
+      dependencies: [dependency],
+      name: "TestBeautify",
+      options: {
+        TestLang: false,
+      },
+      resolveConfig: ({ dependencies, filePath, projectPath }) => {
+        expect(() => dependencies.get(dependency.name)).not.toThrowError();
+        return Promise.resolve({
+          config: beautifierResult,
+          filePath: configPath,
+        });
+      },
+    };
+    unibeautify.loadBeautifier(beautifier);
+    return expect(
+      unibeautify.beautify({
+        languageName: lang.name,
+        options: {
+          [lang.name]: {
+            [beautifier.name]: {
+              prefer_beautifier_config: configPath,
+            },
+          },
+        },
+        text: "test",
+      })
+    ).resolves.toBe(beautifierResult);
+  });
+});

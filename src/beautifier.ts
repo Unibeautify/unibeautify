@@ -397,9 +397,13 @@ export class Unibeautify {
                 beautifierOptions.prefer_beautifier_config &&
                 beautifier.resolveConfig
               ) {
+                const resolveConfigPath: string | undefined =
+                  typeof beautifierOptions.prefer_beautifier_config === "string"
+                    ? beautifierOptions.prefer_beautifier_config
+                    : filePath;
                 return beautifier.resolveConfig({
                   dependencies: dependencyManager,
-                  filePath,
+                  filePath: resolveConfigPath,
                   projectPath,
                 });
               }
