@@ -218,8 +218,7 @@ describe("prefer beautifier config enabled", () => {
         options: {
           [lang.name]: {
             [beautifier.name]: {
-              beautifier_config_path: configPath,
-              prefer_beautifier_config: true,
+              prefer_beautifier_config: configPath,
             },
           },
         },
