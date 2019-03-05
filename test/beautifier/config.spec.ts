@@ -5,6 +5,7 @@ import {
   DependencyDefinition,
   DependencyType,
   DependencyManager,
+  BeautifierSpecificOptionValues,
 } from "../../src/";
 
 beforeEach(() => {

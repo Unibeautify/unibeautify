@@ -12,13 +12,14 @@
     "dev": "tsc --watch",
     "copy-languages-json": "cp src/languages.json dist/src/languages.json",
     "compile": "tsc",
-    "build": "npm-run-all compile copy-languages-json update-type-defs",
+    "build": "npm-run-all compile copy-languages-json update-generated",
     "clean": "rimraf dist/",
     "prepublishOnly": "npm run build",
     "docs": "typedoc --out docs --module commonjs --readme README.md --name Unibeautify src",
     "lint": "tslint '{src,test,script}/**/*.ts'",
     "lint-fix": "tslint --fix '{src,test,script}/**/*.ts'",
     "update-type-defs": "node dist/scripts/update-type-defs.js dist/src/beautifier.d.ts",
+    "update-generated": "node dist/scripts/update-generated.js src/generated.ts",
     "update-languages": "node dist/scripts/update-languages.js ./src/languages.json"
   },
   "repository": {

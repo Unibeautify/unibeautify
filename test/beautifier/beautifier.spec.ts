@@ -178,23 +178,25 @@ test("should successfully transform option values for beautifier", () => {
     name: "TestBeautify",
     options: {
       [lang1.name]: {
-        basicTransform: num => num + 1,
+        basicTransform: (num: number) => num + 1,
         complexTransform: [
+          // ["indent_char", "indent_size", "indent_with_tabs"],
+          // (optionValues) => optionValues.indent_char + optionValues.indent_size,
           ["value1", "basicTransform"],
-          optionValues => optionValues.value1 + optionValues.basicTransform,
+          (optionValues: any) => optionValues.value1 + optionValues.basicTransform,
         ],
         isUndefined: undefined,
         renamed1: "value1",
         value1: true,
         value2: false,
         willBeReplaced: "value1",
-      },
+      } as any,
       [lang2.name]: true,
     },
   };
   unibeautify.loadBeautifier(beautifier);
 
-  const options = {
+  const options: any = {
     basicTransform: 2,
     value1: 123,
   };

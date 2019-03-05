@@ -1,4 +1,4 @@
-import { Unibeautify, Language, Beautifier, OptionsRegistry } from "../../src/";
+import { Unibeautify, Language, Beautifier, OptionsRegistry, BeautifierOptionName } from "../../src/";
 
 test("should get all loaded options", () => {
   const unibeautify = new Unibeautify();
@@ -28,7 +28,7 @@ test("should get all loaded options", () => {
 
 test("should get languages with a loaded beautifier supporting the given option", () => {
   const unibeautify = new Unibeautify();
-  const optionName = "op1";
+  const optionName: BeautifierOptionName = "op1" as any;
   const options1: OptionsRegistry = {
     [optionName]: {
       default: false,
@@ -77,7 +77,7 @@ test("should get languages with a loaded beautifier supporting the given option"
 
 test("should get beautifiers with a loaded language supporting the given option", () => {
   const unibeautify = new Unibeautify();
-  const optionName = "op1";
+  const optionName: BeautifierOptionName = "op1" as any;
   const options1: OptionsRegistry = {
     [optionName]: {
       default: false,
@@ -139,8 +139,8 @@ test("should get beautifiers with a loaded language supporting the given option"
 
 test("should correctly determine whether beautifier supports option for a language", () => {
   const unibeautify = new Unibeautify();
-  const optionName = "op1";
-  const undefinedOptionName = "isUndefined";
+  const optionName: BeautifierOptionName = "op1" as any;
+  const undefinedOptionName: BeautifierOptionName = "isUndefined" as any;
   const options1: OptionsRegistry = {
     [optionName]: {
       default: false,
@@ -232,9 +232,9 @@ test("should correctly determine whether beautifier supports option for a langua
 
 test("should get options supported for a language", () => {
   const unibeautify = new Unibeautify();
-  const optionName1 = "op1";
-  const optionName2 = "op2";
-  const optionName3 = "op3";
+  const optionName1: BeautifierOptionName = "op1" as any;
+  const optionName2: BeautifierOptionName = "op2" as any;
+  const optionName3: BeautifierOptionName = "op3" as any;
   const options1: OptionsRegistry = {
     [optionName1]: {
       default: false,
@@ -314,7 +314,7 @@ test("should get options supported for a language", () => {
 
 test("should get options supported by a beautifier for a language", () => {
   const unibeautify = new Unibeautify();
-  const optionName = "op1";
+  const optionName: BeautifierOptionName = "op1" as any;
   const options1: OptionsRegistry = {
     [optionName]: {
       default: false,
@@ -406,7 +406,7 @@ test(
     "tion name",
   () => {
     const unibeautify = new Unibeautify();
-    const optionName = "op1";
+    const optionName: BeautifierOptionName = "op1" as any;
     const options1: OptionsRegistry = {
       [optionName]: {
         default: true,

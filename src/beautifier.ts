@@ -7,25 +7,90 @@ import {
   DependencyDefinition,
   DependencyManager,
   Badge,
+  DependencyRegistry,
+  DependenciesForBeautifierRegistry,
 } from "./DependencyManager";
 import { zipObject, unique } from "./utils";
+import { BeautifierOptionName } from "./generated";
+// tslint:disable-next-line:export-name
+export { BeautifierOptionName };
 
 /**
 New name to rename the option (key) to.
 Name of an option to configure for a beautifier.
 */
-export type BeautifierOptionName = string;
+// export type BeautifierOptionName = string;
+
+// tslint:disable-next-line:max-line-length
+// export type BeautifierOptionName = "align_assignments" | "arrow_parens" | "brace_style" | "break_chained_methods" | "comma_first" | "end_of_line" | "end_with_comma" | "end_with_newline" | "end_with_semicolon" | "force_indentation" | "identifier_case" | "indent_chained_methods" | "indent_char" | "indent_comments" | "indent_inner_html" | "indent_level" | "indent_scripts" | "indent_size" | "indent_style" | "indent_with_tabs" | "jslint_happy" | "jsx_brackets" | "keep_array_indentation" | "keyword_case" | "max_preserve_newlines" | "multiline_ternary" | "newline_before_tags" | "newline_between_rules" | "no_leading_zero" | "object_curly_spacing" | "pragma_insert" | "pragma_require" | "preserve_newlines" | "quotes" | "remove_trailing_whitespace" | "selector_separator_newline" | "space_after_anon_function" | "space_before_conditional" | "space_in_empty_paren" | "space_in_paren" | "typesafe_equality_operators" | "unescape_strings" | "unformatted" | "unindent_chained_methods" | "wrap_attributes" | "wrap_attributes_indent_size" | "wrap_line_length" | "wrap_prose";
+
 /**
 Function to process the given options and return a final option value.
 */
-export type BeautifierOptionTransformFunction = (options: OptionValues) => any;
+// export type BeautifierOptionTransformFunction = (options: OptionValues) => any;
+// export type BeautifierOptionTransformFunction = (options: LanguageSpecificOptionValues) => any;
+
+// export type BeautifierOptionTransformFunction<
+//   OptionNames extends keyof LanguageSpecificOptionValues
+// > = (options: Pick<LanguageSpecificOptionValues, OptionNames>) => any;
+
+export type BeautifierOptionTransformFunction = (options: Partial<LanguageSpecificOptionValues>) => any;
+
+// export type BeautifierOptionTransformFunction<
+//   OptionNames extends BeautifierOptionName
+// > = (options: Pick<LanguageSpecificOptionValues, OptionNames>) => any;
+
 /**
 Option that transforms one or more required options into a single value.
 */
+
+/*
+export type BeautifyOptionTransform<
+  SelectedBeautifierOptionNames extends BeautifierOptionName,
+  T extends SelectedBeautifierOptionNames[]
+> = [
+  T,
+  BeautifierOptionTransformFunction<SelectedBeautifierOptionNames>
+];
+*/
+
+/*
+export type BeautifyOptionTransform<
+  SelectedBeautifierOptionNames extends BeautifierOptionName
+> = [
+  SelectedBeautifierOptionNames[],
+  BeautifierOptionTransformFunction<SelectedBeautifierOptionNames>
+];
+*/
+
 export type BeautifyOptionTransform = [
   BeautifierOptionName[],
-  BeautifierOptionTransformFunction
+  BeautifierOptionTransformFunction,
 ];
+
+/*
+export type BeautifyOptionTransform<T> = T extends [
+  (infer SelectedBeautifierOptionNames extends BeautifierOptionName)[],
+  any
+] ? ([
+  SelectedBeautifierOptionNames[],
+  BeautifierOptionTransformFunction<SelectedBeautifierOptionNames>
+]) : never;
+*/
+/*
+type BeautifyOptionTransform<T> = T extends { a: infer U, b: infer U } ? U : never;
+
+type Foo<T> = T extends { a: infer U, b: infer U } ? U : never;
+
+type Foo<T, U> = T extends { a: U, b: U } ? U : never;
+*/
+
+// const complexTransform: BeautifyOptionTransform<"indent_with_tabs" | "indent_size"> = [
+// const complexTransform: BeautifyOptionTransform = [
+//     ["indent_with_tabs", "indent_size"],
+//   (optionValues) => optionValues.indent_with_tabs,
+// ];
+
 /**
 Option that transforms a single option value with the same name.
 */
@@ -96,12 +161,48 @@ export interface BeautifierBeautifyData {
   beautifierConfig?: ResolvedConfig;
 }
 
-export interface LanguageOptionValues {
-  [languageName: string]: OptionValues;
+export type LanguageSpecificOptionValues = {
+  [optionName in BeautifierOptionName]?: any;
+};
+
+export interface BeautifierSpecificOptionValues {
+  prefer_beautifier_config?: boolean | string;
 }
 
-export interface OptionValues {
-  [optionName: string]: any;
+export interface BeautifierOptionValues {
+  [beautifierName: string]: BeautifierSpecificOptionValues;
+}
+
+/*
+export type OptionValues = {
+  beautifiers?: string[];
+} & LanguageSpecificOptionValues & BeautifierOptionValues & DependencyRegistry;
+*/
+
+export type OptionValues = LanguageSpecificOptionValues & {
+  beautifiers?: string[];
+} & {
+  // [beautifierName: string]: BeautifierSpecificOptionValues & DependenciesForBeautifierRegistry | string[] | undefined;
+  [beautifierName: string]: BeautifierSpecificOptionValues & DependenciesForBeautifierRegistry;
+};
+
+/*
+const test: OptionValues = {
+  beautifiers: ["test"],
+};
+*/
+
+/*
+export type OptionValues<EnabledBeautifiers extends keyof string[]> = LanguageSpecificOptionValues
+  & BeautifierOptionValues
+  & DependencyRegistry<EnabledBeautifiers>
+  & {
+    beautifiers?: EnabledBeautifiers[];
+  };
+*/
+
+export interface LanguageOptionValues {
+  [languageName: string]: OptionValues;
 }
 
 /**
@@ -565,7 +666,7 @@ export class Unibeautify {
       return {};
     } else if (typeof beautifierOptions === "object") {
       return Object.keys(beautifierOptions).reduce(
-        (acc: OptionValues, key: string) => {
+        (acc: OptionValues, key: BeautifierOptionName) => {
           const option = beautifierOptions[key];
           if (typeof option === "string") {
             return {

@@ -5,6 +5,7 @@ import {
   DependencyDefinition,
   DependencyOptions,
 } from "./Dependency";
+import { BeautifierOptionName } from "../generated";
 
 export class DependencyManager {
   private static registry: DependencyRegistry = {};
@@ -84,6 +85,7 @@ export interface LanguageDependencyOptions {
   [dependencyName: string]: DependencyOptions;
 }
 
+/*
 export interface DependencyRegistry {
   [beautifierName: string]: {
     [dependencyName: string]: {
@@ -91,3 +93,21 @@ export interface DependencyRegistry {
     };
   };
 }
+*/
+
+export interface DependenciesForBeautifierRegistry {
+    [dependencyName: string]: {
+      [optionsKey: string]: Dependency;
+      // [optionName in BeautifierOptionName]: Dependency;
+    };
+}
+
+export interface DependencyRegistry {
+  [beautifierName: string]: DependenciesForBeautifierRegistry;
+}
+
+/*
+export interface DependencyRegistry<EnabledBeautifiers extends keyof string[]> {
+  [beautifierName in EnabledBeautifiers]: DependenciesForBeautifierRegistry;
+}
+*/
