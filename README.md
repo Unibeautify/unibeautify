@@ -27,7 +27,7 @@ $ npm install --save unibeautify
 See [`Unibeautify-CLI`](https://github.com/Unibeautify/unibeautify-cli):
 
 ```bash
-$ npm install --global unibeautify-cli
+$ npm install --global @unibeautify/cli
 ```
 
 ## Usage
