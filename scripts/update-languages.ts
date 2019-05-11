@@ -66,7 +66,7 @@ function convertGitHubLanguageToUnibeautify(
     group: language.group,
     liguistLanguageId: language.language_id,
     name: name,
-    textMateScope: language.tm_scope
+    textMateScope: language.tm_scope,
   }));
 }
 
