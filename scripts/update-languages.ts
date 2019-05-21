@@ -57,23 +57,17 @@ request(languagesUrl, (error, response, body) => {
 function convertGitHubLanguageToUnibeautify(
   languages: GitHubLanguages
 ): Partial<Language>[] {
-  return _.chain(languages)
-    .toPairs()
-    .map((value: [string, GitHubLanguage]) => {
-      const [languageName, language] = value;
-      return <Partial<Language>>{
-        aceMode: language.ace_mode,
-        codeMirrorMimeType: language.codemirror_mime_type,
-        codeMirrorMode: language.codemirror_mode,
-        extensions: language.extensions,
-        fileNames: language.filenames,
-        group: language.group,
-        liguistLanguageId: language.language_id,
-        name: languageName,
-        textMateScope: language.tm_scope,
-      };
-    })
-    .value();
+  return _.map(languages, (language, name) => ({
+    aceMode: language.ace_mode,
+    codeMirrorMimeType: language.codemirror_mime_type,
+    codeMirrorMode: language.codemirror_mode,
+    extensions: language.extensions,
+    fileNames: language.filenames,
+    group: language.group,
+    liguistLanguageId: language.language_id,
+    name: name,
+    textMateScope: language.tm_scope,
+  }));
 }
 
 function mergeLanguages(
