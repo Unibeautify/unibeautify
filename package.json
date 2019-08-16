@@ -56,7 +56,7 @@
     "dedent": "0.7.0",
     "istanbul-api": "3.0.0",
     "istanbul-reports": "2.2.6",
-    "jest": "24.8.0",
+    "jest": "24.9.0",
     "js-yaml": "3.13.1",
     "json-stable-stringify": "1.0.1",
     "npm-run-all": "4.1.5",
