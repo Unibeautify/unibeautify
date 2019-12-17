@@ -51,7 +51,7 @@
     "@types/json-stable-stringify": "1.0.32",
     "@types/lodash": "4.14.149",
     "@types/node": "10.12.24",
-    "@types/request": "2.48.3",
+    "@types/request": "2.48.4",
     "@types/semver": "6.2.0",
     "dedent": "0.7.0",
     "istanbul-api": "3.0.0",
