@@ -55,7 +55,7 @@
     "@types/semver": "6.2.0",
     "dedent": "0.7.0",
     "istanbul-api": "3.0.0",
-    "istanbul-reports": "2.2.6",
+    "istanbul-reports": "3.0.2",
     "jest": "24.9.0",
     "js-yaml": "3.13.1",
     "json-stable-stringify": "1.0.1",
