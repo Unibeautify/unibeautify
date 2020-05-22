@@ -6,8 +6,12 @@ about: Request to add a new option or update an existing one. Updates include ad
 ---
 
 **Option Details**
-Name:
 
+Option name:
+
+Language(s):
+
+Beautifier(s):
 
 **If this is a new option, please fill out the below**
 Type (boolean, multi-select, number, etc):
