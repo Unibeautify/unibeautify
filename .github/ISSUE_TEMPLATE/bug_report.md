@@ -10,6 +10,7 @@ about: Create a report to help us improve. This is only for bug reports, please 
 
 **To Reproduce**
 Steps to reproduce the behavior:
+<!-- Please use https://playground.unibeautify.com/ to reproduce the issue then include link here -->
 
 
 **Expected behavior**
