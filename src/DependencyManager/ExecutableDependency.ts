@@ -72,7 +72,13 @@ export class ExecutableDependency extends Dependency {
     return new Promise((resolve, reject) => {
       // tslint:disable-next-line:no-require-imports
       const spawn: typeof Spawn = require("child_process").spawn;
-      const cmd = spawn(exe, args, options);
+      const cmd = spawn(exe, args, {
+        ...options,
+        env: {
+          ...process.env,
+          ...(options.env || {}),
+        },
+      });
       let stdout = "";
       let stderr = "";
       cmd.stdout.on("data", data => {
