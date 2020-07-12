@@ -354,13 +354,10 @@ export class Unibeautify {
         names: string[],
         beautifiers: Beautifier[]
     ): (Beautifier | undefined)[] {
-        const beautifiersByName = beautifiers.reduce(
-            (index, current) => {
-                index[current.name] = current;
-                return index;
-            },
-            {} as { [beautifierName: string]: Beautifier }
-        );
+        const beautifiersByName = beautifiers.reduce((index, current) => {
+            index[current.name] = current;
+            return index;
+        }, {} as { [beautifierName: string]: Beautifier });
         return names.map(name => beautifiersByName[name]);
     }
 

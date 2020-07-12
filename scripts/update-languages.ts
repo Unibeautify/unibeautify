@@ -84,10 +84,7 @@ function mergeLanguages(
         const newLanguage = mergeLanguage(baseLanguage, lang);
         baseLanguagesMap[langName] = newLanguage;
     });
-    return _.chain(baseLanguagesMap)
-        .values()
-        .sortBy('name')
-        .value() as any[];
+    return _.chain(baseLanguagesMap).values().sortBy('name').value() as any[];
 }
 
 function mergeLanguage(
