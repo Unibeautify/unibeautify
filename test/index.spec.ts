@@ -1,35 +1,35 @@
-import unibeautify, { Beautifier, newUnibeautify } from "../src/";
+import unibeautify, { Beautifier, newUnibeautify } from '../src/';
 
-test("should fail to find language", () => {
+test('should fail to find language', () => {
   expect(
     unibeautify.beautify({
-      languageName: "TestLang",
+      languageName: 'TestLang',
       options: {},
-      text: "test",
+      text: 'test',
     })
-  ).rejects.toThrowError("Cannot find language.");
+  ).rejects.toThrowError('Cannot find language.');
 });
 
-test("should find JavaScript language and no Beautifier for Language", () => {
+test('should find JavaScript language and no Beautifier for Language', () => {
   expect(
     unibeautify.beautify({
-      languageName: "JavaScript",
+      languageName: 'JavaScript',
       options: {},
-      text: "test",
+      text: 'test',
     })
-  ).rejects.toThrowError("Beautifiers not found for Language: JavaScript");
+  ).rejects.toThrowError('Beautifiers not found for Language: JavaScript');
 });
 
-test("should find JavaScript Language and Beautifier", () => {
+test('should find JavaScript Language and Beautifier', () => {
   expect.assertions(1);
   const unibeautify2 = newUnibeautify();
 
-  const beautifierResult = "Testing Result";
+  const beautifierResult = 'Testing Result';
   const beautifier: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: "JavaScript Beautifier",
+    name: 'JavaScript Beautifier',
     options: {
       JavaScript: false,
     },
@@ -38,33 +38,33 @@ test("should find JavaScript Language and Beautifier", () => {
 
   return expect(
     unibeautify2.beautify({
-      languageName: "JavaScript",
+      languageName: 'JavaScript',
       options: {},
-      text: "test",
+      text: 'test',
     })
   ).resolves.toEqual(beautifierResult);
 });
 
-test("should find JavaScript Language and not Beautifier", () => {
+test('should find JavaScript Language and not Beautifier', () => {
   const unibeautify2 = newUnibeautify();
 
-  const beautifierResult = "Testing Result";
+  const beautifierResult = 'Testing Result';
   const beautifier: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: "Not JavaScript Beautifier",
+    name: 'Not JavaScript Beautifier',
     options: {
-      "Not JavaScript": false,
+      'Not JavaScript': false,
     },
   };
   unibeautify2.loadBeautifier(beautifier);
 
   return expect(
     unibeautify2.beautify({
-      languageName: "JavaScript",
+      languageName: 'JavaScript',
       options: {},
-      text: "test",
+      text: 'test',
     })
-  ).rejects.toThrowError("Beautifiers not found for Language: JavaScript");
+  ).rejects.toThrowError('Beautifiers not found for Language: JavaScript');
 });

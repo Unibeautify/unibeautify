@@ -4,7 +4,7 @@ export function replaceInterface(
   newInterfaceBody: string
 ): string {
   return originalContents.replace(
-    new RegExp(`export interface ${interfaceName} {[\\s\\S]+?}`, "gm"),
+    new RegExp(`export interface ${interfaceName} {[\\s\\S]+?}`, 'gm'),
     `export interface ${interfaceName} {
 ${newInterfaceBody}
 }`
@@ -17,7 +17,7 @@ export function replaceType(
   newTypeBody: string
 ): string {
   return originalContents.replace(
-    new RegExp(`export declare type ${typeName} = [\\s\\S]+?;`, "gm"),
+    new RegExp(`export declare type ${typeName} = [\\s\\S]+?;`, 'gm'),
     `export declare type ${typeName} = ${newTypeBody};`
   );
 }
