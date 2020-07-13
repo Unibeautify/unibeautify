@@ -335,9 +335,7 @@ export class Unibeautify {
         ? this.beautifiersWithNames(beautifierNames, allBeautifiers)
         : allBeautifiers;
 
-    const missingBeautifierName:
-      | string
-      | undefined = selectedBeautifiers
+    const missingBeautifierName: string | undefined = selectedBeautifiers
       .map((curr, index) => (curr ? undefined : beautifierNames[index]))
       .find(curr => !!curr);
     return {
@@ -350,10 +348,13 @@ export class Unibeautify {
     names: string[],
     beautifiers: Beautifier[]
   ): (Beautifier | undefined)[] {
-    const beautifiersByName = beautifiers.reduce((index, current) => {
-      index[current.name] = current;
-      return index;
-    }, {} as { [beautifierName: string]: Beautifier });
+    const beautifiersByName = beautifiers.reduce(
+      (index, current) => {
+        index[current.name] = current;
+        return index;
+      },
+      {} as { [beautifierName: string]: Beautifier }
+    );
     return names.map(name => beautifiersByName[name]);
   }
 
