@@ -3,14 +3,14 @@ import {
   DependencyType,
   DependencyDefinition,
   DependencyOptions,
-} from "../../src/DependencyManager";
+} from '../../src/DependencyManager';
 
-describe("fail to load Executable dependency", () => {
-  test("should fail to load Executable dependency", async () => {
+describe('fail to load Executable dependency', () => {
+  test('should fail to load Executable dependency', async () => {
     expect.assertions(4);
     const def: DependencyDefinition = {
-      name: "NotFound",
-      program: "NotFound",
+      name: 'NotFound',
+      program: 'NotFound',
       type: DependencyType.Executable,
     };
     const dependency = new ExecutableDependency(def);
@@ -19,21 +19,21 @@ describe("fail to load Executable dependency", () => {
       expect(error.message).toMatch(
         'Dependency "NotFound" is required and not installed.'
       );
-      expect(error.message).toMatch("spawn NotFound ENOENT");
+      expect(error.message).toMatch('spawn NotFound ENOENT');
       expect(dependency.isInstalled).toBe(false);
       expect(dependency.errors).toHaveLength(1);
     });
   });
 
-  test("should fail to load Executable dependency with incorrect path", () => {
+  test('should fail to load Executable dependency with incorrect path', () => {
     expect.assertions(4);
     const def: DependencyDefinition = {
-      name: "Node",
-      program: "node",
+      name: 'Node',
+      program: 'node',
       type: DependencyType.Executable,
     };
     const options: DependencyOptions = {
-      path: "/this/is/not/going/to/work",
+      path: '/this/is/not/going/to/work',
     };
     const dependency = new ExecutableDependency(def, options);
 
@@ -48,13 +48,13 @@ describe("fail to load Executable dependency", () => {
   });
 });
 
-describe("successfully load Executable dependency", () => {
-  describe("Load", () => {
-    test("should successfully load Executable dependency", async () => {
+describe('successfully load Executable dependency', () => {
+  describe('Load', () => {
+    test('should successfully load Executable dependency', async () => {
       expect.assertions(3);
       const options: DependencyDefinition = {
-        name: "Node",
-        program: "node",
+        name: 'Node',
+        program: 'node',
         type: DependencyType.Executable,
       };
       const dependency = new ExecutableDependency(options);
@@ -66,38 +66,38 @@ describe("successfully load Executable dependency", () => {
       });
     });
 
-    test("should successfully run command for Executable dependency", async () => {
+    test('should successfully run command for Executable dependency', async () => {
       expect.assertions(2);
       const options: DependencyDefinition = {
-        name: "Node",
-        program: "node",
+        name: 'Node',
+        program: 'node',
         type: DependencyType.Executable,
       };
       const dependency = new ExecutableDependency(options);
 
       return await dependency.load().then(() => {
         expect(dependency.isInstalled).toBe(true);
-        return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
-          expect(stdout).toContain("node");
+        return dependency.run({ args: ['--help'] }).then(({ stdout }) => {
+          expect(stdout).toContain('node');
         });
       });
     });
 
-    describe("Run", () => {
-      test("should return stdout", () => {
+    describe('Run', () => {
+      test('should return stdout', () => {
         expect.assertions(2);
         const options: DependencyDefinition = {
-          name: "Node",
-          program: "node",
+          name: 'Node',
+          program: 'node',
           type: DependencyType.Executable,
         };
         const dependency = new ExecutableDependency(options);
         return dependency.load().then(() => {
           expect(dependency.isInstalled).toBe(true);
-          const stdout = "happy output";
+          const stdout = 'happy output';
           return dependency
             .run({
-              args: ["-e", `console.log('${stdout}');`],
+              args: ['-e', `console.log('${stdout}');`],
             })
             .then(result => {
               expect(result.stdout).toContain(stdout);
@@ -105,20 +105,20 @@ describe("successfully load Executable dependency", () => {
         });
       });
 
-      test("should return stderr", () => {
+      test('should return stderr', () => {
         expect.assertions(2);
         const options: DependencyDefinition = {
-          name: "Node",
-          program: "node",
+          name: 'Node',
+          program: 'node',
           type: DependencyType.Executable,
         };
         const dependency = new ExecutableDependency(options);
         return dependency.load().then(() => {
           expect(dependency.isInstalled).toBe(true);
-          const stderr = "sad output";
+          const stderr = 'sad output';
           return dependency
             .run({
-              args: ["-e", `console.error('${stderr}');`],
+              args: ['-e', `console.error('${stderr}');`],
             })
             .then(result => {
               expect(result.stderr).toContain(stderr);
@@ -126,11 +126,11 @@ describe("successfully load Executable dependency", () => {
         });
       });
 
-      test("should return exit code", () => {
+      test('should return exit code', () => {
         expect.assertions(3);
         const options: DependencyDefinition = {
-          name: "Node",
-          program: "node",
+          name: 'Node',
+          program: 'node',
           type: DependencyType.Executable,
         };
         const dependency = new ExecutableDependency(options);
@@ -139,30 +139,30 @@ describe("successfully load Executable dependency", () => {
           const exitCode = 123;
           return dependency
             .run({
-              args: ["-e", `process.exit(${exitCode})`],
+              args: ['-e', `process.exit(${exitCode})`],
             })
             .then(result => {
-              expect(typeof result.exitCode).toBe("number");
+              expect(typeof result.exitCode).toBe('number');
               expect(result.exitCode).toBe(exitCode);
             });
         });
       });
 
-      test("should accept stdin parameter", () => {
+      test('should accept stdin parameter', () => {
         expect.assertions(2);
         const options: DependencyDefinition = {
-          name: "Node",
-          program: "node",
+          name: 'Node',
+          program: 'node',
           type: DependencyType.Executable,
         };
         const dependency = new ExecutableDependency(options);
         return dependency.load().then(() => {
           expect(dependency.isInstalled).toBe(true);
-          const stdin = "happy output";
+          const stdin = 'happy output';
           return dependency
             .run({
               args: [
-                "-e",
+                '-e',
                 'console.log("start");process.stdin.pipe(process.stdout);',
               ],
               stdin,
@@ -174,11 +174,11 @@ describe("successfully load Executable dependency", () => {
       });
     });
 
-    test("should only load once", async () => {
+    test('should only load once', async () => {
       expect.assertions(5);
       const options: DependencyDefinition = {
-        name: "Node",
-        program: "node",
+        name: 'Node',
+        program: 'node',
         type: DependencyType.Executable,
       };
       class CustomExecutableDependency extends ExecutableDependency {
@@ -201,13 +201,13 @@ describe("successfully load Executable dependency", () => {
     });
   });
 
-  test("should successfully extract version from stderr", () => {
+  test('should successfully extract version from stderr', () => {
     expect.assertions(1);
     const options: DependencyDefinition = {
-      name: "Node",
-      program: "node",
+      name: 'Node',
+      program: 'node',
       type: DependencyType.Executable,
-      versionArgs: ["-e", "console.error('v1.2.3');"],
+      versionArgs: ['-e', "console.error('v1.2.3');"],
     };
     const dependency = new ExecutableDependency(options);
     return dependency.load().then(() => {
@@ -215,115 +215,115 @@ describe("successfully load Executable dependency", () => {
     });
   });
 
-  describe("Parse Version", () => {
-    test("should successfully parse version with function", () => {
+  describe('Parse Version', () => {
+    test('should successfully parse version with function', () => {
       expect.assertions(2);
       const options: DependencyDefinition = {
-        name: "Node",
+        name: 'Node',
         parseVersion: (text: string) => {
           const matches = text.match(/v(\d+.\d+.\d+)/);
           return matches ? matches[1] : undefined;
         },
-        program: "node",
+        program: 'node',
         type: DependencyType.Executable,
       };
       const dependency = new ExecutableDependency(options);
       return dependency.load().then(() => {
         expect(dependency.isInstalled).toBe(true);
-        return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
-          expect(stdout).toContain("node");
+        return dependency.run({ args: ['--help'] }).then(({ stdout }) => {
+          expect(stdout).toContain('node');
         });
       });
     });
-    test("should successfully parse version with string pattern", () => {
+    test('should successfully parse version with string pattern', () => {
       expect.assertions(2);
       const options: DependencyDefinition = {
-        name: "Node",
-        parseVersion: "v(\\d+.\\d+.\\d+)",
-        program: "node",
+        name: 'Node',
+        parseVersion: 'v(\\d+.\\d+.\\d+)',
+        program: 'node',
         type: DependencyType.Executable,
       };
       const dependency = new ExecutableDependency(options);
       return dependency.load().then(() => {
         expect(dependency.isInstalled).toBe(true);
-        return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
-          expect(stdout).toContain("node");
+        return dependency.run({ args: ['--help'] }).then(({ stdout }) => {
+          expect(stdout).toContain('node');
         });
       });
     });
-    test("should successfully parse version with RegExp pattern", () => {
+    test('should successfully parse version with RegExp pattern', () => {
       expect.assertions(2);
       const options: DependencyDefinition = {
-        name: "Node",
+        name: 'Node',
         parseVersion: /v(\d+\.\d+\.\d+)/,
-        program: "node",
+        program: 'node',
         type: DependencyType.Executable,
       };
       const dependency = new ExecutableDependency(options);
       return dependency.load().then(() => {
         expect(dependency.isInstalled).toBe(true);
-        return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
-          expect(stdout).toContain("node");
+        return dependency.run({ args: ['--help'] }).then(({ stdout }) => {
+          expect(stdout).toContain('node');
         });
       });
     });
 
-    test("should successfully parse version with array of string patterns", () => {
+    test('should successfully parse version with array of string patterns', () => {
       expect.assertions(2);
       const options: DependencyDefinition = {
-        name: "Node",
-        parseVersion: ["invalid", "v(\\d+.\\d+.\\d+)"],
-        program: "node",
+        name: 'Node',
+        parseVersion: ['invalid', 'v(\\d+.\\d+.\\d+)'],
+        program: 'node',
         type: DependencyType.Executable,
       };
       const dependency = new ExecutableDependency(options);
       return dependency.load().then(() => {
         expect(dependency.isInstalled).toBe(true);
-        return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
-          expect(stdout).toContain("node");
+        return dependency.run({ args: ['--help'] }).then(({ stdout }) => {
+          expect(stdout).toContain('node');
         });
       });
     });
-    test("should successfully parse version with array of RegExp patterns", () => {
+    test('should successfully parse version with array of RegExp patterns', () => {
       expect.assertions(2);
       const options: DependencyDefinition = {
-        name: "Node",
+        name: 'Node',
         parseVersion: [/invalid/, /v(\d+\.\d+\.\d+)/],
-        program: "node",
+        program: 'node',
         type: DependencyType.Executable,
       };
       const dependency = new ExecutableDependency(options);
       return dependency.load().then(() => {
         expect(dependency.isInstalled).toBe(true);
-        return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
-          expect(stdout).toContain("node");
+        return dependency.run({ args: ['--help'] }).then(({ stdout }) => {
+          expect(stdout).toContain('node');
         });
       });
     });
 
-    test("should successfully parse partial (major.minor) version with RegExp pattern", () => {
+    test('should successfully parse partial (major.minor) version with RegExp pattern', () => {
       expect.assertions(2);
       const options: DependencyDefinition = {
-        name: "Node",
+        name: 'Node',
         parseVersion: /v(\d+\.\d+)/,
-        program: "node",
+        program: 'node',
         type: DependencyType.Executable,
       };
       const dependency = new ExecutableDependency(options);
       return dependency.load().then(() => {
         expect(dependency.isInstalled).toBe(true);
-        return dependency.run({ args: ["--help"] }).then(({ stdout }) => {
-          expect(stdout).toContain("node");
+        return dependency.run({ args: ['--help'] }).then(({ stdout }) => {
+          expect(stdout).toContain('node');
         });
       });
     });
 
-    test("should fail to parse version from text without numbers with RegExp pattern", () => {
+    test('should fail to parse version from text without numbers with RegExp pattern', () => {
       expect.assertions(3);
       const options: DependencyDefinition = {
-        name: "Node",
+        name: 'Node',
         parseVersion: /v/,
-        program: "node",
+        program: 'node',
         type: DependencyType.Executable,
       };
       const dependency = new ExecutableDependency(options);
@@ -332,27 +332,27 @@ describe("successfully load Executable dependency", () => {
         expect(error.message).toMatch(
           'Dependency "Node" is required and not installed.'
         );
-        expect(error.message).toMatch("Invalid Version:");
+        expect(error.message).toMatch('Invalid Version:');
       });
     });
 
-    test("should successfully parse version and return first valid version from array of patterns", () => {
+    test('should successfully parse version and return first valid version from array of patterns', () => {
       expect.assertions(14);
 
       const options1: DependencyDefinition = {
-        name: "Fake Program 1",
-        parseVersion: ["invalid", "v(\\d+.\\d+.\\d+)", "v(\\d+)"],
-        program: "node",
+        name: 'Fake Program 1',
+        parseVersion: ['invalid', 'v(\\d+.\\d+.\\d+)', 'v(\\d+)'],
+        program: 'node',
         type: DependencyType.Executable,
-        versionArgs: ["-e", "console.log('v1.2.3')"],
+        versionArgs: ['-e', "console.log('v1.2.3')"],
       };
       const dependency1 = new ExecutableDependency(options1);
       const options2: DependencyDefinition = {
-        name: "Fake Program 2",
-        parseVersion: ["invalid", "v(\\d+)", "v(\\d+.\\d+.\\d+)"],
-        program: "node",
+        name: 'Fake Program 2',
+        parseVersion: ['invalid', 'v(\\d+)', 'v(\\d+.\\d+.\\d+)'],
+        program: 'node',
         type: DependencyType.Executable,
-        versionArgs: ["-e", "console.log('v1.2.3')"],
+        versionArgs: ['-e', "console.log('v1.2.3')"],
       };
       const dependency2 = new ExecutableDependency(options2);
 

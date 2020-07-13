@@ -1,10 +1,10 @@
 // tslint:disable:no-reserved-keywords
-import { DependencyFactory } from "./DependencyFactory";
+import { DependencyFactory } from './DependencyFactory';
 import {
   Dependency,
   DependencyDefinition,
   DependencyOptions,
-} from "./Dependency";
+} from './Dependency';
 
 export class DependencyManager {
   private static registry: DependencyRegistry = {};

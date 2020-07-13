@@ -1,13 +1,13 @@
-import { OptionsRegistry } from "./options";
-import * as _ from "lodash";
-import { Language } from "./language";
+import { OptionsRegistry } from './options';
+import * as _ from 'lodash';
+import { Language } from './language';
 import {
   Beautifier,
   BeautifierOptionName,
   BeautifierLanguageOptionComplex,
   BeautifyOptionTransformSingleFunction,
   BeautifyOptionTransform,
-} from "./beautifier";
+} from './beautifier';
 
 export class OptionsManager {
   constructor(public options: OptionsRegistry) {}
@@ -33,17 +33,17 @@ export function optionKeys(
   language: Language
 ): BeautifierOptionName[] {
   const beautifierOptions = beautifier.options[language.name];
-  if (typeof beautifierOptions === "boolean") {
+  if (typeof beautifierOptions === 'boolean') {
     return [];
-  } else if (typeof beautifierOptions === "object") {
+  } else if (typeof beautifierOptions === 'object') {
     const options: BeautifierOptionName[] = [];
     Object.keys(beautifierOptions).forEach(fieldKey => {
       const op = (<BeautifierLanguageOptionComplex>beautifierOptions)[fieldKey];
-      if (typeof op === "string") {
+      if (typeof op === 'string') {
         options.push(op);
       } else if (isOptionTransformSingleFunction(op)) {
         options.push(fieldKey as BeautifierOptionName);
-      } else if (typeof op === "boolean") {
+      } else if (typeof op === 'boolean') {
         if (op === true) {
           options.push(fieldKey as BeautifierOptionName);
         }
@@ -64,7 +64,7 @@ export function optionKeys(
 function isOptionTransformSingleFunction(
   option: any
 ): option is BeautifyOptionTransformSingleFunction {
-  return typeof option === "function";
+  return typeof option === 'function';
 }
 
 function isOptionTransform(option: any): option is BeautifyOptionTransform {

@@ -4,13 +4,13 @@ import {
   applyPatch,
   ParsedDiff,
   Hunk,
-} from "diff";
+} from 'diff';
 
 export class InlineFlagManager {
   private readonly oldLines: string[] = [];
   private readonly containsDisable: boolean;
   constructor(private oldText: string, private newText: string) {
-    this.oldLines = oldText.split("\n");
+    this.oldLines = oldText.split('\n');
     this.containsDisable =
       this.oldText.indexOf(InlineFlagPrefix.Disable) !== -1;
   }
@@ -34,7 +34,7 @@ export class InlineFlagManager {
   }
 
   private endsWithNewline(text: string): boolean {
-    return text.charAt(text.length - 1) === "\n";
+    return text.charAt(text.length - 1) === '\n';
   }
 
   private get patch(): ParsedDiff {
@@ -47,10 +47,10 @@ export class InlineFlagManager {
   }
 
   private get rawPatch(): ParsedDiff {
-    const oldFileName = "Old";
-    const newFileName = "New";
-    const oldHeader = "";
-    const newHeader = "";
+    const oldFileName = 'Old';
+    const newFileName = 'New';
+    const oldHeader = '';
+    const newHeader = '';
     const options = {
       context: 0,
     };
@@ -92,7 +92,7 @@ export class InlineFlagManager {
       const reversedLines = this.oldLines
         .slice(0, Math.max(0, lineNumber))
         .reverse()
-        .join("\n");
+        .join('\n');
       const disableIndex = reversedLines.indexOf(InlineFlagPrefix.Disable);
       const enableIndex = reversedLines.indexOf(InlineFlagPrefix.Enable);
       if (
@@ -111,7 +111,7 @@ export class InlineFlagManager {
 }
 
 enum InlineFlagPrefix {
-  IgnoreNextLine = "unibeautify:ignore-next-line",
-  Enable = "unibeautify:enable",
-  Disable = "unibeautify:disable",
+  IgnoreNextLine = 'unibeautify:ignore-next-line',
+  Enable = 'unibeautify:enable',
+  Disable = 'unibeautify:disable',
 }

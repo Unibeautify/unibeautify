@@ -3,9 +3,9 @@ import {
   DependencyType,
   DependencyDefinition,
   DependencyOptions,
-} from "./Dependency";
-import { NodeDependency } from "./NodeDependency";
-import { ExecutableDependency } from "./ExecutableDependency";
+} from './Dependency';
+import { NodeDependency } from './NodeDependency';
+import { ExecutableDependency } from './ExecutableDependency';
 
 export class DependencyFactory {
   constructor(

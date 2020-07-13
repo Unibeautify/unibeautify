@@ -1,22 +1,22 @@
-import { Unibeautify, Language, Beautifier, OptionsRegistry } from "../../src/";
+import { Unibeautify, Language, Beautifier, OptionsRegistry } from '../../src/';
 
-test("should get all loaded options", () => {
+test('should get all loaded options', () => {
   const unibeautify = new Unibeautify();
   const options1: OptionsRegistry = {
     op1: {
       default: false,
-      description: "Test option",
-      since: "0.0.0",
-      type: "boolean",
+      description: 'Test option',
+      since: '0.0.0',
+      type: 'boolean',
     },
   };
   unibeautify.loadOptions(options1);
   const options2: OptionsRegistry = {
     op2: {
       default: false,
-      description: "Test option",
-      since: "0.0.0",
-      type: "boolean",
+      description: 'Test option',
+      since: '0.0.0',
+      type: 'boolean',
     },
   };
   unibeautify.loadOptions(options2);
@@ -26,43 +26,43 @@ test("should get all loaded options", () => {
   ]);
 });
 
-test("should get languages with a loaded beautifier supporting the given option", () => {
+test('should get languages with a loaded beautifier supporting the given option', () => {
   const unibeautify = new Unibeautify();
-  const optionName = "op1";
+  const optionName = 'op1';
   const options1: OptionsRegistry = {
     [optionName]: {
       default: false,
-      description: "Test option",
-      since: "0.0.0",
-      type: "boolean",
+      description: 'Test option',
+      since: '0.0.0',
+      type: 'boolean',
     },
   };
   unibeautify.loadOptions(options1);
   const lang1: Language = {
     atomGrammars: [],
-    extensions: ["test"],
-    name: "TestLang1",
-    namespace: "test",
-    since: "0.1.0",
+    extensions: ['test'],
+    name: 'TestLang1',
+    namespace: 'test',
+    since: '0.1.0',
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   const lang2: Language = {
     atomGrammars: [],
-    extensions: ["test"],
-    name: "TestLang2",
-    namespace: "test",
-    since: "0.1.0",
+    extensions: ['test'],
+    name: 'TestLang2',
+    namespace: 'test',
+    since: '0.1.0',
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   unibeautify.loadLanguages([lang1, lang2]);
-  const beautifierResult = "Testing Result";
+  const beautifierResult = 'Testing Result';
   const beautifier: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: "TestBeautify",
+    name: 'TestBeautify',
     options: {
       [lang1.name]: {
         [optionName]: true,
@@ -75,43 +75,43 @@ test("should get languages with a loaded beautifier supporting the given option"
   ).toEqual([lang1.name]);
 });
 
-test("should get beautifiers with a loaded language supporting the given option", () => {
+test('should get beautifiers with a loaded language supporting the given option', () => {
   const unibeautify = new Unibeautify();
-  const optionName = "op1";
+  const optionName = 'op1';
   const options1: OptionsRegistry = {
     [optionName]: {
       default: false,
-      description: "Test option",
-      since: "0.0.0",
-      type: "boolean",
+      description: 'Test option',
+      since: '0.0.0',
+      type: 'boolean',
     },
   };
   unibeautify.loadOptions(options1);
   const lang1: Language = {
     atomGrammars: [],
-    extensions: ["test"],
-    name: "TestLang1",
-    namespace: "test",
-    since: "0.1.0",
+    extensions: ['test'],
+    name: 'TestLang1',
+    namespace: 'test',
+    since: '0.1.0',
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   const lang2: Language = {
     atomGrammars: [],
-    extensions: ["test"],
-    name: "TestLang2",
-    namespace: "test",
-    since: "0.1.0",
+    extensions: ['test'],
+    name: 'TestLang2',
+    namespace: 'test',
+    since: '0.1.0',
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   unibeautify.loadLanguages([lang1, lang2]);
-  const beautifierResult = "Testing Result";
+  const beautifierResult = 'Testing Result';
   const beautifier1: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: "TestBeautify1",
+    name: 'TestBeautify1',
     options: {
       [lang1.name]: {
         [optionName]: false,
@@ -122,7 +122,7 @@ test("should get beautifiers with a loaded language supporting the given option"
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: "TestBeautify2",
+    name: 'TestBeautify2',
     options: {
       [lang1.name]: {
         [optionName]: true,
@@ -137,44 +137,44 @@ test("should get beautifiers with a loaded language supporting the given option"
   ).toEqual([beautifier2.name]);
 });
 
-test("should correctly determine whether beautifier supports option for a language", () => {
+test('should correctly determine whether beautifier supports option for a language', () => {
   const unibeautify = new Unibeautify();
-  const optionName = "op1";
-  const undefinedOptionName = "isUndefined";
+  const optionName = 'op1';
+  const undefinedOptionName = 'isUndefined';
   const options1: OptionsRegistry = {
     [optionName]: {
       default: false,
-      description: "Test option",
-      since: "0.0.0",
-      type: "boolean",
+      description: 'Test option',
+      since: '0.0.0',
+      type: 'boolean',
     },
   };
   unibeautify.loadOptions(options1);
   const lang1: Language = {
     atomGrammars: [],
-    extensions: ["test"],
-    name: "TestLang1",
-    namespace: "test",
-    since: "0.1.0",
+    extensions: ['test'],
+    name: 'TestLang1',
+    namespace: 'test',
+    since: '0.1.0',
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   const lang2: Language = {
     atomGrammars: [],
-    extensions: ["test"],
-    name: "TestLang2",
-    namespace: "test",
-    since: "0.1.0",
+    extensions: ['test'],
+    name: 'TestLang2',
+    namespace: 'test',
+    since: '0.1.0',
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   unibeautify.loadLanguages([lang1, lang2]);
-  const beautifierResult = "Testing Result";
+  const beautifierResult = 'Testing Result';
   const beautifier1: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: "TestBeautify1",
+    name: 'TestBeautify1',
     options: {
       [lang1.name]: {
         [optionName]: false,
@@ -186,7 +186,7 @@ test("should correctly determine whether beautifier supports option for a langua
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: "TestBeautify2",
+    name: 'TestBeautify2',
     options: {
       [lang1.name]: {
         [optionName]: true,
@@ -230,57 +230,57 @@ test("should correctly determine whether beautifier supports option for a langua
   ).toEqual(false);
 });
 
-test("should get options supported for a language", () => {
+test('should get options supported for a language', () => {
   const unibeautify = new Unibeautify();
-  const optionName1 = "op1";
-  const optionName2 = "op2";
-  const optionName3 = "op3";
+  const optionName1 = 'op1';
+  const optionName2 = 'op2';
+  const optionName3 = 'op3';
   const options1: OptionsRegistry = {
     [optionName1]: {
       default: false,
-      description: "Test option",
-      since: "0.0.0",
-      type: "boolean",
+      description: 'Test option',
+      since: '0.0.0',
+      type: 'boolean',
     },
     [optionName2]: {
       default: false,
-      description: "Test option",
-      since: "0.0.0",
-      type: "boolean",
+      description: 'Test option',
+      since: '0.0.0',
+      type: 'boolean',
     },
     [optionName3]: {
       default: false,
-      description: "Test option",
-      since: "0.0.0",
-      type: "boolean",
+      description: 'Test option',
+      since: '0.0.0',
+      type: 'boolean',
     },
   };
   unibeautify.loadOptions(options1);
   const lang1: Language = {
     atomGrammars: [],
-    extensions: ["test"],
-    name: "TestLang1",
-    namespace: "test",
-    since: "0.1.0",
+    extensions: ['test'],
+    name: 'TestLang1',
+    namespace: 'test',
+    since: '0.1.0',
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   const lang2: Language = {
     atomGrammars: [],
-    extensions: ["test"],
-    name: "TestLang2",
-    namespace: "test",
-    since: "0.1.0",
+    extensions: ['test'],
+    name: 'TestLang2',
+    namespace: 'test',
+    since: '0.1.0',
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   unibeautify.loadLanguages([lang1, lang2]);
-  const beautifierResult = "Testing Result";
+  const beautifierResult = 'Testing Result';
   const beautifier1: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: "TestBeautify1",
+    name: 'TestBeautify1',
     options: {
       [lang1.name]: {
         [optionName1]: false,
@@ -292,7 +292,7 @@ test("should get options supported for a language", () => {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: "TestBeautify2",
+    name: 'TestBeautify2',
     options: {
       [lang1.name]: {
         [optionName1]: true,
@@ -312,43 +312,43 @@ test("should get options supported for a language", () => {
   ).toEqual([optionName2]);
 });
 
-test("should get options supported by a beautifier for a language", () => {
+test('should get options supported by a beautifier for a language', () => {
   const unibeautify = new Unibeautify();
-  const optionName = "op1";
+  const optionName = 'op1';
   const options1: OptionsRegistry = {
     [optionName]: {
       default: false,
-      description: "Test option",
-      since: "0.0.0",
-      type: "boolean",
+      description: 'Test option',
+      since: '0.0.0',
+      type: 'boolean',
     },
   };
   unibeautify.loadOptions(options1);
   const lang1: Language = {
     atomGrammars: [],
-    extensions: ["test"],
-    name: "TestLang1",
-    namespace: "test",
-    since: "0.1.0",
+    extensions: ['test'],
+    name: 'TestLang1',
+    namespace: 'test',
+    since: '0.1.0',
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   const lang2: Language = {
     atomGrammars: [],
-    extensions: ["test"],
-    name: "TestLang2",
-    namespace: "test",
-    since: "0.1.0",
+    extensions: ['test'],
+    name: 'TestLang2',
+    namespace: 'test',
+    since: '0.1.0',
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   unibeautify.loadLanguages([lang1, lang2]);
-  const beautifierResult = "Testing Result";
+  const beautifierResult = 'Testing Result';
   const beautifier1: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: "TestBeautify1",
+    name: 'TestBeautify1',
     options: {
       [lang1.name]: {
         [optionName]: false,
@@ -359,7 +359,7 @@ test("should get options supported by a beautifier for a language", () => {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: "TestBeautify2",
+    name: 'TestBeautify2',
     options: {
       [lang1.name]: {
         [optionName]: true,
@@ -402,36 +402,36 @@ test("should get options supported by a beautifier for a language", () => {
 });
 
 test(
-  "should get languages with a loaded beautifier supporting a transform of the op" +
-    "tion name",
+  'should get languages with a loaded beautifier supporting a transform of the op' +
+    'tion name',
   () => {
     const unibeautify = new Unibeautify();
-    const optionName = "op1";
+    const optionName = 'op1';
     const options1: OptionsRegistry = {
       [optionName]: {
         default: true,
-        description: "Test option",
-        since: "0.0.0",
-        type: "boolean",
+        description: 'Test option',
+        since: '0.0.0',
+        type: 'boolean',
       },
     };
     unibeautify.loadOptions(options1);
     const lang1: Language = {
       atomGrammars: [],
-      extensions: ["test"],
-      name: "TestLang1",
-      namespace: "test",
-      since: "0.1.0",
+      extensions: ['test'],
+      name: 'TestLang1',
+      namespace: 'test',
+      since: '0.1.0',
       sublimeSyntaxes: [],
       vscodeLanguages: [],
     };
     unibeautify.loadLanguage(lang1);
-    const beautifierResult = "Testing Result";
+    const beautifierResult = 'Testing Result';
     const beautifier: Beautifier = {
       beautify: () => {
         return Promise.resolve(beautifierResult);
       },
-      name: "TestBeautify",
+      name: 'TestBeautify',
       options: {
         [lang1.name]: {
           op2: optionName,

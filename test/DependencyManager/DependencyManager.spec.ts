@@ -3,19 +3,19 @@ import {
   DependencyType,
   DependencyManager,
   NodeDependency,
-} from "../../src/DependencyManager";
+} from '../../src/DependencyManager';
 
 beforeEach(() => {
   DependencyManager.clearRegistry();
 });
 
-const beautifierName = "beautifierName";
+const beautifierName = 'beautifierName';
 
-test("should fail to load dependencies", async () => {
+test('should fail to load dependencies', async () => {
   expect.assertions(2);
   const options: DependencyDefinition = {
-    name: "NotFound",
-    package: "notfound",
+    name: 'NotFound',
+    package: 'notfound',
     type: DependencyType.Node,
   };
   const manager = new DependencyManager(beautifierName, [options]);
@@ -24,16 +24,16 @@ test("should fail to load dependencies", async () => {
     expect(error.message).toMatch(
       'Dependency "NotFound" is required and not installed.'
     );
-    expect(error.message).toMatch("Cannot find module notfound/package.json");
+    expect(error.message).toMatch('Cannot find module notfound/package.json');
   });
 });
 
-describe("successfully loads dependency", () => {
-  test("should successfully load dependencies", async () => {
+describe('successfully loads dependency', () => {
+  test('should successfully load dependencies', async () => {
     expect.assertions(1);
     const options: DependencyDefinition = {
-      name: "FakeDep",
-      package: "fakedep",
+      name: 'FakeDep',
+      package: 'fakedep',
       type: DependencyType.Node,
     };
     const manager = new DependencyManager(beautifierName, [options]);
@@ -41,9 +41,9 @@ describe("successfully loads dependency", () => {
     return await expect(manager.load()).resolves.toBe(true);
   });
 
-  test("should have package", async () => {
+  test('should have package', async () => {
     expect.assertions(1);
-    const packageName = "fakedep";
+    const packageName = 'fakedep';
     const options: DependencyDefinition = {
       name: packageName,
       package: packageName,
@@ -56,9 +56,9 @@ describe("successfully loads dependency", () => {
     });
   });
 
-  test("should get package", async () => {
+  test('should get package', async () => {
     expect.assertions(1);
-    const packageName = "fakedep";
+    const packageName = 'fakedep';
     const options: DependencyDefinition = {
       name: packageName,
       package: packageName,
@@ -72,9 +72,9 @@ describe("successfully loads dependency", () => {
     });
   });
 
-  test("should get package vesion", async () => {
+  test('should get package vesion', async () => {
     expect.assertions(6);
-    const packageName = "fakedep";
+    const packageName = 'fakedep';
     const options: DependencyDefinition = {
       name: packageName,
       package: packageName,
@@ -89,19 +89,19 @@ describe("successfully loads dependency", () => {
       if (dep) {
         expect(dep.version).not.toBe(undefined);
         if (dep.version) {
-          expect(dep.version.rawVersion).toBe("1.0.0");
-          expect(dep.version.isGreaterThan("0.1.0")).toBe(true);
-          expect(dep.version.isGreaterThan("1.1.0")).toBe(false);
+          expect(dep.version.rawVersion).toBe('1.0.0');
+          expect(dep.version.isGreaterThan('0.1.0')).toBe(true);
+          expect(dep.version.isGreaterThan('1.1.0')).toBe(false);
         }
       }
     });
   });
 });
 
-describe("get", () => {
-  test("should throw error if package not found", () => {
+describe('get', () => {
+  test('should throw error if package not found', () => {
     expect.assertions(1);
-    const packageName = "fakedep";
+    const packageName = 'fakedep';
     const manager = new DependencyManager(beautifierName, []);
     return manager.load().then(() => {
       expect(() => manager.get<NodeDependency>(packageName)).toThrowError();
