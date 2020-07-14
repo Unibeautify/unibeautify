@@ -4,7 +4,7 @@ TypeScript:
   align_assignments: false
   arrow_parens: "as-needed"
   break_chained_methods: true
-  end_with_comma: false
+  end_with_comma: true
   end_with_semicolon: true
   indent_char: " "
   indent_size: 4
