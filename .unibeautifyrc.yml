@@ -7,7 +7,7 @@ TypeScript:
   end_with_comma: true
   end_with_semicolon: true
   indent_char: " "
-  indent_size: 2
+  indent_size: 4
   jsx_brackets: false
   multiline_ternary: true
   object_curly_spacing: true
