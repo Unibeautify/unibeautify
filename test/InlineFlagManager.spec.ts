@@ -1,31 +1,31 @@
 // tslint:disable:no-multiline-string
-import * as dedent from "dedent";
+import * as dedent from 'dedent';
 
-import { InlineFlagManager } from "../src/InlineFlagManager";
+import { InlineFlagManager } from '../src/InlineFlagManager';
 
-describe("ignore-next-line", () => {
-  test("should ignore single-line change", () => {
-    const oldText = dedent`
+describe('ignore-next-line', () => {
+    test('should ignore single-line change', () => {
+        const oldText = dedent`
     console.log('hello world');
     // unibeautify:ignore-next-line
     console.log('hello world');
     `;
-    const newText = dedent`
+        const newText = dedent`
     console.log("hello world");
     // unibeautify:ignore-next-line
     console.log("hello world");
     `;
-    const expectedText = dedent`
+        const expectedText = dedent`
     console.log("hello world");
     // unibeautify:ignore-next-line
     console.log('hello world');
     `;
-    const manager = new InlineFlagManager(oldText, newText);
-    const finalText = manager.text;
-    expect(finalText).toEqual(expectedText);
-  });
-  test("should ignore multi-line change", () => {
-    const oldText = dedent`
+        const manager = new InlineFlagManager(oldText, newText);
+        const finalText = manager.text;
+        expect(finalText).toEqual(expectedText);
+    });
+    test('should ignore multi-line change', () => {
+        const oldText = dedent`
     matrix(
       1, 0, 0,
       0, 1, 0,
@@ -39,13 +39,13 @@ describe("ignore-next-line", () => {
       0, 0, 1
     )
     `;
-    const newText = dedent`
+        const newText = dedent`
     matrix(1, 0, 0, 0, 1, 0, 0, 0, 1);
 
     // unibeautify:ignore-next-line
     matrix(1, 0, 0, 0, 1, 0, 0, 0, 1);
     `;
-    const expectedText = dedent`
+        const expectedText = dedent`
     matrix(1, 0, 0, 0, 1, 0, 0, 0, 1);
 
     // unibeautify:ignore-next-line
@@ -55,45 +55,45 @@ describe("ignore-next-line", () => {
       0, 0, 1
     )
     `;
-    const manager = new InlineFlagManager(oldText, newText);
-    const finalText = manager.text;
-    expect(finalText).toEqual(expectedText);
-  });
-  test("should not add newline at end of file", () => {
-    const oldText = `console.log('hello world');`;
-    const newText = `console.log("hello world");`;
-    const expectedText = `console.log("hello world");`;
-    const manager = new InlineFlagManager(oldText, newText);
-    const finalText = manager.text;
-    expect(finalText).toEqual(expectedText);
-  });
-  test("should keep newline at end of file", () => {
-    const oldText = `console.log('hello world');\n`;
-    const newText = `console.log("hello world");\n`;
-    const expectedText = `console.log("hello world");\n`;
-    const manager = new InlineFlagManager(oldText, newText);
-    const finalText = manager.text;
-    expect(finalText).toEqual(expectedText);
-  });
+        const manager = new InlineFlagManager(oldText, newText);
+        const finalText = manager.text;
+        expect(finalText).toEqual(expectedText);
+    });
+    test('should not add newline at end of file', () => {
+        const oldText = `console.log('hello world');`;
+        const newText = `console.log("hello world");`;
+        const expectedText = `console.log("hello world");`;
+        const manager = new InlineFlagManager(oldText, newText);
+        const finalText = manager.text;
+        expect(finalText).toEqual(expectedText);
+    });
+    test('should keep newline at end of file', () => {
+        const oldText = `console.log('hello world');\n`;
+        const newText = `console.log("hello world");\n`;
+        const expectedText = `console.log("hello world");\n`;
+        const manager = new InlineFlagManager(oldText, newText);
+        const finalText = manager.text;
+        expect(finalText).toEqual(expectedText);
+    });
 });
 
-describe("disable/enable", () => {
-  test("should apply changes without disable", () => {
-    const oldText = dedent`
+describe('disable/enable', () => {
+    test('should apply changes without disable', () => {
+        const oldText = dedent`
     console.log('hello world');
     `;
-    const newText = dedent`
+        const newText = dedent`
     console.log("hello world");
     `;
-    const expectedText = dedent`
+        const expectedText = dedent`
     console.log("hello world");
     `;
-    const manager = new InlineFlagManager(oldText, newText);
-    const finalText = manager.text;
-    expect(finalText).toEqual(expectedText);
-  });
-  test("should ignore changes after disable", () => {
-    const oldText = dedent`
+        const manager = new InlineFlagManager(oldText, newText);
+        const finalText = manager.text;
+        expect(finalText).toEqual(expectedText);
+    });
+    test('should ignore changes after disable', () => {
+        const oldText = dedent`
     console.log('hello world');
     // unibeautify:disable
     console.log('hello world');
@@ -119,25 +119,25 @@ describe("disable/enable", () => {
     // unibeautify:enable
     console.log('hello world');
     `;
-    const newText = dedent`
+        const newText = dedent`
     // unibeautify:disable
     console.log("hello world");
     // unibeautify:enable
     console.log("hello world");
     `;
-    const expectedText = dedent`
+        const expectedText = dedent`
     // unibeautify:disable
     console.log('hello world');
     // unibeautify:enable
     console.log("hello world");
     `;
-    const manager = new InlineFlagManager(oldText, newText);
-    const finalText = manager.text;
-    expect(finalText).toEqual(expectedText);
-  });
+        const manager = new InlineFlagManager(oldText, newText);
+        const finalText = manager.text;
+        expect(finalText).toEqual(expectedText);
+    });
 
-  test("should ignore changes after disable outside block", () => {
-    const oldText = dedent`
+    test('should ignore changes after disable outside block', () => {
+        const oldText = dedent`
     // unibeautify:disable
     function helloWorld() {
     console.log('hello world');
