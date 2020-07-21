@@ -36,7 +36,12 @@ export class ExecutableDependency extends Dependency {
     stdin?: any;
   }): Promise<RunResponse> {
     return this.resolveArgs(args).then(finalArgs =>
-      this.spawn({ exe: this.pathOrProgram, args: finalArgs, options, stdin })
+      this.spawn({
+        exe: this.pathOrProgram,
+        args: finalArgs,
+        options,
+        stdin,
+      })
     );
   }
 
