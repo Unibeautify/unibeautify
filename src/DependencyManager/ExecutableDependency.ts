@@ -1,10 +1,10 @@
-import { spawn as Spawn, SpawnOptions } from 'child_process';
+import { spawn as Spawn, SpawnOptions } from "child_process";
 
 import {
   Dependency,
   ExecutableDependencyDefinition,
   DependencyOptions,
-} from './Dependency';
+} from "./Dependency";
 
 export class ExecutableDependency extends Dependency {
   constructor(
@@ -23,7 +23,7 @@ export class ExecutableDependency extends Dependency {
   }
 
   private get versionArgs(): string[] {
-    return this.definition.versionArgs || ['--version'];
+    return this.definition.versionArgs || ["--version"];
   }
 
   public run({
@@ -76,20 +76,20 @@ export class ExecutableDependency extends Dependency {
   }): Promise<RunResponse> {
     return new Promise((resolve, reject) => {
       // tslint:disable-next-line:no-require-imports
-      const spawn: typeof Spawn = require('child_process').spawn;
+      const spawn: typeof Spawn = require("child_process").spawn;
       const cmd = spawn(exe, args, options);
-      let stdout = '';
-      let stderr = '';
-      cmd.stdout.on('data', data => {
+      let stdout = "";
+      let stderr = "";
+      cmd.stdout.on("data", data => {
         return (stdout += data);
       });
-      cmd.stderr.on('data', data => {
+      cmd.stderr.on("data", data => {
         return (stderr += data);
       });
-      cmd.on('close', exitCode => {
+      cmd.on("close", exitCode => {
         return resolve({ exitCode, stdout, stderr });
       });
-      cmd.on('error', err => {
+      cmd.on("error", err => {
         return reject(err);
       });
       if (stdin) {

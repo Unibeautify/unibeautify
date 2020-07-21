@@ -2,7 +2,7 @@ import {
   Dependency,
   NodeDependencyDefinition,
   DependencyOptions,
-} from './Dependency';
+} from "./Dependency";
 
 export class NodeDependency extends Dependency {
   constructor(
@@ -14,7 +14,7 @@ export class NodeDependency extends Dependency {
 
   protected loadVersion() {
     try {
-      return Promise.resolve(this.require('package.json').version);
+      return Promise.resolve(this.require("package.json").version);
     } catch (error) {
       return Promise.reject(error);
     }
@@ -47,7 +47,7 @@ export class NodeDependency extends Dependency {
 
   private resolveGlobal(path: string): string | undefined {
     // tslint:disable-next-line:no-require-imports no-var-requires
-    const requireg = require('requireg');
+    const requireg = require("requireg");
     return this.resolveWith(requireg.resolve)(path);
   }
 

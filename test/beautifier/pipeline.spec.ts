@@ -1,26 +1,26 @@
-import { newUnibeautify, Beautifier } from '../../src/';
+import { newUnibeautify, Beautifier } from "../../src/";
 
-test('should fail when beautifiers option containers unknown beautifier', () => {
+test("should fail when beautifiers option containers unknown beautifier", () => {
   const unibeautify = newUnibeautify();
-  const beautifierResult = 'Testing Result';
-  const beautifierName = 'UnknownBeautifier';
+  const beautifierResult = "Testing Result";
+  const beautifierName = "UnknownBeautifier";
   return expect(
     unibeautify.beautify({
-      languageName: 'JavaScript',
+      languageName: "JavaScript",
       options: {
         JavaScript: {
           beautifiers: [beautifierName],
         },
       },
-      text: 'test',
+      text: "test",
     })
   ).rejects.toThrowError(`Beautifier not found: ${beautifierName}`);
 });
 
-test('should use named beautifier from beautifiers option', () => {
+test("should use named beautifier from beautifiers option", () => {
   const unibeautify = newUnibeautify();
-  const beautifierResult = 'Testing Result';
-  const beautifierName = 'CustomBeautifier';
+  const beautifierResult = "Testing Result";
+  const beautifierName = "CustomBeautifier";
   const desiredBeautifier: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
@@ -32,9 +32,9 @@ test('should use named beautifier from beautifiers option', () => {
   };
   const otherBeautifier: Beautifier = {
     beautify: () => {
-      return Promise.resolve('Bad');
+      return Promise.resolve("Bad");
     },
-    name: 'Other',
+    name: "Other",
     options: {
       JavaScript: false,
     },
@@ -44,21 +44,21 @@ test('should use named beautifier from beautifiers option', () => {
 
   return expect(
     unibeautify.beautify({
-      languageName: 'JavaScript',
+      languageName: "JavaScript",
       options: {
         JavaScript: {
           beautifiers: [beautifierName],
         },
       },
-      text: 'test',
+      text: "test",
     })
   ).resolves.toEqual(beautifierResult);
 });
 
-test('should fail to use named beautifier which does not support language', () => {
+test("should fail to use named beautifier which does not support language", () => {
   const unibeautify = newUnibeautify();
-  const beautifierResult = 'Testing Result';
-  const beautifierName = 'CustomBeautifier';
+  const beautifierResult = "Testing Result";
+  const beautifierName = "CustomBeautifier";
   const beautifier: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
@@ -72,25 +72,25 @@ test('should fail to use named beautifier which does not support language', () =
 
   return expect(
     unibeautify.beautify({
-      languageName: 'JavaScript',
+      languageName: "JavaScript",
       options: {
         JavaScript: {
           beautifiers: [beautifierName],
         },
       },
-      text: 'test',
+      text: "test",
     })
   ).rejects.toThrowError(`Beautifier not found: ${beautifierName}`);
 });
 
-test('should use all beautifiers for language when beautifiers option is empty', () => {
+test("should use all beautifiers for language when beautifiers option is empty", () => {
   const unibeautify = newUnibeautify();
-  const beautifierResult = 'Test Output';
+  const beautifierResult = "Test Output";
   const beautifier1: Beautifier = {
     beautify: ({ text }) => {
       return Promise.resolve(`${text} Out`);
     },
-    name: 'Beautifier1',
+    name: "Beautifier1",
     options: {
       JavaScript: false,
     },
@@ -99,7 +99,7 @@ test('should use all beautifiers for language when beautifiers option is empty',
     beautify: ({ text }) => {
       return Promise.resolve(`${text}put`);
     },
-    name: 'Beautifier2',
+    name: "Beautifier2",
     options: {
       JavaScript: false,
     },
@@ -109,25 +109,25 @@ test('should use all beautifiers for language when beautifiers option is empty',
 
   return expect(
     unibeautify.beautify({
-      languageName: 'JavaScript',
+      languageName: "JavaScript",
       options: {
         JavaScript: {
           beautifiers: [],
         },
       },
-      text: 'Test',
+      text: "Test",
     })
   ).resolves.toEqual(beautifierResult);
 });
 
-test('should use all beautifiers for language when beautifiers option is missing', () => {
+test("should use all beautifiers for language when beautifiers option is missing", () => {
   const unibeautify = newUnibeautify();
-  const beautifierResult = 'Test Output';
+  const beautifierResult = "Test Output";
   const beautifier1: Beautifier = {
     beautify: ({ text }) => {
       return Promise.resolve(`${text} Out`);
     },
-    name: 'Beautifier1',
+    name: "Beautifier1",
     options: {
       JavaScript: false,
     },
@@ -136,7 +136,7 @@ test('should use all beautifiers for language when beautifiers option is missing
     beautify: ({ text }) => {
       return Promise.resolve(`${text}put`);
     },
-    name: 'Beautifier2',
+    name: "Beautifier2",
     options: {
       JavaScript: false,
     },
@@ -146,23 +146,23 @@ test('should use all beautifiers for language when beautifiers option is missing
 
   return expect(
     unibeautify.beautify({
-      languageName: 'JavaScript',
+      languageName: "JavaScript",
       options: {
         JavaScript: {},
       },
-      text: 'Test',
+      text: "Test",
     })
   ).resolves.toEqual(beautifierResult);
 });
 
-test('should use beautifiers in order of beautifiers option', () => {
+test("should use beautifiers in order of beautifiers option", () => {
   const unibeautify = newUnibeautify();
-  const beautifierResult = '012';
+  const beautifierResult = "012";
   const beautifier1: Beautifier = {
     beautify: ({ text }) => {
       return Promise.resolve(`${text}1`);
     },
-    name: 'Beautifier1',
+    name: "Beautifier1",
     options: {
       JavaScript: false,
     },
@@ -171,7 +171,7 @@ test('should use beautifiers in order of beautifiers option', () => {
     beautify: ({ text }) => {
       return Promise.resolve(`${text}2`);
     },
-    name: 'Beautifier2',
+    name: "Beautifier2",
     options: {
       JavaScript: false,
     },
@@ -181,13 +181,13 @@ test('should use beautifiers in order of beautifiers option', () => {
 
   return expect(
     unibeautify.beautify({
-      languageName: 'JavaScript',
+      languageName: "JavaScript",
       options: {
         JavaScript: {
-          beautifiers: ['Beautifier1', 'Beautifier2'],
+          beautifiers: ["Beautifier1", "Beautifier2"],
         },
       },
-      text: '0',
+      text: "0",
     })
   ).resolves.toBe(beautifierResult);
 });

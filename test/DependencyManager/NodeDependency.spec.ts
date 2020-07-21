@@ -2,13 +2,13 @@ import {
   NodeDependency,
   DependencyType,
   DependencyDefinition,
-} from '../../src/DependencyManager';
+} from "../../src/DependencyManager";
 
-test('should fail to load Node dependency', async () => {
+test("should fail to load Node dependency", async () => {
   expect.assertions(5);
   const options: DependencyDefinition = {
-    name: 'NotFound',
-    package: 'notfound',
+    name: "NotFound",
+    package: "notfound",
     type: DependencyType.Node,
   };
   const dependency = new NodeDependency(options);
@@ -17,22 +17,22 @@ test('should fail to load Node dependency', async () => {
     expect(error.message).toMatch(
       'Dependency "NotFound" is required and not installed.'
     );
-    expect(error.message).toMatch('Cannot find module notfound/package.json');
+    expect(error.message).toMatch("Cannot find module notfound/package.json");
     expect(dependency.isInstalled).toBe(false);
     expect(dependency.errors).toHaveLength(1);
     expect(error.message).toMatch(
       'Dependency "NotFound" is required and not installed.\n' +
-        '  - Cannot find module notfound/package.json'
+        "  - Cannot find module notfound/package.json"
     );
   });
 });
 
-describe('successfully loaded local Node dependency', () => {
-  test('should successfully load local Node dependency', async () => {
+describe("successfully loaded local Node dependency", () => {
+  test("should successfully load local Node dependency", async () => {
     expect.assertions(4);
     const options: DependencyDefinition = {
-      name: 'FakeDep',
-      package: 'fakedep',
+      name: "FakeDep",
+      package: "fakedep",
       type: DependencyType.Node,
     };
     const dependency = new NodeDependency(options);
@@ -46,12 +46,12 @@ describe('successfully loaded local Node dependency', () => {
   });
 });
 
-describe('successfully loaded global Node dependency', () => {
-  test('should successfully load global Node dependency', () => {
+describe("successfully loaded global Node dependency", () => {
+  test("should successfully load global Node dependency", () => {
     expect.assertions(4);
     const options: DependencyDefinition = {
-      name: 'FakeDep',
-      package: 'global-fakedep',
+      name: "FakeDep",
+      package: "global-fakedep",
       type: DependencyType.Node,
     };
     const dependency = new NodeDependency(options);

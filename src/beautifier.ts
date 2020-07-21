@@ -1,14 +1,14 @@
-import { Language } from './language';
-import { LanguageManager, LanguageQuery } from './LanguageManager';
-import { OptionsRegistry } from './options';
-import { OptionsManager, optionKeys } from './OptionsManager';
-import { InlineFlagManager } from './InlineFlagManager';
+import { Language } from "./language";
+import { LanguageManager, LanguageQuery } from "./LanguageManager";
+import { OptionsRegistry } from "./options";
+import { OptionsManager, optionKeys } from "./OptionsManager";
+import { InlineFlagManager } from "./InlineFlagManager";
 import {
   DependencyDefinition,
   DependencyManager,
   Badge,
-} from './DependencyManager';
-import { zipObject, unique } from './utils';
+} from "./DependencyManager";
+import { zipObject, unique } from "./utils";
 
 /**
 New name to rename the option (key) to.
@@ -288,7 +288,7 @@ export class Unibeautify {
   public beautify(data: BeautifyData): Promise<string> {
     const lang: Language | null = this.languageManager.getLanguage(data);
     if (lang == null) {
-      return Promise.reject(new Error('Cannot find language.'));
+      return Promise.reject(new Error("Cannot find language."));
     }
     const langOptions: OptionValues = Unibeautify.getOptionsForLanguage(
       lang,
@@ -370,10 +370,10 @@ export class Unibeautify {
     beautifiers: Beautifier[];
     language: Language;
     langOptions: OptionValues;
-    text: BeautifyData['text'];
-    fileExtension: BeautifyData['fileExtension'];
-    filePath: BeautifyData['filePath'];
-    projectPath: BeautifyData['projectPath'];
+    text: BeautifyData["text"];
+    fileExtension: BeautifyData["fileExtension"];
+    filePath: BeautifyData["filePath"];
+    projectPath: BeautifyData["projectPath"];
   }): Promise<string> {
     return beautifiers.reduce(
       (promise: Promise<string>, beautifier: Beautifier) => {
@@ -397,7 +397,7 @@ export class Unibeautify {
                 beautifier.resolveConfig
               ) {
                 const resolveConfigPath: string | undefined =
-                  typeof beautifierOptions.prefer_beautifier_config === 'string'
+                  typeof beautifierOptions.prefer_beautifier_config === "string"
                     ? beautifierOptions.prefer_beautifier_config
                     : filePath;
                 return beautifier.resolveConfig({
@@ -420,7 +420,7 @@ export class Unibeautify {
                   text: currentText,
                 })
                 .then(newText => {
-                  if (typeof newText !== 'string') {
+                  if (typeof newText !== "string") {
                     return Promise.reject(
                       new Error(
                         `Beautifier response type must be "string" not "${typeof newText}": ${newText}`
@@ -560,18 +560,18 @@ export class Unibeautify {
     options: OptionValues
   ): OptionValues {
     const beautifierOptions = beautifier.options[language.name];
-    if (typeof beautifierOptions === 'boolean' && beautifierOptions === false) {
+    if (typeof beautifierOptions === "boolean" && beautifierOptions === false) {
       return {};
-    } else if (typeof beautifierOptions === 'object') {
+    } else if (typeof beautifierOptions === "object") {
       return Object.keys(beautifierOptions).reduce(
         (acc: OptionValues, key: string) => {
           const option = beautifierOptions[key];
-          if (typeof option === 'string') {
+          if (typeof option === "string") {
             return {
               ...acc,
               [key]: options[option],
             };
-          } else if (typeof option === 'function') {
+          } else if (typeof option === "function") {
             return {
               ...acc,
               [key]: option(options[key]),

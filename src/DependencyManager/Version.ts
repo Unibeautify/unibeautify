@@ -1,4 +1,4 @@
-import * as SemVer from 'semver';
+import * as SemVer from "semver";
 
 export class Version {
   private readonly semVer: SemVer.SemVer;

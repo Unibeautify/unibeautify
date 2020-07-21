@@ -1,16 +1,16 @@
-import { unique, filterMultiCriteria } from './utils';
-import { BeautifyData } from './beautifier';
-import { Language } from './language';
+import { unique, filterMultiCriteria } from "./utils";
+import { BeautifyData } from "./beautifier";
+import { Language } from "./language";
 
 export class LanguageManager {
   constructor(public readonly languages: Language[]) {}
 
   public getLanguage(data: {
-    atomGrammar?: BeautifyData['atomGrammar'];
-    fileExtension?: BeautifyData['fileExtension'];
-    languageName?: BeautifyData['languageName'];
-    sublimeSyntax?: BeautifyData['sublimeSyntax'];
-    vscodeLanguage?: BeautifyData['vscodeLanguage'];
+    atomGrammar?: BeautifyData["atomGrammar"];
+    fileExtension?: BeautifyData["fileExtension"];
+    languageName?: BeautifyData["languageName"];
+    sublimeSyntax?: BeautifyData["sublimeSyntax"];
+    vscodeLanguage?: BeautifyData["vscodeLanguage"];
   }): Language | null {
     const filters = {
       atomGrammars: data.atomGrammar,

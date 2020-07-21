@@ -5,43 +5,43 @@ import {
   DependencyDefinition,
   DependencyType,
   DependencyManager,
-} from '../../src/';
+} from "../../src/";
 
 beforeEach(() => {
   DependencyManager.clearRegistry();
 });
 
-describe('prefer beautifier config default', () => {
-  test('should not resolve beautifier config', () => {
+describe("prefer beautifier config default", () => {
+  test("should not resolve beautifier config", () => {
     expect.assertions(4);
     const unibeautify = new Unibeautify();
     const lang: Language = {
       atomGrammars: [],
-      extensions: ['test'],
-      name: 'TestLang',
-      namespace: 'test',
-      since: '0.1.0',
+      extensions: ["test"],
+      name: "TestLang",
+      namespace: "test",
+      since: "0.1.0",
       sublimeSyntaxes: [],
       vscodeLanguages: [],
     };
     unibeautify.loadLanguage(lang);
 
-    const beautifierResult = 'Testing Result';
+    const beautifierResult = "Testing Result";
     const dependency: DependencyDefinition = {
-      name: 'Node',
-      program: 'node',
+      name: "Node",
+      program: "node",
       type: DependencyType.Executable,
     };
     const resolveConfig = jest.fn();
     const beautifier: Beautifier = {
       beautify: ({ dependencies, beautifierConfig }) => {
         expect(() => dependencies.get(dependency.name)).not.toThrowError();
-        expect(typeof beautifierConfig).toBe('object');
+        expect(typeof beautifierConfig).toBe("object");
         expect(resolveConfig.mock.calls.length).toBe(0);
         return Promise.resolve(beautifierResult);
       },
       dependencies: [dependency],
-      name: 'TestBeautify',
+      name: "TestBeautify",
       options: {
         TestLang: false,
       },
@@ -56,43 +56,43 @@ describe('prefer beautifier config default', () => {
             [beautifier.name]: {},
           },
         },
-        text: 'test',
+        text: "test",
       })
     ).resolves.toBe(beautifierResult);
   });
 });
 
-describe('prefer beautifier config disabled', () => {
-  test('should not resolve beautifier config', () => {
+describe("prefer beautifier config disabled", () => {
+  test("should not resolve beautifier config", () => {
     expect.assertions(4);
     const unibeautify = new Unibeautify();
     const lang: Language = {
       atomGrammars: [],
-      extensions: ['test'],
-      name: 'TestLang',
-      namespace: 'test',
-      since: '0.1.0',
+      extensions: ["test"],
+      name: "TestLang",
+      namespace: "test",
+      since: "0.1.0",
       sublimeSyntaxes: [],
       vscodeLanguages: [],
     };
     unibeautify.loadLanguage(lang);
 
-    const beautifierResult = 'Testing Result';
+    const beautifierResult = "Testing Result";
     const dependency: DependencyDefinition = {
-      name: 'Node',
-      program: 'node',
+      name: "Node",
+      program: "node",
       type: DependencyType.Executable,
     };
     const resolveConfig = jest.fn();
     const beautifier: Beautifier = {
       beautify: ({ dependencies, beautifierConfig }) => {
         expect(() => dependencies.get(dependency.name)).not.toThrowError();
-        expect(typeof beautifierConfig).toBe('object');
+        expect(typeof beautifierConfig).toBe("object");
         expect(resolveConfig.mock.calls.length).toBe(0);
         return Promise.resolve(beautifierResult);
       },
       dependencies: [dependency],
-      name: 'TestBeautify',
+      name: "TestBeautify",
       options: {
         TestLang: false,
       },
@@ -109,31 +109,31 @@ describe('prefer beautifier config disabled', () => {
             },
           },
         },
-        text: 'test',
+        text: "test",
       })
     ).resolves.toBe(beautifierResult);
   });
 });
 
-describe('prefer beautifier config enabled', () => {
-  test('should resolve beautifier config', () => {
+describe("prefer beautifier config enabled", () => {
+  test("should resolve beautifier config", () => {
     expect.assertions(3);
     const unibeautify = new Unibeautify();
     const lang: Language = {
       atomGrammars: [],
-      extensions: ['test'],
-      name: 'TestLang',
-      namespace: 'test',
-      since: '0.1.0',
+      extensions: ["test"],
+      name: "TestLang",
+      namespace: "test",
+      since: "0.1.0",
       sublimeSyntaxes: [],
       vscodeLanguages: [],
     };
     unibeautify.loadLanguage(lang);
 
-    const beautifierResult = 'Testing Result';
+    const beautifierResult = "Testing Result";
     const dependency: DependencyDefinition = {
-      name: 'Node',
-      program: 'node',
+      name: "Node",
+      program: "node",
       type: DependencyType.Executable,
     };
     const beautifier: Beautifier = {
@@ -142,7 +142,7 @@ describe('prefer beautifier config enabled', () => {
         return Promise.resolve(beautifierConfig && beautifierConfig.config);
       },
       dependencies: [dependency],
-      name: 'TestBeautify',
+      name: "TestBeautify",
       options: {
         TestLang: false,
       },
@@ -165,32 +165,32 @@ describe('prefer beautifier config enabled', () => {
             },
           },
         },
-        text: 'test',
+        text: "test",
       })
     ).resolves.toBe(beautifierResult);
   });
 });
 
-describe('prefer beautifier config enabled', () => {
-  test('should use path to beautifier config file', () => {
+describe("prefer beautifier config enabled", () => {
+  test("should use path to beautifier config file", () => {
     expect.assertions(3);
     const unibeautify = new Unibeautify();
     const lang: Language = {
       atomGrammars: [],
-      extensions: ['test'],
-      name: 'TestLang',
-      namespace: 'test',
-      since: '0.1.0',
+      extensions: ["test"],
+      name: "TestLang",
+      namespace: "test",
+      since: "0.1.0",
       sublimeSyntaxes: [],
       vscodeLanguages: [],
     };
     unibeautify.loadLanguage(lang);
 
-    const beautifierResult = 'Testing Result';
-    const configPath = 'C:\\path1\\path2';
+    const beautifierResult = "Testing Result";
+    const configPath = "C:\\path1\\path2";
     const dependency: DependencyDefinition = {
-      name: 'Node',
-      program: 'node',
+      name: "Node",
+      program: "node",
       type: DependencyType.Executable,
     };
     const beautifier: Beautifier = {
@@ -199,7 +199,7 @@ describe('prefer beautifier config enabled', () => {
         return Promise.resolve(beautifierConfig && beautifierConfig.config);
       },
       dependencies: [dependency],
-      name: 'TestBeautify',
+      name: "TestBeautify",
       options: {
         TestLang: false,
       },
@@ -222,7 +222,7 @@ describe('prefer beautifier config enabled', () => {
             },
           },
         },
-        text: 'test',
+        text: "test",
       })
     ).resolves.toBe(beautifierResult);
   });

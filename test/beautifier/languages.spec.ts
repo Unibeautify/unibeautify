@@ -4,16 +4,16 @@ import {
   Beautifier,
   LanguageManager,
   Languages,
-} from '../../src/';
+} from "../../src/";
 
-test('should get all loaded languages', () => {
+test("should get all loaded languages", () => {
   const unibeautify = new Unibeautify();
   const lang: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
@@ -23,14 +23,14 @@ test('should get all loaded languages', () => {
   ]);
 });
 
-test('should return empty array when no languages are supported with a beautifier', () => {
+test("should return empty array when no languages are supported with a beautifier", () => {
   const unibeautify = new Unibeautify();
   const lang: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
@@ -38,24 +38,24 @@ test('should return empty array when no languages are supported with a beautifie
   expect(unibeautify.supportedLanguages.map(({ name }) => name)).toEqual([]);
 });
 
-test('should supported languages', () => {
+test("should supported languages", () => {
   const unibeautify = new Unibeautify();
   const lang: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   unibeautify.loadLanguage(lang);
-  const beautifierResult = 'Testing Result';
+  const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: 'TestBeautify',
+    name: "TestBeautify",
     options: {
       TestLang: false,
     },
@@ -66,33 +66,33 @@ test('should supported languages', () => {
   ]);
 });
 
-test('should loaded languages which support a given beautifier', () => {
+test("should loaded languages which support a given beautifier", () => {
   const unibeautify = new Unibeautify();
   const lang1: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang1',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang1",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   const lang2: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang2',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang2",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   unibeautify.loadLanguages([lang1, lang2]);
-  const beautifierResult = 'Testing Result';
+  const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: 'TestBeautify',
+    name: "TestBeautify",
     options: {
       [lang1.name]: false,
     },
@@ -103,33 +103,33 @@ test('should loaded languages which support a given beautifier', () => {
   ).toEqual([lang1.name]);
 });
 
-test('should loaded languages which support a given beautifier', () => {
+test("should loaded languages which support a given beautifier", () => {
   const unibeautify = new Unibeautify();
   const lang1: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang1',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang1",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   const lang2: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang2',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang2",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   unibeautify.loadLanguages([lang1, lang2]);
-  const beautifierResult = 'Testing Result';
+  const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: 'TestBeautify',
+    name: "TestBeautify",
     options: {
       [lang1.name]: false,
     },
@@ -143,11 +143,11 @@ test('should loaded languages which support a given beautifier', () => {
   ).toEqual([]);
 });
 
-test('should return javascript when getting the language', () => {
+test("should return javascript when getting the language", () => {
   const languageData = {
-    fileExtension: '.js',
-    languageName: 'JavaScript',
-    vscodeLanguage: 'javascript',
+    fileExtension: ".js",
+    languageName: "JavaScript",
+    vscodeLanguage: "javascript",
   };
   const languageManager = new LanguageManager(Languages);
   const returnedLanguage = languageManager.getLanguage(languageData);
@@ -155,12 +155,12 @@ test('should return javascript when getting the language', () => {
   if (returnedLanguage) {
     languageName = returnedLanguage.name;
   }
-  expect(languageName).toEqual('JavaScript');
+  expect(languageName).toEqual("JavaScript");
 });
 
-test('should return Hack as language even thought it ties with php', () => {
+test("should return Hack as language even thought it ties with php", () => {
   const languageData = {
-    fileExtension: '.php',
+    fileExtension: ".php",
   };
   const languageManager = new LanguageManager(Languages);
   const returnedLanguage = languageManager.getLanguage(languageData);
@@ -168,5 +168,5 @@ test('should return Hack as language even thought it ties with php', () => {
   if (returnedLanguage) {
     languageName = returnedLanguage.name;
   }
-  expect(languageName).toEqual('Hack');
+  expect(languageName).toEqual("Hack");
 });
