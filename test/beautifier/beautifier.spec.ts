@@ -1,6 +1,6 @@
-import { Unibeautify, Language, Beautifier } from '../../src/';
+import { Unibeautify, Language, Beautifier } from "../../src/";
 
-test('should fail to load undefined beautifier', () => {
+test("should fail to load undefined beautifier", () => {
   const unibeautify = new Unibeautify();
   const beautifier: Beautifier = undefined as any;
   expect(() => unibeautify.loadBeautifier(beautifier)).toThrowError(
@@ -8,9 +8,9 @@ test('should fail to load undefined beautifier', () => {
   );
 });
 
-test('should fail to load beautifier without name', () => {
+test("should fail to load beautifier without name", () => {
   const unibeautify = new Unibeautify();
-  const beautifierResult = 'Testing Result';
+  const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
@@ -25,14 +25,14 @@ test('should fail to load beautifier without name', () => {
   );
 });
 
-test('should load beautifier', () => {
+test("should load beautifier", () => {
   const unibeautify = new Unibeautify();
-  const beautifierResult = 'Testing Result';
+  const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: 'TestBeautify',
+    name: "TestBeautify",
     options: {
       TestLang: false,
     },
@@ -43,14 +43,14 @@ test('should load beautifier', () => {
   ]);
 });
 
-test('should load beautifiers', () => {
+test("should load beautifiers", () => {
   const unibeautify = new Unibeautify();
-  const beautifierResult = 'Testing Result';
+  const beautifierResult = "Testing Result";
   const beautifier1: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: 'TestBeautify1',
+    name: "TestBeautify1",
     options: {
       TestLang: false,
     },
@@ -59,7 +59,7 @@ test('should load beautifiers', () => {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: 'TestBeautify2',
+    name: "TestBeautify2",
     options: {
       TestLang: false,
     },
@@ -71,25 +71,25 @@ test('should load beautifiers', () => {
   ]);
 });
 
-test('should successfully beautify text', () => {
+test("should successfully beautify text", () => {
   const unibeautify = new Unibeautify();
   const lang: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   unibeautify.loadLanguage(lang);
 
-  const beautifierResult = 'Testing Result';
+  const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: 'TestBeautify',
+    name: "TestBeautify",
     options: {
       TestLang: false,
     },
@@ -98,21 +98,21 @@ test('should successfully beautify text', () => {
 
   return expect(
     unibeautify.beautify({
-      languageName: 'TestLang',
+      languageName: "TestLang",
       options: {},
-      text: 'test',
+      text: "test",
     })
   ).resolves.toBe(beautifierResult);
 });
 
-test('should fail to find beautifier', () => {
+test("should fail to find beautifier", () => {
   const unibeautify = new Unibeautify();
   const lang: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
@@ -120,74 +120,74 @@ test('should fail to find beautifier', () => {
 
   return expect(
     unibeautify.beautify({
-      languageName: 'TestLang',
+      languageName: "TestLang",
       options: {},
-      text: 'test',
+      text: "test",
     })
   ).rejects.toThrowError(`Beautifiers not found for Language: ${lang.name}`);
 });
 
-test('should fail to find language', () => {
+test("should fail to find language", () => {
   const unibeautify = new Unibeautify();
 
   return expect(
     unibeautify.beautify({
-      languageName: 'TestLang',
+      languageName: "TestLang",
       options: {},
-      text: 'test',
+      text: "test",
     })
-  ).rejects.toThrowError('Cannot find language.');
+  ).rejects.toThrowError("Cannot find language.");
 });
 
-test('should successfully transform option values for beautifier', () => {
+test("should successfully transform option values for beautifier", () => {
   const unibeautify = new Unibeautify();
   const lang1: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang1',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang1",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   const lang2: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang2',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang2",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   const lang3: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang3',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang3",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   unibeautify.loadLanguages([lang1, lang2, lang3]);
 
-  const beautifierResult = 'Testing Result';
+  const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: 'TestBeautify',
+    name: "TestBeautify",
     options: {
       [lang1.name]: {
         basicTransform: num => num + 1,
         complexTransform: [
-          ['value1', 'basicTransform'],
+          ["value1", "basicTransform"],
           optionValues => optionValues.value1 + optionValues.basicTransform,
         ],
         isUndefined: undefined,
-        renamed1: 'value1',
+        renamed1: "value1",
         value1: true,
         value2: false,
-        willBeReplaced: 'value1',
+        willBeReplaced: "value1",
       },
       [lang2.name]: true,
     },
@@ -233,26 +233,26 @@ test('should successfully transform option values for beautifier', () => {
   );
 });
 
-test('should successfully ignore-next-line', () => {
+test("should successfully ignore-next-line", () => {
   const unibeautify = new Unibeautify();
   const lang: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
   unibeautify.loadLanguage(lang);
 
-  const originalText = '// unibeautify:ignore-next-line\ntest';
-  const beautifierResult = 'Testing Result';
+  const originalText = "// unibeautify:ignore-next-line\ntest";
+  const beautifierResult = "Testing Result";
   const beautifier: Beautifier = {
     beautify: () => {
       return Promise.resolve(beautifierResult);
     },
-    name: 'TestBeautify',
+    name: "TestBeautify",
     options: {
       TestLang: false,
     },
@@ -261,21 +261,21 @@ test('should successfully ignore-next-line', () => {
 
   return expect(
     unibeautify.beautify({
-      languageName: 'TestLang',
+      languageName: "TestLang",
       options: {},
       text: originalText,
     })
   ).resolves.toBe(originalText);
 });
 
-test('should throw error if beautify returns undefined', () => {
+test("should throw error if beautify returns undefined", () => {
   const unibeautify = new Unibeautify();
   const lang: Language = {
     atomGrammars: [],
-    extensions: ['test'],
-    name: 'TestLang',
-    namespace: 'test',
-    since: '0.1.0',
+    extensions: ["test"],
+    name: "TestLang",
+    namespace: "test",
+    since: "0.1.0",
     sublimeSyntaxes: [],
     vscodeLanguages: [],
   };
@@ -285,7 +285,7 @@ test('should throw error if beautify returns undefined', () => {
     beautify: () => {
       return Promise.resolve(undefined as any);
     },
-    name: 'TestBeautify',
+    name: "TestBeautify",
     options: {
       TestLang: false,
     },
@@ -294,9 +294,9 @@ test('should throw error if beautify returns undefined', () => {
 
   return expect(
     unibeautify.beautify({
-      languageName: 'TestLang',
+      languageName: "TestLang",
       options: {},
-      text: 'test',
+      text: "test",
     })
   ).rejects.toThrowError(
     'Beautifier response type must be "string" not "undefined": undefined'

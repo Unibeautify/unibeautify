@@ -1,10 +1,10 @@
 // tslint:disable:no-multiline-string
-import * as dedent from 'dedent';
+import * as dedent from "dedent";
 
-import { InlineFlagManager } from '../src/InlineFlagManager';
+import { InlineFlagManager } from "../src/InlineFlagManager";
 
-describe('ignore-next-line', () => {
-  test('should ignore single-line change', () => {
+describe("ignore-next-line", () => {
+  test("should ignore single-line change", () => {
     const oldText = dedent`
     console.log('hello world');
     // unibeautify:ignore-next-line
@@ -24,7 +24,7 @@ describe('ignore-next-line', () => {
     const finalText = manager.text;
     expect(finalText).toEqual(expectedText);
   });
-  test('should ignore multi-line change', () => {
+  test("should ignore multi-line change", () => {
     const oldText = dedent`
     matrix(
       1, 0, 0,
@@ -59,7 +59,7 @@ describe('ignore-next-line', () => {
     const finalText = manager.text;
     expect(finalText).toEqual(expectedText);
   });
-  test('should not add newline at end of file', () => {
+  test("should not add newline at end of file", () => {
     const oldText = `console.log('hello world');`;
     const newText = `console.log("hello world");`;
     const expectedText = `console.log("hello world");`;
@@ -67,7 +67,7 @@ describe('ignore-next-line', () => {
     const finalText = manager.text;
     expect(finalText).toEqual(expectedText);
   });
-  test('should keep newline at end of file', () => {
+  test("should keep newline at end of file", () => {
     const oldText = `console.log('hello world');\n`;
     const newText = `console.log("hello world");\n`;
     const expectedText = `console.log("hello world");\n`;
@@ -77,8 +77,8 @@ describe('ignore-next-line', () => {
   });
 });
 
-describe('disable/enable', () => {
-  test('should apply changes without disable', () => {
+describe("disable/enable", () => {
+  test("should apply changes without disable", () => {
     const oldText = dedent`
     console.log('hello world');
     `;
@@ -92,7 +92,7 @@ describe('disable/enable', () => {
     const finalText = manager.text;
     expect(finalText).toEqual(expectedText);
   });
-  test('should ignore changes after disable', () => {
+  test("should ignore changes after disable", () => {
     const oldText = dedent`
     console.log('hello world');
     // unibeautify:disable
@@ -136,7 +136,7 @@ describe('disable/enable', () => {
     expect(finalText).toEqual(expectedText);
   });
 
-  test('should ignore changes after disable outside block', () => {
+  test("should ignore changes after disable outside block", () => {
     const oldText = dedent`
     // unibeautify:disable
     function helloWorld() {

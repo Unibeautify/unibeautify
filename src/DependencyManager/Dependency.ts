@@ -1,4 +1,4 @@
-import { Version } from './Version';
+import { Version } from "./Version";
 
 export abstract class Dependency {
   private _isInstalled: boolean = false;
@@ -35,7 +35,7 @@ export abstract class Dependency {
             [
               `Dependency "${this.name}" is required and not installed.`,
               ...this.errors.map(error => `  - ${error.message}`),
-            ].join('\n')
+            ].join("\n")
           );
         }
         return isInstalled;
@@ -43,7 +43,7 @@ export abstract class Dependency {
   }
 
   private parseVersion(text: string): Version {
-    return new Version(this.versionFromText(text) || '');
+    return new Version(this.versionFromText(text) || "");
   }
 
   private versionFromText(text: string): string | undefined {
@@ -51,13 +51,13 @@ export abstract class Dependency {
     if (!parseVersion) {
       return text;
     }
-    if (typeof parseVersion === 'function') {
+    if (typeof parseVersion === "function") {
       return parseVersion(text);
     }
     const patterns = Array.isArray(parseVersion)
       ? parseVersion
       : [parseVersion];
-    return this.extractWithPatterns(text, patterns) || '';
+    return this.extractWithPatterns(text, patterns) || "";
   }
 
   private extractWithPatterns(
@@ -70,7 +70,7 @@ export abstract class Dependency {
           return extracted;
         }
         const expr =
-          typeof pattern === 'string' ? new RegExp(pattern) : pattern;
+          typeof pattern === "string" ? new RegExp(pattern) : pattern;
         const matches = text.match(expr);
         if (matches) {
           return matches[1];
@@ -137,8 +137,8 @@ export interface Badge {
 }
 
 export enum DependencyType {
-  Node = 'node',
-  Executable = 'exec',
+  Node = "node",
+  Executable = "exec",
 }
 
 export type DependencyVersionParser =
