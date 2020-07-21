@@ -1,178 +1,178 @@
 import { Version } from "./Version";
 
 export abstract class Dependency {
-  private _isInstalled: boolean = false;
-  private _version?: Version;
-  private _errors: Error[] = [];
+    private _isInstalled: boolean = false;
+    private _version?: Version;
+    private _errors: Error[] = [];
 
-  constructor(
-    protected definition: DependencyDefinition,
-    protected options: DependencyOptions
-  ) {}
+    constructor(
+        protected definition: DependencyDefinition,
+        protected options: DependencyOptions
+    ) {}
 
-  public load(): Promise<boolean> {
-    if (this.isInstalled) {
-      return Promise.resolve(this.isInstalled);
-    }
-    return this.reload();
-  }
-
-  public reload(): Promise<boolean> {
-    this.clearErrors();
-    return this.loadVersion()
-      .then(version => {
-        this._version = this.parseVersion(version);
-        return (this._isInstalled = true);
-      })
-      .catch((error: Error) => {
-        this.addError(error);
-        this._version = undefined;
-        return (this._isInstalled = false);
-      })
-      .then(isInstalled => {
-        if (this.required && !isInstalled) {
-          throw new Error(
-            [
-              `Dependency "${this.name}" is required and not installed.`,
-              ...this.errors.map(error => `  - ${error.message}`),
-            ].join("\n")
-          );
+    public load(): Promise<boolean> {
+        if (this.isInstalled) {
+            return Promise.resolve(this.isInstalled);
         }
-        return isInstalled;
-      });
-  }
-
-  private parseVersion(text: string): Version {
-    return new Version(this.versionFromText(text) || "");
-  }
-
-  private versionFromText(text: string): string | undefined {
-    const { parseVersion } = this.definition;
-    if (!parseVersion) {
-      return text;
+        return this.reload();
     }
-    if (typeof parseVersion === "function") {
-      return parseVersion(text);
+
+    public reload(): Promise<boolean> {
+        this.clearErrors();
+        return this.loadVersion()
+            .then(version => {
+                this._version = this.parseVersion(version);
+                return (this._isInstalled = true);
+            })
+            .catch((error: Error) => {
+                this.addError(error);
+                this._version = undefined;
+                return (this._isInstalled = false);
+            })
+            .then(isInstalled => {
+                if (this.required && !isInstalled) {
+                    throw new Error(
+                        [
+                            `Dependency "${this.name}" is required and not installed.`,
+                            ...this.errors.map(error => `  - ${error.message}`),
+                        ].join("\n")
+                    );
+                }
+                return isInstalled;
+            });
     }
-    const patterns = Array.isArray(parseVersion)
-      ? parseVersion
-      : [parseVersion];
-    return this.extractWithPatterns(text, patterns) || "";
-  }
 
-  private extractWithPatterns(
-    text: string,
-    patterns: (string | RegExp)[]
-  ): string | undefined {
-    return patterns.reduce(
-      (extracted: string | undefined, pattern: string | RegExp) => {
-        if (extracted) {
-          return extracted;
+    private parseVersion(text: string): Version {
+        return new Version(this.versionFromText(text) || "");
+    }
+
+    private versionFromText(text: string): string | undefined {
+        const { parseVersion } = this.definition;
+        if (!parseVersion) {
+            return text;
         }
-        const expr =
-          typeof pattern === "string" ? new RegExp(pattern) : pattern;
-        const matches = text.match(expr);
-        if (matches) {
-          return matches[1];
+        if (typeof parseVersion === "function") {
+            return parseVersion(text);
         }
-        return undefined;
-      },
-      undefined
-    );
-  }
+        const patterns = Array.isArray(parseVersion)
+            ? parseVersion
+            : [parseVersion];
+        return this.extractWithPatterns(text, patterns) || "";
+    }
 
-  protected abstract loadVersion(): Promise<string>;
+    private extractWithPatterns(
+        text: string,
+        patterns: (string | RegExp)[]
+    ): string | undefined {
+        return patterns.reduce(
+            (extracted: string | undefined, pattern: string | RegExp) => {
+                if (extracted) {
+                    return extracted;
+                }
+                const expr =
+                    typeof pattern === "string" ? new RegExp(pattern) : pattern;
+                const matches = text.match(expr);
+                if (matches) {
+                    return matches[1];
+                }
+                return undefined;
+            },
+            undefined
+        );
+    }
 
-  public get isInstalled(): boolean {
-    return this._isInstalled;
-  }
+    protected abstract loadVersion(): Promise<string>;
 
-  protected addError(error: Error): void {
-    this._errors.push(error);
-  }
+    public get isInstalled(): boolean {
+        return this._isInstalled;
+    }
 
-  private clearErrors(): void {
-    this._errors = [];
-  }
+    protected addError(error: Error): void {
+        this._errors.push(error);
+    }
 
-  public get name(): string {
-    return this.definition.name;
-  }
+    private clearErrors(): void {
+        this._errors = [];
+    }
 
-  public get required(): boolean {
-    return !Boolean(this.definition.optional);
-  }
+    public get name(): string {
+        return this.definition.name;
+    }
 
-  public get version(): Version | undefined {
-    return this._version;
-  }
+    public get required(): boolean {
+        return !Boolean(this.definition.optional);
+    }
 
-  public get errors() {
-    return this._errors;
-  }
+    public get version(): Version | undefined {
+        return this._version;
+    }
+
+    public get errors() {
+        return this._errors;
+    }
 }
 
 export interface BaseDependencyDefinition {
-  // tslint:disable-next-line:no-reserved-keywords
-  type: DependencyType;
-  name: string;
-  parseVersion?: DependencyVersionParser;
-  optional?: boolean;
-  homepageUrl?: string;
-  installationUrl?: string;
-  bugsUrl?: string;
-  badges?: Badge[];
+    // tslint:disable-next-line:no-reserved-keywords
+    type: DependencyType;
+    name: string;
+    parseVersion?: DependencyVersionParser;
+    optional?: boolean;
+    homepageUrl?: string;
+    installationUrl?: string;
+    bugsUrl?: string;
+    badges?: Badge[];
 }
 
 export interface Badge {
-  description: string;
-  /**
-   * url for the badge's image URL
-   */
-  url: string;
-  /**
-   * href for the link users will follow when clicking the badge and description.
-   */
-  href: string;
+    description: string;
+    /**
+     * url for the badge's image URL
+     */
+    url: string;
+    /**
+     * href for the link users will follow when clicking the badge and description.
+     */
+    href: string;
 }
 
 export enum DependencyType {
-  Node = "node",
-  Executable = "exec",
+    Node = "node",
+    Executable = "exec",
 }
 
 export type DependencyVersionParser =
-  | string
-  | RegExp
-  | (string | RegExp)[]
-  | DependencyVersionParserFunction;
+    | string
+    | RegExp
+    | (string | RegExp)[]
+    | DependencyVersionParserFunction;
 
 export type DependencyVersionParserFunction = (
-  text: string
+    text: string
 ) => string | undefined;
 
 export interface NodeDependencyDefinition extends BaseDependencyDefinition {
-  // tslint:disable-next-line:no-reserved-keywords
-  type: DependencyType.Node;
-  // tslint:disable-next-line:no-reserved-keywords
-  package: string;
+    // tslint:disable-next-line:no-reserved-keywords
+    type: DependencyType.Node;
+    // tslint:disable-next-line:no-reserved-keywords
+    package: string;
 }
 
 export interface ExecutableDependencyDefinition
-  extends BaseDependencyDefinition {
-  // tslint:disable-next-line:no-reserved-keywords
-  type: DependencyType.Executable;
-  program: string;
-  versionArgs?: string[];
-  docker?: {
-    image: string;
-  };
+    extends BaseDependencyDefinition {
+    // tslint:disable-next-line:no-reserved-keywords
+    type: DependencyType.Executable;
+    program: string;
+    versionArgs?: string[];
+    docker?: {
+        image: string;
+    };
 }
 
 export type DependencyDefinition =
-  | NodeDependencyDefinition
-  | ExecutableDependencyDefinition;
+    | NodeDependencyDefinition
+    | ExecutableDependencyDefinition;
 
 export interface DependencyOptions {
-  path?: string;
+    path?: string;
 }
