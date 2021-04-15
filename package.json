@@ -50,7 +50,7 @@
     "@types/js-yaml": "3.12.6",
     "@types/json-stable-stringify": "1.0.32",
     "@types/lodash": "4.14.168",
-    "@types/node": "10.17.57",
+    "@types/node": "10.17.58",
     "@types/request": "2.48.5",
     "@types/semver": "6.2.2",
     "dedent": "0.7.0",
