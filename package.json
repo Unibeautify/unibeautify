@@ -72,7 +72,7 @@
   },
   "dependencies": {
     "diff": "^4.0.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "requireg": "^0.2.1",
     "semver": "^6.0.0"
   },
