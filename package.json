@@ -49,7 +49,7 @@
     "@types/jest": "24.9.1",
     "@types/js-yaml": "3.12.7",
     "@types/json-stable-stringify": "1.0.33",
-    "@types/lodash": "4.14.172",
+    "@types/lodash": "4.14.173",
     "@types/node": "10.17.60",
     "@types/request": "2.48.7",
     "@types/semver": "6.2.3",
