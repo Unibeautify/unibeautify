@@ -68,7 +68,7 @@
     "tslint-clean-code": "0.2.10",
     "tslint-microsoft-contrib": "6.2.0",
     "typedoc": "0.22.10",
-    "typescript": "3.9.10"
+    "typescript": "4.9.3"
   },
   "dependencies": {
     "diff": "^4.0.1",
