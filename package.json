@@ -44,7 +44,7 @@
   },
   "homepage": "https://github.com/Unibeautify/unibeautify#readme",
   "devDependencies": {
-    "@types/dedent": "0.7.0",
+    "@types/dedent": "0.7.2",
     "@types/diff": "4.0.2",
     "@types/jest": "24.9.1",
     "@types/js-yaml": "3.12.7",
