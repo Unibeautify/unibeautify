@@ -45,7 +45,7 @@
   "homepage": "https://github.com/Unibeautify/unibeautify#readme",
   "devDependencies": {
     "@types/dedent": "0.7.2",
-    "@types/diff": "4.0.2",
+    "@types/diff": "8.0.0",
     "@types/jest": "24.9.1",
     "@types/js-yaml": "3.12.10",
     "@types/json-stable-stringify": "1.2.0",
@@ -71,7 +71,7 @@
     "typescript": "3.9.10"
   },
   "dependencies": {
-    "diff": "^4.0.1",
+    "diff": "^8.0.0",
     "lodash": "^4.17.19",
     "requireg": "^0.2.1",
     "semver": "^6.0.0"
