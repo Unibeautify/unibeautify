@@ -53,7 +53,7 @@
     "@types/node": "10.17.60",
     "@types/request": "2.48.13",
     "@types/semver": "6.2.7",
-    "dedent": "0.7.0",
+    "dedent": "1.7.1",
     "istanbul-api": "3.0.0",
     "istanbul-reports": "2.2.7",
     "jest": "24.9.0",
