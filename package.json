@@ -52,7 +52,7 @@
     "@types/lodash": "4.14.192",
     "@types/node": "10.17.60",
     "@types/request": "2.48.13",
-    "@types/semver": "6.2.7",
+    "@types/semver": "7.7.1",
     "dedent": "0.7.0",
     "istanbul-api": "3.0.0",
     "istanbul-reports": "2.2.7",
@@ -74,7 +74,7 @@
     "diff": "^4.0.1",
     "lodash": "^4.17.19",
     "requireg": "^0.2.1",
-    "semver": "^6.0.0"
+    "semver": "^7.0.0"
   },
   "engines": {
     "node": ">=6.0.0"
